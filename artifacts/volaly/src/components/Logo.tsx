@@ -14,7 +14,7 @@ export function Logo({
       className={`inline-flex items-center ${className}`}
     >
       <img
-        src={withTagline ? "/volaly-logo-full.svg" : "/volaly-wordmark.svg"}
+        src={withTagline ? "/volaly-logo.png" : "/volaly-logo.png"}
         alt="Volaly — More customers. Less work."
         className={
           withTagline
