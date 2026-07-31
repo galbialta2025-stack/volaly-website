@@ -18,8 +18,8 @@ export function Logo({
         alt="Volaly — More customers. Less work."
         className={
           withTagline
-            ? "h-16 w-auto max-w-full object-contain sm:h-20"
-            : "h-8 w-auto object-contain sm:h-9"
+            ? "h-20 w-auto max-w-full object-contain sm:h-24"
+            : "h-11 w-auto object-contain sm:h-12"
         }
         loading="eager"
       />
