@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Volaly"
+version = "1.0.0"
+id = "artifacts/volaly"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19788
+
+[services.development]
+run = "pnpm --filter @workspace/volaly run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/volaly", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/volaly/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19788"
+BASE_PATH = "/"

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <defs>
+    <linearGradient id="wg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="oklch(0.68 0.21 40)"/>
+      <stop offset="100%" stop-color="oklch(0.56 0.24 258)"/>
+    </linearGradient>
+  </defs>
+  <text x="0" y="30" font-family="'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif" font-size="28" font-weight="800" fill="url(#wg)" letter-spacing="-1">Volaly</text>
+</svg>
