@@ -27,7 +27,7 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-3 sm:pt-4">
       <nav
-        className={`mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-full px-4 py-3 transition-all duration-300 sm:px-5 sm:py-3.5 ${
+        className={`mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-full px-4 py-1 transition-all duration-300 sm:px-5 sm:py-1.5 ${
           scrolled
             ? "glass-nav border border-white/80 shadow-soft"
             : "glass-nav border border-white/70"
@@ -48,7 +48,7 @@ export function Navbar() {
           ))}
         </div>
         <div className="hidden lg:block">
-          <Button variant="hero" size="lg" className="rounded-full" onClick={openDemo}>
+          <Button variant="hero" size="sm" className="rounded-full" onClick={openDemo}>
             Book Demo
           </Button>
         </div>
