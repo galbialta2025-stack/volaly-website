@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as VisaAgencyRouteImport } from './routes/visa-agency'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
@@ -25,6 +26,11 @@ import { Route as CarRentalRouteImport } from './routes/car-rental'
 import { Route as BarRouteImport } from './routes/bar'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VisaAgencyRoute = VisaAgencyRouteImport.update({
   id: '/visa-agency',
   path: '/visa-agency',
@@ -104,6 +110,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/bar': typeof BarRoute
+  '/contact': typeof ContactRoute
   '/car-rental': typeof CarRentalRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/dentist': typeof DentistRoute
@@ -121,6 +128,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/bar': typeof BarRoute
+  '/contact': typeof ContactRoute
   '/car-rental': typeof CarRentalRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/dentist': typeof DentistRoute
@@ -139,6 +147,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/bar': typeof BarRoute
+  '/contact': typeof ContactRoute
   '/car-rental': typeof CarRentalRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/dentist': typeof DentistRoute
@@ -158,6 +167,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/bar'
+    | '/contact'
     | '/car-rental'
     | '/cookie-policy'
     | '/dentist'
@@ -175,6 +185,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/bar'
+    | '/contact'
     | '/car-rental'
     | '/cookie-policy'
     | '/dentist'
@@ -192,6 +203,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/bar'
+    | '/contact'
     | '/car-rental'
     | '/cookie-policy'
     | '/dentist'
@@ -210,6 +222,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BarRoute: typeof BarRoute
+  ContactRoute: typeof ContactRoute
   CarRentalRoute: typeof CarRentalRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
   DentistRoute: typeof DentistRoute
@@ -325,6 +338,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BarRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -338,6 +358,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BarRoute: BarRoute,
+  ContactRoute: ContactRoute,
   CarRentalRoute: CarRentalRoute,
   CookiePolicyRoute: CookiePolicyRoute,
   DentistRoute: DentistRoute,

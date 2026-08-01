@@ -71,6 +71,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Contact -->
+  <url>
+    <loc>https://volaly.com/contact</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Legal pages -->
   <url>
     <loc>https://volaly.com/privacy</loc>
