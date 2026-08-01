@@ -23,7 +23,7 @@ export function Hero() {
         <div>
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <Eyebrow>
-              <Sparkles className="h-3.5 w-3.5 text-brand-orange" /> The AI Business Growth Platform
+              <Sparkles className="h-3.5 w-3.5 text-brand-orange" /> The AI Revenue System for Local Business
             </Eyebrow>
           </motion.div>
           <motion.h1
