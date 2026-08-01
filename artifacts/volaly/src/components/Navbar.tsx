@@ -41,9 +41,7 @@ export function Navbar() {
               : "glass-nav border border-white/70"
           }`}
         >
-          <div className="rounded-xl bg-white/90 px-2 py-0 backdrop-blur-sm">
-            <Logo className="relative" />
-          </div>
+          <Logo className="relative" />
 
           <div className="hidden items-center gap-0.5 lg:flex">
             {links.map((l) => (
