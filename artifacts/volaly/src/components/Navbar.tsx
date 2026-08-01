@@ -48,7 +48,12 @@ export function Navbar() {
           ))}
         </div>
         <div className="hidden items-center gap-2 lg:flex">
-          {/* Chatbot bubble */}
+          <Button variant="hero" size="sm" className="rounded-full" onClick={openDemo}>
+            View Demo
+          </Button>
+        </div>
+        {/* Chatbot bubble + hamburger — always visible on the right */}
+        <div className="flex items-center gap-2">
           <button
             aria-label="Chat with Volaly AI"
             className="relative flex h-9 w-9 items-center justify-center rounded-full shadow-md transition-transform hover:scale-110 active:scale-95"
@@ -59,18 +64,15 @@ export function Navbar() {
             <MessageCircle className="h-4 w-4 text-white drop-shadow" />
             <span className="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full border-2 border-white bg-green-400" />
           </button>
-          <Button variant="hero" size="sm" className="rounded-full" onClick={openDemo}>
-            View Demo
-          </Button>
+          <button
+            className="rounded-full p-2 text-foreground lg:hidden"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Toggle menu"
+            aria-expanded={open}
+          >
+            {open ? <X /> : <Menu />}
+          </button>
         </div>
-        <button
-          className="rounded-full p-2 text-foreground lg:hidden"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
-          aria-expanded={open}
-        >
-          {open ? <X /> : <Menu />}
-        </button>
       </nav>
       {open && (
         <div className="glass-nav mx-auto mt-2 max-w-6xl rounded-3xl border border-white/80 p-4 shadow-soft lg:hidden">
