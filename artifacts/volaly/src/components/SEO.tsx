@@ -40,7 +40,7 @@ export function SEO({ title, description, canonical, ogImage, noIndex }: SEOProp
   const defaultDesc =
     "Volaly is the AI Business Growth Platform. Create content, attract customers, convert enquiries and grow revenue automatically across Google, LINE, WhatsApp and more.";
   const defaultCanonical = BASE_URL + "/";
-  const image = ogImage ?? `${BASE_URL}/volaly-logo.png`;
+  const image = ogImage ?? `${BASE_URL}/og-image.png`;
 
   useEffect(() => {
     const prevTitle = document.title;
