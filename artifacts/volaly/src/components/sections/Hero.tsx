@@ -32,8 +32,8 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
             className="mt-7 text-5xl font-extrabold leading-[0.98] tracking-tight text-foreground sm:text-6xl md:text-7xl"
           >
-            Turn Visibility
-            <span className="block gradient-text-multi">into Revenue.</span>
+            More customers.
+            <span className="block gradient-text-multi">Less work.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -41,8 +41,9 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.18 }}
             className="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground"
           >
-            Create content. Attract customers. Convert enquiries. Grow automatically. Volaly is the
-            AI platform that gets your business found and turns attention into revenue.
+            Volaly is a complete AI system for local businesses: it posts your social content every
+            day and turns every enquiry into a booked, paying customer. You send the photos —
+            Volaly does the rest.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -51,10 +52,10 @@ export function Hero() {
             className="mt-10 flex flex-wrap gap-4"
           >
             <Button size="xl" variant="hero" onClick={openDemo}>
-              Book Demo <ArrowRight className="h-4 w-4" />
+              View Demo <ArrowRight className="h-4 w-4" />
             </Button>
             <Button size="xl" variant="heroOutline" onClick={openDemo}>
-              <Play className="h-4 w-4" /> Watch 2 Minute Demo
+              <Play className="h-4 w-4" /> Book Consultation
             </Button>
           </motion.div>
           <motion.div

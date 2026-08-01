@@ -20,14 +20,14 @@ export function FinalCta() {
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Button size="xl" variant="hero" className="rounded-full" onClick={openDemo}>
-                Book Demo <ArrowRight className="h-4 w-4" />
+                View Demo <ArrowRight className="h-4 w-4" />
               </Button>
               <Button
                 size="xl"
                 className="rounded-full border border-white/30 bg-white/10 text-white backdrop-blur hover:bg-white/20"
                 onClick={openDemo}
               >
-                <Play className="h-4 w-4" /> Watch 2 Minute Demo
+                <Play className="h-4 w-4" /> Book Consultation
               </Button>
             </div>
           </div>

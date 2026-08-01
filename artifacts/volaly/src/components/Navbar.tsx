@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { Logo } from "./Logo";
 import { Button } from "@/components/ui/button";
 import { openDemo } from "@/lib/demo";
@@ -47,9 +47,20 @@ export function Navbar() {
             </a>
           ))}
         </div>
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-2 lg:flex">
+          {/* Chatbot bubble */}
+          <button
+            aria-label="Chat with Volaly AI"
+            className="relative flex h-9 w-9 items-center justify-center rounded-full shadow-md transition-transform hover:scale-110 active:scale-95"
+            style={{
+              background: "linear-gradient(135deg, #ff6b35, #f72585, #7209b7, #3a0ca3, #4361ee, #4cc9f0)",
+            }}
+          >
+            <MessageCircle className="h-4 w-4 text-white drop-shadow" />
+            <span className="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full border-2 border-white bg-green-400" />
+          </button>
           <Button variant="hero" size="sm" className="rounded-full" onClick={openDemo}>
-            Book Demo
+            View Demo
           </Button>
         </div>
         <button
@@ -83,7 +94,7 @@ export function Navbar() {
                 openDemo();
               }}
             >
-              Book Demo
+              View Demo
             </Button>
           </div>
         </div>
