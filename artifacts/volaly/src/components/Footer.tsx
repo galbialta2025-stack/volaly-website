@@ -84,6 +84,7 @@ export function Footer() {
               <li><a href="/#faq" className="text-muted-foreground hover:text-foreground">FAQ</a></li>
               <li><Link to="/privacy" className="text-muted-foreground hover:text-foreground">Privacy Policy</Link></li>
               <li><Link to="/terms" className="text-muted-foreground hover:text-foreground">Terms</Link></li>
+              <li><Link to="/cookie-policy" className="text-muted-foreground hover:text-foreground">Cookie Policy</Link></li>
             </ul>
           </div>
           <div>
@@ -116,8 +117,15 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-border/60 pt-6 text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Volaly. All rights reserved.
+        <div className="mt-12 border-t border-border/60 pt-6 space-y-2">
+          <p className="text-xs text-muted-foreground/70 max-w-2xl leading-relaxed">
+            * Individual results may vary and are not guaranteed. Statistics shown represent outcomes
+            reported by select clients and may not reflect typical results. Past performance is not
+            indicative of future results.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Volaly. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

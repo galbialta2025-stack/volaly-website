@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VisaAgencyRouteImport } from './routes/visa-agency'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
 import { Route as SocialMediaInfluencerRouteImport } from './routes/social-media-influencer'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RestaurantRouteImport } from './routes/restaurant'
@@ -27,6 +28,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const VisaAgencyRoute = VisaAgencyRouteImport.update({
   id: '/visa-agency',
   path: '/visa-agency',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiePolicyRoute = CookiePolicyRouteImport.update({
+  id: '/cookie-policy',
+  path: '/cookie-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TermsRoute = TermsRouteImport.update({
@@ -99,6 +105,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/bar': typeof BarRoute
   '/car-rental': typeof CarRentalRoute
+  '/cookie-policy': typeof CookiePolicyRoute
   '/dentist': typeof DentistRoute
   '/gym': typeof GymRoute
   '/hotel': typeof HotelRoute
@@ -115,6 +122,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/bar': typeof BarRoute
   '/car-rental': typeof CarRentalRoute
+  '/cookie-policy': typeof CookiePolicyRoute
   '/dentist': typeof DentistRoute
   '/gym': typeof GymRoute
   '/hotel': typeof HotelRoute
@@ -132,6 +140,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/bar': typeof BarRoute
   '/car-rental': typeof CarRentalRoute
+  '/cookie-policy': typeof CookiePolicyRoute
   '/dentist': typeof DentistRoute
   '/gym': typeof GymRoute
   '/hotel': typeof HotelRoute
@@ -150,6 +159,7 @@ export interface FileRouteTypes {
     | '/'
     | '/bar'
     | '/car-rental'
+    | '/cookie-policy'
     | '/dentist'
     | '/gym'
     | '/hotel'
@@ -166,6 +176,7 @@ export interface FileRouteTypes {
     | '/'
     | '/bar'
     | '/car-rental'
+    | '/cookie-policy'
     | '/dentist'
     | '/gym'
     | '/hotel'
@@ -182,6 +193,7 @@ export interface FileRouteTypes {
     | '/'
     | '/bar'
     | '/car-rental'
+    | '/cookie-policy'
     | '/dentist'
     | '/gym'
     | '/hotel'
@@ -199,6 +211,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BarRoute: typeof BarRoute
   CarRentalRoute: typeof CarRentalRoute
+  CookiePolicyRoute: typeof CookiePolicyRoute
   DentistRoute: typeof DentistRoute
   GymRoute: typeof GymRoute
   HotelRoute: typeof HotelRoute
@@ -219,6 +232,13 @@ declare module '@tanstack/react-router' {
       path: '/visa-agency'
       fullPath: '/visa-agency'
       preLoaderRoute: typeof VisaAgencyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookie-policy': {
+      id: '/cookie-policy'
+      path: '/cookie-policy'
+      fullPath: '/cookie-policy'
+      preLoaderRoute: typeof CookiePolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/terms': {
@@ -319,6 +339,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BarRoute: BarRoute,
   CarRentalRoute: CarRentalRoute,
+  CookiePolicyRoute: CookiePolicyRoute,
   DentistRoute: DentistRoute,
   GymRoute: GymRoute,
   HotelRoute: HotelRoute,

@@ -67,6 +67,7 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
                 </StaggerItem>
               ))}
             </Stagger>
+            <p className="mt-3 text-xs text-muted-foreground/60">* Individual results may vary and are not guaranteed.</p>
           </div>
 
           {/* Embedded video player */}

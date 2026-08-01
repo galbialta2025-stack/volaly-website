@@ -104,7 +104,7 @@ export const industryFaqs: Record<string, Faq[]> = {
     },
     {
       q: "Why do many people check my bar online but never reserve or show up?",
-      a: "Missing real-time table availability, unclear event information or weak next-step prompts cause visitors to check and leave. A fast reservation path, accurate event listings and an AI agent that can answer capacity and availability questions converts more casual online interest into confirmed bookings and guaranteed revenue for the night.",
+      a: "Missing real-time table availability, unclear event information or weak next-step prompts cause visitors to check and leave. A fast reservation path, accurate event listings and an AI agent that can answer capacity and availability questions converts more casual online interest into confirmed bookings and stronger table revenue night after night.",
     },
     {
       q: "How can bars capture late-night and after-hours enquiries that currently go unanswered?",
