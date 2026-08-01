@@ -18,3 +18,8 @@ expertMode = true
 [postMerge]
 path = "scripts/post-merge.sh"
 timeoutMs = 20000
+
+[userenv]
+
+[userenv.shared]
+VITE_N8N_CHAT_WEBHOOK = "https://n8n.srv1125285.hstgr.cloud/webhook/nova-chat"
