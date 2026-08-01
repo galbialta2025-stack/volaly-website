@@ -17,8 +17,8 @@ const infoCards = [
   {
     icon: Mail,
     title: "Email",
-    value: "hello@thaisolutions.ai",
-    href: "mailto:hello@thaisolutions.ai",
+    value: "info@volaly.com",
+    href: "mailto:info@volaly.com",
     accent: "text-brand-orange",
   },
   {
@@ -79,7 +79,7 @@ function ContactPage() {
             sessionId: `contact-${Date.now()}`,
             source: "contact-form",
             name: form.name,
-            email: form.email,
+            replyTo: form.email,
             subject: form.subject,
           }),
         });
