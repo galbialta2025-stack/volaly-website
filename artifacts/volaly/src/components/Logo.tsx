@@ -19,7 +19,7 @@ export function Logo({
         className={
           withTagline
             ? "h-20 w-auto max-w-full object-contain sm:h-24"
-            : "h-12 w-auto object-contain sm:h-14"
+            : "h-[52px] w-auto object-contain"
         }
         loading="eager"
       />
