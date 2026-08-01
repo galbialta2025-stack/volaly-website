@@ -16,29 +16,29 @@ const WEBHOOK_URL = import.meta.env.VITE_N8N_CHAT_WEBHOOK as string | undefined;
 const infoCards = [
   {
     icon: Mail,
-    title: "E-Mail",
+    title: "Email",
     value: "hello@thaisolutions.ai",
     href: "mailto:hello@thaisolutions.ai",
     accent: "text-brand-orange",
   },
   {
     icon: Clock,
-    title: "Antwortzeit",
-    value: "Innerhalb von 24 Stunden",
+    title: "Response time",
+    value: "Within 24 hours",
     href: null,
     accent: "text-brand-blue",
   },
   {
     icon: Globe,
-    title: "Sprachen",
-    value: "Deutsch · English · ภาษาไทย",
+    title: "Languages",
+    value: "English · Deutsch · ภาษาไทย",
     href: null,
     accent: "text-brand-purple",
   },
   {
     icon: MessageCircle,
-    title: "Live-Chat",
-    value: "Jetzt mit Volaly AI chatten",
+    title: "Live Chat",
+    value: "Chat with Volaly AI now",
     href: null,
     accent: "text-brand-orange",
     action: true,
@@ -48,10 +48,10 @@ const infoCards = [
 const contactSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Kontakt — Volaly",
+  name: "Contact — Volaly",
   url: "https://volaly.com/contact",
   description:
-    "Kontaktiere das Volaly-Team. Wir antworten innerhalb von 24 Stunden auf Deutsch, Englisch oder Thailändisch.",
+    "Contact the Volaly team. We respond within 24 hours in English, German or Thai.",
   publisher: { "@id": "https://volaly.com/#organization" },
 };
 
@@ -75,7 +75,7 @@ function ContactPage() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            message: `Kontaktformular von ${form.name} (${form.email}):\n\nBetreff: ${form.subject}\n\n${form.message}`,
+            message: `Contact form from ${form.name} (${form.email}):\n\nSubject: ${form.subject}\n\n${form.message}`,
             sessionId: `contact-${Date.now()}`,
             source: "contact-form",
             name: form.name,
@@ -100,16 +100,16 @@ function ContactPage() {
   return (
     <>
       <SEO
-        title="Kontakt — Volaly"
-        description="Kontaktiere das Volaly-Team. Wir helfen dir dabei, dein Business mit KI-gesteuertem Marketing und Automatisierung zu skalieren. Antwort innerhalb von 24 Stunden."
+        title="Contact — Volaly"
+        description="Get in touch with the Volaly team. Questions, demo requests or partnership enquiries — we respond within 24 hours in English, German or Thai."
         canonical="https://volaly.com/contact"
       />
       <JsonLd schema={contactSchema} />
 
       <PageHeader
-        eyebrow="Kontakt"
-        title="Wir freuen uns auf deine Nachricht"
-        subtitle="Fragen, Demo-Anfragen oder Partnerschaftsanfragen — schreib uns und wir antworten innerhalb von 24 Stunden."
+        eyebrow="Contact"
+        title="Get in touch"
+        subtitle="Questions, demo requests or partnership enquiries — write to us and we'll get back to you within 24 hours."
       />
 
       <section className="pb-28 pt-4">
@@ -124,9 +124,9 @@ function ContactPage() {
                     <span className="grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-brand-orange/20 to-brand-blue/20">
                       <CheckCircle className="h-8 w-8 text-brand-orange" />
                     </span>
-                    <h2 className="text-xl font-bold text-foreground">Nachricht gesendet!</h2>
+                    <h2 className="text-xl font-bold text-foreground">Message sent!</h2>
                     <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-                      Danke für deine Anfrage. Wir melden uns innerhalb von 24 Stunden bei dir.
+                      Thanks for reaching out. We'll get back to you within 24 hours.
                     </p>
                     <Button
                       variant="hero"
@@ -136,7 +136,7 @@ function ContactPage() {
                         setStatus("idle");
                       }}
                     >
-                      Neue Anfrage
+                      Send another message
                     </Button>
                   </div>
                 ) : (
@@ -150,7 +150,7 @@ function ContactPage() {
                           id="name"
                           type="text"
                           required
-                          placeholder="Max Mustermann"
+                          placeholder="Jane Smith"
                           className={inputClass}
                           value={form.name}
                           onChange={set("name")}
@@ -159,13 +159,13 @@ function ContactPage() {
                       </div>
                       <div className="space-y-1.5">
                         <label className="text-xs font-semibold text-foreground" htmlFor="email">
-                          E-Mail <span className="text-brand-orange">*</span>
+                          Email <span className="text-brand-orange">*</span>
                         </label>
                         <input
                           id="email"
                           type="email"
                           required
-                          placeholder="max@beispiel.de"
+                          placeholder="jane@example.com"
                           className={inputClass}
                           value={form.email}
                           onChange={set("email")}
@@ -176,7 +176,7 @@ function ContactPage() {
 
                     <div className="space-y-1.5">
                       <label className="text-xs font-semibold text-foreground" htmlFor="subject">
-                        Betreff
+                        Subject
                       </label>
                       <select
                         id="subject"
@@ -185,24 +185,24 @@ function ContactPage() {
                         onChange={set("subject")}
                         disabled={status === "sending"}
                       >
-                        <option value="">Bitte wählen…</option>
-                        <option value="Demo anfragen">Demo anfragen</option>
-                        <option value="Preise & Pakete">Preise & Pakete</option>
-                        <option value="Technischer Support">Technischer Support</option>
-                        <option value="Partnerschaft">Partnerschaft</option>
-                        <option value="Sonstiges">Sonstiges</option>
+                        <option value="">Please select…</option>
+                        <option value="Book a demo">Book a demo</option>
+                        <option value="Pricing & packages">Pricing & packages</option>
+                        <option value="Technical support">Technical support</option>
+                        <option value="Partnership">Partnership</option>
+                        <option value="Other">Other</option>
                       </select>
                     </div>
 
                     <div className="space-y-1.5">
                       <label className="text-xs font-semibold text-foreground" htmlFor="message">
-                        Nachricht <span className="text-brand-orange">*</span>
+                        Message <span className="text-brand-orange">*</span>
                       </label>
                       <textarea
                         id="message"
                         required
                         rows={5}
-                        placeholder="Erzähl uns von deinem Business und wie wir helfen können…"
+                        placeholder="Tell us about your business and how we can help…"
                         className={`${inputClass} resize-none`}
                         value={form.message}
                         onChange={set("message")}
@@ -212,7 +212,7 @@ function ContactPage() {
 
                     {status === "error" && (
                       <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
-                        Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib uns direkt per E-Mail.
+                        Something went wrong. Please try again or email us directly.
                       </p>
                     )}
 
@@ -224,16 +224,16 @@ function ContactPage() {
                       disabled={status === "sending" || !form.name || !form.email || !form.message}
                     >
                       {status === "sending" ? (
-                        "Wird gesendet…"
+                        "Sending…"
                       ) : (
                         <>
-                          Nachricht senden <Send className="h-4 w-4" />
+                          Send message <Send className="h-4 w-4" />
                         </>
                       )}
                     </Button>
                     <p className="text-center text-xs text-muted-foreground/60">
-                      Mit dem Absenden stimmst du unserer{" "}
-                      <a href="/privacy" className="underline hover:text-foreground">Datenschutzerklärung</a> zu.
+                      By submitting you agree to our{" "}
+                      <a href="/privacy" className="underline hover:text-foreground">Privacy Policy</a>.
                     </p>
                   </form>
                 )}

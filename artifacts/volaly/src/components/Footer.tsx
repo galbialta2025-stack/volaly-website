@@ -82,7 +82,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5 text-sm">
               <li><a href="/#industries" className="text-muted-foreground hover:text-foreground">Industries</a></li>
               <li><a href="/#faq" className="text-muted-foreground hover:text-foreground">FAQ</a></li>
-              <li><Link to="/contact" className="text-muted-foreground hover:text-foreground">Kontakt</Link></li>
+              <li><Link to="/contact" className="text-muted-foreground hover:text-foreground">Contact</Link></li>
               <li><Link to="/privacy" className="text-muted-foreground hover:text-foreground">Privacy Policy</Link></li>
               <li><Link to="/terms" className="text-muted-foreground hover:text-foreground">Terms</Link></li>
               <li><Link to="/cookie-policy" className="text-muted-foreground hover:text-foreground">Cookie Policy</Link></li>
