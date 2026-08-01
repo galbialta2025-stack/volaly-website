@@ -15,6 +15,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { SEO } from "@/components/SEO";
+import { JsonLd } from "@/components/JsonLd";
 
 export function IndustryPage({ data }: { data: IndustryPageData }) {
   const others = industryPages.filter((i) => i.slug !== data.slug).slice(0, 6);
@@ -23,8 +25,55 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
     .map((slug) => industryPages.find((p) => p.slug === slug))
     .filter(Boolean) as IndustryPageData[];
 
+  const pageUrl = `https://volaly.com/${data.slug}`;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://volaly.com/" },
+      { "@type": "ListItem", position: 2, name: data.name, item: pageUrl },
+    ],
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: data.metaTitle.replace(" — Volaly", ""),
+    description: data.metaDescription,
+    url: pageUrl,
+    provider: {
+      "@type": "Organization",
+      name: "Volaly",
+      url: "https://volaly.com",
+    },
+    serviceType: "AI Business Growth Platform",
+    areaServed: "Worldwide",
+  };
+
+  const faqSchema =
+    faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }
+      : null;
+
   return (
     <>
+      <SEO
+        title={data.metaTitle}
+        description={data.metaDescription}
+        canonical={pageUrl}
+      />
+      <JsonLd schema={breadcrumbSchema} />
+      <JsonLd schema={serviceSchema} />
+      {faqSchema && <JsonLd schema={faqSchema} />}
       {/* Hero */}
       <section className="bg-hero-glow relative overflow-hidden pt-32">
         <AuroraOrbs />

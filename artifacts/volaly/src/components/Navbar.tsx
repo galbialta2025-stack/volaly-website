@@ -35,6 +35,7 @@ export function Navbar() {
 
       <header className="fixed inset-x-0 top-0 z-50 px-4 pt-3 sm:pt-4">
         <nav
+          aria-label="Main navigation"
           className={`mx-auto flex h-[60px] max-w-6xl items-center justify-between gap-4 rounded-full px-4 transition-all duration-300 sm:px-5 ${
             scrolled
               ? "glass-nav border border-white/80 shadow-soft"

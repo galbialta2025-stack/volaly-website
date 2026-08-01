@@ -1,9 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/sections/PageHeader";
+import { SEO } from "@/components/SEO";
 
 export const Route = createFileRoute("/cookie-policy")({
   component: () => (
     <>
+      <SEO
+        title="Cookie Policy — Volaly"
+        description="Learn how Volaly uses cookies, which types of cookies are set, and how to manage or opt out through your browser settings."
+        canonical="https://volaly.com/cookie-policy"
+      />
       <PageHeader eyebrow="Legal" title="Cookie Policy" subtitle="Effective date: August 1, 2025 · Last updated: August 1, 2025" />
       <section className="pb-24">
         <div className="mx-auto max-w-3xl space-y-10 px-6 text-muted-foreground">

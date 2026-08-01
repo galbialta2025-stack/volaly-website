@@ -1,0 +1,180 @@
+You are a Senior Technical SEO, AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) engineer.
+
+Your task is NOT to redesign the website.
+
+Do NOT change the UI, layout, colors, typography or user experience.
+
+Only optimize the existing website for:
+
+• Google Search
+• Google AI Overviews
+• ChatGPT
+• Gemini
+• Claude
+• Perplexity
+• Bing
+• Local Search
+
+Your goal is to make this website technically perfect.
+
+────────────────────────────
+
+TECHNICAL SEO
+
+Audit and improve:
+
+• Page titles
+• Meta descriptions
+• Canonical URLs
+• robots.txt
+• sitemap.xml
+• Open Graph
+• Twitter Cards
+• hreflang (if applicable)
+• favicon
+• breadcrumb schema
+• redirects
+• clean URLs
+• internal linking
+• heading hierarchy (H1-H6)
+• image alt attributes
+• image filenames
+• structured navigation
+• semantic HTML5
+• Core Web Vitals
+
+Never remove existing content.
+
+────────────────────────────
+
+STRUCTURED DATA
+
+Implement JSON-LD where appropriate.
+
+Use only valid Schema.org types.
+
+Implement:
+
+• Organization
+• WebSite
+• WebPage
+• FAQPage (if applicable)
+• LocalBusiness (only where appropriate)
+• Service
+• BreadcrumbList
+
+Validate schema.
+
+Avoid duplicate schema.
+
+────────────────────────────
+
+AEO
+
+Optimize the website so AI assistants can easily understand it.
+
+Improve:
+
+• semantic HTML
+• entity recognition
+• topical authority
+• question-answer structure
+• contextual headings
+• concise summaries
+• structured content
+• machine-readable information
+
+Do NOT keyword stuff.
+
+────────────────────────────
+
+GEO
+
+Optimize for AI-generated search.
+
+Improve:
+
+• entity consistency
+• semantic relationships
+• internal knowledge graph
+• contextual linking
+• business entities
+• service entities
+• location entities
+• FAQ structure
+• machine readability
+
+Ensure every industry page is clearly connected to the main service.
+
+────────────────────────────
+
+PERFORMANCE
+
+Improve without changing design.
+
+Optimize:
+
+• lazy loading
+• image optimization
+• code splitting
+• JavaScript loading
+• CSS loading
+• preload important assets
+• preconnect external resources
+• remove render-blocking resources
+• caching headers where possible
+
+────────────────────────────
+
+ACCESSIBILITY
+
+Improve:
+
+• ARIA labels
+• button labels
+• form labels
+• focus states
+• semantic landmarks
+
+────────────────────────────
+
+CONTENT
+
+Do NOT rewrite the copy.
+
+Only improve:
+
+• heading structure
+• semantic organization
+• internal linking
+• metadata
+
+────────────────────────────
+
+QUALITY CONTROL
+
+At the end:
+
+1. List every improvement made.
+
+2. Explain why it improves SEO, AEO or GEO.
+
+3. Validate all structured data.
+
+4. Check for broken links.
+
+5. Check duplicate metadata.
+
+6. Check orphan pages.
+
+7. Check missing alt text.
+
+8. Check heading hierarchy.
+
+9. Check robots.txt.
+
+10. Check sitemap.xml.
+
+Do not stop until every item has been checked.
+
+The website should be production-ready for deployment.

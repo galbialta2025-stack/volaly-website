@@ -1,9 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/sections/PageHeader";
+import { SEO } from "@/components/SEO";
 
 export const Route = createFileRoute("/terms")({
   component: () => (
     <>
+      <SEO
+        title="Terms of Service — Volaly"
+        description="Volaly's Terms of Service covering usage terms, limitation of liability, warranty disclaimer, arbitration clause, and governing law for the AI Business Growth Platform."
+        canonical="https://volaly.com/terms"
+      />
       <PageHeader eyebrow="Legal" title="Terms of Service" subtitle="Effective date: August 1, 2025 · Last updated: August 1, 2025" />
       <section className="pb-24">
         <div className="mx-auto max-w-3xl space-y-10 px-6 text-muted-foreground">

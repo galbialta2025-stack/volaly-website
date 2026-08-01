@@ -1,9 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/sections/PageHeader";
+import { SEO } from "@/components/SEO";
 
 export const Route = createFileRoute("/privacy")({
   component: () => (
     <>
+      <SEO
+        title="Privacy Policy — Volaly"
+        description="Read Volaly's Privacy Policy. Learn what data we collect, how we use it, your rights under CCPA, and how to contact us about your personal information."
+        canonical="https://volaly.com/privacy"
+      />
       <PageHeader eyebrow="Legal" title="Privacy Policy" subtitle="Effective date: August 1, 2025 · Last updated: August 1, 2025" />
       <section className="pb-24">
         <div className="mx-auto max-w-3xl space-y-10 px-6 text-muted-foreground">

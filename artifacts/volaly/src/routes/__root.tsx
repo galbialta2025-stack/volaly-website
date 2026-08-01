@@ -11,6 +11,46 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { VideoModal } from "../components/VideoModal";
+import { JsonLd } from "../components/JsonLd";
+
+const SITE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://volaly.com/#organization",
+      name: "Volaly",
+      url: "https://volaly.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://volaly.com/volaly-logo.png",
+        width: 512,
+        height: 512,
+      },
+      description:
+        "Volaly is the AI Business Growth Platform. Create content, attract customers, convert enquiries and grow revenue automatically across Google, LINE, WhatsApp and more.",
+      sameAs: [
+        "https://www.facebook.com/profile.php?id=61592148647140",
+        "https://www.instagram.com/volal.y/",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://volaly.com/#website",
+      name: "Volaly",
+      url: "https://volaly.com",
+      publisher: { "@id": "https://volaly.com/#organization" },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: "https://volaly.com/?q={search_term_string}",
+        },
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ],
+};
 
 function NotFoundComponent() {
   return (
@@ -83,9 +123,10 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <JsonLd schema={SITE_SCHEMA} />
       <div className="flex min-h-screen flex-col">
         <Navbar />
-        <main className="flex-1">
+        <main className="flex-1" id="main-content">
           <Outlet />
         </main>
         <Footer />
