@@ -1,0 +1,114 @@
+Audit the project before making any changes.
+
+First check whether the following already exist:
+
+- manifest.webmanifest
+- site.webmanifest
+- favicon.ico
+- favicon-16x16.png
+- favicon-32x32.png
+- apple-touch-icon.png
+- android-chrome-192x192.png
+- android-chrome-512x512.png
+- browserconfig.xml (optional)
+- web app meta tags
+- theme-color meta tag
+- Apple mobile meta tags
+- Open Graph image
+- Twitter Card image
+
+If any of these already exist and are correctly configured, DO NOT recreate or replace them.
+
+Only create or update missing or incorrect files.
+
+────────────────────────────
+
+If missing, create a complete Progressive Web App (PWA) configuration.
+
+Requirements:
+
+• Create manifest.webmanifest
+• Configure the website as installable
+• Use:
+    Name: Volaly AI
+    Short Name: Volaly
+    Description: AI Revenue System for Local Businesses
+    Start URL: /
+    Display: standalone
+    Orientation: portrait
+    Background Color: white (#FFFFFF)
+    Theme Color: use the existing primary brand blue from the website
+    Language: en
+
+────────────────────────────
+
+Icons
+
+If icons already exist, reuse them.
+
+If not, create references for:
+
+- favicon.ico
+- favicon-16x16.png
+- favicon-32x32.png
+- apple-touch-icon.png (180x180)
+- android-chrome-192x192.png
+- android-chrome-512x512.png
+
+Do NOT redesign the logo.
+
+Use the existing Volaly logo exactly as provided.
+
+────────────────────────────
+
+HEAD
+
+Verify that the following exist.
+
+Create only missing entries.
+
+- manifest link
+- favicon links
+- Apple touch icon
+- theme-color
+- mobile-web-app-capable
+- apple-mobile-web-app-capable
+- apple-mobile-web-app-status-bar-style
+- apple-mobile-web-app-title
+
+────────────────────────────
+
+SEO
+
+Verify:
+
+- Open Graph image
+- Twitter Card image
+- favicon references
+- canonical URL
+- robots.txt
+- sitemap.xml
+
+────────────────────────────
+
+QUALITY CHECK
+
+At the end provide a report.
+
+For every item output:
+
+✅ Already configured
+
+or
+
+🛠 Created
+
+or
+
+⚠ Needs manual attention
+
+Do NOT modify the website design.
+
+Do NOT modify any content.
+
+Only improve the technical PWA, favicon and metadata configuration.
