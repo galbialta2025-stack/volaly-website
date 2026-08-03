@@ -1,0 +1,205 @@
+We are redesigning the Revenue Suite section on the homepage.
+
+Do NOT redesign the entire page.
+
+Only improve the Revenue Suite section.
+
+Keep the existing design system.
+
+Keep colors.
+
+Keep typography.
+
+Keep animations.
+
+Reuse existing components whenever possible.
+
+--------------------------------------------------
+
+GOAL
+
+This section should answer one question:
+
+"How does Volaly help me make money?"
+
+Focus on outcomes.
+
+Never focus on technical features.
+
+--------------------------------------------------
+
+SECTION
+
+Headline
+
+Revenue Suite
+
+Subheadline
+
+Everything you need to turn your content into revenue.
+
+Create a premium modern layout.
+
+Large spacing.
+
+Minimal design.
+
+Stripe / Linear quality.
+
+--------------------------------------------------
+
+Create six premium feature cards.
+
+Each card should include
+
+• Modern icon
+
+• Title
+
+• One sentence
+
+• Small hover animation
+
+--------------------------------------------------
+
+Card 1
+
+AI FAQ
+
+Automatically answer customer questions 24/7.
+
+--------------------------------------------------
+
+Card 2
+
+Voice AI
+
+Let customers talk naturally with your business or creator profile.
+
+--------------------------------------------------
+
+Card 3
+
+Smart Shop
+
+Sell digital products, memberships and merchandise from one place.
+
+--------------------------------------------------
+
+Card 4
+
+Memberships
+
+Build recurring monthly revenue.
+
+--------------------------------------------------
+
+Card 5
+
+Affiliate Revenue
+
+Recommend products and earn automatically.
+
+--------------------------------------------------
+
+Card 6
+
+AI Sales Assistant
+
+Turn conversations into paying customers automatically.
+
+--------------------------------------------------
+
+Below the cards
+
+Create a premium horizontal workflow.
+
+Upload Content
+
+↓
+
+Volaly AI
+
+↓
+
+Revenue Suite
+
+↓
+
+Sales
+
+↓
+
+Recurring Revenue
+
+--------------------------------------------------
+
+Below the workflow
+
+Add a small comparison.
+
+WITHOUT VOLALY
+
+• Manual replies
+
+• One income source
+
+• Missed opportunities
+
+• Manual selling
+
+WITH VOLALY
+
+• AI conversations
+
+• Multiple revenue streams
+
+• Automatic selling
+
+• Revenue 24/7
+
+Use beautiful comparison cards.
+
+--------------------------------------------------
+
+Finish the section with a CTA.
+
+Headline
+
+Start Monetizing Every Upload.
+
+Button
+
+Explore Revenue Suite
+
+--------------------------------------------------
+
+DESIGN
+
+Premium.
+
+Minimal.
+
+Large typography.
+
+Large spacing.
+
+Glassmorphism where appropriate.
+
+Subtle animations.
+
+Apple + Stripe + Linear style.
+
+--------------------------------------------------
+
+TECHNICAL
+
+Reuse existing components.
+
+Do not change routing.
+
+Do not change SEO.
+
+Keep production-ready code.
+
+Keep the implementation clean and modular.
