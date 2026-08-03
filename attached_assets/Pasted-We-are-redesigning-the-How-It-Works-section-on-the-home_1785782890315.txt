@@ -1,0 +1,192 @@
+We are redesigning the "How It Works" section on the homepage.
+
+Do NOT redesign the entire page.
+
+Only redesign this section.
+
+Keep the existing design language, colors, typography, spacing and animations.
+
+Reuse existing components whenever possible.
+
+--------------------------------------------------
+
+GOAL
+
+The visitor should understand the entire Volaly workflow within 10 seconds.
+
+This section should visually explain:
+
+One Upload.
+Volaly Does the Rest.
+
+Avoid long paragraphs.
+
+Focus on visual storytelling.
+
+--------------------------------------------------
+
+SECTION TITLE
+
+How It Works
+
+Headline
+
+From One Upload to Complete Automation.
+
+Subheadline
+
+Connect your content once.
+Volaly automatically transforms it into revenue, visibility and AI-powered customer experiences.
+
+--------------------------------------------------
+
+Create a modern horizontal workflow with premium cards.
+
+STEP 1
+
+Upload
+
+Description
+
+Upload a video, image or connect your social accounts.
+
+Icon
+
+Upload
+
+--------------------------------------------------
+
+STEP 2
+
+AI Processing
+
+Description
+
+Volaly understands your content and builds AI knowledge automatically.
+
+Icon
+
+Brain
+
+--------------------------------------------------
+
+STEP 3
+
+Revenue Suite
+
+Description
+
+Create AI FAQs, Voice AI, Shops, Memberships and Digital Products.
+
+Icon
+
+Revenue
+
+--------------------------------------------------
+
+STEP 4
+
+Visibility Suite
+
+Description
+
+Generate Smart Shorts, social posts, blogs, newsletters and SEO content automatically.
+
+Icon
+
+Rocket
+
+--------------------------------------------------
+
+STEP 5
+
+Grow
+
+Description
+
+Reach more people, answer more customers and generate more revenue.
+
+Icon
+
+Chart
+
+--------------------------------------------------
+
+Below the workflow create a premium animated flow.
+
+Content
+
+↓
+
+Volaly AI
+
+↓
+
+Revenue Suite
+
++
+
+Visibility Suite
+
+↓
+
+More Customers
+
+↓
+
+More Revenue
+
+--------------------------------------------------
+
+ANIMATION
+
+Cards should animate into view while scrolling.
+
+Connecting lines should animate smoothly.
+
+Keep animations elegant and subtle.
+
+--------------------------------------------------
+
+DESIGN
+
+Minimal.
+
+Premium.
+
+Large spacing.
+
+Apple.
+
+Stripe.
+
+Linear.
+
+Use beautiful icons.
+
+Avoid unnecessary text.
+
+--------------------------------------------------
+
+BOTTOM CTA
+
+Headline
+
+One Upload.
+Everything Else Happens Automatically.
+
+Button
+
+See How Volaly Works
+
+--------------------------------------------------
+
+TECHNICAL
+
+Reuse existing components.
+
+Keep production-ready code.
+
+Keep responsive behavior.
+
+Do not modify SEO, routing or navigation.
