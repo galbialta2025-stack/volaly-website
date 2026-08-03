@@ -1,0 +1,166 @@
+We are NOT redesigning the website.
+
+We are reorganizing the homepage to create a much stronger conversion flow.
+
+IMPORTANT
+
+Keep the existing design system.
+Keep all colors.
+Keep typography.
+Keep animations.
+Keep reusable components.
+Keep SEO.
+Keep schema markup.
+Keep all existing sections.
+
+Do NOT redesign the UI.
+
+Only change the homepage structure and section order.
+
+--------------------------------------------------
+
+NEW HOMEPAGE STRUCTURE
+
+--------------------------------------------------
+
+1.
+
+Hero
+
+(Keep current Hero for now.)
+
+--------------------------------------------------
+
+2.
+
+Move Revenue Suite directly below the Hero.
+
+Revenue Suite becomes the first major product section.
+
+Reason:
+
+Visitors first need to understand how Volaly helps them make money.
+
+--------------------------------------------------
+
+3.
+
+Move Visibility Suite directly below Revenue Suite.
+
+This becomes the second major product.
+
+--------------------------------------------------
+
+4.
+
+Move Workflow below Visibility Suite.
+
+Rename the section to
+
+How Volaly Works
+
+Keep existing animations if possible.
+
+--------------------------------------------------
+
+5.
+
+Create a brand-new section above Industries called
+
+Who Uses Volaly?
+
+This section contains only TWO large premium cards.
+
+Card 1
+
+Creators
+
+Short text:
+
+Monetize your audience, automate your content and grow your creator business.
+
+Button:
+
+Explore Creator
+
+--------------------------------------------------
+
+Card 2
+
+Businesses
+
+Short text:
+
+Generate more leads, automate customer communication and grow your business.
+
+Button:
+
+Explore Industries
+
+--------------------------------------------------
+
+Reuse the current card style.
+
+Do NOT create a complicated layout.
+
+--------------------------------------------------
+
+6.
+
+Move the Industries section BELOW the new "Who Uses Volaly?" section.
+
+Keep all existing industry cards.
+
+Do not remove any.
+
+--------------------------------------------------
+
+7.
+
+Move Why Volaly below Industries.
+
+--------------------------------------------------
+
+8.
+
+Keep FAQ.
+
+--------------------------------------------------
+
+9.
+
+Keep Final CTA.
+
+--------------------------------------------------
+
+10.
+
+Keep Footer.
+
+--------------------------------------------------
+
+Navigation
+
+Do not remove existing navigation items.
+
+Only prepare the structure for future changes.
+
+No new navigation yet.
+
+--------------------------------------------------
+
+IMPORTANT
+
+Do NOT redesign sections.
+
+Do NOT rewrite all copy.
+
+Do NOT change colors.
+
+Do NOT introduce new layouts.
+
+Only improve the homepage flow and hierarchy.
+
+Reuse as much code as possible.
+
+Keep the codebase clean and production-ready.

@@ -1,0 +1,159 @@
+We are repositioning Volaly.
+
+Do NOT redesign the entire homepage.
+
+Only redesign the HERO section.
+
+Keep the current design system, typography, colors, spacing, gradients and animations.
+
+The new hero should feel like a premium SaaS website similar to Stripe, Linear, Vercel or Apple.
+
+--------------------------------------------------
+
+GOAL
+
+The visitor should understand Volaly within 5 seconds.
+
+The message is no longer:
+
+AI Automation
+
+The message becomes:
+
+One Upload.
+Volaly Does the Rest.
+
+--------------------------------------------------
+
+Replace the current Hero copy.
+
+Headline:
+
+One Upload.
+Volaly Does the Rest.
+
+Make this extremely large.
+
+Maximum two lines.
+
+Strong typography.
+
+--------------------------------------------------
+
+Subheadline
+
+Transform every piece of content into revenue, visibility and AI-powered customer conversations.
+
+Connect your social accounts once. Volaly automatically creates revenue streams, AI knowledge, FAQs, voice conversations, smart shorts and multi-platform content.
+
+Maximum 2 short paragraphs.
+
+Very easy to scan.
+
+--------------------------------------------------
+
+Buttons
+
+Primary
+
+Start Free
+
+Secondary
+
+Watch Demo
+
+--------------------------------------------------
+
+Right Side Hero Visual
+
+Replace static illustrations with a premium animated workflow.
+
+Create a floating workflow card.
+
+Example flow:
+
+Upload
+
+↓
+
+Volaly AI
+
+↓
+
+Revenue Suite
+
+• AI FAQ
+• Voice AI
+• Creator Shop
+• Memberships
+
++
+
+Visibility Suite
+
+• Smart Shorts
+• Auto Posting
+• Blog
+• SEO
+
+↓
+
+Revenue
+
+Use beautiful motion.
+
+Floating cards.
+
+Subtle animations.
+
+Glassmorphism.
+
+Premium shadows.
+
+Gradient accents.
+
+--------------------------------------------------
+
+Micro Trust Section
+
+Below the hero add three small benefit badges.
+
+⚡ One Upload
+
+💰 Multiple Revenue Streams
+
+🚀 Grow Everywhere
+
+--------------------------------------------------
+
+Visual Style
+
+Do NOT create a busy hero.
+
+Use lots of whitespace.
+
+Large typography.
+
+Premium spacing.
+
+Minimal icons.
+
+Professional SaaS quality.
+
+--------------------------------------------------
+
+Technical Requirements
+
+Reuse existing components whenever possible.
+
+Do not change routing.
+
+Do not modify SEO.
+
+Do not change navigation.
+
+Keep performance high.
+
+Use Framer Motion only for subtle animations.
+
+The result should look production ready.
