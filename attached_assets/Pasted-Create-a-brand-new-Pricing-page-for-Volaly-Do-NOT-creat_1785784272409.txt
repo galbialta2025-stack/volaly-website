@@ -1,0 +1,303 @@
+Create a brand-new Pricing page for Volaly.
+
+Do NOT create a typical SaaS pricing page.
+
+The pricing page should reinforce the idea that creators and businesses grow with Volaly.
+
+Reuse the current design system, typography, spacing, colors and animations.
+
+Maintain the same premium visual language used throughout the website.
+
+Style inspiration:
+
+Apple
+
+Stripe
+
+Linear
+
+Vercel
+
+--------------------------------------------------
+
+GOAL
+
+Pricing should feel simple.
+
+Three paid plans.
+
+One invitation-only partner plan.
+
+Focus on VALUE.
+
+Not features.
+
+--------------------------------------------------
+
+SECTION 1
+
+Hero
+
+Headline
+
+Choose How You Want To Grow.
+
+Subheadline
+
+Start with the plan that fits today.
+Upgrade whenever your business grows.
+
+--------------------------------------------------
+
+SECTION 2
+
+Pricing Cards
+
+Creator Partner
+
+Invitation Only
+
+$0
+
+Requirements
+
+5,000+ Followers
+OR
+Approved Application
+
+Revenue Share
+
+Digital Products
+
+30%
+
+Merch
+
+15%
+
+Memberships
+
+10%
+
+Included
+
+Revenue Suite
+
+Creator Page
+
+AI FAQ
+
+Voice AI
+
+Smart Shop
+
+CTA
+
+Apply Now
+
+--------------------------------------------------
+
+Creator
+
+$199 / month
+
+Revenue Share
+
+Digital Products
+
+20%
+
+Merch
+
+12%
+
+Memberships
+
+8%
+
+CTA
+
+Start Free Trial
+
+--------------------------------------------------
+
+Creator Pro
+
+Most Popular
+
+$499 / month
+
+Revenue Share
+
+Digital Products
+
+15%
+
+Merch
+
+10%
+
+Memberships
+
+6%
+
+CTA
+
+Upgrade
+
+--------------------------------------------------
+
+Creator Elite
+
+$999 / month
+
+Revenue Share
+
+Digital Products
+
+10%
+
+Merch
+
+8%
+
+Memberships
+
+5%
+
+CTA
+
+Contact Sales
+
+--------------------------------------------------
+
+SECTION 3
+
+Upgrade Journey
+
+Create a premium animated timeline.
+
+Creator Partner
+
+↓
+
+Creator
+
+↓
+
+Creator Pro
+
+↓
+
+Creator Elite
+
+Headline
+
+The More You Grow,
+The Less You Pay.
+
+Explain that revenue share decreases while automation, AI capabilities and scaling features increase.
+
+--------------------------------------------------
+
+SECTION 4
+
+Feature Comparison
+
+Use the existing component style.
+
+Compare
+
+Revenue Suite
+
+Visibility Suite
+
+AI
+
+Automation
+
+Support
+
+API
+
+White Label
+
+Teams
+
+Analytics
+
+--------------------------------------------------
+
+SECTION 5
+
+FAQ
+
+Questions
+
+Why revenue sharing?
+
+Can I upgrade anytime?
+
+Do I own my content?
+
+Why is Creator Partner invitation only?
+
+What happens if I grow?
+
+--------------------------------------------------
+
+SECTION 6
+
+CTA
+
+Headline
+
+Ready To Let Volaly Do The Rest?
+
+Primary Button
+
+Start Free
+
+Secondary Button
+
+Book Demo
+
+--------------------------------------------------
+
+DESIGN
+
+Minimal.
+
+Premium.
+
+Lots of whitespace.
+
+Beautiful pricing cards.
+
+Smooth hover animations.
+
+Large typography.
+
+Glassmorphism.
+
+Apple quality.
+
+Stripe quality.
+
+Linear quality.
+
+--------------------------------------------------
+
+TECHNICAL
+
+Reuse existing pricing components if available.
+
+Responsive.
+
+Production-ready.
+
+SEO optimized.
+
+Maintain performance.
+
+Do not modify routing or navigation.
