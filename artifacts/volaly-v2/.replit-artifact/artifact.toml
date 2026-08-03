@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/volaly-v2/"
+title = "Volaly (Copy)"
+description = "Working copy of the Volaly marketing website for parallel development and experimentation."
+version = "1.0.0"
+id = "artifacts/volaly-v2"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/volaly-v2/" ]
+localPort = 18238
+
+[services.development]
+run = "pnpm --filter @workspace/volaly-v2 run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/volaly-v2", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/volaly-v2/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18238"
+BASE_PATH = "/volaly-v2/"

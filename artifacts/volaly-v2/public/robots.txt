@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://volaly.com/sitemap.xml
