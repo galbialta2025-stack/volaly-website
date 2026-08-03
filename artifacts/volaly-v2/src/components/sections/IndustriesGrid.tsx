@@ -1,40 +1,98 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import { motion } from "motion/react";
 import { industryPages } from "@/lib/industries-data";
+import { Button } from "@/components/ui/button";
 import { SectionHeading } from "./shared";
-import { Stagger, StaggerItem } from "@/components/Motion";
+import { Stagger, StaggerItem, Reveal } from "@/components/Motion";
+import { openDemo } from "@/lib/demo";
+
+/** One outcome sentence per industry slug. */
+const outcomes: Record<string, string> = {
+  gym:                      "Turn every workout into memberships.",
+  dentist:                  "Turn expertise into trust and appointments.",
+  "medical-beauty":         "Turn every treatment into appointments.",
+  "visa-agency":            "Turn every enquiry into approved applications.",
+  "real-estate":            "Turn every listing into qualified leads.",
+  "social-media-influencer":"Turn every upload into revenue.",
+  "car-rental":             "Turn every search into a confirmed booking.",
+  hotel:                    "Turn every room into bookings.",
+  bar:                      "Turn every event into packed nights.",
+  restaurant:               "Turn every dish into customers.",
+};
 
 export function IndustriesGrid() {
   return (
-    <section id="industries" className="bg-mesh-soft relative scroll-mt-24 overflow-hidden py-28">
+    <section id="industries" className="relative scroll-mt-24 overflow-hidden bg-muted/20 py-28">
       <div className="relative mx-auto max-w-7xl px-6">
+
+        {/* Heading */}
         <SectionHeading
           eyebrow="Industries"
-          title={<>Built for <span className="gradient-text-multi">your business</span></>}
-          subtitle="Tailored AI systems for the industries that rely on visibility and bookings."
+          title="Built for Every Business That Creates Content."
+          subtitle="One AI platform. Endless possibilities. Whether you're a creator, hotel, restaurant, gym or real estate agency — Volaly transforms every upload into revenue and visibility."
         />
-        <Stagger className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2" gap={0.05}>
+
+        {/* Industry cards — 4-col desktop, 2-col tablet, 1-col mobile */}
+        <Stagger
+          className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+          gap={0.05}
+        >
           {industryPages.map((ind) => (
             <StaggerItem key={ind.slug}>
-              <Link
-                to={`/${ind.slug}` as "/"}
-                className="group relative flex h-full min-h-44 flex-col justify-between overflow-hidden rounded-[24px] border border-border/70 bg-background/70 p-6 shadow-soft backdrop-blur transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[var(--shadow-glow-orange)]"
-              >
-              <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-gradient-to-br from-brand-orange/20 to-brand-blue/20 blur-2xl transition-opacity duration-300 group-hover:opacity-100 opacity-60" />
-              <div className="relative grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-brand-orange/15 to-brand-purple/15 text-brand-orange">
-                <ind.icon className="h-6 w-6" />
-              </div>
-              <div className="relative mt-6">
-                <h3 className="text-lg font-bold text-foreground">{ind.name}</h3>
-                <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted-foreground">{ind.subtitle}</p>
-                <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-orange">
-                  Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </span>
-              </div>
+              <Link to={`/${ind.slug}` as "/"} className="group block h-full">
+                <motion.div
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                  className="relative flex h-full flex-col overflow-hidden rounded-[22px] border border-border/60 bg-background/80 p-6 backdrop-blur transition-all duration-300 hover:border-brand-orange/35 hover:shadow-[0_12px_40px_rgba(0,0,0,0.10)]"
+                >
+                  {/* Hover glow blob */}
+                  <div className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-gradient-to-br from-brand-orange/20 to-brand-blue/20 opacity-0 blur-2xl transition-opacity duration-400 group-hover:opacity-100" />
+
+                  {/* Icon */}
+                  <div className="relative z-10 grid h-11 w-11 place-items-center rounded-[14px] bg-gradient-to-br from-brand-orange/15 to-brand-blue/15 text-brand-orange transition-transform duration-300 group-hover:scale-110">
+                    <ind.icon className="h-5 w-5" />
+                  </div>
+
+                  {/* Text */}
+                  <div className="relative z-10 mt-5 flex-1">
+                    <h3 className="text-sm font-extrabold text-foreground">{ind.name}</h3>
+                    <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
+                      {outcomes[ind.slug] ?? ind.subtitle}
+                    </p>
+                  </div>
+
+                  {/* Arrow */}
+                  <div className="relative z-10 mt-4 inline-flex items-center gap-1 text-xs font-semibold text-brand-orange/70 transition-colors duration-200 group-hover:text-brand-orange">
+                    Learn more
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" />
+                  </div>
+                </motion.div>
               </Link>
             </StaggerItem>
           ))}
         </Stagger>
+
+        {/* Bottom statement */}
+        <Reveal delay={0.1}>
+          <div className="mt-16 flex flex-col items-center gap-1 text-center">
+            <p className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+              One Upload.{" "}
+              <span className="gradient-text-multi">Different Industries.</span>
+              <span className="block">Same AI Engine.</span>
+            </p>
+          </div>
+        </Reveal>
+
+        {/* CTA */}
+        <Reveal delay={0.15}>
+          <div className="mt-8 flex justify-center">
+            <Button variant="heroOutline" size="lg" onClick={openDemo}>
+              Explore All Industries <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
+        </Reveal>
+
       </div>
     </section>
   );

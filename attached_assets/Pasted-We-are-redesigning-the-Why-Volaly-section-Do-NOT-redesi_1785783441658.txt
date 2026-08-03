@@ -1,0 +1,184 @@
+We are redesigning the "Why Volaly" section.
+
+Do NOT redesign the rest of the homepage.
+
+Keep the existing design system.
+
+Reuse existing components whenever possible.
+
+--------------------------------------------------
+
+GOAL
+
+Do NOT compare Volaly against competitors.
+
+Instead explain why Volaly is fundamentally different.
+
+The section should communicate one message:
+
+Volaly doesn't replace your existing platforms.
+
+It makes them work together.
+
+--------------------------------------------------
+
+SECTION
+
+Headline
+
+Your Content Already Works.
+Volaly Makes It Work Harder.
+
+Subheadline
+
+Keep using YouTube, Instagram, TikTok, Facebook and your existing tools.
+
+Volaly connects everything and automatically turns every upload into revenue, visibility and AI-powered customer experiences.
+
+--------------------------------------------------
+
+Create four premium cards.
+
+--------------------------------------------------
+
+Card 1
+
+One Upload
+
+Description
+
+Upload once or connect your social accounts.
+
+Volaly automatically handles everything else.
+
+--------------------------------------------------
+
+Card 2
+
+Revenue First
+
+Description
+
+Every upload becomes new opportunities to generate revenue automatically.
+
+--------------------------------------------------
+
+Card 3
+
+Works With Your Existing Tools
+
+Description
+
+No need to replace YouTube, Instagram or TikTok.
+
+Volaly builds on top of them.
+
+--------------------------------------------------
+
+Card 4
+
+Always Learning
+
+Description
+
+Every new upload expands your AI knowledge, improves customer conversations and strengthens your business.
+
+--------------------------------------------------
+
+Below the cards create a premium comparison.
+
+Instead of a comparison table use two modern panels.
+
+LEFT PANEL
+
+Traditional Workflow
+
+Upload
+
+↓
+
+One Platform
+
+↓
+
+Manual Work
+
+↓
+
+Repeat
+
+RIGHT PANEL
+
+Volaly Workflow
+
+Upload
+
+↓
+
+Volaly AI
+
+↓
+
+Revenue Suite
+
++
+
+Visibility Suite
+
+↓
+
+Automatic Growth
+
+--------------------------------------------------
+
+Bottom Statement
+
+You already create content.
+
+Volaly makes every upload work harder.
+
+--------------------------------------------------
+
+CTA
+
+See Volaly in Action
+
+--------------------------------------------------
+
+DESIGN
+
+Premium SaaS.
+
+Minimal.
+
+Apple.
+
+Stripe.
+
+Linear.
+
+Large spacing.
+
+Soft gradients.
+
+Glass cards.
+
+Elegant animations.
+
+No feature overload.
+
+--------------------------------------------------
+
+TECHNICAL
+
+Reuse existing components.
+
+Responsive.
+
+Production-ready.
+
+Do not change routing.
+
+Do not modify navigation.
+
+Do not touch SEO.
