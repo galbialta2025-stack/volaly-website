@@ -1,0 +1,220 @@
+Create a brand-new FAQ page for Volaly.
+
+Route:
+
+/faq
+
+This should become the central knowledge page for the platform.
+
+Reuse the existing design system.
+
+Reuse typography, colors, spacing and animations.
+
+Keep the premium SaaS look.
+
+Style inspiration:
+
+Stripe
+Linear
+Apple
+Vercel
+
+--------------------------------------------------
+
+GOAL
+
+The FAQ page should answer every important question before someone contacts sales.
+
+Use collapsible accordion components.
+
+Include search at the top.
+
+Group FAQs into categories.
+
+--------------------------------------------------
+
+Hero
+
+Headline
+
+Frequently Asked Questions
+
+Subheadline
+
+Everything you need to know about Volaly.
+
+Large search bar.
+
+Placeholder
+
+Search questions...
+
+--------------------------------------------------
+
+Categories
+
+Create filter tabs.
+
+General
+
+Revenue Suite
+
+Visibility Suite
+
+Creator
+
+Business
+
+Pricing
+
+Security
+
+AI
+
+--------------------------------------------------
+
+GENERAL
+
+What is Volaly?
+
+Who is Volaly for?
+
+How does Volaly work?
+
+What makes Volaly different?
+
+--------------------------------------------------
+
+REVENUE SUITE
+
+What is Revenue Suite?
+
+How does AI FAQ work?
+
+What is Voice AI?
+
+Can I sell digital products?
+
+Can I sell memberships?
+
+Can I sell merchandise?
+
+How do affiliate products work?
+
+--------------------------------------------------
+
+VISIBILITY SUITE
+
+What is Visibility Suite?
+
+What are Smart Shorts?
+
+Can Volaly publish automatically?
+
+Can I connect social accounts?
+
+Does Volaly generate blogs?
+
+Does Volaly create newsletters?
+
+--------------------------------------------------
+
+CREATORS
+
+Can creators use Volaly?
+
+Do I need 5,000 followers?
+
+What is Creator Partner?
+
+Can I migrate from another platform?
+
+--------------------------------------------------
+
+BUSINESSES
+
+Can businesses use Volaly?
+
+Which industries are supported?
+
+Can I use Volaly for multiple locations?
+
+--------------------------------------------------
+
+PRICING
+
+How does revenue sharing work?
+
+Can I upgrade?
+
+Can I cancel?
+
+Do I own my customers?
+
+--------------------------------------------------
+
+AI
+
+How does the AI learn?
+
+Does the AI improve over time?
+
+Can I upload PDFs?
+
+Can I upload videos?
+
+Can I upload websites?
+
+--------------------------------------------------
+
+Search
+
+The search bar should instantly filter all FAQ entries.
+
+--------------------------------------------------
+
+Bottom CTA
+
+Still have questions?
+
+Talk to Volaly AI
+
+Button
+
+Start Chat
+
+--------------------------------------------------
+
+Design
+
+Premium.
+
+Minimal.
+
+Fast.
+
+Lots of whitespace.
+
+Beautiful accordion animations.
+
+Apple quality.
+
+Stripe quality.
+
+Linear quality.
+
+--------------------------------------------------
+
+Technical
+
+Reusable accordion components.
+
+Reusable category filter.
+
+Search should work client-side.
+
+Responsive.
+
+Production-ready.
+
+SEO optimized.
