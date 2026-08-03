@@ -13,6 +13,7 @@ import { Route as CreatorRouteImport } from './routes/creator'
 import { Route as DemoRouteImport } from './routes/demo'
 import { Route as VisibilitySuiteRouteImport } from './routes/visibility-suite'
 import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as FaqPageRouteImport } from './routes/faq'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as VisaAgencyRouteImport } from './routes/visa-agency'
 import { Route as TermsRouteImport } from './routes/terms'
@@ -48,6 +49,11 @@ const VisibilitySuiteRoute = VisibilitySuiteRouteImport.update({
 const PricingRoute = PricingRouteImport.update({
   id: '/pricing',
   path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqPageRoute = FaqPageRouteImport.update({
+  id: '/faq',
+  path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -139,6 +145,7 @@ export interface FileRoutesByFullPath {
   '/demo': typeof DemoRoute
   '/visibility-suite': typeof VisibilitySuiteRoute
   '/pricing': typeof PricingRoute
+  '/faq': typeof FaqPageRoute
   '/car-rental': typeof CarRentalRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/dentist': typeof DentistRoute
@@ -161,6 +168,7 @@ export interface FileRoutesByTo {
   '/demo': typeof DemoRoute
   '/visibility-suite': typeof VisibilitySuiteRoute
   '/pricing': typeof PricingRoute
+  '/faq': typeof FaqPageRoute
   '/car-rental': typeof CarRentalRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/dentist': typeof DentistRoute
@@ -184,6 +192,7 @@ export interface FileRoutesById {
   '/demo': typeof DemoRoute
   '/visibility-suite': typeof VisibilitySuiteRoute
   '/pricing': typeof PricingRoute
+  '/faq': typeof FaqPageRoute
   '/car-rental': typeof CarRentalRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/dentist': typeof DentistRoute
@@ -208,6 +217,7 @@ export interface FileRouteTypes {
     | '/demo'
     | '/visibility-suite'
     | '/pricing'
+    | '/faq'
     | '/car-rental'
     | '/cookie-policy'
     | '/dentist'
@@ -230,6 +240,7 @@ export interface FileRouteTypes {
     | '/demo'
     | '/visibility-suite'
     | '/pricing'
+    | '/faq'
     | '/car-rental'
     | '/cookie-policy'
     | '/dentist'
@@ -252,6 +263,7 @@ export interface FileRouteTypes {
     | '/demo'
     | '/visibility-suite'
     | '/pricing'
+    | '/faq'
     | '/car-rental'
     | '/cookie-policy'
     | '/dentist'
@@ -275,6 +287,7 @@ export interface RootRouteChildren {
   DemoRoute: typeof DemoRoute
   VisibilitySuiteRoute: typeof VisibilitySuiteRoute
   PricingRoute: typeof PricingRoute
+  FaqPageRoute: typeof FaqPageRoute
   CarRentalRoute: typeof CarRentalRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
   DentistRoute: typeof DentistRoute
@@ -425,6 +438,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqPageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -443,6 +463,7 @@ const rootRouteChildren: RootRouteChildren = {
   DemoRoute: DemoRoute,
   VisibilitySuiteRoute: VisibilitySuiteRoute,
   PricingRoute: PricingRoute,
+  FaqPageRoute: FaqPageRoute,
   CarRentalRoute: CarRentalRoute,
   CookiePolicyRoute: CookiePolicyRoute,
   DentistRoute: DentistRoute,
