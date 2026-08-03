@@ -1,0 +1,299 @@
+Create a brand-new landing page:
+
+/visibility-suite
+
+This page should become the main sales page for the Visibility Suite.
+
+Do NOT copy the homepage.
+
+Go much deeper.
+
+Reuse the existing Volaly design system.
+
+Reuse components whenever possible.
+
+Maintain typography, spacing, animations and colors.
+
+Design inspiration:
+
+Apple
+Stripe
+Linear
+Vercel
+
+--------------------------------------------------
+
+GOAL
+
+Answer one question:
+
+"How does Volaly help me grow?"
+
+This page should sell outcomes.
+
+Never sell features.
+
+--------------------------------------------------
+
+SECTION 1
+
+Hero
+
+Headline
+
+Grow Everywhere.
+From One Upload.
+
+Subheadline
+
+One upload automatically becomes social content, shorts, blogs, SEO pages and newsletters.
+
+Primary CTA
+
+Start Free
+
+Secondary CTA
+
+Watch Demo
+
+Large animated product illustration.
+
+--------------------------------------------------
+
+SECTION 2
+
+The Visibility Problem
+
+Without Volaly
+
+Upload
+
+↓
+
+One Platform
+
+↓
+
+Repeat
+
+Repeat
+
+Repeat
+
+With Volaly
+
+Upload Once
+
+↓
+
+Volaly AI
+
+↓
+
+Every Platform
+
+↓
+
+Automatic Growth
+
+Use premium comparison cards.
+
+--------------------------------------------------
+
+SECTION 3
+
+Everything Works Automatically
+
+Premium feature grid.
+
+Smart Shorts
+
+Turn long videos into viral short-form content.
+
+Auto Publishing
+
+Publish everywhere automatically.
+
+Auto Import
+
+Connect your accounts once.
+
+SEO Engine
+
+Turn content into Google traffic.
+
+AI Blog Writer
+
+Every upload becomes an article.
+
+Newsletter Generator
+
+Automatically create email campaigns.
+
+Multi-language Publishing
+
+Reach global audiences.
+
+Analytics
+
+Know what really grows your business.
+
+--------------------------------------------------
+
+SECTION 4
+
+One Upload Workflow
+
+Large animated workflow.
+
+Upload
+
+↓
+
+Volaly AI
+
+↓
+
+Smart Shorts
+
+↓
+
+Instagram
+
+TikTok
+
+Facebook
+
+YouTube
+
+LinkedIn
+
+X
+
+Threads
+
+Blog
+
+Newsletter
+
+SEO
+
+↓
+
+Growth
+
+--------------------------------------------------
+
+SECTION 5
+
+Growth Dashboard
+
+Modern dashboard preview.
+
+Posts Published
+
+Reach
+
+Views
+
+Followers
+
+Traffic
+
+Top Performing Content
+
+--------------------------------------------------
+
+SECTION 6
+
+Why Visibility Suite?
+
+Three premium cards.
+
+Save Hours Every Week
+
+Reach Every Platform
+
+Keep Creating Instead of Posting
+
+--------------------------------------------------
+
+SECTION 7
+
+Who Benefits?
+
+Cards
+
+Creators
+
+Coaches
+
+Businesses
+
+Restaurants
+
+Hotels
+
+Real Estate
+
+Gyms
+
+--------------------------------------------------
+
+SECTION 8
+
+FAQ
+
+Visibility Suite specific questions.
+
+--------------------------------------------------
+
+SECTION 9
+
+Final CTA
+
+Headline
+
+You Create.
+
+Volaly Grows.
+
+Button
+
+Start Free
+
+--------------------------------------------------
+
+DESIGN
+
+Minimal.
+
+Premium.
+
+Apple quality.
+
+Stripe quality.
+
+Linear quality.
+
+Large whitespace.
+
+Modern gradients.
+
+Glassmorphism.
+
+Elegant animations.
+
+--------------------------------------------------
+
+TECHNICAL
+
+Reuse existing components.
+
+Responsive.
+
+Production ready.
+
+SEO optimized.
+
+Keep performance high.

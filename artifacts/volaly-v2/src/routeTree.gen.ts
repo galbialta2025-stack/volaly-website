@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as CreatorRouteImport } from './routes/creator'
+import { Route as DemoRouteImport } from './routes/demo'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as VisaAgencyRouteImport } from './routes/visa-agency'
 import { Route as TermsRouteImport } from './routes/terms'
@@ -30,6 +31,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const CreatorRoute = CreatorRouteImport.update({
   id: '/creator',
   path: '/creator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemoRoute = DemoRouteImport.update({
+  id: '/demo',
+  path: '/demo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -118,6 +124,7 @@ export interface FileRoutesByFullPath {
   '/bar': typeof BarRoute
   '/contact': typeof ContactRoute
   '/creator': typeof CreatorRoute
+  '/demo': typeof DemoRoute
   '/car-rental': typeof CarRentalRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/dentist': typeof DentistRoute
@@ -137,6 +144,7 @@ export interface FileRoutesByTo {
   '/bar': typeof BarRoute
   '/contact': typeof ContactRoute
   '/creator': typeof CreatorRoute
+  '/demo': typeof DemoRoute
   '/car-rental': typeof CarRentalRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/dentist': typeof DentistRoute
@@ -157,6 +165,7 @@ export interface FileRoutesById {
   '/bar': typeof BarRoute
   '/contact': typeof ContactRoute
   '/creator': typeof CreatorRoute
+  '/demo': typeof DemoRoute
   '/car-rental': typeof CarRentalRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/dentist': typeof DentistRoute
@@ -178,6 +187,7 @@ export interface FileRouteTypes {
     | '/bar'
     | '/contact'
     | '/creator'
+    | '/demo'
     | '/car-rental'
     | '/cookie-policy'
     | '/dentist'
@@ -197,6 +207,7 @@ export interface FileRouteTypes {
     | '/bar'
     | '/contact'
     | '/creator'
+    | '/demo'
     | '/car-rental'
     | '/cookie-policy'
     | '/dentist'
@@ -216,6 +227,7 @@ export interface FileRouteTypes {
     | '/bar'
     | '/contact'
     | '/creator'
+    | '/demo'
     | '/car-rental'
     | '/cookie-policy'
     | '/dentist'
@@ -236,6 +248,7 @@ export interface RootRouteChildren {
   BarRoute: typeof BarRoute
   ContactRoute: typeof ContactRoute
   CreatorRoute: typeof CreatorRoute
+  DemoRoute: typeof DemoRoute
   CarRentalRoute: typeof CarRentalRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
   DentistRoute: typeof DentistRoute
@@ -365,6 +378,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CreatorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/demo': {
+      id: '/demo'
+      path: '/demo'
+      fullPath: '/demo'
+      preLoaderRoute: typeof DemoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -380,6 +400,7 @@ const rootRouteChildren: RootRouteChildren = {
   BarRoute: BarRoute,
   ContactRoute: ContactRoute,
   CreatorRoute: CreatorRoute,
+  DemoRoute: DemoRoute,
   CarRentalRoute: CarRentalRoute,
   CookiePolicyRoute: CookiePolicyRoute,
   DentistRoute: DentistRoute,
