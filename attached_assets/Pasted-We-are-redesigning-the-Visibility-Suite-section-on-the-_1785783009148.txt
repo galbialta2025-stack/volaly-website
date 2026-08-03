@@ -1,0 +1,229 @@
+We are redesigning the Visibility Suite section on the homepage.
+
+Do NOT redesign the entire homepage.
+
+Only redesign the Visibility Suite section.
+
+Keep the existing design system.
+
+Keep typography.
+
+Keep colors.
+
+Keep spacing.
+
+Keep animations.
+
+Reuse existing components whenever possible.
+
+--------------------------------------------------
+
+GOAL
+
+This section should answer one simple question:
+
+"How does Volaly help me grow?"
+
+Focus on RESULTS.
+
+Do NOT focus on software features.
+
+Every card should explain what the user achieves.
+
+--------------------------------------------------
+
+SECTION
+
+Headline
+
+Visibility Suite
+
+Subheadline
+
+Grow everywhere from a single upload.
+
+One piece of content automatically becomes dozens of assets for every platform.
+
+--------------------------------------------------
+
+Create six premium feature cards.
+
+Each card contains
+
+• Icon
+
+• Title
+
+• One short description
+
+• Hover animation
+
+--------------------------------------------------
+
+Card 1
+
+Smart Shorts
+
+Turn one long video into multiple high-performing short videos automatically.
+
+--------------------------------------------------
+
+Card 2
+
+Auto Publishing
+
+Publish everywhere from one upload.
+
+--------------------------------------------------
+
+Card 3
+
+Social Media
+
+Create content for Instagram, TikTok, Facebook, LinkedIn, X and YouTube automatically.
+
+--------------------------------------------------
+
+Card 4
+
+SEO Content
+
+Transform every upload into search traffic with AI-generated articles.
+
+--------------------------------------------------
+
+Card 5
+
+Newsletter
+
+Automatically generate email campaigns from your content.
+
+--------------------------------------------------
+
+Card 6
+
+Analytics
+
+See which content generates the most revenue and visibility.
+
+--------------------------------------------------
+
+Below the cards create a premium transformation animation.
+
+Upload Once
+
+↓
+
+Volaly AI
+
+↓
+
+Shorts
+
+↓
+
+Social Posts
+
+↓
+
+Blog
+
+↓
+
+SEO
+
+↓
+
+Newsletter
+
+↓
+
+Multiple Platforms
+
+↓
+
+Audience Growth
+
+--------------------------------------------------
+
+Below this animation create a highlight section.
+
+Headline
+
+One Upload.
+Unlimited Visibility.
+
+Short text
+
+Instead of manually creating content for every platform,
+Volaly automatically adapts every upload for the channels that matter.
+
+--------------------------------------------------
+
+Create a comparison.
+
+WITHOUT VOLALY
+
+• Upload once
+
+• Reach one platform
+
+• Create everything manually
+
+• Limited visibility
+
+WITH VOLALY
+
+• Upload once
+
+• Publish everywhere
+
+• AI adapts every format
+
+• Maximum reach
+
+--------------------------------------------------
+
+CTA
+
+Headline
+
+Grow Everywhere Automatically.
+
+Button
+
+Explore Visibility Suite
+
+--------------------------------------------------
+
+DESIGN
+
+Premium SaaS.
+
+Apple.
+
+Stripe.
+
+Linear.
+
+Large spacing.
+
+Glassmorphism.
+
+Subtle animations.
+
+No walls of text.
+
+--------------------------------------------------
+
+TECHNICAL
+
+Reuse existing components.
+
+Do not modify navigation.
+
+Do not modify SEO.
+
+Do not modify routing.
+
+Production-ready code only.

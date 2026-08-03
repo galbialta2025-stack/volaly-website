@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/sections/Hero";
 import { Problem } from "@/components/sections/Problem";
 import { TrustBar } from "@/components/sections/TrustBar";
-import { VisibilityEngine } from "@/components/sections/Engines";
+import { VisibilitySuite } from "@/components/sections/VisibilitySuite";
 import { RevenueSuite } from "@/components/sections/RevenueSuite";
 import { Workflow } from "@/components/sections/Workflow";
 import { IndustriesGrid } from "@/components/sections/IndustriesGrid";
@@ -55,7 +55,7 @@ function Index() {
       <Hero />
       <TrustBar />
       <Problem />
-      <VisibilityEngine />
+      <VisibilitySuite />
       <RevenueSuite />
       <Workflow />
       <IndustriesGrid />
