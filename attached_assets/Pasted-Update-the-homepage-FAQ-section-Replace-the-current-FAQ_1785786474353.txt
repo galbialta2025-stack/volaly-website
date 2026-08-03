@@ -1,0 +1,149 @@
+Update the homepage FAQ section.
+
+Replace the current FAQ questions and answers with the following new content.
+
+Keep the existing FAQ component.
+
+Keep the current design system, animations, spacing and typography.
+
+Do not change the accordion behavior.
+
+Keep the implementation SEO friendly.
+
+Where appropriate, add internal links to the corresponding pages using the existing routing system.
+
+Maximum one or two internal links per answer.
+
+--------------------------------------------------
+
+FAQ 1
+
+Question
+
+What is Volaly?
+
+Answer
+
+Volaly is an AI-powered platform that helps creators and businesses turn every upload into revenue and visibility. Instead of juggling multiple tools, Volaly automatically transforms your content into AI conversations, digital products, smart social content and new growth opportunities. Learn more about the Revenue Suite and Visibility Suite to see how everything works together.
+
+--------------------------------------------------
+
+FAQ 2
+
+Question
+
+Who is Volaly for?
+
+Answer
+
+Volaly is built for anyone who creates content to grow a business. Whether you're a creator, coach, hotel, restaurant, gym, real estate agency or local business, Volaly helps automate customer conversations, increase visibility and generate more revenue from every upload. Explore the Creator page or Business Solutions to see how Volaly adapts to your workflow.
+
+--------------------------------------------------
+
+FAQ 3
+
+Question
+
+How does Volaly work?
+
+Answer
+
+Simply upload your content or connect your social media accounts. Volaly automatically understands your content, builds AI knowledge, creates customer conversations, generates new marketing assets and helps grow your business. One upload powers both the Revenue Suite and the Visibility Suite, allowing you to monetize and scale from a single workflow.
+
+--------------------------------------------------
+
+FAQ 4
+
+Question
+
+What is the Revenue Suite?
+
+Answer
+
+The Revenue Suite brings together everything you need to monetize your content. AI FAQ, Voice AI, Smart Shop, Memberships and Digital Products work together to answer questions, recommend products and generate revenue automatically. Instead of manually selling, Volaly helps convert visitors into customers around the clock. Learn more on the Revenue Suite page.
+
+--------------------------------------------------
+
+FAQ 5
+
+Question
+
+What is the Visibility Suite?
+
+Answer
+
+The Visibility Suite helps you reach more people without creating more work. From one upload, Volaly automatically generates Smart Shorts, social media content, blog articles, newsletters and SEO content for multiple platforms. Create once, publish everywhere and keep growing automatically. Learn more on the Visibility Suite page.
+
+--------------------------------------------------
+
+FAQ 6
+
+Question
+
+Which platforms does Volaly support?
+
+Answer
+
+Volaly works with the platforms creators and businesses already use. Depending on your workflow, this includes YouTube, Instagram, TikTok, Facebook, LinkedIn, X, WhatsApp and LINE. New integrations are added regularly, allowing Volaly to fit seamlessly into your existing ecosystem instead of replacing it.
+
+--------------------------------------------------
+
+FAQ 7
+
+Question
+
+Do I need technical skills?
+
+Answer
+
+No. Volaly is designed for creators and businesses—not developers. Most features work through an intuitive dashboard without coding or complex setup. Simply connect your accounts, upload your content and let Volaly automate the rest so you can focus on creating and growing your business.
+
+--------------------------------------------------
+
+FAQ 8
+
+Question
+
+Is my data secure?
+
+Answer
+
+Yes. Protecting your data is one of our highest priorities. Your content, customer information and connected accounts are handled using modern security standards and encrypted connections where applicable. You remain in full control of your content while Volaly only processes the information required to deliver its AI-powered services.
+
+--------------------------------------------------
+
+FAQ 9
+
+Question
+
+Can I manage multiple brands or locations?
+
+Answer
+
+Yes. Volaly is built to scale with your business. Whether you manage multiple creators, brands, locations or clients, everything can be managed from a single platform. This makes Volaly ideal for agencies, franchises and growing businesses that want consistent automation across multiple accounts.
+
+--------------------------------------------------
+
+FAQ 10
+
+Question
+
+How do I get started?
+
+Answer
+
+Getting started takes only a few minutes. Create your account, connect your social media channels or upload your first content and Volaly immediately begins building your AI knowledge base. From there you can activate the Revenue Suite, expand your visibility and start growing automatically. Visit the Pricing page to choose the plan that fits your business.
+
+--------------------------------------------------
+
+Requirements
+
+- Keep the current accordion component.
+- Keep the current styling.
+- Preserve all animations.
+- Use semantic HTML.
+- Keep the FAQ fully SEO optimized.
+- Add structured FAQ schema if it already exists.
+- Use internal links to Revenue Suite, Visibility Suite, Creator and Pricing pages where available.
+- Ensure answers remain easy to scan and mobile friendly.
+- Keep production-ready code.
