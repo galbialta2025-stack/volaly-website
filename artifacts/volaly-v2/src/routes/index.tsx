@@ -6,6 +6,7 @@ import { VisibilitySuite } from "@/components/sections/VisibilitySuite";
 import { RevenueSuite } from "@/components/sections/RevenueSuite";
 import { Workflow } from "@/components/sections/Workflow";
 import { IndustriesGrid } from "@/components/sections/IndustriesGrid";
+import { WhoUsesVolaly } from "@/components/sections/WhoUsesVolaly";
 import { FeaturesGrid } from "@/components/sections/FeaturesGrid";
 import { WhyVolaly } from "@/components/sections/WhyVolaly";
 import { FAQ } from "@/components/sections/FAQ";
@@ -58,6 +59,7 @@ function Index() {
       <VisibilitySuite />
       <RevenueSuite />
       <Workflow />
+      <WhoUsesVolaly />
       <IndustriesGrid />
       <FeaturesGrid />
       <WhyVolaly />

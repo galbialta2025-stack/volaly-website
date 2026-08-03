@@ -1,0 +1,162 @@
+We are redesigning the "Who Uses Volaly?" section.
+
+Do NOT redesign the rest of the homepage.
+
+Keep the current design system, typography, spacing, colors and animations.
+
+Reuse existing components whenever possible.
+
+--------------------------------------------------
+
+GOAL
+
+Visitors should immediately understand that Volaly serves two audiences using the same AI platform.
+
+Do NOT present two different products.
+
+Present ONE platform with two different workflows.
+
+Keep the section clean and premium.
+
+--------------------------------------------------
+
+SECTION
+
+Headline
+
+Built for Everyone Who Creates Content.
+
+Subheadline
+
+Whether you are growing a personal brand or a business, Volaly turns every upload into revenue and visibility.
+
+--------------------------------------------------
+
+Create two large premium cards.
+
+Both cards should have equal visual weight.
+
+--------------------------------------------------
+
+CARD 1
+
+Creators
+
+Icon:
+Creator / User
+
+Headline
+
+For Creators
+
+Description
+
+Monetize your audience with AI-powered conversations, digital products, memberships and automated content distribution.
+
+Feature Highlights
+
+• AI FAQ
+
+• Voice AI
+
+• Smart Shop
+
+• Memberships
+
+• Smart Shorts
+
+CTA
+
+Explore Creator Solutions
+
+--------------------------------------------------
+
+CARD 2
+
+Businesses
+
+Icon:
+Building
+
+Headline
+
+For Businesses
+
+Description
+
+Generate more leads, automate customer communication and publish content across every channel from a single upload.
+
+Feature Highlights
+
+• AI FAQ
+
+• Voice AI
+
+• Lead Generation
+
+• Smart Shop
+
+• Smart Shorts
+
+CTA
+
+Explore Business Solutions
+
+--------------------------------------------------
+
+Below both cards add a connecting statement.
+
+Headline
+
+One Platform.
+Different Workflows.
+
+Description
+
+The same AI engine powers creators, hotels, restaurants, gyms, real estate agencies and every business that creates content.
+
+--------------------------------------------------
+
+Add a subtle animated divider leading into the Industries section.
+
+The transition should feel natural.
+
+--------------------------------------------------
+
+DESIGN
+
+Premium SaaS.
+
+Minimal.
+
+Apple inspired.
+
+Linear inspired.
+
+Stripe inspired.
+
+Large whitespace.
+
+Rounded premium cards.
+
+Subtle hover animations.
+
+No unnecessary gradients.
+
+--------------------------------------------------
+
+TECHNICAL
+
+Reuse existing card components.
+
+Responsive.
+
+Production ready.
+
+Do not change routing.
+
+Do not modify navigation.
+
+Do not touch SEO.
+
+Keep performance high.
