@@ -1,0 +1,9 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "tppgMOwvjy-dwWcrc2Ajd"
+uri = "file://volaly-website.zip"
+type = "unspecified"
+title = "Volaly Website — Source Code"
+description = "Kompletter Quellcode (ohne node_modules) — src/, public/, alle Icons, index.html, vite.config.ts"
