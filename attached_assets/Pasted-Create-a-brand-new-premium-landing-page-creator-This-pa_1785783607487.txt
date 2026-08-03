@@ -1,0 +1,287 @@
+Create a brand-new premium landing page:
+
+/creator
+
+This page will become the main conversion page for creators.
+
+Do NOT redesign the homepage.
+
+Reuse the current design system.
+
+Reuse existing UI components whenever possible.
+
+Follow the existing typography, spacing, animations and color palette.
+
+The page should feel like Apple, Stripe, Linear and Vercel.
+
+Minimal.
+
+Premium.
+
+Fast.
+
+--------------------------------------------------
+
+GOAL
+
+This page should answer one question:
+
+Why should a creator use Volaly?
+
+The page should focus on outcomes instead of features.
+
+Keep paragraphs short.
+
+Use large typography.
+
+Lots of whitespace.
+
+--------------------------------------------------
+
+SECTION 1
+
+Hero
+
+Headline
+
+One Upload.
+Volaly Does the Rest.
+
+Subheadline
+
+Keep creating content.
+Volaly automatically transforms every upload into revenue, visibility and AI-powered customer conversations.
+
+Primary CTA
+
+Start Free
+
+Secondary CTA
+
+Watch Demo
+
+Large product video.
+
+--------------------------------------------------
+
+SECTION 2
+
+The Creator Problem
+
+Show two columns.
+
+WITHOUT VOLALY
+
+Create
+
+Edit
+
+Post
+
+Reply
+
+Sell
+
+Repeat
+
+WITH VOLALY
+
+Create
+
+Upload
+
+Volaly does the rest
+
+Use modern comparison cards.
+
+--------------------------------------------------
+
+SECTION 3
+
+Revenue Suite
+
+Headline
+
+Earn More From Every Upload.
+
+Show six premium cards.
+
+AI FAQ
+
+Voice AI
+
+Creator Shop
+
+Memberships
+
+Digital Products
+
+Affiliate
+
+Focus on outcomes.
+
+--------------------------------------------------
+
+SECTION 4
+
+Visibility Suite
+
+Headline
+
+Grow Everywhere Automatically.
+
+Show six premium cards.
+
+Smart Shorts
+
+Auto Publishing
+
+SEO
+
+Blog
+
+Newsletter
+
+Analytics
+
+Again:
+
+Focus on outcomes.
+
+--------------------------------------------------
+
+SECTION 5
+
+How It Works
+
+Beautiful horizontal timeline.
+
+Upload
+
+↓
+
+Volaly AI
+
+↓
+
+Revenue Suite
+
+↓
+
+Visibility Suite
+
+↓
+
+Growth
+
+--------------------------------------------------
+
+SECTION 6
+
+Creator Dashboard
+
+Large premium dashboard preview.
+
+Revenue
+
+Visibility
+
+Shop
+
+Voice
+
+Analytics
+
+Shorts
+
+--------------------------------------------------
+
+SECTION 7
+
+Who Is It For?
+
+Cards
+
+YouTubers
+
+TikTok Creators
+
+Instagram Creators
+
+Educators
+
+Coaches
+
+Businesses
+
+--------------------------------------------------
+
+SECTION 8
+
+Testimonials
+
+Placeholder cards.
+
+--------------------------------------------------
+
+SECTION 9
+
+FAQ
+
+Creator-specific FAQ.
+
+--------------------------------------------------
+
+SECTION 10
+
+Final CTA
+
+Headline
+
+You Create.
+
+Volaly Grows.
+
+Button
+
+Start Free
+
+--------------------------------------------------
+
+DESIGN
+
+Premium.
+
+Minimal.
+
+Apple.
+
+Stripe.
+
+Linear.
+
+Large spacing.
+
+Beautiful animations.
+
+Modern gradients.
+
+No feature overload.
+
+--------------------------------------------------
+
+TECHNICAL
+
+React.
+
+Tailwind.
+
+Reuse components.
+
+Responsive.
+
+SEO ready.
+
+Production-ready.
+
+Maintain excellent performance.

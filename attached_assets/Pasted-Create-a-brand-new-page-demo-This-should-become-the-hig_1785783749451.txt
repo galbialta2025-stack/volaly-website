@@ -1,0 +1,243 @@
+Create a brand-new page:
+
+/demo
+
+This should become the highest converting page on the website.
+
+Reuse the existing design system.
+
+Reuse existing UI components.
+
+Maintain the current typography, spacing, animations and premium design.
+
+Style inspiration:
+
+Apple
+
+Stripe
+
+Linear
+
+Vercel
+
+--------------------------------------------------
+
+GOAL
+
+Visitors should experience Volaly instead of reading about it.
+
+The page should feel interactive.
+
+Do NOT create a feature page.
+
+Create a product experience.
+
+--------------------------------------------------
+
+SECTION 1
+
+Hero
+
+Headline
+
+Experience Volaly.
+
+Subheadline
+
+See how one upload becomes revenue, visibility and AI-powered customer conversations.
+
+Primary CTA
+
+Start Free
+
+Secondary CTA
+
+Book Demo
+
+--------------------------------------------------
+
+SECTION 2
+
+Interactive Workflow
+
+Large animated workflow.
+
+Upload
+
+↓
+
+Volaly AI
+
+↓
+
+Revenue Suite
+
++
+
+Visibility Suite
+
+↓
+
+Growth
+
+Allow subtle hover animations.
+
+--------------------------------------------------
+
+SECTION 3
+
+Interactive AI FAQ Demo
+
+Create a realistic chat interface.
+
+Include several example questions.
+
+Example buttons
+
+"What products do you recommend?"
+
+"Tell me more about memberships."
+
+"How does Smart Shorts work?"
+
+"Can I connect YouTube?"
+
+When clicked, display realistic AI responses.
+
+No backend required.
+
+Use mock responses.
+
+--------------------------------------------------
+
+SECTION 4
+
+Voice AI Demo
+
+Modern voice interface.
+
+Large microphone button.
+
+Wave animation.
+
+Placeholder interaction.
+
+No real voice backend required.
+
+--------------------------------------------------
+
+SECTION 5
+
+Smart Shorts Demo
+
+Large upload area.
+
+Placeholder video.
+
+Animated transformation.
+
+Long Video
+
+↓
+
+10 Shorts
+
+↓
+
+Auto Publish
+
+--------------------------------------------------
+
+SECTION 6
+
+Revenue Dashboard
+
+Modern dashboard preview.
+
+Show example metrics.
+
+Revenue
+
+Orders
+
+Visitors
+
+Memberships
+
+Growth
+
+--------------------------------------------------
+
+SECTION 7
+
+Visibility Dashboard
+
+Example statistics.
+
+Posts
+
+Views
+
+Clicks
+
+Reach
+
+Shorts
+
+--------------------------------------------------
+
+SECTION 8
+
+Final CTA
+
+Headline
+
+One Upload.
+
+Volaly Does the Rest.
+
+Button
+
+Start Free
+
+--------------------------------------------------
+
+DESIGN
+
+Minimal.
+
+Premium.
+
+Modern SaaS.
+
+Apple quality.
+
+Stripe quality.
+
+Linear quality.
+
+Very interactive.
+
+Large whitespace.
+
+Beautiful animations.
+
+--------------------------------------------------
+
+TECHNICAL
+
+React
+
+Tailwind
+
+Framer Motion
+
+Reusable components
+
+Responsive
+
+Production ready
+
+No backend required.
+
+Use realistic placeholder data.

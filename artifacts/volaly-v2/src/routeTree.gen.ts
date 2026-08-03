@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as CreatorRouteImport } from './routes/creator'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as VisaAgencyRouteImport } from './routes/visa-agency'
 import { Route as TermsRouteImport } from './routes/terms'
@@ -26,6 +27,11 @@ import { Route as CarRentalRouteImport } from './routes/car-rental'
 import { Route as BarRouteImport } from './routes/bar'
 import { Route as IndexRouteImport } from './routes/index'
 
+const CreatorRoute = CreatorRouteImport.update({
+  id: '/creator',
+  path: '/creator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -111,6 +117,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/bar': typeof BarRoute
   '/contact': typeof ContactRoute
+  '/creator': typeof CreatorRoute
   '/car-rental': typeof CarRentalRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/dentist': typeof DentistRoute
@@ -129,6 +136,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/bar': typeof BarRoute
   '/contact': typeof ContactRoute
+  '/creator': typeof CreatorRoute
   '/car-rental': typeof CarRentalRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/dentist': typeof DentistRoute
@@ -148,6 +156,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/bar': typeof BarRoute
   '/contact': typeof ContactRoute
+  '/creator': typeof CreatorRoute
   '/car-rental': typeof CarRentalRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/dentist': typeof DentistRoute
@@ -168,6 +177,7 @@ export interface FileRouteTypes {
     | '/'
     | '/bar'
     | '/contact'
+    | '/creator'
     | '/car-rental'
     | '/cookie-policy'
     | '/dentist'
@@ -186,6 +196,7 @@ export interface FileRouteTypes {
     | '/'
     | '/bar'
     | '/contact'
+    | '/creator'
     | '/car-rental'
     | '/cookie-policy'
     | '/dentist'
@@ -204,6 +215,7 @@ export interface FileRouteTypes {
     | '/'
     | '/bar'
     | '/contact'
+    | '/creator'
     | '/car-rental'
     | '/cookie-policy'
     | '/dentist'
@@ -223,6 +235,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BarRoute: typeof BarRoute
   ContactRoute: typeof ContactRoute
+  CreatorRoute: typeof CreatorRoute
   CarRentalRoute: typeof CarRentalRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
   DentistRoute: typeof DentistRoute
@@ -345,6 +358,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/creator': {
+      id: '/creator'
+      path: '/creator'
+      fullPath: '/creator'
+      preLoaderRoute: typeof CreatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -359,6 +379,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BarRoute: BarRoute,
   ContactRoute: ContactRoute,
+  CreatorRoute: CreatorRoute,
   CarRentalRoute: CarRentalRoute,
   CookiePolicyRoute: CookiePolicyRoute,
   DentistRoute: DentistRoute,
