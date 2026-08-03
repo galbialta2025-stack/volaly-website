@@ -1,0 +1,157 @@
+We are improving the homepage.
+
+Do NOT redesign the entire website.
+
+Only redesign the Hero section by adding a premium product video.
+
+Keep the existing design system, colors, typography, spacing, gradients and animations.
+
+Reuse existing components whenever possible.
+
+Do NOT modify routing, SEO, footer or navigation.
+
+--------------------------------------------------
+
+GOAL
+
+The Hero must instantly communicate the core promise:
+
+"One Upload. Volaly Does the Rest."
+
+The product video should become the main visual element.
+
+--------------------------------------------------
+
+LAYOUT
+
+Desktop
+
+Left:
+Headline
+Subheadline
+CTA buttons
+
+Right:
+Large premium video player.
+
+Mobile
+
+Headline
+
+Video
+
+Buttons
+
+--------------------------------------------------
+
+HERO COPY
+
+Headline
+
+One Upload.
+Volaly Does the Rest.
+
+Subheadline
+
+Turn every piece of content into revenue, visibility and AI-powered customer conversations automatically.
+
+Primary Button
+
+Start Free
+
+Secondary Button
+
+Watch Demo
+
+--------------------------------------------------
+
+VIDEO PLAYER
+
+Replace the current hero illustration with a modern embedded product video.
+
+The player should look premium and feel similar to Apple, Stripe or Linear.
+
+Requirements:
+
+• Large rounded corners
+• Glassmorphism container
+• Soft shadow
+• Responsive
+• Lazy loaded
+• Optimized for performance
+
+Show a large play button in the center.
+
+Display a preview thumbnail before playback.
+
+When clicked:
+
+• Open the video in a fullscreen modal
+OR
+• Play inline (whichever fits the current architecture best)
+
+Autoplay should NOT start automatically.
+
+Use muted playback by default if autoplay is later enabled.
+
+--------------------------------------------------
+
+VIDEO PLACEHOLDER
+
+For now create a reusable video component with placeholder support.
+
+The component should accept:
+
+- thumbnail
+- video url
+- title
+
+Do not hardcode values.
+
+--------------------------------------------------
+
+MICRO BENEFITS
+
+Below the buttons add three premium badges.
+
+✓ One Upload
+
+✓ Revenue Suite
+
+✓ Visibility Suite
+
+--------------------------------------------------
+
+DESIGN
+
+Minimal.
+
+Premium.
+
+Large whitespace.
+
+Modern SaaS style.
+
+Apple.
+
+Stripe.
+
+Linear.
+
+Do not overload the hero.
+
+The video should become the visual focus.
+
+--------------------------------------------------
+
+TECHNICAL
+
+Reuse existing components.
+
+Create a reusable HeroVideo component.
+
+Production-ready React code.
+
+Keep animations subtle.
+
+Maintain current performance.
