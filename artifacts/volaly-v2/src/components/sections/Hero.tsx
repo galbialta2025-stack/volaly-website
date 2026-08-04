@@ -52,6 +52,7 @@ export function Hero() {
             >
               <HeroVideo
                 title="Watch product demo"
+                thumbnail="https://img.youtube.com/vi/qY4AafC9JS4/maxresdefault.jpg"
                 onPlay={openDemo}
               />
             </motion.div>
@@ -90,6 +91,7 @@ export function Hero() {
           <div className="hidden lg:block">
             <HeroVideo
               title="Watch product demo"
+              thumbnail="https://img.youtube.com/vi/qY4AafC9JS4/maxresdefault.jpg"
               onPlay={openDemo}
             />
           </div>
