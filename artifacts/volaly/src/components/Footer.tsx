@@ -49,7 +49,7 @@ const socials = [
   {
     Icon: Youtube,
     label: "YouTube",
-    href: "#",
+    href: "https://www.youtube.com/@Volal.y",
     color: "hover:text-[#FF0000]",
   },
 ];
