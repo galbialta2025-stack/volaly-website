@@ -44,7 +44,7 @@ export const industryPages: IndustryPageData[] = [
     metaTitle: "AI Marketing & Automation for Gyms — Volaly",
     metaDescription:
       "Volaly helps gyms and fitness studios get found online, reply to every lead instantly and convert trials into paying members.",
-    videoUrl: yt("qY4AafC9JS4"),
+    videoUrl: "",
     videoTitle: "Volaly for gyms — 2 minute demo",
     stats: [
       { value: "+124%", label: "More trial bookings" },
@@ -75,7 +75,7 @@ export const industryPages: IndustryPageData[] = [
     metaTitle: "AI Patient Booking & Marketing for Dentists — Volaly",
     metaDescription:
       "Volaly helps dental clinics rank higher on Google, answer patient enquiries instantly and fill the appointment calendar automatically.",
-    videoUrl: yt("qY4AafC9JS4"),
+    videoUrl: "",
     videoTitle: "Volaly for dental clinics — 2 minute demo",
     stats: [
       { value: "+62%", label: "More booked appointments" },
@@ -106,7 +106,7 @@ export const industryPages: IndustryPageData[] = [
     metaTitle: "AI Marketing for Medical Beauty & Aesthetic Clinics — Volaly",
     metaDescription:
       "Volaly generates on-brand content, replies to every enquiry instantly and books consultations for medical beauty and aesthetic clinics.",
-    videoUrl: yt("qY4AafC9JS4"),
+    videoUrl: "",
     videoTitle: "Volaly for medical beauty clinics — 2 minute demo",
     stats: [
       { value: "+3.1x", label: "Consultation requests" },
@@ -137,7 +137,7 @@ export const industryPages: IndustryPageData[] = [
     metaTitle: "AI Automation for Visa Agencies — Volaly",
     metaDescription:
       "Volaly answers visa questions 24/7 in any language, qualifies applicants and books consultations automatically for visa agencies.",
-    videoUrl: yt("qY4AafC9JS4"),
+    videoUrl: "",
     videoTitle: "Volaly for visa agencies — 2 minute demo",
     stats: [
       { value: "90%", label: "Questions auto-answered" },
@@ -168,7 +168,7 @@ export const industryPages: IndustryPageData[] = [
     metaTitle: "AI Lead Qualification for Real Estate Agencies — Volaly",
     metaDescription:
       "Volaly replies to every property enquiry instantly, qualifies buyers and books viewings automatically for real estate agencies.",
-    videoUrl: yt("qY4AafC9JS4"),
+    videoUrl: "",
     videoTitle: "Volaly for real estate — 2 minute demo",
     stats: [
       { value: "+87%", label: "More viewings booked" },
@@ -199,7 +199,7 @@ export const industryPages: IndustryPageData[] = [
     metaTitle: "AI Content & DM Automation for Influencers — Volaly",
     metaDescription:
       "Volaly creates daily content, handles DMs and brand enquiries, and helps social media influencers monetise their audience.",
-    videoUrl: yt("qY4AafC9JS4"),
+    videoUrl: "",
     videoTitle: "Volaly for creators — 2 minute demo",
     stats: [
       { value: "10x", label: "Faster content output" },
@@ -230,7 +230,7 @@ export const industryPages: IndustryPageData[] = [
     metaTitle: "AI Booking Automation for Car Rental Companies — Volaly",
     metaDescription:
       "Volaly quotes rates, checks availability and confirms car rental bookings automatically, 24/7, in any language.",
-    videoUrl: yt("qY4AafC9JS4"),
+    videoUrl: "",
     videoTitle: "Volaly for car rental — 2 minute demo",
     stats: [
       { value: "+71%", label: "More confirmed rentals" },
@@ -261,7 +261,7 @@ export const industryPages: IndustryPageData[] = [
     metaTitle: "AI Guest Communication & Direct Bookings for Hotels — Volaly",
     metaDescription:
       "Volaly answers guest questions 24/7, drives direct hotel bookings and grows 5-star reviews — reducing OTA commission.",
-    videoUrl: yt("qY4AafC9JS4"),
+    videoUrl: "",
     videoTitle: "Volaly for hotels — 2 minute demo",
     stats: [
       { value: "+46%", label: "More direct bookings" },
@@ -323,7 +323,7 @@ export const industryPages: IndustryPageData[] = [
     metaTitle: "AI Reservations & Marketing for Restaurants — Volaly",
     metaDescription:
       "Volaly takes reservations, answers menu questions and promotes your restaurant automatically across Google, LINE, WhatsApp and social.",
-    videoUrl: yt("qY4AafC9JS4"),
+    videoUrl: "",
     videoTitle: "Volaly for restaurants — 2 minute demo",
     stats: [
       { value: "+58%", label: "More reservations" },

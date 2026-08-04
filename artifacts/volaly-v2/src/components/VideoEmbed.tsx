@@ -11,6 +11,7 @@ export function VideoEmbed({
   poster?: string;
 }) {
   const [active, setActive] = useState(false);
+  if (!url) return null;
   const isFile = /\.(mp4|webm)$/i.test(url);
   const src = active && !isFile ? `${url}${url.includes("?") ? "&" : "?"}autoplay=1` : url;
 
