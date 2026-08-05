@@ -27,11 +27,12 @@ export type IndustryPageData = {
   stats: { value: string; label: string }[];
   pains: string[];
   solutions: { title: string; desc: string }[];
+  disabled?: boolean;
 };
 
 const yt = (id: string) => `https://www.youtube-nocookie.com/embed/${id}?rel=0&modestbranding=1`;
 
-export const industryPages: IndustryPageData[] = [
+const _allIndustryPages: IndustryPageData[] = [
   {
     slug: "gym",
     name: "Gyms & Fitness Studios",
@@ -188,6 +189,7 @@ export const industryPages: IndustryPageData[] = [
     ],
   },
   {
+    disabled: true,
     slug: "social-media-influencer",
     name: "Social Media Influencers",
     icon: Megaphone,
@@ -344,6 +346,8 @@ export const industryPages: IndustryPageData[] = [
   },
 ];
 
+export const industryPages = _allIndustryPages.filter((i) => !i.disabled);
+
 export const industryBySlug = Object.fromEntries(
-  industryPages.map((i) => [i.slug, i]),
+  _allIndustryPages.map((i) => [i.slug, i]),
 ) as Record<string, IndustryPageData>;
