@@ -22,6 +22,13 @@ export function FinalCta() {
               <Button size="xl" variant="hero" className="rounded-full" onClick={openDemo}>
                 View Demo <ArrowRight className="h-4 w-4" />
               </Button>
+              <Button
+                size="xl"
+                className="rounded-full border border-white/30 bg-white/10 text-white backdrop-blur hover:bg-white/20"
+                onClick={openDemo}
+              >
+                <Play className="h-4 w-4" /> Book Consultation
+              </Button>
             </div>
           </div>
         </div>
