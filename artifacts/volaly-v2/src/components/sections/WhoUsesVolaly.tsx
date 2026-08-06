@@ -9,8 +9,8 @@ const audiences = [
   {
     icon: User,
     eyebrow: "For Creators",
-    desc: "Monetize your audience with AI-powered conversations, digital products, memberships and automated content distribution.",
-    features: ["AI FAQ", "Voice AI", "Smart Shop", "Memberships", "Smart Shorts"],
+    desc: "Grow your audience faster with automated content distribution across every platform — from a single upload.",
+    features: ["Smart Shorts", "Auto Publishing", "SEO Content", "Newsletter", "Multi-platform"],
     cta: "Explore Creator Solutions",
     gradient: "from-brand-purple/10 to-brand-blue/10",
     iconGradient: "from-brand-purple to-brand-blue",
@@ -20,8 +20,8 @@ const audiences = [
   {
     icon: Building2,
     eyebrow: "For Businesses",
-    desc: "Generate more leads, automate customer communication and publish content across every channel from a single upload.",
-    features: ["AI FAQ", "Voice AI", "Lead Generation", "Smart Shop", "Smart Shorts"],
+    desc: "Get found by more customers and publish content across every channel automatically — from a single upload.",
+    features: ["Smart Shorts", "Google Business", "Social Media", "SEO Content", "Auto Publishing"],
     cta: "Explore Business Solutions",
     gradient: "from-brand-orange/10 to-brand-pink/10",
     iconGradient: "from-brand-orange to-brand-pink",

@@ -8,7 +8,6 @@ import { ChatWidget } from "./ChatWidget";
 
 const links = [
   { href: "/#visibility", label: "Visibility" },
-  { href: "/#revenue", label: "Revenue" },
   { href: "/#how-it-works", label: "How It Works" },
   { href: "/#industries", label: "Industries" },
   { href: "/#platform", label: "Platform" },

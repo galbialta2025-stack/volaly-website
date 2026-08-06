@@ -71,8 +71,7 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-foreground">Platform</h4>
             <ul className="mt-4 space-y-2.5 text-sm">
-              <li><a href="/#visibility" className="text-muted-foreground hover:text-foreground">Visibility Engine</a></li>
-              <li><a href="/#revenue" className="text-muted-foreground hover:text-foreground">Revenue Engine</a></li>
+              <li><a href="/#visibility" className="text-muted-foreground hover:text-foreground">Visibility Suite</a></li>
               <li><a href="/#how-it-works" className="text-muted-foreground hover:text-foreground">How It Works</a></li>
               <li><a href="/#platform" className="text-muted-foreground hover:text-foreground">Capabilities</a></li>
             </ul>

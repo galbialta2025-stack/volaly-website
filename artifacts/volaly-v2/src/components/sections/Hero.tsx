@@ -7,8 +7,8 @@ import { HeroVideo } from "@/components/HeroVideo";
 
 const microBenefits = [
   "One Upload",
-  "Revenue Suite",
   "Visibility Suite",
+  "All Platforms",
 ];
 
 export function Hero() {

@@ -4,12 +4,9 @@ import {
   Plug,
   BrainCircuit,
   ArrowRight,
-  ArrowDown,
-  Plus,
   XCircle,
   CheckCircle2,
   Sparkles,
-  DollarSign,
   Rocket,
 } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
@@ -29,8 +26,8 @@ const cards = [
   },
   {
     icon: TrendingUp,
-    title: "Revenue First",
-    desc: "Every upload becomes new opportunities to generate revenue automatically.",
+    title: "Visibility First",
+    desc: "Every upload becomes content for every platform — automatically and without extra effort.",
     gradient: "from-brand-green/15 to-brand-cyan/15",
     iconGradient: "from-brand-green to-brand-cyan",
   },
@@ -160,23 +157,16 @@ export function WhyVolaly() {
               />
               <FlowDot />
 
-              {/* Split */}
+              {/* Visibility Suite */}
               <motion.div
                 initial={reduce ? undefined : { opacity: 0, y: 8 }}
                 whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.5, delay: 0.16 }}
-                className="grid grid-cols-[1fr_auto_1fr] items-center gap-2"
+                className="flex flex-col items-center gap-1.5 rounded-xl border border-border/50 bg-background/60 px-3 py-2.5 text-center"
               >
-                <div className="flex flex-col items-center gap-1.5 rounded-xl border border-border/50 bg-background/60 px-3 py-2.5 text-center">
-                  <DollarSign className="h-4 w-4 text-brand-orange" />
-                  <span className="text-xs font-bold text-foreground/80">Revenue Suite</span>
-                </div>
-                <Plus className="h-4 w-4 shrink-0 text-muted-foreground/40" />
-                <div className="flex flex-col items-center gap-1.5 rounded-xl border border-border/50 bg-background/60 px-3 py-2.5 text-center">
-                  <Rocket className="h-4 w-4 text-brand-blue" />
-                  <span className="text-xs font-bold text-foreground/80">Visibility Suite</span>
-                </div>
+                <Rocket className="h-4 w-4 text-brand-blue" />
+                <span className="text-xs font-bold text-foreground/80">Visibility Suite</span>
               </motion.div>
               <FlowDot />
 

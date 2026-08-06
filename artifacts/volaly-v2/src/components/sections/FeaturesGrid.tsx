@@ -1,18 +1,15 @@
 import {
-  MessageCircle, Send, CalendarCheck, MapPin, MessagesSquare,
-  Phone, Users, BarChart3, Languages,
+  Send, MapPin, MessagesSquare,
+  Phone, BarChart3, Languages,
 } from "lucide-react";
 import { SectionHeading } from "./shared";
 import { Stagger, StaggerItem } from "@/components/Motion";
 
 const features = [
-  { icon: MessageCircle, name: "24/7 AI Chat" },
   { icon: Send, name: "Automatic Posting" },
-  { icon: CalendarCheck, name: "Appointment Booking" },
   { icon: MapPin, name: "Google Business" },
-  { icon: MessagesSquare, name: "LINE Automation" },
-  { icon: Phone, name: "WhatsApp Automation" },
-  { icon: Users, name: "CRM" },
+  { icon: MessagesSquare, name: "LINE Publishing" },
+  { icon: Phone, name: "WhatsApp Publishing" },
   { icon: BarChart3, name: "Analytics" },
   { icon: Languages, name: "Multi-language" },
 ];

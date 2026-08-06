@@ -3,8 +3,6 @@ import { Hero } from "@/components/sections/Hero";
 import { Problem } from "@/components/sections/Problem";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { VisibilitySuite } from "@/components/sections/VisibilitySuite";
-import { RevenueSuite } from "@/components/sections/RevenueSuite";
-import { Workflow } from "@/components/sections/Workflow";
 import { IndustriesGrid } from "@/components/sections/IndustriesGrid";
 import { WhoUsesVolaly } from "@/components/sections/WhoUsesVolaly";
 import { FeaturesGrid } from "@/components/sections/FeaturesGrid";
@@ -57,8 +55,6 @@ function Index() {
       <TrustBar />
       <Problem />
       <VisibilitySuite />
-      <RevenueSuite />
-      <Workflow />
       <WhoUsesVolaly />
       <IndustriesGrid />
       <FeaturesGrid />
