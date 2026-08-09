@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { AuroraOrbs } from "@/components/Backdrop";
 import { openDemo } from "@/lib/demo";
-import { HeroVideo } from "@/components/HeroVideo";
+import { VideoEmbed } from "@/components/VideoEmbed";
 
 const microBenefits = [
   "One Upload",
@@ -48,10 +48,10 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.22 }}
               className="mt-8 lg:hidden"
             >
-              <HeroVideo
-                title="Watch product demo"
-                thumbnail="https://img.youtube.com/vi/RNKP-v0RxsM/maxresdefault.jpg"
-                onPlay={openDemo}
+              <VideoEmbed
+                url="https://www.youtube-nocookie.com/embed/RNKP-v0RxsM?rel=0&modestbranding=1"
+                title="Volaly product demo"
+                poster="https://img.youtube.com/vi/RNKP-v0RxsM/maxresdefault.jpg"
               />
             </motion.div>
 
@@ -87,10 +87,10 @@ export function Hero() {
 
           {/* ── RIGHT: video (desktop only) ── */}
           <div className="hidden lg:block">
-            <HeroVideo
-              title="Watch product demo"
-              thumbnail="https://img.youtube.com/vi/RNKP-v0RxsM/maxresdefault.jpg"
-              onPlay={openDemo}
+            <VideoEmbed
+              url="https://www.youtube-nocookie.com/embed/RNKP-v0RxsM?rel=0&modestbranding=1"
+              title="Volaly product demo"
+              poster="https://img.youtube.com/vi/RNKP-v0RxsM/maxresdefault.jpg"
             />
           </div>
 
