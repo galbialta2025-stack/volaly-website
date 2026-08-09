@@ -3,7 +3,7 @@ import { X } from "lucide-react";
 import { DEMO_EVENT } from "@/lib/demo";
 
 // Replace with a real MP4, YouTube (nocookie) or Vimeo embed URL.
-const VIDEO_URL = "https://www.youtube-nocookie.com/embed/qY4AafC9JS4?autoplay=1&rel=0";
+const VIDEO_URL = "https://www.youtube-nocookie.com/embed/RNKP-v0RxsM?autoplay=1&rel=0";
 
 function isEmbed(url: string) {
   return /youtube|youtu\.be|vimeo/.test(url);
