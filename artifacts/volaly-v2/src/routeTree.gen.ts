@@ -9,6 +9,9 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as AccountRouteImport } from './routes/account'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as SignupRouteImport } from './routes/signup'
 import { Route as CreatorRouteImport } from './routes/creator'
 import { Route as DemoRouteImport } from './routes/demo'
 import { Route as VisibilitySuiteRouteImport } from './routes/visibility-suite'
@@ -31,6 +34,21 @@ import { Route as CarRentalRouteImport } from './routes/car-rental'
 import { Route as BarRouteImport } from './routes/bar'
 import { Route as IndexRouteImport } from './routes/index'
 
+const AccountRoute = AccountRouteImport.update({
+  id: '/account',
+  path: '/account',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignupRoute = SignupRouteImport.update({
+  id: '/signup',
+  path: '/signup',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CreatorRoute = CreatorRouteImport.update({
   id: '/creator',
   path: '/creator',
@@ -139,6 +157,9 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/login': typeof LoginRoute
+  '/signup': typeof SignupRoute
+  '/account': typeof AccountRoute
   '/bar': typeof BarRoute
   '/contact': typeof ContactRoute
   '/creator': typeof CreatorRoute
@@ -162,6 +183,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/login': typeof LoginRoute
+  '/signup': typeof SignupRoute
+  '/account': typeof AccountRoute
   '/bar': typeof BarRoute
   '/contact': typeof ContactRoute
   '/creator': typeof CreatorRoute
@@ -186,6 +210,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/login': typeof LoginRoute
+  '/signup': typeof SignupRoute
+  '/account': typeof AccountRoute
   '/bar': typeof BarRoute
   '/contact': typeof ContactRoute
   '/creator': typeof CreatorRoute
@@ -211,6 +238,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/login'
+    | '/signup'
+    | '/account'
     | '/bar'
     | '/contact'
     | '/creator'
@@ -234,6 +264,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/login'
+    | '/signup'
+    | '/account'
     | '/bar'
     | '/contact'
     | '/creator'
@@ -257,6 +290,9 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/login'
+    | '/signup'
+    | '/account'
     | '/bar'
     | '/contact'
     | '/creator'
@@ -281,6 +317,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LoginRoute: typeof LoginRoute
+  SignupRoute: typeof SignupRoute
+  AccountRoute: typeof AccountRoute
   BarRoute: typeof BarRoute
   ContactRoute: typeof ContactRoute
   CreatorRoute: typeof CreatorRoute
@@ -396,6 +435,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CarRentalRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signup': {
+      id: '/signup'
+      path: '/signup'
+      fullPath: '/signup'
+      preLoaderRoute: typeof SignupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/account': {
+      id: '/account'
+      path: '/account'
+      fullPath: '/account'
+      preLoaderRoute: typeof AccountRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/bar': {
       id: '/bar'
       path: '/bar'
@@ -457,6 +517,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LoginRoute: LoginRoute,
+  SignupRoute: SignupRoute,
+  AccountRoute: AccountRoute,
   BarRoute: BarRoute,
   ContactRoute: ContactRoute,
   CreatorRoute: CreatorRoute,
