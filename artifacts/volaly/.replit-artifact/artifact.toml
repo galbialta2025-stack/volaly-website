@@ -11,12 +11,12 @@ paths = [ "/" ]
 localPort = 19788
 
 [services.development]
-run = "pnpm --filter @workspace/volaly run dev"
+run = "pnpm --filter @workspace/volaly-v2 run dev"
 
 [services.production]
-build = [ "pnpm", "--filter", "@workspace/volaly", "run", "build" ]
+build = [ "env", "PORT=19788", "BASE_PATH=/", "pnpm", "--filter", "@workspace/volaly-v2", "run", "build" ]
 serve = "static"
-publicDir = "artifacts/volaly/dist/public"
+publicDir = "artifacts/volaly-v2/dist/public"
 
 [[services.production.rewrites]]
 from = "/*"

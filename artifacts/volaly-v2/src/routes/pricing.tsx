@@ -159,7 +159,7 @@ const compareRows: CompareRow[] = [
   { label: "API Access",        icon: Code2,        partner: false,     creator: false,     pro: true,            elite: true },
   { label: "White Label",       icon: Shield,       partner: false,     creator: false,     pro: false,           elite: true },
   { label: "Teams",             icon: Users,        partner: false,     creator: false,     pro: "Up to 5",       elite: "Unlimited" },
-  { label: "Analytics",         icon: BarChart3,    partner: "Basic",   creator: "Standard","Advanced": true,    pro: "Advanced",  elite: "Custom" },
+  { label: "Analytics",         icon: BarChart3,    partner: "Basic",   creator: "Standard", pro: "Advanced",    elite: "Custom" },
   { label: "Multi-language",    icon: Globe,        partner: false,     creator: false,     pro: true,            elite: true },
 ];
 

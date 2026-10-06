@@ -59,6 +59,7 @@ const topContent = [
   { title: "5 tools every creator needs in 2025",  views: "84K",  platform: "TikTok", trend: "+61%" },
   { title: "The real cost of manual marketing",    views: "52K",  platform: "Blog",   trend: "+22%" },
 ];
+type TopContentItem = (typeof topContent)[number];
 
 const whyCards = [
   {
@@ -575,7 +576,7 @@ function WorkflowArrow({ delay }: { delay: number }) {
 
 /* ─────────────── SECTION 5: DASHBOARD ─────────────── */
 
-function DashboardSection({ topContent }: { topContent: typeof topContent }) {
+function DashboardSection({ topContent }: { topContent: TopContentItem[] }) {
   const barHeights = [40, 65, 52, 88, 72, 95, 58, 79];
   return (
     <section className="relative overflow-hidden py-32">
