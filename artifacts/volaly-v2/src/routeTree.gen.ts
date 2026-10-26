@@ -9,144 +9,41 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as AccountRouteImport } from './routes/account'
-import { Route as LoginRouteImport } from './routes/login'
-import { Route as SignupRouteImport } from './routes/signup'
-import { Route as CreatorRouteImport } from './routes/creator'
-import { Route as DemoRouteImport } from './routes/demo'
-import { Route as VisibilitySuiteRouteImport } from './routes/visibility-suite'
-import { Route as PricingRouteImport } from './routes/pricing'
-import { Route as FaqPageRouteImport } from './routes/faq'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as VisaAgencyRouteImport } from './routes/visa-agency'
-import { Route as TermsRouteImport } from './routes/terms'
-import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
-import { Route as SocialMediaInfluencerRouteImport } from './routes/social-media-influencer'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as RestaurantRouteImport } from './routes/restaurant'
-import { Route as RealEstateRouteImport } from './routes/real-estate'
-import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as MedicalBeautyRouteImport } from './routes/medical-beauty'
-import { Route as HotelRouteImport } from './routes/hotel'
-import { Route as GymRouteImport } from './routes/gym'
-import { Route as DentistRouteImport } from './routes/dentist'
-import { Route as CarRentalRouteImport } from './routes/car-rental'
-import { Route as BarRouteImport } from './routes/bar'
+import { Route as LangRouteRouteImport } from './routes/$lang/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LangIndexRouteImport } from './routes/$lang/index'
+import { Route as LangVisibilitySuiteRouteImport } from './routes/$lang/visibility-suite'
+import { Route as LangVisaAgencyRouteImport } from './routes/$lang/visa-agency'
+import { Route as LangTermsRouteImport } from './routes/$lang/terms'
+import { Route as LangSocialMediaInfluencerRouteImport } from './routes/$lang/social-media-influencer'
+import { Route as LangSignupRouteImport } from './routes/$lang/signup'
+import { Route as LangRestaurantRouteImport } from './routes/$lang/restaurant'
+import { Route as LangRealEstateRouteImport } from './routes/$lang/real-estate'
+import { Route as LangPrivacyRouteImport } from './routes/$lang/privacy'
+import { Route as LangPricingRouteImport } from './routes/$lang/pricing'
+import { Route as LangMedicalBeautyRouteImport } from './routes/$lang/medical-beauty'
+import { Route as LangLoginRouteImport } from './routes/$lang/login'
+import { Route as LangHotelRouteImport } from './routes/$lang/hotel'
+import { Route as LangGymRouteImport } from './routes/$lang/gym'
+import { Route as LangFaqRouteImport } from './routes/$lang/faq'
+import { Route as LangDentistRouteImport } from './routes/$lang/dentist'
+import { Route as LangDemoRouteImport } from './routes/$lang/demo'
+import { Route as LangCreatorRouteImport } from './routes/$lang/creator'
+import { Route as LangCookiePolicyRouteImport } from './routes/$lang/cookie-policy'
+import { Route as LangContactRouteImport } from './routes/$lang/contact'
+import { Route as LangCarRentalRouteImport } from './routes/$lang/car-rental'
+import { Route as LangBarRouteImport } from './routes/$lang/bar'
+import { Route as LangAccountRouteImport } from './routes/$lang/account'
 
-const AccountRoute = AccountRouteImport.update({
-  id: '/account',
-  path: '/account',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LoginRoute = LoginRouteImport.update({
-  id: '/login',
-  path: '/login',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SignupRoute = SignupRouteImport.update({
-  id: '/signup',
-  path: '/signup',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CreatorRoute = CreatorRouteImport.update({
-  id: '/creator',
-  path: '/creator',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoRoute = DemoRouteImport.update({
-  id: '/demo',
-  path: '/demo',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const VisibilitySuiteRoute = VisibilitySuiteRouteImport.update({
-  id: '/visibility-suite',
-  path: '/visibility-suite',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PricingRoute = PricingRouteImport.update({
-  id: '/pricing',
-  path: '/pricing',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FaqPageRoute = FaqPageRouteImport.update({
-  id: '/faq',
-  path: '/faq',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const VisaAgencyRoute = VisaAgencyRouteImport.update({
-  id: '/visa-agency',
-  path: '/visa-agency',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CookiePolicyRoute = CookiePolicyRouteImport.update({
-  id: '/cookie-policy',
-  path: '/cookie-policy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TermsRoute = TermsRouteImport.update({
-  id: '/terms',
-  path: '/terms',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SocialMediaInfluencerRoute = SocialMediaInfluencerRouteImport.update({
-  id: '/social-media-influencer',
-  path: '/social-media-influencer',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RestaurantRoute = RestaurantRouteImport.update({
-  id: '/restaurant',
-  path: '/restaurant',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RealEstateRoute = RealEstateRouteImport.update({
-  id: '/real-estate',
-  path: '/real-estate',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MedicalBeautyRoute = MedicalBeautyRouteImport.update({
-  id: '/medical-beauty',
-  path: '/medical-beauty',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HotelRoute = HotelRouteImport.update({
-  id: '/hotel',
-  path: '/hotel',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GymRoute = GymRouteImport.update({
-  id: '/gym',
-  path: '/gym',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DentistRoute = DentistRouteImport.update({
-  id: '/dentist',
-  path: '/dentist',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CarRentalRoute = CarRentalRouteImport.update({
-  id: '/car-rental',
-  path: '/car-rental',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BarRoute = BarRouteImport.update({
-  id: '/bar',
-  path: '/bar',
+const LangRouteRoute = LangRouteRouteImport.update({
+  id: '/$lang',
+  path: '/$lang',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -154,224 +51,301 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LangIndexRoute = LangIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangVisibilitySuiteRoute = LangVisibilitySuiteRouteImport.update({
+  id: '/visibility-suite',
+  path: '/visibility-suite',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangVisaAgencyRoute = LangVisaAgencyRouteImport.update({
+  id: '/visa-agency',
+  path: '/visa-agency',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangTermsRoute = LangTermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangSocialMediaInfluencerRoute =
+  LangSocialMediaInfluencerRouteImport.update({
+    id: '/social-media-influencer',
+    path: '/social-media-influencer',
+    getParentRoute: () => LangRouteRoute,
+  } as any)
+const LangSignupRoute = LangSignupRouteImport.update({
+  id: '/signup',
+  path: '/signup',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangRestaurantRoute = LangRestaurantRouteImport.update({
+  id: '/restaurant',
+  path: '/restaurant',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangRealEstateRoute = LangRealEstateRouteImport.update({
+  id: '/real-estate',
+  path: '/real-estate',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangPrivacyRoute = LangPrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangPricingRoute = LangPricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangMedicalBeautyRoute = LangMedicalBeautyRouteImport.update({
+  id: '/medical-beauty',
+  path: '/medical-beauty',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangLoginRoute = LangLoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangHotelRoute = LangHotelRouteImport.update({
+  id: '/hotel',
+  path: '/hotel',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangGymRoute = LangGymRouteImport.update({
+  id: '/gym',
+  path: '/gym',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangFaqRoute = LangFaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangDentistRoute = LangDentistRouteImport.update({
+  id: '/dentist',
+  path: '/dentist',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangDemoRoute = LangDemoRouteImport.update({
+  id: '/demo',
+  path: '/demo',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangCreatorRoute = LangCreatorRouteImport.update({
+  id: '/creator',
+  path: '/creator',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangCookiePolicyRoute = LangCookiePolicyRouteImport.update({
+  id: '/cookie-policy',
+  path: '/cookie-policy',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangContactRoute = LangContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangCarRentalRoute = LangCarRentalRouteImport.update({
+  id: '/car-rental',
+  path: '/car-rental',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangBarRoute = LangBarRouteImport.update({
+  id: '/bar',
+  path: '/bar',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangAccountRoute = LangAccountRouteImport.update({
+  id: '/account',
+  path: '/account',
+  getParentRoute: () => LangRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/login': typeof LoginRoute
-  '/signup': typeof SignupRoute
-  '/account': typeof AccountRoute
-  '/bar': typeof BarRoute
-  '/contact': typeof ContactRoute
-  '/creator': typeof CreatorRoute
-  '/demo': typeof DemoRoute
-  '/visibility-suite': typeof VisibilitySuiteRoute
-  '/pricing': typeof PricingRoute
-  '/faq': typeof FaqPageRoute
-  '/car-rental': typeof CarRentalRoute
-  '/cookie-policy': typeof CookiePolicyRoute
-  '/dentist': typeof DentistRoute
-  '/gym': typeof GymRoute
-  '/hotel': typeof HotelRoute
-  '/medical-beauty': typeof MedicalBeautyRoute
-  '/privacy': typeof PrivacyRoute
-  '/real-estate': typeof RealEstateRoute
-  '/restaurant': typeof RestaurantRoute
+  '/$lang': typeof LangRouteRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/social-media-influencer': typeof SocialMediaInfluencerRoute
-  '/terms': typeof TermsRoute
-  '/visa-agency': typeof VisaAgencyRoute
+  '/$lang/account': typeof LangAccountRoute
+  '/$lang/bar': typeof LangBarRoute
+  '/$lang/car-rental': typeof LangCarRentalRoute
+  '/$lang/contact': typeof LangContactRoute
+  '/$lang/cookie-policy': typeof LangCookiePolicyRoute
+  '/$lang/creator': typeof LangCreatorRoute
+  '/$lang/demo': typeof LangDemoRoute
+  '/$lang/dentist': typeof LangDentistRoute
+  '/$lang/faq': typeof LangFaqRoute
+  '/$lang/gym': typeof LangGymRoute
+  '/$lang/hotel': typeof LangHotelRoute
+  '/$lang/login': typeof LangLoginRoute
+  '/$lang/medical-beauty': typeof LangMedicalBeautyRoute
+  '/$lang/pricing': typeof LangPricingRoute
+  '/$lang/privacy': typeof LangPrivacyRoute
+  '/$lang/real-estate': typeof LangRealEstateRoute
+  '/$lang/restaurant': typeof LangRestaurantRoute
+  '/$lang/signup': typeof LangSignupRoute
+  '/$lang/social-media-influencer': typeof LangSocialMediaInfluencerRoute
+  '/$lang/terms': typeof LangTermsRoute
+  '/$lang/visa-agency': typeof LangVisaAgencyRoute
+  '/$lang/visibility-suite': typeof LangVisibilitySuiteRoute
+  '/$lang/': typeof LangIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/login': typeof LoginRoute
-  '/signup': typeof SignupRoute
-  '/account': typeof AccountRoute
-  '/bar': typeof BarRoute
-  '/contact': typeof ContactRoute
-  '/creator': typeof CreatorRoute
-  '/demo': typeof DemoRoute
-  '/visibility-suite': typeof VisibilitySuiteRoute
-  '/pricing': typeof PricingRoute
-  '/faq': typeof FaqPageRoute
-  '/car-rental': typeof CarRentalRoute
-  '/cookie-policy': typeof CookiePolicyRoute
-  '/dentist': typeof DentistRoute
-  '/gym': typeof GymRoute
-  '/hotel': typeof HotelRoute
-  '/medical-beauty': typeof MedicalBeautyRoute
-  '/privacy': typeof PrivacyRoute
-  '/real-estate': typeof RealEstateRoute
-  '/restaurant': typeof RestaurantRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/social-media-influencer': typeof SocialMediaInfluencerRoute
-  '/terms': typeof TermsRoute
-  '/visa-agency': typeof VisaAgencyRoute
+  '/$lang/account': typeof LangAccountRoute
+  '/$lang/bar': typeof LangBarRoute
+  '/$lang/car-rental': typeof LangCarRentalRoute
+  '/$lang/contact': typeof LangContactRoute
+  '/$lang/cookie-policy': typeof LangCookiePolicyRoute
+  '/$lang/creator': typeof LangCreatorRoute
+  '/$lang/demo': typeof LangDemoRoute
+  '/$lang/dentist': typeof LangDentistRoute
+  '/$lang/faq': typeof LangFaqRoute
+  '/$lang/gym': typeof LangGymRoute
+  '/$lang/hotel': typeof LangHotelRoute
+  '/$lang/login': typeof LangLoginRoute
+  '/$lang/medical-beauty': typeof LangMedicalBeautyRoute
+  '/$lang/pricing': typeof LangPricingRoute
+  '/$lang/privacy': typeof LangPrivacyRoute
+  '/$lang/real-estate': typeof LangRealEstateRoute
+  '/$lang/restaurant': typeof LangRestaurantRoute
+  '/$lang/signup': typeof LangSignupRoute
+  '/$lang/social-media-influencer': typeof LangSocialMediaInfluencerRoute
+  '/$lang/terms': typeof LangTermsRoute
+  '/$lang/visa-agency': typeof LangVisaAgencyRoute
+  '/$lang/visibility-suite': typeof LangVisibilitySuiteRoute
+  '/$lang': typeof LangIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/login': typeof LoginRoute
-  '/signup': typeof SignupRoute
-  '/account': typeof AccountRoute
-  '/bar': typeof BarRoute
-  '/contact': typeof ContactRoute
-  '/creator': typeof CreatorRoute
-  '/demo': typeof DemoRoute
-  '/visibility-suite': typeof VisibilitySuiteRoute
-  '/pricing': typeof PricingRoute
-  '/faq': typeof FaqPageRoute
-  '/car-rental': typeof CarRentalRoute
-  '/cookie-policy': typeof CookiePolicyRoute
-  '/dentist': typeof DentistRoute
-  '/gym': typeof GymRoute
-  '/hotel': typeof HotelRoute
-  '/medical-beauty': typeof MedicalBeautyRoute
-  '/privacy': typeof PrivacyRoute
-  '/real-estate': typeof RealEstateRoute
-  '/restaurant': typeof RestaurantRoute
+  '/$lang': typeof LangRouteRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/social-media-influencer': typeof SocialMediaInfluencerRoute
-  '/terms': typeof TermsRoute
-  '/visa-agency': typeof VisaAgencyRoute
+  '/$lang/account': typeof LangAccountRoute
+  '/$lang/bar': typeof LangBarRoute
+  '/$lang/car-rental': typeof LangCarRentalRoute
+  '/$lang/contact': typeof LangContactRoute
+  '/$lang/cookie-policy': typeof LangCookiePolicyRoute
+  '/$lang/creator': typeof LangCreatorRoute
+  '/$lang/demo': typeof LangDemoRoute
+  '/$lang/dentist': typeof LangDentistRoute
+  '/$lang/faq': typeof LangFaqRoute
+  '/$lang/gym': typeof LangGymRoute
+  '/$lang/hotel': typeof LangHotelRoute
+  '/$lang/login': typeof LangLoginRoute
+  '/$lang/medical-beauty': typeof LangMedicalBeautyRoute
+  '/$lang/pricing': typeof LangPricingRoute
+  '/$lang/privacy': typeof LangPrivacyRoute
+  '/$lang/real-estate': typeof LangRealEstateRoute
+  '/$lang/restaurant': typeof LangRestaurantRoute
+  '/$lang/signup': typeof LangSignupRoute
+  '/$lang/social-media-influencer': typeof LangSocialMediaInfluencerRoute
+  '/$lang/terms': typeof LangTermsRoute
+  '/$lang/visa-agency': typeof LangVisaAgencyRoute
+  '/$lang/visibility-suite': typeof LangVisibilitySuiteRoute
+  '/$lang/': typeof LangIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/login'
-    | '/signup'
-    | '/account'
-    | '/bar'
-    | '/contact'
-    | '/creator'
-    | '/demo'
-    | '/visibility-suite'
-    | '/pricing'
-    | '/faq'
-    | '/car-rental'
-    | '/cookie-policy'
-    | '/dentist'
-    | '/gym'
-    | '/hotel'
-    | '/medical-beauty'
-    | '/privacy'
-    | '/real-estate'
-    | '/restaurant'
+    | '/$lang'
     | '/sitemap.xml'
-    | '/social-media-influencer'
-    | '/terms'
-    | '/visa-agency'
+    | '/$lang/account'
+    | '/$lang/bar'
+    | '/$lang/car-rental'
+    | '/$lang/contact'
+    | '/$lang/cookie-policy'
+    | '/$lang/creator'
+    | '/$lang/demo'
+    | '/$lang/dentist'
+    | '/$lang/faq'
+    | '/$lang/gym'
+    | '/$lang/hotel'
+    | '/$lang/login'
+    | '/$lang/medical-beauty'
+    | '/$lang/pricing'
+    | '/$lang/privacy'
+    | '/$lang/real-estate'
+    | '/$lang/restaurant'
+    | '/$lang/signup'
+    | '/$lang/social-media-influencer'
+    | '/$lang/terms'
+    | '/$lang/visa-agency'
+    | '/$lang/visibility-suite'
+    | '/$lang/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/login'
-    | '/signup'
-    | '/account'
-    | '/bar'
-    | '/contact'
-    | '/creator'
-    | '/demo'
-    | '/visibility-suite'
-    | '/pricing'
-    | '/faq'
-    | '/car-rental'
-    | '/cookie-policy'
-    | '/dentist'
-    | '/gym'
-    | '/hotel'
-    | '/medical-beauty'
-    | '/privacy'
-    | '/real-estate'
-    | '/restaurant'
     | '/sitemap.xml'
-    | '/social-media-influencer'
-    | '/terms'
-    | '/visa-agency'
+    | '/$lang/account'
+    | '/$lang/bar'
+    | '/$lang/car-rental'
+    | '/$lang/contact'
+    | '/$lang/cookie-policy'
+    | '/$lang/creator'
+    | '/$lang/demo'
+    | '/$lang/dentist'
+    | '/$lang/faq'
+    | '/$lang/gym'
+    | '/$lang/hotel'
+    | '/$lang/login'
+    | '/$lang/medical-beauty'
+    | '/$lang/pricing'
+    | '/$lang/privacy'
+    | '/$lang/real-estate'
+    | '/$lang/restaurant'
+    | '/$lang/signup'
+    | '/$lang/social-media-influencer'
+    | '/$lang/terms'
+    | '/$lang/visa-agency'
+    | '/$lang/visibility-suite'
+    | '/$lang'
   id:
     | '__root__'
     | '/'
-    | '/login'
-    | '/signup'
-    | '/account'
-    | '/bar'
-    | '/contact'
-    | '/creator'
-    | '/demo'
-    | '/visibility-suite'
-    | '/pricing'
-    | '/faq'
-    | '/car-rental'
-    | '/cookie-policy'
-    | '/dentist'
-    | '/gym'
-    | '/hotel'
-    | '/medical-beauty'
-    | '/privacy'
-    | '/real-estate'
-    | '/restaurant'
+    | '/$lang'
     | '/sitemap.xml'
-    | '/social-media-influencer'
-    | '/terms'
-    | '/visa-agency'
+    | '/$lang/account'
+    | '/$lang/bar'
+    | '/$lang/car-rental'
+    | '/$lang/contact'
+    | '/$lang/cookie-policy'
+    | '/$lang/creator'
+    | '/$lang/demo'
+    | '/$lang/dentist'
+    | '/$lang/faq'
+    | '/$lang/gym'
+    | '/$lang/hotel'
+    | '/$lang/login'
+    | '/$lang/medical-beauty'
+    | '/$lang/pricing'
+    | '/$lang/privacy'
+    | '/$lang/real-estate'
+    | '/$lang/restaurant'
+    | '/$lang/signup'
+    | '/$lang/social-media-influencer'
+    | '/$lang/terms'
+    | '/$lang/visa-agency'
+    | '/$lang/visibility-suite'
+    | '/$lang/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  LoginRoute: typeof LoginRoute
-  SignupRoute: typeof SignupRoute
-  AccountRoute: typeof AccountRoute
-  BarRoute: typeof BarRoute
-  ContactRoute: typeof ContactRoute
-  CreatorRoute: typeof CreatorRoute
-  DemoRoute: typeof DemoRoute
-  VisibilitySuiteRoute: typeof VisibilitySuiteRoute
-  PricingRoute: typeof PricingRoute
-  FaqPageRoute: typeof FaqPageRoute
-  CarRentalRoute: typeof CarRentalRoute
-  CookiePolicyRoute: typeof CookiePolicyRoute
-  DentistRoute: typeof DentistRoute
-  GymRoute: typeof GymRoute
-  HotelRoute: typeof HotelRoute
-  MedicalBeautyRoute: typeof MedicalBeautyRoute
-  PrivacyRoute: typeof PrivacyRoute
-  RealEstateRoute: typeof RealEstateRoute
-  RestaurantRoute: typeof RestaurantRoute
+  LangRouteRoute: typeof LangRouteRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  SocialMediaInfluencerRoute: typeof SocialMediaInfluencerRoute
-  TermsRoute: typeof TermsRoute
-  VisaAgencyRoute: typeof VisaAgencyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/visa-agency': {
-      id: '/visa-agency'
-      path: '/visa-agency'
-      fullPath: '/visa-agency'
-      preLoaderRoute: typeof VisaAgencyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cookie-policy': {
-      id: '/cookie-policy'
-      path: '/cookie-policy'
-      fullPath: '/cookie-policy'
-      preLoaderRoute: typeof CookiePolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/terms': {
-      id: '/terms'
-      path: '/terms'
-      fullPath: '/terms'
-      preLoaderRoute: typeof TermsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/social-media-influencer': {
-      id: '/social-media-influencer'
-      path: '/social-media-influencer'
-      fullPath: '/social-media-influencer'
-      preLoaderRoute: typeof SocialMediaInfluencerRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -379,130 +353,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/restaurant': {
-      id: '/restaurant'
-      path: '/restaurant'
-      fullPath: '/restaurant'
-      preLoaderRoute: typeof RestaurantRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/real-estate': {
-      id: '/real-estate'
-      path: '/real-estate'
-      fullPath: '/real-estate'
-      preLoaderRoute: typeof RealEstateRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/medical-beauty': {
-      id: '/medical-beauty'
-      path: '/medical-beauty'
-      fullPath: '/medical-beauty'
-      preLoaderRoute: typeof MedicalBeautyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/hotel': {
-      id: '/hotel'
-      path: '/hotel'
-      fullPath: '/hotel'
-      preLoaderRoute: typeof HotelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/gym': {
-      id: '/gym'
-      path: '/gym'
-      fullPath: '/gym'
-      preLoaderRoute: typeof GymRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/dentist': {
-      id: '/dentist'
-      path: '/dentist'
-      fullPath: '/dentist'
-      preLoaderRoute: typeof DentistRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/car-rental': {
-      id: '/car-rental'
-      path: '/car-rental'
-      fullPath: '/car-rental'
-      preLoaderRoute: typeof CarRentalRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/signup': {
-      id: '/signup'
-      path: '/signup'
-      fullPath: '/signup'
-      preLoaderRoute: typeof SignupRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/account': {
-      id: '/account'
-      path: '/account'
-      fullPath: '/account'
-      preLoaderRoute: typeof AccountRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/bar': {
-      id: '/bar'
-      path: '/bar'
-      fullPath: '/bar'
-      preLoaderRoute: typeof BarRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/creator': {
-      id: '/creator'
-      path: '/creator'
-      fullPath: '/creator'
-      preLoaderRoute: typeof CreatorRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo': {
-      id: '/demo'
-      path: '/demo'
-      fullPath: '/demo'
-      preLoaderRoute: typeof DemoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/visibility-suite': {
-      id: '/visibility-suite'
-      path: '/visibility-suite'
-      fullPath: '/visibility-suite'
-      preLoaderRoute: typeof VisibilitySuiteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pricing': {
-      id: '/pricing'
-      path: '/pricing'
-      fullPath: '/pricing'
-      preLoaderRoute: typeof PricingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/faq': {
-      id: '/faq'
-      path: '/faq'
-      fullPath: '/faq'
-      preLoaderRoute: typeof FaqPageRouteImport
+    '/$lang': {
+      id: '/$lang'
+      path: '/$lang'
+      fullPath: '/$lang'
+      preLoaderRoute: typeof LangRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -512,36 +367,231 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$lang/': {
+      id: '/$lang/'
+      path: '/'
+      fullPath: '/$lang/'
+      preLoaderRoute: typeof LangIndexRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/visibility-suite': {
+      id: '/$lang/visibility-suite'
+      path: '/visibility-suite'
+      fullPath: '/$lang/visibility-suite'
+      preLoaderRoute: typeof LangVisibilitySuiteRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/visa-agency': {
+      id: '/$lang/visa-agency'
+      path: '/visa-agency'
+      fullPath: '/$lang/visa-agency'
+      preLoaderRoute: typeof LangVisaAgencyRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/terms': {
+      id: '/$lang/terms'
+      path: '/terms'
+      fullPath: '/$lang/terms'
+      preLoaderRoute: typeof LangTermsRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/social-media-influencer': {
+      id: '/$lang/social-media-influencer'
+      path: '/social-media-influencer'
+      fullPath: '/$lang/social-media-influencer'
+      preLoaderRoute: typeof LangSocialMediaInfluencerRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/signup': {
+      id: '/$lang/signup'
+      path: '/signup'
+      fullPath: '/$lang/signup'
+      preLoaderRoute: typeof LangSignupRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/restaurant': {
+      id: '/$lang/restaurant'
+      path: '/restaurant'
+      fullPath: '/$lang/restaurant'
+      preLoaderRoute: typeof LangRestaurantRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/real-estate': {
+      id: '/$lang/real-estate'
+      path: '/real-estate'
+      fullPath: '/$lang/real-estate'
+      preLoaderRoute: typeof LangRealEstateRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/privacy': {
+      id: '/$lang/privacy'
+      path: '/privacy'
+      fullPath: '/$lang/privacy'
+      preLoaderRoute: typeof LangPrivacyRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/pricing': {
+      id: '/$lang/pricing'
+      path: '/pricing'
+      fullPath: '/$lang/pricing'
+      preLoaderRoute: typeof LangPricingRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/medical-beauty': {
+      id: '/$lang/medical-beauty'
+      path: '/medical-beauty'
+      fullPath: '/$lang/medical-beauty'
+      preLoaderRoute: typeof LangMedicalBeautyRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/login': {
+      id: '/$lang/login'
+      path: '/login'
+      fullPath: '/$lang/login'
+      preLoaderRoute: typeof LangLoginRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/hotel': {
+      id: '/$lang/hotel'
+      path: '/hotel'
+      fullPath: '/$lang/hotel'
+      preLoaderRoute: typeof LangHotelRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/gym': {
+      id: '/$lang/gym'
+      path: '/gym'
+      fullPath: '/$lang/gym'
+      preLoaderRoute: typeof LangGymRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/faq': {
+      id: '/$lang/faq'
+      path: '/faq'
+      fullPath: '/$lang/faq'
+      preLoaderRoute: typeof LangFaqRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/dentist': {
+      id: '/$lang/dentist'
+      path: '/dentist'
+      fullPath: '/$lang/dentist'
+      preLoaderRoute: typeof LangDentistRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/demo': {
+      id: '/$lang/demo'
+      path: '/demo'
+      fullPath: '/$lang/demo'
+      preLoaderRoute: typeof LangDemoRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/creator': {
+      id: '/$lang/creator'
+      path: '/creator'
+      fullPath: '/$lang/creator'
+      preLoaderRoute: typeof LangCreatorRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/cookie-policy': {
+      id: '/$lang/cookie-policy'
+      path: '/cookie-policy'
+      fullPath: '/$lang/cookie-policy'
+      preLoaderRoute: typeof LangCookiePolicyRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/contact': {
+      id: '/$lang/contact'
+      path: '/contact'
+      fullPath: '/$lang/contact'
+      preLoaderRoute: typeof LangContactRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/car-rental': {
+      id: '/$lang/car-rental'
+      path: '/car-rental'
+      fullPath: '/$lang/car-rental'
+      preLoaderRoute: typeof LangCarRentalRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/bar': {
+      id: '/$lang/bar'
+      path: '/bar'
+      fullPath: '/$lang/bar'
+      preLoaderRoute: typeof LangBarRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/account': {
+      id: '/$lang/account'
+      path: '/account'
+      fullPath: '/$lang/account'
+      preLoaderRoute: typeof LangAccountRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
   }
 }
 
+interface LangRouteRouteChildren {
+  LangAccountRoute: typeof LangAccountRoute
+  LangBarRoute: typeof LangBarRoute
+  LangCarRentalRoute: typeof LangCarRentalRoute
+  LangContactRoute: typeof LangContactRoute
+  LangCookiePolicyRoute: typeof LangCookiePolicyRoute
+  LangCreatorRoute: typeof LangCreatorRoute
+  LangDemoRoute: typeof LangDemoRoute
+  LangDentistRoute: typeof LangDentistRoute
+  LangFaqRoute: typeof LangFaqRoute
+  LangGymRoute: typeof LangGymRoute
+  LangHotelRoute: typeof LangHotelRoute
+  LangLoginRoute: typeof LangLoginRoute
+  LangMedicalBeautyRoute: typeof LangMedicalBeautyRoute
+  LangPricingRoute: typeof LangPricingRoute
+  LangPrivacyRoute: typeof LangPrivacyRoute
+  LangRealEstateRoute: typeof LangRealEstateRoute
+  LangRestaurantRoute: typeof LangRestaurantRoute
+  LangSignupRoute: typeof LangSignupRoute
+  LangSocialMediaInfluencerRoute: typeof LangSocialMediaInfluencerRoute
+  LangTermsRoute: typeof LangTermsRoute
+  LangVisaAgencyRoute: typeof LangVisaAgencyRoute
+  LangVisibilitySuiteRoute: typeof LangVisibilitySuiteRoute
+  LangIndexRoute: typeof LangIndexRoute
+}
+
+const LangRouteRouteChildren: LangRouteRouteChildren = {
+  LangAccountRoute: LangAccountRoute,
+  LangBarRoute: LangBarRoute,
+  LangCarRentalRoute: LangCarRentalRoute,
+  LangContactRoute: LangContactRoute,
+  LangCookiePolicyRoute: LangCookiePolicyRoute,
+  LangCreatorRoute: LangCreatorRoute,
+  LangDemoRoute: LangDemoRoute,
+  LangDentistRoute: LangDentistRoute,
+  LangFaqRoute: LangFaqRoute,
+  LangGymRoute: LangGymRoute,
+  LangHotelRoute: LangHotelRoute,
+  LangLoginRoute: LangLoginRoute,
+  LangMedicalBeautyRoute: LangMedicalBeautyRoute,
+  LangPricingRoute: LangPricingRoute,
+  LangPrivacyRoute: LangPrivacyRoute,
+  LangRealEstateRoute: LangRealEstateRoute,
+  LangRestaurantRoute: LangRestaurantRoute,
+  LangSignupRoute: LangSignupRoute,
+  LangSocialMediaInfluencerRoute: LangSocialMediaInfluencerRoute,
+  LangTermsRoute: LangTermsRoute,
+  LangVisaAgencyRoute: LangVisaAgencyRoute,
+  LangVisibilitySuiteRoute: LangVisibilitySuiteRoute,
+  LangIndexRoute: LangIndexRoute,
+}
+
+const LangRouteRouteWithChildren = LangRouteRoute._addFileChildren(
+  LangRouteRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  LoginRoute: LoginRoute,
-  SignupRoute: SignupRoute,
-  AccountRoute: AccountRoute,
-  BarRoute: BarRoute,
-  ContactRoute: ContactRoute,
-  CreatorRoute: CreatorRoute,
-  DemoRoute: DemoRoute,
-  VisibilitySuiteRoute: VisibilitySuiteRoute,
-  PricingRoute: PricingRoute,
-  FaqPageRoute: FaqPageRoute,
-  CarRentalRoute: CarRentalRoute,
-  CookiePolicyRoute: CookiePolicyRoute,
-  DentistRoute: DentistRoute,
-  GymRoute: GymRoute,
-  HotelRoute: HotelRoute,
-  MedicalBeautyRoute: MedicalBeautyRoute,
-  PrivacyRoute: PrivacyRoute,
-  RealEstateRoute: RealEstateRoute,
-  RestaurantRoute: RestaurantRoute,
+  LangRouteRoute: LangRouteRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  SocialMediaInfluencerRoute: SocialMediaInfluencerRoute,
-  TermsRoute: TermsRoute,
-  VisaAgencyRoute: VisaAgencyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
