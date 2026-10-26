@@ -48,7 +48,7 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
           alt={LOCALE_LABELS[currentLocale]}
           width={28}
           height={20}
-          className="h-5 w-7 rounded-[3px] object-cover shadow-sm"
+          className="h-5 w-7 shrink-0 rounded-[3px] object-cover shadow-sm"
         />
       </button>
 
@@ -73,7 +73,7 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
                 alt={LOCALE_LABELS[locale]}
                 width={28}
                 height={20}
-                className="h-5 w-7 rounded-[3px] object-cover shadow-sm"
+                className="h-5 w-7 shrink-0 rounded-[3px] object-cover shadow-sm"
               />
             </button>
           ))}
