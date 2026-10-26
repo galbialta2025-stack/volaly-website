@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Mail, MessageCircle, CheckCircle, Send, Clock, Globe } from "lucide-react";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { SEO } from "@/components/SEO";
@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
 import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 
-export const Route = createFileRoute("/contact")({
+export const Route = createFileRoute("/$lang/contact")({
   component: ContactPage,
 });
 
@@ -45,17 +45,17 @@ const infoCards = [
   },
 ];
 
-const contactSchema = {
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  name: "Contact — Volaly",
-  url: "https://volaly.com/contact",
-  description:
-    "Contact the Volaly team. We respond within 24 hours in English, German or Thai.",
-  publisher: { "@id": "https://volaly.com/#organization" },
-};
-
 function ContactPage() {
+  const { lang } = Route.useParams();
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contact — Volaly",
+    url: `https://volaly.com/${lang}/contact`,
+    description:
+      "Contact the Volaly team. We respond within 24 hours in English, German or Thai.",
+    publisher: { "@id": "https://volaly.com/#organization" },
+  };
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
@@ -102,7 +102,7 @@ function ContactPage() {
       <SEO
         title="Contact — Volaly"
         description="Get in touch with the Volaly team. Questions, demo requests or partnership enquiries — we respond within 24 hours in English, German or Thai."
-        canonical="https://volaly.com/contact"
+        canonical={`https://volaly.com/${lang}/contact`}
       />
       <JsonLd schema={contactSchema} />
 
@@ -233,7 +233,7 @@ function ContactPage() {
                     </Button>
                     <p className="text-center text-xs text-muted-foreground/60">
                       By submitting you agree to our{" "}
-                      <a href="/privacy" className="underline hover:text-foreground">Privacy Policy</a>.
+                      <Link to="/$lang/privacy" params={{ lang }} className="underline hover:text-foreground">Privacy Policy</Link>.
                     </p>
                   </form>
                 )}

@@ -1,14 +1,19 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { SEO } from "@/components/SEO";
 
-export const Route = createFileRoute("/privacy")({
-  component: () => (
+export const Route = createFileRoute("/$lang/privacy")({
+  component: PrivacyPage,
+});
+
+function PrivacyPage() {
+  const { lang } = Route.useParams();
+  return (
     <>
       <SEO
         title="Privacy Policy — Volaly"
         description="Read Volaly's Privacy Policy. Learn what data we collect, how we use it, your rights under CCPA, and how to contact us about your personal information."
-        canonical="https://volaly.com/privacy"
+        canonical={`https://volaly.com/${lang}/privacy`}
       />
       <PageHeader eyebrow="Legal" title="Privacy Policy" subtitle="Effective date: August 1, 2025 · Last updated: August 1, 2025" />
       <section className="pb-24">
@@ -75,7 +80,7 @@ export const Route = createFileRoute("/privacy")({
             </ul>
             <p>
               You can control cookies through your browser settings. Please see our{" "}
-              <a href="/cookie-policy" className="text-foreground underline underline-offset-2">Cookie Policy</a>{" "}
+              <Link to="/$lang/cookie-policy" params={{ lang }} className="text-foreground underline underline-offset-2">Cookie Policy</Link>{" "}
               for full details.
             </p>
           </div>
@@ -165,5 +170,5 @@ export const Route = createFileRoute("/privacy")({
         </div>
       </section>
     </>
-  ),
-});
+  );
+}

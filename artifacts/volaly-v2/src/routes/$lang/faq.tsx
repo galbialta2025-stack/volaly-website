@@ -13,7 +13,7 @@ import { SEO } from "@/components/SEO";
 import { JsonLd } from "@/components/JsonLd";
 import { openDemo } from "@/lib/demo";
 
-export const Route = createFileRoute("/faq")({
+export const Route = createFileRoute("/$lang/faq")({
   component: FaqPage,
 });
 
@@ -227,23 +227,23 @@ const categories: Category[] = [
 
 const ALL_ID = "all";
 
-const pageSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  name: "FAQ — Volaly",
-  url: "https://volaly.com/faq",
-  mainEntity: categories.flatMap((c) =>
-    c.items.map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: { "@type": "Answer", text: item.a },
-    }))
-  ),
-};
-
 /* ─────────────── PAGE ─────────────── */
 
 function FaqPage() {
+  const { lang } = Route.useParams();
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    name: "FAQ — Volaly",
+    url: `https://volaly.com/${lang}/faq`,
+    mainEntity: categories.flatMap((c) =>
+      c.items.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
+      }))
+    ),
+  };
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState(ALL_ID);
   const [openItem, setOpenItem] = useState<string | null>(null);
@@ -276,7 +276,7 @@ function FaqPage() {
       <SEO
         title="FAQ — Everything You Need to Know About Volaly"
         description="Find answers to every question about Volaly — Revenue Suite, Visibility Suite, AI, pricing, creators, businesses and more."
-        canonical="https://volaly.com/faq"
+        canonical={`https://volaly.com/${lang}/faq`}
       />
       <JsonLd schema={pageSchema} />
 

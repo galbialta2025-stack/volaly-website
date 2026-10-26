@@ -4,14 +4,18 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useLocation,
 } from "@tanstack/react-router";
 import { useEffect } from "react";
 
+import "../lib/i18n";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { VideoModal } from "../components/VideoModal";
 import { JsonLd } from "../components/JsonLd";
+import { useCurrentLocale } from "../hooks/use-locale";
+import { LOCALE_BCP47, SUPPORTED_LOCALES } from "../lib/i18n-config";
 
 const SITE_SCHEMA = {
   "@context": "https://schema.org",
@@ -53,6 +57,7 @@ const SITE_SCHEMA = {
 };
 
 function NotFoundComponent() {
+  const locale = useCurrentLocale();
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
@@ -63,7 +68,8 @@ function NotFoundComponent() {
         </p>
         <div className="mt-6">
           <Link
-            to="/"
+            to="/$lang"
+            params={{ lang: locale }}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Go home
@@ -77,6 +83,7 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
+  const locale = useCurrentLocale();
   useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
@@ -101,7 +108,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             Try again
           </button>
           <a
-            href="/"
+            href={`/${locale}`}
             className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
           >
             Go home
@@ -120,6 +127,39 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const locale = useCurrentLocale();
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    document.documentElement.lang = LOCALE_BCP47[locale];
+  }, [locale]);
+
+  useEffect(() => {
+    // hreflang alternates: one per supported locale for the current path,
+    // plus x-default pointing at the English version. Basic/generic for
+    // Step 1 — refined per-page once full content translation (Step 2) lands.
+    const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}(\/|$)/, "/");
+    const created: HTMLLinkElement[] = [];
+
+    for (const loc of SUPPORTED_LOCALES) {
+      const link = document.createElement("link");
+      link.rel = "alternate";
+      link.hreflang = LOCALE_BCP47[loc];
+      link.href = `https://volaly.com/${loc}${pathWithoutLocale}`;
+      document.head.appendChild(link);
+      created.push(link);
+    }
+    const defaultLink = document.createElement("link");
+    defaultLink.rel = "alternate";
+    defaultLink.hreflang = "x-default";
+    defaultLink.href = `https://volaly.com/en${pathWithoutLocale}`;
+    document.head.appendChild(defaultLink);
+    created.push(defaultLink);
+
+    return () => {
+      created.forEach((el) => el.remove());
+    };
+  }, [pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>

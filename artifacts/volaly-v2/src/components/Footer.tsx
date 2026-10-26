@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Youtube } from "lucide-react";
 import { Logo } from "./Logo";
 import { industryPages } from "@/lib/industries-data";
+import { useCurrentLocale } from "@/hooks/use-locale";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -55,6 +56,7 @@ const socials = [
 ];
 
 export function Footer() {
+  const locale = useCurrentLocale();
   return (
     <footer className="relative overflow-hidden border-t border-border/60 bg-background">
       <div className="bg-mesh-soft pointer-events-none absolute inset-0 opacity-60" />
@@ -71,20 +73,20 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-foreground">Platform</h4>
             <ul className="mt-4 space-y-2.5 text-sm">
-              <li><a href="/#visibility" className="text-muted-foreground hover:text-foreground">Visibility Suite</a></li>
-              <li><a href="/#how-it-works" className="text-muted-foreground hover:text-foreground">How It Works</a></li>
-              <li><a href="/#platform" className="text-muted-foreground hover:text-foreground">Capabilities</a></li>
+              <li><a href={`/${locale}#visibility`} className="text-muted-foreground hover:text-foreground">Visibility Suite</a></li>
+              <li><a href={`/${locale}#how-it-works`} className="text-muted-foreground hover:text-foreground">How It Works</a></li>
+              <li><a href={`/${locale}#platform`} className="text-muted-foreground hover:text-foreground">Capabilities</a></li>
             </ul>
           </div>
           <div>
             <h4 className="text-sm font-semibold text-foreground">Company</h4>
             <ul className="mt-4 space-y-2.5 text-sm">
-              <li><a href="/#industries" className="text-muted-foreground hover:text-foreground">Industries</a></li>
-              <li><a href="/#faq" className="text-muted-foreground hover:text-foreground">FAQ</a></li>
-              <li><Link to="/contact" className="text-muted-foreground hover:text-foreground">Contact</Link></li>
-              <li><Link to="/privacy" className="text-muted-foreground hover:text-foreground">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="text-muted-foreground hover:text-foreground">Terms</Link></li>
-              <li><Link to="/cookie-policy" className="text-muted-foreground hover:text-foreground">Cookie Policy</Link></li>
+              <li><a href={`/${locale}#industries`} className="text-muted-foreground hover:text-foreground">Industries</a></li>
+              <li><a href={`/${locale}#faq`} className="text-muted-foreground hover:text-foreground">FAQ</a></li>
+              <li><Link to="/$lang/contact" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">Contact</Link></li>
+              <li><Link to="/$lang/privacy" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">Privacy Policy</Link></li>
+              <li><Link to="/$lang/terms" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">Terms</Link></li>
+              <li><Link to="/$lang/cookie-policy" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">Cookie Policy</Link></li>
             </ul>
           </div>
           <div>
@@ -92,7 +94,7 @@ export function Footer() {
             <ul className="mt-4 grid grid-cols-1 gap-2.5 text-sm sm:grid-cols-2 md:grid-cols-1">
               {industryPages.map((ind) => (
                 <li key={ind.slug}>
-                  <Link to={`/${ind.slug}` as "/"} className="text-muted-foreground hover:text-foreground">
+                  <Link to={`/$lang/${ind.slug}` as "/$lang/bar"} params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">
                     {ind.name}
                   </Link>
                 </li>

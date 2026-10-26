@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { useCurrentLocale } from "@/hooks/use-locale";
 import { SectionHeading } from "./shared";
 import { Reveal } from "@/components/Motion";
-import { faqs } from "@/lib/faq-data";
+import { getFaqs, type FaqItem } from "@/lib/faq-data";
 
 /** JSON-LD FAQ schema for Google rich results */
-function FaqSchema() {
+function FaqSchema({ faqs }: { faqs: FaqItem[] }) {
   const items = faqs.map((f) => ({
     "@type": "Question",
     name: typeof f.q === "string" ? f.q : "",
@@ -32,10 +33,12 @@ function FaqSchema() {
 
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
+  const locale = useCurrentLocale();
+  const faqs = getFaqs(locale);
 
   return (
     <section id="faq" className="bg-mesh-soft relative scroll-mt-24 overflow-hidden py-28">
-      <FaqSchema />
+      <FaqSchema faqs={faqs} />
       <div className="relative mx-auto max-w-3xl px-6">
         <SectionHeading
           eyebrow="FAQ"

@@ -17,21 +17,23 @@ import {
 } from "@/components/ui/accordion";
 import { SEO } from "@/components/SEO";
 import { JsonLd } from "@/components/JsonLd";
+import { useCurrentLocale } from "@/hooks/use-locale";
 
 export function IndustryPage({ data }: { data: IndustryPageData }) {
+  const locale = useCurrentLocale();
   const others = industryPages.filter((i) => i.slug !== data.slug).slice(0, 6);
   const faqs = industryFaqs[data.slug] ?? [];
   const related = (relatedIndustries[data.slug] ?? [])
     .map((slug) => industryPages.find((p) => p.slug === slug))
     .filter(Boolean) as IndustryPageData[];
 
-  const pageUrl = `https://volaly.com/${data.slug}`;
+  const pageUrl = `https://volaly.com/${locale}/${data.slug}`;
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://volaly.com/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: `https://volaly.com/${locale}/` },
       { "@type": "ListItem", position: 2, name: data.name, item: pageUrl },
     ],
   };
@@ -235,7 +237,8 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
                     {related.map((r) => (
                       <Link
                         key={r.slug}
-                        to={`/${r.slug}` as "/"}
+                        to={`/$lang/${r.slug}` as "/$lang/bar"}
+                        params={{ lang: locale }}
                         className="group inline-flex items-center gap-2 rounded-full border border-border/70 bg-background px-4 py-2 text-sm font-medium text-muted-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-brand-orange/50 hover:text-foreground hover:shadow-[var(--shadow-glow-orange)]"
                       >
                         <r.icon className="h-4 w-4 text-brand-orange" />
@@ -259,7 +262,8 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
             {others.map((o) => (
               <StaggerItem key={o.slug}>
                 <Link
-                  to={`/${o.slug}` as "/"}
+                  to={`/$lang/${o.slug}` as "/$lang/bar"}
+                  params={{ lang: locale }}
                   className="group flex items-center gap-4 rounded-[22px] border border-border/70 bg-background/70 p-5 shadow-soft backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-glow-orange)]"
                 >
                   <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-orange/15 to-brand-purple/15 text-brand-orange">

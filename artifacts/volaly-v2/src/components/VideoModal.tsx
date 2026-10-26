@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import { DEMO_EVENT } from "@/lib/demo";
-
-// Replace with a real MP4, YouTube (nocookie) or Vimeo embed URL.
-const VIDEO_URL = "https://www.youtube-nocookie.com/embed/RNKP-v0RxsM?autoplay=1&rel=0";
+import { useCurrentLocale } from "@/hooks/use-locale";
+import { getDemoVideoEmbedUrl } from "@/lib/video-urls";
 
 function isEmbed(url: string) {
   return /youtube|youtu\.be|vimeo/.test(url);
 }
 
 export function VideoModal() {
+  const locale = useCurrentLocale();
+  const videoUrl = getDemoVideoEmbedUrl(locale, { autoplay: true });
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -51,9 +52,9 @@ export function VideoModal() {
           <X className="h-5 w-5" />
         </button>
         <div className="aspect-video w-full bg-black">
-          {isEmbed(VIDEO_URL) ? (
+          {isEmbed(videoUrl) ? (
             <iframe
-              src={VIDEO_URL}
+              src={videoUrl}
               title="Volaly 2 minute demo"
               className="h-full w-full"
               allow="autoplay; encrypted-media; picture-in-picture"
@@ -61,7 +62,7 @@ export function VideoModal() {
               loading="lazy"
             />
           ) : (
-            <video src={VIDEO_URL} className="h-full w-full" controls autoPlay playsInline />
+            <video src={videoUrl} className="h-full w-full" controls autoPlay playsInline />
           )}
         </div>
       </div>

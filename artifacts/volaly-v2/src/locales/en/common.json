@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "visibility": "Visibility",
+    "howItWorks": "How It Works",
+    "industries": "Industries",
+    "platform": "Platform",
+    "faq": "FAQ",
+    "viewDemo": "View Demo",
+    "chatAriaLabel": "Chat with Volaly AI",
+    "toggleMenuAriaLabel": "Toggle menu",
+    "mainNavigationAriaLabel": "Main navigation"
+  }
+}

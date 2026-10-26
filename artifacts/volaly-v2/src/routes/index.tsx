@@ -1,66 +1,16 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Hero } from "@/components/sections/Hero";
-import { Problem } from "@/components/sections/Problem";
-import { TrustBar } from "@/components/sections/TrustBar";
-import { VisibilitySuite } from "@/components/sections/VisibilitySuite";
-import { IndustriesGrid } from "@/components/sections/IndustriesGrid";
-import { WhoUsesVolaly } from "@/components/sections/WhoUsesVolaly";
-import { FeaturesGrid } from "@/components/sections/FeaturesGrid";
-import { WhyVolaly } from "@/components/sections/WhyVolaly";
-import { FAQ } from "@/components/sections/FAQ";
-import { FinalCta } from "@/components/sections/FinalCta";
-import { JsonLd } from "@/components/JsonLd";
-import { faqs } from "@/lib/faq-data";
+import { createFileRoute, redirect } from "@tanstack/react-router";
+import {
+  detectBrowserLocale,
+  getStoredLocale,
+} from "@/lib/i18n-config";
 
+// Bare "/" has no language of its own — it only decides which /$lang/ to
+// send the visitor to: their previously chosen language (localStorage),
+// else their browser's preferred language if we support it, else English.
 export const Route = createFileRoute("/")({
-  component: Index,
+  beforeLoad: () => {
+    const locale = getStoredLocale() ?? detectBrowserLocale();
+    throw redirect({ to: "/$lang", params: { lang: locale }, replace: true });
+  },
+  component: () => null,
 });
-
-const homepageSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://volaly.com/#webpage",
-      url: "https://volaly.com/",
-      name: "Volaly — Turn Visibility into Revenue | Business Growth Platform",
-      description:
-        "Volaly is the AI Business Growth Platform. Create content, attract customers, convert enquiries and grow revenue automatically across Google, LINE, WhatsApp and more.",
-      isPartOf: { "@id": "https://volaly.com/#website" },
-      publisher: { "@id": "https://volaly.com/#organization" },
-      breadcrumb: {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://volaly.com/" },
-        ],
-      },
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://volaly.com/#faq",
-      mainEntity: faqs.map((f) => ({
-        "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
-      })),
-    },
-  ],
-};
-
-function Index() {
-  return (
-    <>
-      <JsonLd schema={homepageSchema} />
-      <Hero />
-      <TrustBar />
-      <Problem />
-      <VisibilitySuite />
-      <WhoUsesVolaly />
-      <IndustriesGrid />
-      <FeaturesGrid />
-      <WhyVolaly />
-      <FAQ />
-      <FinalCta />
-    </>
-  );
-}

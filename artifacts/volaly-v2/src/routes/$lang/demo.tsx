@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
 import { openDemo } from "@/lib/demo";
 
-export const Route = createFileRoute("/demo")({
+export const Route = createFileRoute("/$lang/demo")({
   component: DemoPage,
 });
 
@@ -77,12 +77,13 @@ const shortsSteps = [
 ═══════════════════════════════════════ */
 
 function DemoPage() {
+  const { lang } = Route.useParams();
   return (
     <>
       <SEO
         title="Experience Volaly — Live Demo"
         description="See how one upload becomes revenue, visibility and AI-powered customer conversations. Interactive demo — no signup required."
-        canonical="https://volaly.com/demo"
+        canonical={`https://volaly.com/${lang}/demo`}
       />
 
       <HeroSection />

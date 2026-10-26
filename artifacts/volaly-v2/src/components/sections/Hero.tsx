@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { AuroraOrbs } from "@/components/Backdrop";
 import { openDemo } from "@/lib/demo";
 import { VideoEmbed } from "@/components/VideoEmbed";
+import { useCurrentLocale } from "@/hooks/use-locale";
+import { getDemoVideoEmbedUrl, getDemoVideoPosterUrl } from "@/lib/video-urls";
 
 const microBenefits = [
   "One Upload",
@@ -12,6 +14,10 @@ const microBenefits = [
 ];
 
 export function Hero() {
+  const locale = useCurrentLocale();
+  const videoUrl = getDemoVideoEmbedUrl(locale, { modestbranding: true });
+  const posterUrl = getDemoVideoPosterUrl(locale);
+
   return (
     <section className="bg-aurora noise relative overflow-hidden pt-36 pb-24">
       <AuroraOrbs />
@@ -49,9 +55,9 @@ export function Hero() {
               className="mt-8 lg:hidden"
             >
               <VideoEmbed
-                url="https://www.youtube-nocookie.com/embed/RNKP-v0RxsM?rel=0&modestbranding=1"
+                url={videoUrl}
                 title="Volaly product demo"
-                poster="https://img.youtube.com/vi/RNKP-v0RxsM/maxresdefault.jpg"
+                poster={posterUrl}
               />
             </motion.div>
 
@@ -88,9 +94,9 @@ export function Hero() {
           {/* ── RIGHT: video (desktop only) ── */}
           <div className="hidden lg:block">
             <VideoEmbed
-              url="https://www.youtube-nocookie.com/embed/RNKP-v0RxsM?rel=0&modestbranding=1"
+              url={videoUrl}
               title="Volaly product demo"
-              poster="https://img.youtube.com/vi/RNKP-v0RxsM/maxresdefault.jpg"
+              poster={posterUrl}
             />
           </div>
 

@@ -15,7 +15,7 @@ import { SEO } from "@/components/SEO";
 import { JsonLd } from "@/components/JsonLd";
 import { openDemo } from "@/lib/demo";
 
-export const Route = createFileRoute("/pricing")({
+export const Route = createFileRoute("/$lang/pricing")({
   component: PricingPage,
 });
 
@@ -186,27 +186,28 @@ const faqs = [
   },
 ];
 
-const pageSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "Pricing — Volaly",
-  url: "https://volaly.com/pricing",
-  description: "Choose how you want to grow with Volaly. Three paid plans and one invitation-only Creator Partner plan — focused on value, not features.",
-  publisher: { "@id": "https://volaly.com/#organization" },
-};
-
 /* ─────────────── PAGE ─────────────── */
 
 function PricingPage() {
+  const { lang } = Route.useParams();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [activeCol, setActiveCol] = useState<string | null>(null);
+
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Pricing — Volaly",
+    url: `https://volaly.com/${lang}/pricing`,
+    description: "Choose how you want to grow with Volaly. Three paid plans and one invitation-only Creator Partner plan — focused on value, not features.",
+    publisher: { "@id": "https://volaly.com/#organization" },
+  };
 
   return (
     <>
       <SEO
         title="Pricing — Choose How You Want To Grow | Volaly"
         description="Three plans built around your growth. Creator Partner (free), Creator ($199), Creator Pro ($499), Creator Elite ($999). Revenue share decreases as you scale."
-        canonical="https://volaly.com/pricing"
+        canonical={`https://volaly.com/${lang}/pricing`}
       />
       <JsonLd schema={pageSchema} />
 

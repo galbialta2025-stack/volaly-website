@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { useCurrentLocale } from "@/hooks/use-locale";
 
 export function Logo({
   className = "",
@@ -7,9 +8,11 @@ export function Logo({
   className?: string;
   withTagline?: boolean;
 }) {
+  const locale = useCurrentLocale();
   return (
     <Link
-      to="/"
+      to="/$lang"
+      params={{ lang: locale }}
       aria-label="Volaly home"
       className={`inline-flex items-center ${className}`}
     >

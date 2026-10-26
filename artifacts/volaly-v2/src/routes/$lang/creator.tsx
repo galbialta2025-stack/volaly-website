@@ -18,7 +18,7 @@ import { SEO } from "@/components/SEO";
 import { JsonLd } from "@/components/JsonLd";
 import { openDemo } from "@/lib/demo";
 
-export const Route = createFileRoute("/creator")({
+export const Route = createFileRoute("/$lang/creator")({
   component: CreatorPage,
 });
 
@@ -85,28 +85,29 @@ const faqs = [
   { q: "Can I try Volaly for free?",                a: "Yes — start free and explore the platform before committing to any plan." },
 ];
 
-const creatorSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "Volaly for Creators — Turn Every Upload into Revenue",
-  url: "https://volaly.com/creator",
-  description: "Volaly helps creators automatically monetize and distribute every upload with AI-powered revenue streams, smart content distribution and 24/7 audience engagement.",
-  publisher: { "@id": "https://volaly.com/#organization" },
-};
-
 /* ═══════════════════════════════════════════════
    PAGE
 ═══════════════════════════════════════════════ */
 
 function CreatorPage() {
+  const { lang } = Route.useParams();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  const creatorSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Volaly for Creators — Turn Every Upload into Revenue",
+    url: `https://volaly.com/${lang}/creator`,
+    description: "Volaly helps creators automatically monetize and distribute every upload with AI-powered revenue streams, smart content distribution and 24/7 audience engagement.",
+    publisher: { "@id": "https://volaly.com/#organization" },
+  };
 
   return (
     <>
       <SEO
         title="Volaly for Creators — Turn Every Upload into Revenue"
         description="Keep creating. Volaly automatically transforms every upload into revenue, visibility and AI-powered audience experiences. Creator Shop, Voice AI, Memberships and more."
-        canonical="https://volaly.com/creator"
+        canonical={`https://volaly.com/${lang}/creator`}
       />
       <JsonLd schema={creatorSchema} />
 

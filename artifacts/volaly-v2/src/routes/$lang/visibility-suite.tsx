@@ -16,7 +16,7 @@ import { SEO } from "@/components/SEO";
 import { JsonLd } from "@/components/JsonLd";
 import { openDemo } from "@/lib/demo";
 
-export const Route = createFileRoute("/visibility-suite")({
+export const Route = createFileRoute("/$lang/visibility-suite")({
   component: VisibilitySuitePage,
 });
 
@@ -104,26 +104,27 @@ const faqs = [
   { q: "How quickly does content go live after I upload?", a: "Most content is processed and scheduled within minutes. Smart Shorts and platform-specific variants are typically ready in under 10 minutes." },
 ];
 
-const pageSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "Visibility Suite — Volaly",
-  url: "https://volaly.com/visibility-suite",
-  description: "One upload automatically becomes social content, shorts, blogs, SEO pages and newsletters. Grow everywhere automatically with Volaly's Visibility Suite.",
-  publisher: { "@id": "https://volaly.com/#organization" },
-};
-
 /* ─────────────── PAGE ─────────────── */
 
 function VisibilitySuitePage() {
+  const { lang } = Route.useParams();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Visibility Suite — Volaly",
+    url: `https://volaly.com/${lang}/visibility-suite`,
+    description: "One upload automatically becomes social content, shorts, blogs, SEO pages and newsletters. Grow everywhere automatically with Volaly's Visibility Suite.",
+    publisher: { "@id": "https://volaly.com/#organization" },
+  };
 
   return (
     <>
       <SEO
         title="Visibility Suite — Grow Everywhere From One Upload | Volaly"
         description="One upload automatically becomes social content, shorts, blogs, SEO pages and newsletters. Grow everywhere automatically with Volaly's Visibility Suite."
-        canonical="https://volaly.com/visibility-suite"
+        canonical={`https://volaly.com/${lang}/visibility-suite`}
       />
       <JsonLd schema={pageSchema} />
 

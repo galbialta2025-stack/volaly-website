@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { SectionHeading } from "./shared";
 import { Stagger, StaggerItem, Reveal } from "@/components/Motion";
 import { openDemo } from "@/lib/demo";
+import { useCurrentLocale } from "@/hooks/use-locale";
 
 /** One outcome sentence per industry slug. */
 const outcomes: Record<string, string> = {
@@ -22,6 +23,7 @@ const outcomes: Record<string, string> = {
 };
 
 export function IndustriesGrid() {
+  const locale = useCurrentLocale();
   return (
     <section id="industries" className="relative scroll-mt-24 overflow-hidden bg-muted/20 py-28">
       <div className="relative mx-auto max-w-7xl px-6">
@@ -40,7 +42,7 @@ export function IndustriesGrid() {
         >
           {industryPages.map((ind) => (
             <StaggerItem key={ind.slug}>
-              <Link to={`/${ind.slug}` as "/"} className="group block h-full">
+              <Link to={`/$lang/${ind.slug}` as "/$lang/bar"} params={{ lang: locale }} className="group block h-full">
                 <motion.div
                   whileHover={{ y: -5 }}
                   transition={{ duration: 0.2, ease: "easeOut" }}

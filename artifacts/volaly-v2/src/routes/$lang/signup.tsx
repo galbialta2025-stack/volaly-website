@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useState } from 'react'
-import { useAuth } from '../hooks/use-auth'
+import { useAuth } from '../../hooks/use-auth'
 
 const signupSchema = z.object({
   email: z.string().email('Bitte eine gültige Email-Adresse eingeben'),
@@ -12,11 +12,12 @@ const signupSchema = z.object({
 
 type SignupForm = z.infer<typeof signupSchema>
 
-export const Route = createFileRoute('/signup')({
+export const Route = createFileRoute('/$lang/signup')({
   component: SignupPage,
 })
 
 function SignupPage() {
+  const { lang } = Route.useParams()
   const { signUp } = useAuth()
   const [serverError, setServerError] = useState<string | null>(null)
   const [confirmationSent, setConfirmationSent] = useState(false)
@@ -89,7 +90,7 @@ function SignupPage() {
 
       <p className="mt-4 text-sm text-gray-600">
         Schon ein Konto?{' '}
-        <Link to="/login" className="font-medium underline">Einloggen</Link>
+        <Link to="/$lang/login" params={{ lang }} className="font-medium underline">Einloggen</Link>
       </p>
     </div>
   )

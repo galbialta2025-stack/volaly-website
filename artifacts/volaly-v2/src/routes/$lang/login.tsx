@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useState } from 'react'
-import { useAuth } from '../hooks/use-auth'
+import { useAuth } from '../../hooks/use-auth'
 
 const loginSchema = z.object({
   email: z.string().email('Bitte eine gültige Email-Adresse eingeben'),
@@ -12,11 +12,12 @@ const loginSchema = z.object({
 
 type LoginForm = z.infer<typeof loginSchema>
 
-export const Route = createFileRoute('/login')({
+export const Route = createFileRoute('/$lang/login')({
   component: LoginPage,
 })
 
 function LoginPage() {
+  const { lang } = Route.useParams()
   const { signIn } = useAuth()
   const navigate = useNavigate()
   const [serverError, setServerError] = useState<string | null>(null)
@@ -36,7 +37,7 @@ function LoginPage() {
       setServerError(error)
       return
     }
-    navigate({ to: '/account' })
+    navigate({ to: '/$lang/account', params: { lang } })
   }
 
   return (
@@ -80,7 +81,7 @@ function LoginPage() {
 
       <p className="mt-4 text-sm text-gray-600">
         Noch kein Konto?{' '}
-        <Link to="/signup" className="font-medium underline">Registrieren</Link>
+        <Link to="/$lang/signup" params={{ lang }} className="font-medium underline">Registrieren</Link>
       </p>
     </div>
   )

@@ -1,23 +1,28 @@
 import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { AnimatePresence } from "motion/react";
+import { useTranslation } from "react-i18next";
 import { Logo } from "./Logo";
 import { Button } from "@/components/ui/button";
 import { openDemo } from "@/lib/demo";
 import { ChatWidget } from "./ChatWidget";
-
-const links = [
-  { href: "/#visibility", label: "Visibility" },
-  { href: "/#how-it-works", label: "How It Works" },
-  { href: "/#industries", label: "Industries" },
-  { href: "/#platform", label: "Platform" },
-  { href: "/#faq", label: "FAQ" },
-];
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useCurrentLocale } from "@/hooks/use-locale";
 
 export function Navbar() {
+  const { t } = useTranslation();
+  const locale = useCurrentLocale();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
+
+  const links = [
+    { href: `/${locale}#visibility`, label: t("nav.visibility") },
+    { href: `/${locale}#how-it-works`, label: t("nav.howItWorks") },
+    { href: `/${locale}#industries`, label: t("nav.industries") },
+    { href: `/${locale}#platform`, label: t("nav.platform") },
+    { href: `/${locale}#faq`, label: t("nav.faq") },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -34,7 +39,7 @@ export function Navbar() {
 
       <header className="fixed inset-x-0 top-0 z-50 px-4 pt-3 sm:pt-4">
         <nav
-          aria-label="Main navigation"
+          aria-label={t("nav.mainNavigationAriaLabel")}
           className={`mx-auto flex h-[60px] max-w-6xl items-center justify-between gap-4 rounded-full px-4 transition-all duration-300 sm:px-5 ${
             scrolled
               ? "glass-nav border border-white/80 shadow-soft"
@@ -55,17 +60,18 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Desktop: View Demo button */}
-          <div className="hidden lg:block">
+          {/* Desktop: language switcher + View Demo button */}
+          <div className="hidden items-center gap-2 lg:flex">
+            <LanguageSwitcher currentLocale={locale} />
             <Button variant="hero" size="sm" className="rounded-full" onClick={openDemo}>
-              View Demo
+              {t("nav.viewDemo")}
             </Button>
           </div>
 
           {/* Chatbot bubble + hamburger (always visible on right) */}
           <div className="flex items-center gap-2">
             <button
-              aria-label="Chat with Volaly AI"
+              aria-label={t("nav.chatAriaLabel")}
               onClick={() => setChatOpen((v) => !v)}
               className="relative flex h-9 w-9 items-center justify-center rounded-full shadow-md transition-transform hover:scale-110 active:scale-95"
               style={{
@@ -79,7 +85,7 @@ export function Navbar() {
             <button
               className="rounded-full p-2 text-foreground lg:hidden"
               onClick={() => setOpen((v) => !v)}
-              aria-label="Toggle menu"
+              aria-label={t("nav.toggleMenuAriaLabel")}
               aria-expanded={open}
             >
               {open ? <X /> : <Menu />}
@@ -109,8 +115,11 @@ export function Navbar() {
                   openDemo();
                 }}
               >
-                View Demo
+                {t("nav.viewDemo")}
               </Button>
+              <div className="mt-2 flex justify-center">
+                <LanguageSwitcher currentLocale={locale} />
+              </div>
             </div>
           </div>
         )}

@@ -1,6 +1,7 @@
 import path from 'path';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
+import { tanstackRouter } from '@tanstack/router-plugin/vite';
 import { defineConfig } from 'vite';
 
 import runtimeErrorOverlay from '@replit/vite-plugin-runtime-error-modal';
@@ -30,6 +31,15 @@ if (!basePath) {
 export default defineConfig({
   base: basePath,
   plugins: [
+    tanstackRouter({
+      target: 'react',
+      autoCodeSplitting: false,
+      routesDirectory: path.resolve(import.meta.dirname, 'src/routes'),
+      generatedRouteTree: path.resolve(
+        import.meta.dirname,
+        'src/routeTree.gen.ts',
+      ),
+    }),
     react(),
     tailwindcss(),
     runtimeErrorOverlay(),

@@ -1,12 +1,12 @@
 import { createFileRoute, redirect } from '@tanstack/react-router'
-import { supabase } from '../lib/supabase'
-import { useAuth } from '../hooks/use-auth'
+import { supabase } from '../../lib/supabase'
+import { useAuth } from '../../hooks/use-auth'
 
-export const Route = createFileRoute('/account')({
-  beforeLoad: async () => {
+export const Route = createFileRoute('/$lang/account')({
+  beforeLoad: async ({ params }) => {
     const { data } = await supabase.auth.getSession()
     if (!data.session) {
-      throw redirect({ to: '/login' })
+      throw redirect({ to: '/$lang/login', params: { lang: params.lang } })
     }
   },
   component: AccountPage,
