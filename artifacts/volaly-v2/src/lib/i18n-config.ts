@@ -16,15 +16,22 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   vi: 'Tiếng Việt',
 };
 
-// Flag emoji shown next to each language in the switcher.
-export const LOCALE_FLAGS: Record<Locale, string> = {
-  en: '🇺🇸',
-  de: '🇩🇪',
-  th: '🇹🇭',
-  fr: '🇫🇷',
-  es: '🇪🇸',
-  vi: '🇻🇳',
+// ISO 3166-1 alpha-2 country code per locale, used to fetch a flag image
+// from flagcdn.com. Unicode flag emoji are avoided — many platforms (e.g.
+// Windows, most Linux desktops) have no flag glyphs and fall back to
+// showing the raw two-letter code in a box instead of an actual flag.
+export const LOCALE_COUNTRY: Record<Locale, string> = {
+  en: 'us',
+  de: 'de',
+  th: 'th',
+  fr: 'fr',
+  es: 'es',
+  vi: 'vn',
 };
+
+export function flagUrl(locale: Locale, width: 20 | 40 | 80 = 40): string {
+  return `https://flagcdn.com/w${width}/${LOCALE_COUNTRY[locale]}.png`;
+}
 
 // BCP 47 tags used for <html lang>, hreflang and og:locale.
 export const LOCALE_BCP47: Record<Locale, string> = {

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useRouter } from "@tanstack/react-router";
 import {
-  LOCALE_FLAGS,
   LOCALE_LABELS,
   SUPPORTED_LOCALES,
+  flagUrl,
   isSupportedLocale,
   storeLocale,
   type Locale,
@@ -38,34 +38,39 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
     <div className="relative">
       <button
         type="button"
-        aria-label="Change language"
+        aria-label={`Change language (current: ${LOCALE_LABELS[currentLocale]})`}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className="flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/50 hover:text-foreground"
+        className="flex items-center justify-center rounded-full p-1.5 transition-colors hover:bg-white/50"
       >
-        <span className="text-base leading-none">{LOCALE_FLAGS[currentLocale]}</span>
-        <span className="uppercase">{currentLocale}</span>
+        <img
+          src={flagUrl(currentLocale)}
+          alt={LOCALE_LABELS[currentLocale]}
+          className="h-5 w-7 rounded-[3px] object-cover shadow-sm"
+        />
       </button>
 
       {open && (
         <div
           role="menu"
-          className="glass-nav absolute right-0 top-full mt-2 min-w-[140px] rounded-2xl border border-white/80 p-1.5 shadow-soft"
+          className="glass-nav absolute right-0 top-full mt-2 flex items-center gap-1.5 rounded-2xl border border-white/80 p-1.5 shadow-soft"
         >
           {SUPPORTED_LOCALES.map((locale) => (
             <button
               key={locale}
               type="button"
               role="menuitem"
+              aria-label={LOCALE_LABELS[locale]}
               onClick={() => selectLocale(locale)}
-              className={`flex w-full items-center gap-2 rounded-xl px-3 py-2 text-left text-sm font-medium transition-colors hover:bg-white/70 ${
-                locale === currentLocale
-                  ? "text-foreground"
-                  : "text-muted-foreground"
+              className={`flex items-center justify-center rounded-xl p-1.5 transition-colors hover:bg-white/70 ${
+                locale === currentLocale ? "ring-2 ring-brand-orange/60" : ""
               }`}
             >
-              <span className="text-base leading-none">{LOCALE_FLAGS[locale]}</span>
-              {LOCALE_LABELS[locale]}
+              <img
+                src={flagUrl(locale)}
+                alt={LOCALE_LABELS[locale]}
+                className="h-5 w-7 rounded-[3px] object-cover shadow-sm"
+              />
             </button>
           ))}
         </div>
