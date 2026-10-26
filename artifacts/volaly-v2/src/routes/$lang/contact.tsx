@@ -252,7 +252,7 @@ function ContactPage() {
                         onClick={() => {
                           // Trigger the chat bubble in the navbar
                           const bubble = document.querySelector<HTMLButtonElement>(
-                            'button[aria-label="Chat with Volaly AI"]',
+                            "button[data-chat-toggle]",
                           );
                           bubble?.click();
                         }}

@@ -14,7 +14,8 @@
     "cookiePolicy": "Chính Sách Cookie",
     "followUs": "Theo Dõi Chúng Tôi",
     "disclaimer": "* Kết quả cá nhân có thể khác nhau và không được đảm bảo. Số liệu thống kê hiển thị đại diện cho kết quả được báo cáo bởi một số khách hàng nhất định và có thể không phản ánh kết quả điển hình. Hiệu suất trong quá khứ không phải là chỉ báo cho kết quả trong tương lai.",
-    "copyright": "Đã đăng ký bản quyền."
+    "copyright": "Đã đăng ký bản quyền.",
+    "imprint": "Thông tin pháp lý"
   },
   "nav": {
     "visibility": "Khả Năng Hiển Thị",
@@ -26,5 +27,9 @@
     "chatAriaLabel": "Trò chuyện với Volaly AI",
     "toggleMenuAriaLabel": "Bật/tắt menu",
     "mainNavigationAriaLabel": "Điều hướng chính"
+  },
+  "chat": {
+    "aiNotice": "Bạn đang trò chuyện với trợ lý AI. Vui lòng không chia sẻ dữ liệu cá nhân nhạy cảm.",
+    "privacyLink": "Chính sách quyền riêng tư"
   }
 }

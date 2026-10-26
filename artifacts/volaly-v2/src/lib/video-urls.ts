@@ -34,7 +34,11 @@ export function getDemoVideoEmbedUrl(
   return `https://www.youtube-nocookie.com/embed/${id}?${params.toString()}`;
 }
 
-export function getDemoVideoPosterUrl(locale: Locale): string {
-  const id = getDemoVideoId(locale);
-  return `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+// Posters must be self-hosted (files in /public) so that no request reaches
+// Google before the visitor clicks play. Add an entry per locale once the
+// poster image exists, e.g. en: "/video-posters/demo-en.jpg".
+const DEMO_VIDEO_POSTERS: Partial<Record<Locale, string>> = {};
+
+export function getDemoVideoPosterUrl(locale: Locale): string | undefined {
+  return DEMO_VIDEO_POSTERS[locale] ?? DEMO_VIDEO_POSTERS.en;
 }

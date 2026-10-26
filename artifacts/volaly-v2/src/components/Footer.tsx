@@ -90,6 +90,7 @@ export function Footer() {
               <li><Link to="/$lang/privacy" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">{t("footer.privacyPolicy")}</Link></li>
               <li><Link to="/$lang/terms" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">{t("footer.terms")}</Link></li>
               <li><Link to="/$lang/cookie-policy" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">{t("footer.cookiePolicy")}</Link></li>
+              <li><Link to="/$lang/imprint" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">{t("footer.imprint")}</Link></li>
             </ul>
           </div>
           <div>

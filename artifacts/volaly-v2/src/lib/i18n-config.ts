@@ -16,10 +16,11 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   vi: 'Tiếng Việt',
 };
 
-// ISO 3166-1 alpha-2 country code per locale, used to fetch a flag image
-// from flagcdn.com. Unicode flag emoji are avoided — many platforms (e.g.
-// Windows, most Linux desktops) have no flag glyphs and fall back to
-// showing the raw two-letter code in a box instead of an actual flag.
+// ISO 3166-1 alpha-2 country code per locale, used to pick a self-hosted flag
+// SVG from /public/flags (source: flag-icons, MIT — see public/flags/LICENSE.txt).
+// Flags are self-hosted so no third-party request happens on page load.
+// Unicode flag emoji are avoided — many platforms (e.g. Windows, most Linux
+// desktops) have no flag glyphs and show the raw two-letter code instead.
 export const LOCALE_COUNTRY: Record<Locale, string> = {
   en: 'us',
   de: 'de',
@@ -29,8 +30,8 @@ export const LOCALE_COUNTRY: Record<Locale, string> = {
   vi: 'vn',
 };
 
-export function flagUrl(locale: Locale, width: 20 | 40 | 80 = 40): string {
-  return `https://flagcdn.com/w${width}/${LOCALE_COUNTRY[locale]}.png`;
+export function flagUrl(locale: Locale): string {
+  return `/flags/${LOCALE_COUNTRY[locale]}.svg`;
 }
 
 // BCP 47 tags used for <html lang>, hreflang and og:locale.

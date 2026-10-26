@@ -14,7 +14,8 @@
     "cookiePolicy": "Política de cookies",
     "followUs": "Síguenos",
     "disclaimer": "* Los resultados individuales pueden variar y no están garantizados. Las estadísticas mostradas representan resultados reportados por determinados clientes y pueden no reflejar resultados típicos. El rendimiento pasado no es indicativo de resultados futuros.",
-    "copyright": "Todos los derechos reservados."
+    "copyright": "Todos los derechos reservados.",
+    "imprint": "Aviso legal"
   },
   "nav": {
     "visibility": "Visibilidad",
@@ -26,5 +27,9 @@
     "chatAriaLabel": "Chatear con Volaly AI",
     "toggleMenuAriaLabel": "Alternar menú",
     "mainNavigationAriaLabel": "Navegación principal"
+  },
+  "chat": {
+    "aiNotice": "Está conversando con un asistente de IA. Por favor, no comparta datos personales sensibles.",
+    "privacyLink": "Política de privacidad"
   }
 }

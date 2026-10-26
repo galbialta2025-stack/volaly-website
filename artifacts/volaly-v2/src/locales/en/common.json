@@ -14,7 +14,8 @@
     "cookiePolicy": "Cookie Policy",
     "followUs": "Follow Us",
     "disclaimer": "* Individual results may vary and are not guaranteed. Statistics shown represent outcomes reported by select clients and may not reflect typical results. Past performance is not indicative of future results.",
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "imprint": "Imprint"
   },
   "nav": {
     "visibility": "Visibility",
@@ -26,5 +27,9 @@
     "chatAriaLabel": "Chat with Volaly AI",
     "toggleMenuAriaLabel": "Toggle menu",
     "mainNavigationAriaLabel": "Main navigation"
+  },
+  "chat": {
+    "aiNotice": "You are chatting with an AI assistant. Please don't share sensitive personal data.",
+    "privacyLink": "Privacy Policy"
   }
 }

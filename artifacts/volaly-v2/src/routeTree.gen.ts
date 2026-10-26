@@ -24,6 +24,7 @@ import { Route as LangPrivacyRouteImport } from './routes/$lang/privacy'
 import { Route as LangPricingRouteImport } from './routes/$lang/pricing'
 import { Route as LangMedicalBeautyRouteImport } from './routes/$lang/medical-beauty'
 import { Route as LangLoginRouteImport } from './routes/$lang/login'
+import { Route as LangImprintRouteImport } from './routes/$lang/imprint'
 import { Route as LangHotelRouteImport } from './routes/$lang/hotel'
 import { Route as LangGymRouteImport } from './routes/$lang/gym'
 import { Route as LangFaqRouteImport } from './routes/$lang/faq'
@@ -112,6 +113,11 @@ const LangLoginRoute = LangLoginRouteImport.update({
   path: '/login',
   getParentRoute: () => LangRouteRoute,
 } as any)
+const LangImprintRoute = LangImprintRouteImport.update({
+  id: '/imprint',
+  path: '/imprint',
+  getParentRoute: () => LangRouteRoute,
+} as any)
 const LangHotelRoute = LangHotelRouteImport.update({
   id: '/hotel',
   path: '/hotel',
@@ -183,6 +189,7 @@ export interface FileRoutesByFullPath {
   '/$lang/faq': typeof LangFaqRoute
   '/$lang/gym': typeof LangGymRoute
   '/$lang/hotel': typeof LangHotelRoute
+  '/$lang/imprint': typeof LangImprintRoute
   '/$lang/login': typeof LangLoginRoute
   '/$lang/medical-beauty': typeof LangMedicalBeautyRoute
   '/$lang/pricing': typeof LangPricingRoute
@@ -210,6 +217,7 @@ export interface FileRoutesByTo {
   '/$lang/faq': typeof LangFaqRoute
   '/$lang/gym': typeof LangGymRoute
   '/$lang/hotel': typeof LangHotelRoute
+  '/$lang/imprint': typeof LangImprintRoute
   '/$lang/login': typeof LangLoginRoute
   '/$lang/medical-beauty': typeof LangMedicalBeautyRoute
   '/$lang/pricing': typeof LangPricingRoute
@@ -239,6 +247,7 @@ export interface FileRoutesById {
   '/$lang/faq': typeof LangFaqRoute
   '/$lang/gym': typeof LangGymRoute
   '/$lang/hotel': typeof LangHotelRoute
+  '/$lang/imprint': typeof LangImprintRoute
   '/$lang/login': typeof LangLoginRoute
   '/$lang/medical-beauty': typeof LangMedicalBeautyRoute
   '/$lang/pricing': typeof LangPricingRoute
@@ -269,6 +278,7 @@ export interface FileRouteTypes {
     | '/$lang/faq'
     | '/$lang/gym'
     | '/$lang/hotel'
+    | '/$lang/imprint'
     | '/$lang/login'
     | '/$lang/medical-beauty'
     | '/$lang/pricing'
@@ -296,6 +306,7 @@ export interface FileRouteTypes {
     | '/$lang/faq'
     | '/$lang/gym'
     | '/$lang/hotel'
+    | '/$lang/imprint'
     | '/$lang/login'
     | '/$lang/medical-beauty'
     | '/$lang/pricing'
@@ -324,6 +335,7 @@ export interface FileRouteTypes {
     | '/$lang/faq'
     | '/$lang/gym'
     | '/$lang/hotel'
+    | '/$lang/imprint'
     | '/$lang/login'
     | '/$lang/medical-beauty'
     | '/$lang/pricing'
@@ -451,6 +463,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangLoginRouteImport
       parentRoute: typeof LangRouteRoute
     }
+    '/$lang/imprint': {
+      id: '/$lang/imprint'
+      path: '/imprint'
+      fullPath: '/$lang/imprint'
+      preLoaderRoute: typeof LangImprintRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
     '/$lang/hotel': {
       id: '/$lang/hotel'
       path: '/hotel'
@@ -543,6 +562,7 @@ interface LangRouteRouteChildren {
   LangFaqRoute: typeof LangFaqRoute
   LangGymRoute: typeof LangGymRoute
   LangHotelRoute: typeof LangHotelRoute
+  LangImprintRoute: typeof LangImprintRoute
   LangLoginRoute: typeof LangLoginRoute
   LangMedicalBeautyRoute: typeof LangMedicalBeautyRoute
   LangPricingRoute: typeof LangPricingRoute
@@ -569,6 +589,7 @@ const LangRouteRouteChildren: LangRouteRouteChildren = {
   LangFaqRoute: LangFaqRoute,
   LangGymRoute: LangGymRoute,
   LangHotelRoute: LangHotelRoute,
+  LangImprintRoute: LangImprintRoute,
   LangLoginRoute: LangLoginRoute,
   LangMedicalBeautyRoute: LangMedicalBeautyRoute,
   LangPricingRoute: LangPricingRoute,

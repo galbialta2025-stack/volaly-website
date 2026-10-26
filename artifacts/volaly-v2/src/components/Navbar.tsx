@@ -72,6 +72,7 @@ export function Navbar() {
           <div className="flex items-center gap-2">
             <button
               aria-label={t("nav.chatAriaLabel")}
+              data-chat-toggle=""
               onClick={() => setChatOpen((v) => !v)}
               className="relative flex h-9 w-9 items-center justify-center rounded-full shadow-md transition-transform hover:scale-110 active:scale-95"
               style={{

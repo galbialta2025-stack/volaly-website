@@ -1,6 +1,9 @@
 import { useState, useRef, useEffect, useCallback } from "react";
+import { Link } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 import { X, Send, Bot } from "lucide-react";
 import { motion } from "motion/react";
+import { useCurrentLocale } from "@/hooks/use-locale";
 
 // Webhook URL is configured via VITE_N8N_CHAT_WEBHOOK environment variable
 const WEBHOOK_URL = import.meta.env.VITE_N8N_CHAT_WEBHOOK as string | undefined;
@@ -43,6 +46,8 @@ function extractText(data: unknown): string {
 }
 
 export function ChatWidget({ onClose }: { onClose: () => void }) {
+  const { t } = useTranslation();
+  const locale = useCurrentLocale();
   const [messages, setMessages] = useState<Message[]>([GREETING]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -169,6 +174,18 @@ export function ChatWidget({ onClose }: { onClose: () => void }) {
         >
           <X className="h-4 w-4" />
         </button>
+      </div>
+
+      {/* AI disclosure (EU AI Act Art. 50(1)) */}
+      <div className="border-b border-border/50 bg-muted/40 px-4 py-2 text-[11px] leading-snug text-muted-foreground">
+        {t("chat.aiNotice")}{" "}
+        <Link
+          to="/$lang/privacy"
+          params={{ lang: locale }}
+          className="underline underline-offset-2 hover:text-foreground"
+        >
+          {t("chat.privacyLink")}
+        </Link>
       </div>
 
       {/* Messages */}
