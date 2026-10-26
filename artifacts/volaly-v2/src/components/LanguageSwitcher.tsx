@@ -46,6 +46,8 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
         <img
           src={flagUrl(currentLocale)}
           alt={LOCALE_LABELS[currentLocale]}
+          width={28}
+          height={20}
           className="h-5 w-7 rounded-[3px] object-cover shadow-sm"
         />
       </button>
@@ -53,7 +55,7 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
       {open && (
         <div
           role="menu"
-          className="glass-nav absolute right-0 top-full mt-2 flex items-center gap-1.5 rounded-2xl border border-white/80 p-1.5 shadow-soft [transform:translateZ(0)]"
+          className="absolute right-0 top-full mt-2 flex items-center gap-1.5 rounded-2xl border border-white/80 bg-white p-1.5 shadow-soft"
         >
           {SUPPORTED_LOCALES.map((locale) => (
             <button
@@ -69,6 +71,8 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
               <img
                 src={flagUrl(locale)}
                 alt={LOCALE_LABELS[locale]}
+                width={28}
+                height={20}
                 className="h-5 w-7 rounded-[3px] object-cover shadow-sm"
               />
             </button>
