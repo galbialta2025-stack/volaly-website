@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "@tanstack/react-router";
-import { Globe } from "lucide-react";
 import {
+  LOCALE_FLAGS,
   LOCALE_LABELS,
   SUPPORTED_LOCALES,
   isSupportedLocale,
@@ -43,7 +43,7 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
         onClick={() => setOpen((v) => !v)}
         className="flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/50 hover:text-foreground"
       >
-        <Globe className="h-4 w-4" />
+        <span className="text-base leading-none">{LOCALE_FLAGS[currentLocale]}</span>
         <span className="uppercase">{currentLocale}</span>
       </button>
 
@@ -58,12 +58,13 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
               type="button"
               role="menuitem"
               onClick={() => selectLocale(locale)}
-              className={`block w-full rounded-xl px-3 py-2 text-left text-sm font-medium transition-colors hover:bg-white/70 ${
+              className={`flex w-full items-center gap-2 rounded-xl px-3 py-2 text-left text-sm font-medium transition-colors hover:bg-white/70 ${
                 locale === currentLocale
                   ? "text-foreground"
                   : "text-muted-foreground"
               }`}
             >
+              <span className="text-base leading-none">{LOCALE_FLAGS[locale]}</span>
               {LOCALE_LABELS[locale]}
             </button>
           ))}

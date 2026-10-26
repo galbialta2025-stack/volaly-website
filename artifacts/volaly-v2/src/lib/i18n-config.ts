@@ -16,6 +16,16 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   vi: 'Tiếng Việt',
 };
 
+// Flag emoji shown next to each language in the switcher.
+export const LOCALE_FLAGS: Record<Locale, string> = {
+  en: '🇺🇸',
+  de: '🇩🇪',
+  th: '🇹🇭',
+  fr: '🇫🇷',
+  es: '🇪🇸',
+  vi: '🇻🇳',
+};
+
 // BCP 47 tags used for <html lang>, hreflang and og:locale.
 export const LOCALE_BCP47: Record<Locale, string> = {
   en: 'en',
