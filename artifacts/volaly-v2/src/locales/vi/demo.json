@@ -1,0 +1,135 @@
+{
+  "seo": {
+    "title": "Trải nghiệm Volaly — Bản Demo Trực Tiếp",
+    "description": "Xem cách một lượt tải lên trở thành doanh thu, độ hiển thị và các cuộc trò chuyện với khách hàng được hỗ trợ bởi AI. Demo tương tác — không cần đăng ký."
+  },
+  "hero": {
+    "badge": "Demo Tương Tác",
+    "titleLine1": "Trải nghiệm",
+    "titleLine2": "Volaly.",
+    "subtitle": "Xem cách một lượt tải lên trở thành doanh thu, độ hiển thị và các cuộc trò chuyện với khách hàng được hỗ trợ bởi AI.",
+    "startFree": "Bắt Đầu Miễn Phí",
+    "bookDemo": "Đặt Lịch Demo"
+  },
+  "workflow": {
+    "eyebrow": "Cách Thức Hoạt Động",
+    "titlePre": "Một Lượt Tải Lên. ",
+    "titleHighlight": "Mọi Thứ Khác Tự Động.",
+    "subtitle": "Di chuột vào từng bước để xem Volaly tạo ra gì cho bạn.",
+    "nodes": {
+      "upload": { "label": "Tải Lên", "sub": "Một nội dung duy nhất" },
+      "ai": { "label": "Volaly AI", "sub": "Hiểu & xử lý" },
+      "growth": { "label": "Tăng Trưởng", "sub": "Doanh thu & đối tượng" }
+    },
+    "split": {
+      "revenueLabel": "Bộ Công Cụ Doanh Thu",
+      "revenueSub": "AI FAQ · Cửa hàng · Giọng nói · Gói thành viên",
+      "visibilityLabel": "Bộ Công Cụ Hiển Thị",
+      "visibilitySub": "Shorts · Bài đăng · SEO · Bản tin"
+    },
+    "automatic": "Tự Động ✓"
+  },
+  "chat": {
+    "badge": "Demo AI FAQ",
+    "titlePre": "AI của bạn trả lời ",
+    "titleHighlight": "tất cả.",
+    "subtitle": "Nhấn vào một câu hỏi để xem phản hồi AI trực tiếp.",
+    "titleBar": "Volaly AI — luôn hoạt động",
+    "live": "Trực tiếp",
+    "tryAsking": "Thử hỏi:",
+    "initialMessage": "Xin chào! Tôi là Volaly AI của bạn. Hãy nhấn vào một câu hỏi dưới đây hoặc hỏi tôi bất cứ điều gì về Volaly.",
+    "questions": [
+      {
+        "q": "Bạn gợi ý sản phẩm nào?",
+        "a": "Dựa trên nội dung của bạn, tôi gợi ý bắt đầu với Creator Shop và Gói thành viên. Đối tượng của bạn tương tác nhiều nhất với nội dung giáo dục — các sản phẩm số như hướng dẫn và mẫu thường có tỷ lệ chuyển đổi 8–12%. Bạn có muốn tôi thiết lập bản xem trước cửa hàng không?"
+      },
+      {
+        "q": "Cho tôi biết thêm về gói thành viên.",
+        "a": "Gói thành viên giúp bạn tạo doanh thu định kỳ hàng tháng từ những khán giả trung thành nhất. Bạn đặt giá, quyền lợi và nội dung — Volaly tự động xử lý thanh toán, kiểm soát quyền truy cập và nhắc nhở. Hầu hết creator có thành viên đầu tiên chỉ trong tuần đầu."
+      },
+      {
+        "q": "Smart Shorts hoạt động như thế nào?",
+        "a": "Tải lên một video dài và AI của Volaly sẽ xác định những khoảnh khắc hay nhất — điểm thu hút, cao điểm, câu chốt — và cắt thành các đoạn clip ngắn gây chú ý, được tối ưu cho TikTok, Reels và YouTube Shorts. Mỗi clip được thêm phụ đề, thương hiệu và lên lịch đăng tự động."
+      },
+      {
+        "q": "Tôi có thể kết nối YouTube không?",
+        "a": "Có! Kết nối YouTube chỉ với một lần nhấn từ bảng điều khiển của bạn. Volaly sẽ tự động lấy các video mới nhất, tạo Shorts, bài viết SEO, bản tin và bài đăng mạng xã hội — hoàn toàn không cần bạn làm gì."
+      }
+    ]
+  },
+  "voice": {
+    "eyebrow": "AI Giọng Nói",
+    "titlePre": "Nói chuyện với ",
+    "titleHighlight": "AI của bạn.",
+    "subtitle": "Khán giả của bạn có thể trò chuyện bằng giọng nói thật với AI của bạn — 24/7, bằng mọi ngôn ngữ.",
+    "idleStatus": "Nhấn vào micro để bắt đầu cuộc trò chuyện.",
+    "demoOnly": "Chỉ là demo — không cần âm thanh thật",
+    "lines": [
+      "Xin chào! Tôi là Volaly AI của bạn. Tôi có thể giúp gì cho bạn hôm nay?",
+      "Tôi có thể trả lời các câu hỏi về sản phẩm, dịch vụ hoặc nội dung của bạn.",
+      "Bạn muốn biết thêm về gói thành viên hay cửa hàng creator?",
+      "Mời bạn nói — tôi đang nghe."
+    ]
+  },
+  "shorts": {
+    "eyebrow": "Smart Shorts",
+    "titlePre": "Một video. ",
+    "titleHighlight": "Mười clip. Tự động đăng.",
+    "subtitle": "Tải lên một video dài và Volaly ngay lập tức tạo, thêm phụ đề và lên lịch nội dung ngắn cho mọi nền tảng.",
+    "idle": {
+      "title": "Kéo thả video dài của bạn vào đây",
+      "sub": "hoặc nhấn để tải lên — MP4, MOV, AVI",
+      "cta": "Tải Lên & Tạo Shorts"
+    },
+    "processing": {
+      "title": "Volaly AI đang xử lý…",
+      "sub": "Phát hiện cao điểm · Tạo phụ đề · Cắt clip"
+    },
+    "done": {
+      "title": "Đã Tạo 10 Shorts!",
+      "sub": "Đã lên lịch cho TikTok · Reels · YouTube Shorts",
+      "resetHint": "Nhấn để đặt lại"
+    },
+    "steps": {
+      "upload": { "label": "Video Dài", "sub": "Nội dung bạn tải lên" },
+      "ai": { "label": "Volaly AI", "sub": "Đang xử lý…" },
+      "shorts": { "label": "10 Shorts", "sub": "Tự động tạo" },
+      "publish": { "label": "Tự Động Đăng", "sub": "Mọi nền tảng" }
+    }
+  },
+  "revenue": {
+    "eyebrow": "Bảng Điều Khiển Doanh Thu",
+    "titlePre": "Doanh thu của bạn, ",
+    "titleHighlight": "tự động vận hành.",
+    "subtitle": "Số liệu thời gian thực từ Creator Shop, gói thành viên và thu nhập liên kết — tất cả ở một nơi.",
+    "titleBar": "Volaly Dashboard — Trực tiếp",
+    "live": "Trực tiếp",
+    "items": {
+      "revenue": "Doanh thu",
+      "orders": "Đơn hàng",
+      "visitors": "Khách truy cập",
+      "members": "Thành viên",
+      "growth": "Tăng trưởng"
+    }
+  },
+  "visibility": {
+    "eyebrow": "Bảng Điều Khiển Hiển Thị",
+    "titlePre": "Tiếp cận, ",
+    "titleHighlight": "khắp mọi nơi.",
+    "subtitle": "Bài đăng, lượt xem, lượt nhấn và Shorts — được theo dõi tự động trên mọi nền tảng chỉ từ một lượt tải lên.",
+    "items": {
+      "posts": "Bài đăng",
+      "views": "Lượt xem",
+      "clicks": "Lượt nhấn",
+      "reach": "Lượt tiếp cận",
+      "shorts": "Shorts"
+    }
+  },
+  "finalCta": {
+    "titleLine1": "Một Lượt Tải Lên.",
+    "titleLine2": "Volaly Làm Phần Còn Lại.",
+    "subtitle": "Tham gia cùng các creator và doanh nghiệp tải lên một lần và để Volaly xử lý mọi thứ khác.",
+    "startFree": "Bắt Đầu Miễn Phí",
+    "restart": "Chạy Lại Demo"
+  }
+}

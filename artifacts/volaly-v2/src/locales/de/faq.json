@@ -1,0 +1,185 @@
+{
+  "seo": {
+    "title": "FAQ — Häufig gestellte Fragen | Volaly",
+    "description": "Antworten auf häufige Fragen zu Volaly: was es ist, für wen es ist, wie es funktioniert, die Revenue Suite, die Visibility Suite, Sicherheit, Preise und der Einstieg."
+  },
+  "hero": {
+    "eyebrow": "FAQ",
+    "titleLine1": "Häufig gestellte",
+    "titleLine2": "Fragen.",
+    "subtitle": "Alles, was Sie über Volaly wissen müssen."
+  },
+  "page": {
+    "searchPlaceholder": "Fragen durchsuchen…",
+    "allTab": "Alle",
+    "resultsFoundOne": "1 Ergebnis für",
+    "resultsFoundMany": "{{count}} Ergebnisse für",
+    "resultsNotFound": "Keine Ergebnisse für",
+    "noResultsTitle": "Keine Fragen gefunden",
+    "noResultsSubtitle": "Versuchen Sie andere Suchbegriffe oder durchsuchen Sie alle Kategorien.",
+    "clearSearch": "Suche zurücksetzen",
+    "ctaTitle": "Noch Fragen?",
+    "ctaSubtitle": "Sprechen Sie mit Volaly AI — sie kennt die Plattform in- und auswendig und antwortet sofort.",
+    "ctaButton": "Chat starten",
+    "categories": [
+      {
+        "id": "general",
+        "label": "Allgemein",
+        "items": [
+          { "q": "Was ist Volaly?", "a": "Volaly ist eine KI-gestützte Wachstumsplattform für Creator und Unternehmen. Sie laden Ihre Inhalte einmal hoch, und Volaly verwandelt sie automatisch in Umsatzströme, plattformübergreifende Sichtbarkeit und KI-gestützte Kundengespräche — ohne manuellen Aufwand." },
+          { "q": "Für wen ist Volaly?", "a": "Volaly ist für Content-Creator (YouTuber, TikTok-Creator, Podcaster, Pädagogen, Coaches) und Unternehmen (Restaurants, Hotels, Fitnessstudios, Immobilienagenturen, Zahnarztpraxen und mehr) gebaut, die online wachsen wollen, ohne Stunden mit manuellem Marketing zu verbringen." },
+          { "q": "Wie funktioniert Volaly?", "a": "Sie verbinden Ihre Content-Quellen (YouTube, Social Media, eigene Uploads), und die KI von Volaly verarbeitet jeden Inhalt. Sie erstellt Kurzclips, Blogbeiträge, Newsletter, SEO-Seiten, Produktlisten und KI-Kundengespräche — alles automatisch auf jeder Plattform verteilt." },
+          { "q": "Was macht Volaly anders?", "a": "Die meisten Tools automatisieren eine Sache. Volaly automatisiert alles. Ein Upload startet eine komplette Wachstumsmaschine — Revenue Suite für die Monetarisierung und Visibility Suite für die Verteilung. Es gibt keine andere Plattform, die Content-Erstellung in einem einzigen Workflow direkt mit Umsatz und Reichweite verbindet." }
+        ]
+      },
+      {
+        "id": "revenue",
+        "label": "Revenue Suite",
+        "items": [
+          { "q": "Was ist die Revenue Suite?", "a": "Die Revenue Suite ist die Monetarisierungs-Engine in Volaly. Sie umfasst KI-FAQ, Voice AI, Creator Shop, Mitgliedschaften, digitale Produkte und Affiliate — alles automatisch angetrieben von Ihren hochgeladenen Inhalten." },
+          { "q": "Wie funktioniert KI-FAQ?", "a": "KI-FAQ wird mit Ihren Inhalten trainiert und beantwortet Kunden- oder Fan-Fragen rund um die Uhr — auf Ihrer Website, Ihrer Creator-Seite oder überall eingebettet. Sie klingt wie Sie, nutzt Ihre Produkte und Preise und behandelt Einwände automatisch." },
+          { "q": "Was ist Voice AI?", "a": "Voice AI erstellt eine interaktive Sprachpersona, die von Ihren Inhalten angetrieben wird. Ihr Publikum kann buchstäblich ein Echtzeit-Sprachgespräch mit Ihrer KI führen — Fragen beantworten, Produkte empfehlen und Termine rund um die Uhr buchen." },
+          { "q": "Kann ich digitale Produkte verkaufen?", "a": "Ja. Sie können E-Books, Vorlagen, Kurse und jedes herunterladbare Produkt über Ihren Volaly-gestützten Creator Shop verkaufen. Die Einrichtung dauert Minuten — Volaly übernimmt Zahlungen, Lieferung und Nachbereitung automatisch." },
+          { "q": "Kann ich Mitgliedschaften verkaufen?", "a": "Ja. Erstellen Sie gestufte Mitgliedschaften mit individuellen Vorteilen und Preisen. Volaly verwaltet wiederkehrende Abrechnung, Zugriffskontrolle und Mitgliederkommunikation automatisch." },
+          { "q": "Kann ich Merchandise verkaufen?", "a": "Ja. Verbinden Sie Ihren Merch-Store oder richten Sie einen über Volaly ein. Ihre KI kann Produkte in jedem Kundengespräch automatisch empfehlen und fördern." },
+          { "q": "Wie funktionieren Affiliate-Produkte?", "a": "Verbinden Sie Ihre Affiliate-Links einmal, und die KI von Volaly empfiehlt sie natürlich in relevanten Kundengesprächen. Sie verdienen automatisch Provisionen, ohne manuelle Werbung in Ihren Workflow einzubauen." }
+        ]
+      },
+      {
+        "id": "visibility",
+        "label": "Visibility Suite",
+        "items": [
+          { "q": "Was ist die Visibility Suite?", "a": "Die Visibility Suite ist die Verteilungs-Engine in Volaly. Ein Upload wird automatisch zu Kurzclips, langen Blogbeiträgen, Newsletter-Ausgaben, SEO-Seiten und Social-Posts — veröffentlicht auf jeder Plattform ohne manuellen Aufwand." },
+          { "q": "Was sind Smart Shorts?", "a": "Smart Shorts nutzt KI, um Ihr Langform-Video zu analysieren, die stärksten Momente (Hooks, Highlights, Pointen) zu identifizieren und automatisch plattformoptimierte vertikale Clips für TikTok, Instagram Reels und YouTube Shorts zu erstellen — komplett mit Untertiteln und Branding." },
+          { "q": "Kann Volaly automatisch veröffentlichen?", "a": "Ja. Verbinden Sie Ihre Social-Accounts einmal, und Volaly übernimmt die gesamte Planung, Formatierung und Veröffentlichung. Inhalte werden automatisch an das native Format, Seitenverhältnis und den Stil jeder Plattform angepasst." },
+          { "q": "Kann ich meine Social-Accounts verbinden?", "a": "Ja. Volaly verbindet sich mit YouTube, TikTok, Instagram, Facebook, LinkedIn, X und Threads. Verbinden Sie einmal über Ihr Dashboard, und jeder zukünftige Upload wird automatisch auf allen Plattformen verteilt." },
+          { "q": "Erstellt Volaly Blogbeiträge?", "a": "Ja. Jeder Upload wird automatisch in einen langen, SEO-optimierten Blogbeitrag in Ihrer Markenstimme verwandelt. Beiträge sind für das Suchranking strukturiert und werden auf Ihrem verbundenen Blog oder Ihrer Website veröffentlicht." },
+          { "q": "Erstellt Volaly Newsletter?", "a": "Ja. Jeder Upload erzeugt eine Newsletter-Ausgabe, bereit zum Versand an Ihre E-Mail-Liste. Volaly übernimmt das Schreiben, die Formatierung und die Planung — Sie prüfen und genehmigen nur." }
+        ]
+      },
+      {
+        "id": "creator",
+        "label": "Creator",
+        "items": [
+          { "q": "Können Creator Volaly nutzen?", "a": "Auf jeden Fall — Volaly ist für Creator gebaut. Ob Sie YouTuber, TikTok-Creator, Podcaster, Pädagoge oder Coach sind, Volaly verwandelt Ihre Inhalte in Mitgliedschaften, digitale Produkte, einen Creator Shop und automatische Verteilung auf jeder Plattform." },
+          { "q": "Brauche ich 5.000 Follower zum Beitritt?", "a": "Nur für den kostenlosen Creator-Partner-Plan, der nur auf Einladung verfügbar ist. Die kostenpflichtigen Pläne Creator, Creator Pro und Creator Elite stehen jedem offen, unabhängig von der Publikumsgröße." },
+          { "q": "Was ist Creator Partner?", "a": "Creator Partner ist unser kostenloser, nur auf Einladung verfügbarer Plan für etablierte Creator (5.000+ Follower oder genehmigte Bewerber). Statt einer monatlichen Gebühr verdient Volaly eine Umsatzbeteiligung an Verkäufen, die Sie über die Plattform generieren. Wir wachsen gemeinsam." },
+          { "q": "Kann ich von einer anderen Plattform migrieren?", "a": "Ja. Wenn Sie derzeit ein anderes Creator-Tool oder eine andere Monetarisierungsplattform nutzen, hilft unser Team Ihnen, Ihr Publikum, Ihre Produkte und Inhalte zu Volaly zu migrieren. Kontaktieren Sie uns für einen individuellen Migrationsplan." }
+        ]
+      },
+      {
+        "id": "business",
+        "label": "Unternehmen",
+        "items": [
+          { "q": "Können Unternehmen Volaly nutzen?", "a": "Ja. Volaly ist für Creator und lokale/globale Unternehmen gleichermaßen gebaut. Restaurants, Hotels, Fitnessstudios, Zahnarztpraxen, Immobilienagenturen, Medical-Beauty-Kliniken, Autovermietungen und viele mehr nutzen Volaly, um ihre Online-Präsenz auszubauen und die Kundenkommunikation zu automatisieren." },
+          { "q": "Welche Branchen werden unterstützt?", "a": "Volaly unterstützt Restaurants, Hotels, Fitnessstudios, Zahnarztpraxen, Immobilien, Medical Beauty, Autovermietung, Bars, Social-Media-Agenturen, Visa-Agenturen und viele mehr. Wenn Ihr Unternehmen Kunden hat und irgendeine Form von Inhalten erstellt, kann Volaly Ihr Wachstum automatisieren." },
+          { "q": "Kann ich Volaly für mehrere Standorte nutzen?", "a": "Ja. Creator Elite und Enterprise-Pläne unterstützen mehrere Standorte und Teammitglieder. Jeder Standort kann seine eigene KI-Persona, seinen Produktkatalog und seine Content-Verteilung haben — alles von einem Dashboard aus verwaltet." }
+        ]
+      },
+      {
+        "id": "pricing",
+        "label": "Preise",
+        "items": [
+          { "q": "Wie funktioniert die Umsatzbeteiligung?", "a": "Im kostenlosen Creator-Partner-Plan verdient Volaly einen Prozentsatz der Verkäufe, die Sie über die Plattform tätigen, statt eine monatliche Gebühr zu erheben. Bei kostenpflichtigen Plänen sinkt die Umsatzbeteiligung deutlich — je mehr Sie verdienen, desto besser wird das Preis-Leistungs-Verhältnis eines kostenpflichtigen Plans." },
+          { "q": "Kann ich meinen Plan jederzeit upgraden?", "a": "Ja. Upgrades werden sofort wirksam, und Ihre neuen Funktionen stehen sofort zur Verfügung. Downgrades gelten ab Beginn Ihres nächsten Abrechnungszyklus, damit Sie immer den vollen Wert Ihres aktuellen Plans erhalten." },
+          { "q": "Kann ich mein Abonnement kündigen?", "a": "Ja. Kündigen Sie jederzeit über Ihr Dashboard — ohne Rückfragen. Ihr Konto bleibt bis zum Ende Ihres aktuellen Abrechnungszeitraums aktiv, und Sie behalten Zugriff auf alle Ihre Inhalte und Daten." },
+          { "q": "Gehören mir meine Kunden?", "a": "Zu 100 %. Ihre Kunden, Ihre Daten, Ihre Beziehungen. Volaly kontaktiert, vermarktet an oder monetarisiert Ihr Publikum niemals ohne Ihre ausdrückliche Erlaubnis. Sie besitzen jede Kundenbeziehung, die über die Plattform aufgebaut wird." }
+        ]
+      },
+      {
+        "id": "security",
+        "label": "Sicherheit",
+        "items": [
+          { "q": "Sind meine Inhalte sicher?", "a": "Ja. Alle Inhalte werden bei der Übertragung und im Ruhezustand verschlüsselt. Ihre Daten werden in einer sicheren, ISO-27001-konformen Infrastruktur gespeichert. Wir geben Ihre Inhalte niemals weiter, verkaufen sie nicht und nutzen sie nicht zum Training von Drittanbieter-Modellen." },
+          { "q": "Wer hat Zugriff auf meine Daten?", "a": "Nur Sie und von Ihnen ausdrücklich autorisierte Teammitglieder haben Zugriff auf Ihre Kontodaten. Volaly-Mitarbeiter können nur zu Support-Zwecken und nur mit Ihrer Erlaubnis auf Ihr Konto zugreifen." },
+          { "q": "Erfüllt Volaly die DSGVO?", "a": "Ja. Volaly ist vollständig DSGVO-konform. Sie haben die volle Kontrolle über Ihre Daten — Sie können Ihr Konto und alle zugehörigen Daten jederzeit über Ihr Dashboard exportieren oder löschen." }
+        ]
+      },
+      {
+        "id": "ai",
+        "label": "KI",
+        "items": [
+          { "q": "Wie lernt die KI?", "a": "Die KI von Volaly wird mit den von Ihnen hochgeladenen Inhalten trainiert — Ihren Videos, PDFs, Websites und Produktinformationen. Sie lernt Ihren Ton, Ihre Produkte, Ihre Preise und Ihre Marke, damit sich jede Interaktion wie Sie selbst anfühlt." },
+          { "q": "Verbessert sich die KI mit der Zeit?", "a": "Ja. Je mehr Inhalte Sie hinzufügen, desto genauer und fähiger wird Ihre KI. Kundengespräche helfen der KI außerdem zu lernen, welche Fragen Ihr Publikum am häufigsten stellt — sie verbessert sich also mit jeder Interaktion." },
+          { "q": "Kann ich PDFs hochladen?", "a": "Ja. Laden Sie Produktleitfäden, Speisekarten, Preislisten, Kursmaterialien oder jedes PDF hoch, und die KI von Volaly lernt sofort daraus. Die KI kann diese Inhalte dann in Kundengesprächen referenzieren und empfehlen." },
+          { "q": "Kann ich Videos hochladen?", "a": "Ja. Video ist der primäre Inhaltstyp von Volaly. Laden Sie ein beliebiges Video hoch, und die KI transkribiert, analysiert und lernt daraus — und nutzt dieses Wissen dann, um Ihre KI-FAQ, Voice AI, Smart Shorts, Blogbeiträge und Newsletter zu unterstützen." },
+          { "q": "Kann ich meine Website verbinden?", "a": "Ja. Verbinden Sie Ihre Website-URL, und die KI von Volaly durchsucht und lernt aus Ihren bestehenden Inhalten — Seiten, Blogbeiträge, Produktbeschreibungen und FAQs. So ist Ihre KI sofort über Ihr Unternehmen informiert." }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "q": "Was ist Volaly?",
+      "parts": [
+        { "text": "Volaly ist eine KI-gestützte Plattform, die Creatorn und Unternehmen hilft, jeden Upload in Umsatz und Reichweite zu verwandeln. Anstatt mehrere Tools jonglieren zu müssen, verwandelt Volaly Ihre Inhalte automatisch in KI-Konversationen, digitale Produkte, smarte Social-Inhalte und neue Wachstumschancen. Erfahren Sie mehr über die " },
+        { "link": "revenue-suite", "text": "Revenue Suite" },
+        { "text": " und die " },
+        { "link": "visibility-suite", "text": "Visibility Suite" },
+        { "text": ", um zu sehen, wie alles zusammenwirkt." }
+      ]
+    },
+    {
+      "q": "Für wen ist Volaly?",
+      "parts": [
+        { "text": "Volaly ist für jeden gebaut, der mit Inhalten ein Geschäft aufbaut. Ob Sie Creator, Coach, Hotel, Restaurant, Fitnessstudio, Immobilienagentur oder lokales Unternehmen sind — Volaly hilft, Kundengespräche zu automatisieren, die Sichtbarkeit zu erhöhen und mit jedem Upload mehr Umsatz zu generieren. Entdecken Sie die " },
+        { "link": "creator", "text": "Creator-Seite" },
+        { "text": " oder die Business-Lösungen, um zu sehen, wie sich Volaly an Ihren Workflow anpasst." }
+      ]
+    },
+    {
+      "q": "Wie funktioniert Volaly?",
+      "parts": [
+        { "text": "Laden Sie einfach Ihre Inhalte hoch oder verbinden Sie Ihre Social-Media-Accounts. Volaly versteht Ihre Inhalte automatisch, baut KI-Wissen auf, erstellt Kundengespräche, generiert neue Marketing-Assets und hilft Ihrem Geschäft beim Wachsen. Ein einziger Upload versorgt sowohl die " },
+        { "link": "revenue-suite", "text": "Revenue Suite" },
+        { "text": " als auch die Visibility Suite — so können Sie aus einem einzigen Workflow monetarisieren und skalieren." }
+      ]
+    },
+    {
+      "q": "Was ist die Revenue Suite?",
+      "parts": [
+        { "text": "Die Revenue Suite vereint alles, was Sie zur Monetarisierung Ihrer Inhalte brauchen. KI-FAQ, Voice AI, Smart Shop, Mitgliedschaften und digitale Produkte arbeiten zusammen, um Fragen zu beantworten, Produkte zu empfehlen und automatisch Umsatz zu generieren. Statt manuell zu verkaufen, hilft Volaly, Besucher rund um die Uhr in Kunden zu verwandeln. " },
+        { "link": "revenue-suite", "text": "Mehr dazu auf der Revenue-Suite-Seite." }
+      ]
+    },
+    {
+      "q": "Was ist die Visibility Suite?",
+      "parts": [
+        { "text": "Die Visibility Suite hilft Ihnen, mehr Menschen zu erreichen, ohne mehr Arbeit zu haben. Aus einem einzigen Upload generiert Volaly automatisch Smart Shorts, Social-Media-Inhalte, Blogartikel, Newsletter und SEO-Inhalte für mehrere Plattformen. Einmal erstellen, überall veröffentlichen und automatisch weiterwachsen. " },
+        { "link": "visibility-suite", "text": "Mehr dazu auf der Visibility-Suite-Seite." }
+      ]
+    },
+    {
+      "q": "Welche Plattformen unterstützt Volaly?",
+      "parts": [
+        { "text": "Volaly funktioniert mit den Plattformen, die Creator und Unternehmen bereits nutzen. Je nach Workflow gehören dazu YouTube, Instagram, TikTok, Facebook, LinkedIn, X, WhatsApp und LINE. Neue Integrationen werden regelmäßig hinzugefügt, damit sich Volaly nahtlos in Ihr bestehendes Ökosystem einfügt, statt es zu ersetzen." }
+      ]
+    },
+    {
+      "q": "Brauche ich technische Kenntnisse?",
+      "parts": [
+        { "text": "Nein. Volaly ist für Creator und Unternehmen entwickelt – nicht für Entwickler. Die meisten Funktionen laufen über ein intuitives Dashboard, ohne Programmierung oder komplexe Einrichtung. Verbinden Sie einfach Ihre Accounts, laden Sie Ihre Inhalte hoch und lassen Sie Volaly den Rest automatisieren, damit Sie sich auf das Erstellen und Wachsen Ihres Geschäfts konzentrieren können." }
+      ]
+    },
+    {
+      "q": "Sind meine Daten sicher?",
+      "parts": [
+        { "text": "Ja. Der Schutz Ihrer Daten hat für uns höchste Priorität. Ihre Inhalte, Kundeninformationen und verbundenen Accounts werden nach modernen Sicherheitsstandards und, wo anwendbar, mit verschlüsselten Verbindungen verarbeitet. Sie behalten die volle Kontrolle über Ihre Inhalte, während Volaly nur die Informationen verarbeitet, die für die KI-gestützten Dienste erforderlich sind." }
+      ]
+    },
+    {
+      "q": "Kann ich mehrere Marken oder Standorte verwalten?",
+      "parts": [
+        { "text": "Ja. Volaly ist darauf ausgelegt, mit Ihrem Geschäft zu skalieren. Egal ob Sie mehrere Creator, Marken, Standorte oder Kunden verwalten — alles lässt sich von einer einzigen Plattform aus steuern. Das macht Volaly ideal für Agenturen, Franchises und wachsende Unternehmen, die eine einheitliche Automatisierung über mehrere Accounts hinweg wünschen." }
+      ]
+    },
+    {
+      "q": "Wie fange ich an?",
+      "parts": [
+        { "text": "Der Einstieg dauert nur wenige Minuten. Erstellen Sie Ihren Account, verbinden Sie Ihre Social-Media-Kanäle oder laden Sie Ihren ersten Inhalt hoch, und Volaly beginnt sofort mit dem Aufbau Ihrer KI-Wissensbasis. Von dort aus können Sie die Revenue Suite aktivieren, Ihre Sichtbarkeit erweitern und automatisch zu wachsen beginnen. " },
+        { "link": "pricing", "text": "Besuchen Sie die Preisseite" },
+        { "text": ", um den Plan zu wählen, der zu Ihrem Geschäft passt." }
+      ]
+    }
+  ]
+}

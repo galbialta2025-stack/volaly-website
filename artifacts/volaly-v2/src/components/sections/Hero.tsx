@@ -1,5 +1,6 @@
 import { ArrowRight, Play, CheckCircle2 } from "lucide-react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { AuroraOrbs } from "@/components/Backdrop";
 import { openDemo } from "@/lib/demo";
@@ -7,16 +8,12 @@ import { VideoEmbed } from "@/components/VideoEmbed";
 import { useCurrentLocale } from "@/hooks/use-locale";
 import { getDemoVideoEmbedUrl, getDemoVideoPosterUrl } from "@/lib/video-urls";
 
-const microBenefits = [
-  "One Upload",
-  "Visibility Suite",
-  "All Platforms",
-];
-
 export function Hero() {
+  const { t } = useTranslation("home");
   const locale = useCurrentLocale();
   const videoUrl = getDemoVideoEmbedUrl(locale, { modestbranding: true });
   const posterUrl = getDemoVideoPosterUrl(locale);
+  const benefits = t("hero.benefits", { returnObjects: true }) as string[];
 
   return (
     <section className="bg-aurora noise relative overflow-hidden pt-36 pb-24">
@@ -34,8 +31,8 @@ export function Hero() {
               transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
               className="text-[clamp(2.6rem,6vw,5.5rem)] font-black leading-[0.95] tracking-tight text-foreground"
             >
-              One Upload.
-              <span className="block gradient-text-multi">Volaly Does the Rest.</span>
+              {t("hero.titleLine1")}
+              <span className="block gradient-text-multi">{t("hero.titleLine2")}</span>
             </motion.h1>
 
             <motion.p
@@ -44,7 +41,7 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.15 }}
               className="mt-7 max-w-lg text-lg leading-relaxed text-muted-foreground"
             >
-              Turn every piece of content into visibility and growth across every platform — automatically.
+              {t("hero.subtitle")}
             </motion.p>
 
             {/* Mobile-only video */}
@@ -68,10 +65,10 @@ export function Hero() {
               className="mt-8 flex flex-wrap gap-4"
             >
               <Button size="xl" variant="hero" onClick={openDemo}>
-                Start Free <ArrowRight className="h-4 w-4" />
+                {t("hero.startFree")} <ArrowRight className="h-4 w-4" />
               </Button>
               <Button size="xl" variant="heroOutline" onClick={openDemo}>
-                <Play className="h-4 w-4" /> Watch Demo
+                <Play className="h-4 w-4" /> {t("hero.watchDemo")}
               </Button>
             </motion.div>
 
@@ -82,7 +79,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.42 }}
               className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-2"
             >
-              {microBenefits.map((b) => (
+              {benefits.map((b) => (
                 <span key={b} className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
                   <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-green" />
                   {b}

@@ -1,0 +1,135 @@
+{
+  "seo": {
+    "title": "Volaly erleben — Live-Demo",
+    "description": "Sehen Sie, wie aus einem Upload Umsatz, Sichtbarkeit und KI-gestützte Kundengespräche werden. Interaktive Demo — keine Anmeldung erforderlich."
+  },
+  "hero": {
+    "badge": "Interaktive Demo",
+    "titleLine1": "Erleben Sie",
+    "titleLine2": "Volaly.",
+    "subtitle": "Sehen Sie, wie aus einem Upload Umsatz, Sichtbarkeit und KI-gestützte Kundengespräche werden.",
+    "startFree": "Kostenlos starten",
+    "bookDemo": "Demo buchen"
+  },
+  "workflow": {
+    "eyebrow": "So funktioniert's",
+    "titlePre": "Ein Upload. ",
+    "titleHighlight": "Alles Weitere läuft automatisch.",
+    "subtitle": "Bewegen Sie den Mauszeiger über jeden Schritt, um zu sehen, was Volaly für Sie erstellt.",
+    "nodes": {
+      "upload": { "label": "Upload", "sub": "Ein Content-Stück" },
+      "ai": { "label": "Volaly AI", "sub": "Versteht & verarbeitet" },
+      "growth": { "label": "Wachstum", "sub": "Umsatz & Publikum" }
+    },
+    "split": {
+      "revenueLabel": "Revenue Suite",
+      "revenueSub": "KI-FAQ · Shop · Voice · Mitgliedschaften",
+      "visibilityLabel": "Visibility Suite",
+      "visibilitySub": "Shorts · Posts · SEO · Newsletter"
+    },
+    "automatic": "Automatisch ✓"
+  },
+  "chat": {
+    "badge": "KI-FAQ-Demo",
+    "titlePre": "Ihre KI beantwortet ",
+    "titleHighlight": "alles.",
+    "subtitle": "Klicken Sie auf eine Frage, um eine Live-KI-Antwort zu sehen.",
+    "titleBar": "Volaly AI — immer aktiv",
+    "live": "Live",
+    "tryAsking": "Probieren Sie es aus:",
+    "initialMessage": "Hallo! Ich bin Ihre Volaly AI. Klicken Sie unten auf eine Frage oder fragen Sie mich alles rund um Volaly.",
+    "questions": [
+      {
+        "q": "Welche Produkte empfehlen Sie?",
+        "a": "Basierend auf Ihrem Content würde ich mit dem Creator Shop und Mitgliedschaften beginnen. Ihr Publikum interagiert am meisten mit Lerninhalten — digitale Produkte wie Guides und Vorlagen konvertieren tendenziell mit 8–12 %. Soll ich eine Shop-Vorschau einrichten?"
+      },
+      {
+        "q": "Erzählen Sie mir mehr über Mitgliedschaften.",
+        "a": "Mit Mitgliedschaften erzielen Sie wiederkehrende monatliche Einnahmen von Ihrem treuesten Publikum. Sie legen Preis, Vorteile und Inhalte fest — Volaly übernimmt automatisch Abrechnung, Zugangskontrolle und Erinnerungen. Die meisten Creator gewinnen ihre ersten Mitglieder bereits in der ersten Woche."
+      },
+      {
+        "q": "Wie funktioniert Smart Shorts?",
+        "a": "Laden Sie ein langes Video hoch, und die KI von Volaly identifiziert die besten Momente — Hooks, Highlights, Pointen — und schneidet sie zu scroll-stoppenden Kurzclips, optimiert für TikTok, Reels und YouTube Shorts. Jeder Clip erhält Untertitel, Branding und wird automatisch zur Veröffentlichung geplant."
+      },
+      {
+        "q": "Kann ich YouTube verbinden?",
+        "a": "Ja! Verbinden Sie YouTube mit einem Klick von Ihrem Dashboard aus. Volaly zieht automatisch Ihre neuesten Uploads und generiert daraus Shorts, SEO-Artikel, Newsletter und Social-Posts — ganz ohne, dass Sie etwas tun müssen."
+      }
+    ]
+  },
+  "voice": {
+    "eyebrow": "Voice AI",
+    "titlePre": "Sprechen Sie mit Ihrer ",
+    "titleHighlight": "KI-Persona.",
+    "subtitle": "Ihr Publikum kann echte Sprachgespräche mit Ihrer KI führen — 24/7, in jeder Sprache.",
+    "idleStatus": "Klicken Sie auf das Mikrofon, um ein Gespräch zu starten.",
+    "demoOnly": "Nur Demo — kein echtes Audio erforderlich",
+    "lines": [
+      "Hallo! Ich bin Ihre Volaly AI. Wie kann ich Ihnen heute helfen?",
+      "Ich kann Fragen zu Ihren Produkten, Leistungen oder Inhalten beantworten.",
+      "Möchten Sie mehr über Mitgliedschaften oder den Creator Shop wissen?",
+      "Legen Sie los — ich höre zu."
+    ]
+  },
+  "shorts": {
+    "eyebrow": "Smart Shorts",
+    "titlePre": "Ein Video. ",
+    "titleHighlight": "Zehn Clips. Automatisch veröffentlicht.",
+    "subtitle": "Laden Sie ein langes Video hoch, und Volaly erstellt, untertitelt und plant sofort Kurzform-Content für jede Plattform.",
+    "idle": {
+      "title": "Ziehen Sie Ihr langes Video hierher",
+      "sub": "oder klicken Sie zum Hochladen — MP4, MOV, AVI",
+      "cta": "Hochladen & Shorts generieren"
+    },
+    "processing": {
+      "title": "Volaly AI verarbeitet…",
+      "sub": "Highlights erkennen · Untertitel generieren · Clips schneiden"
+    },
+    "done": {
+      "title": "10 Shorts generiert!",
+      "sub": "Geplant für TikTok · Reels · YouTube Shorts",
+      "resetHint": "Zum Zurücksetzen klicken"
+    },
+    "steps": {
+      "upload": { "label": "Langes Video", "sub": "Ihr Upload" },
+      "ai": { "label": "Volaly AI", "sub": "Verarbeitet…" },
+      "shorts": { "label": "10 Shorts", "sub": "Automatisch erstellt" },
+      "publish": { "label": "Auto-Veröffentlichung", "sub": "Alle Plattformen" }
+    }
+  },
+  "revenue": {
+    "eyebrow": "Revenue-Dashboard",
+    "titlePre": "Ihr Umsatz, ",
+    "titleHighlight": "auf Autopilot.",
+    "subtitle": "Echtzeit-Kennzahlen aus Ihrem Creator Shop, Mitgliedschaften und Affiliate-Einnahmen — alles an einem Ort.",
+    "titleBar": "Volaly Dashboard — Live",
+    "live": "Live",
+    "items": {
+      "revenue": "Umsatz",
+      "orders": "Bestellungen",
+      "visitors": "Besucher",
+      "members": "Mitglieder",
+      "growth": "Wachstum"
+    }
+  },
+  "visibility": {
+    "eyebrow": "Visibility-Dashboard",
+    "titlePre": "Reichweite, ",
+    "titleHighlight": "überall.",
+    "subtitle": "Posts, Views, Klicks und Shorts — automatisch über jede Plattform hinweg erfasst, aus einem einzigen Upload.",
+    "items": {
+      "posts": "Posts",
+      "views": "Views",
+      "clicks": "Klicks",
+      "reach": "Reichweite",
+      "shorts": "Shorts"
+    }
+  },
+  "finalCta": {
+    "titleLine1": "Ein Upload.",
+    "titleLine2": "Volaly erledigt den Rest.",
+    "subtitle": "Schließen Sie sich Creatorn und Unternehmen an, die einmal hochladen und Volaly den Rest übernehmen lassen.",
+    "startFree": "Kostenlos starten",
+    "restart": "Demo neu starten"
+  }
+}

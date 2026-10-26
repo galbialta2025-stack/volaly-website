@@ -1,0 +1,42 @@
+{
+  "seo": {
+    "title": "ติดต่อเรา — Volaly",
+    "description": "ติดต่อทีม Volaly ไม่ว่าจะเป็นคำถาม การขอเดโม หรือข้อเสนอความร่วมมือ — เราตอบกลับภายใน 24 ชั่วโมง เป็นภาษาอังกฤษ เยอรมัน หรือไทย"
+  },
+  "header": {
+    "eyebrow": "ติดต่อเรา",
+    "title": "ติดต่อเรา",
+    "subtitle": "ไม่ว่าจะเป็นคำถาม การขอเดโม หรือข้อเสนอความร่วมมือ — เขียนถึงเรา แล้วเราจะตอบกลับภายใน 24 ชั่วโมง"
+  },
+  "info": {
+    "email": { "title": "อีเมล", "value": "info@volaly.com" },
+    "responseTime": { "title": "ระยะเวลาตอบกลับ", "value": "ภายใน 24 ชั่วโมง" },
+    "languages": { "title": "ภาษา", "value": "English · Deutsch · ภาษาไทย" },
+    "liveChat": { "title": "แชทสด", "value": "คุยกับ Volaly AI ได้เลยตอนนี้" }
+  },
+  "form": {
+    "nameLabel": "ชื่อ",
+    "namePlaceholder": "สมชาย ใจดี",
+    "emailLabel": "อีเมล",
+    "emailPlaceholder": "jane@example.com",
+    "subjectLabel": "หัวข้อ",
+    "subjectPlaceholder": "กรุณาเลือก…",
+    "subjectOptions": {
+      "demo": "จองเดโม",
+      "pricing": "ราคาและแพ็กเกจ",
+      "support": "ฝ่ายสนับสนุนเทคนิค",
+      "partnership": "ความร่วมมือทางธุรกิจ",
+      "other": "อื่น ๆ"
+    },
+    "messageLabel": "ข้อความ",
+    "messagePlaceholder": "บอกเราเกี่ยวกับธุรกิจของคุณ และสิ่งที่เราช่วยได้…",
+    "errorMessage": "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้งหรืออีเมลถึงเราโดยตรง",
+    "sending": "กำลังส่ง…",
+    "send": "ส่งข้อความ",
+    "agreementPre": "การส่งข้อความถือว่าคุณยอมรับ ",
+    "privacyLink": "นโยบายความเป็นส่วนตัว",
+    "successTitle": "ส่งข้อความสำเร็จ!",
+    "successBody": "ขอบคุณที่ติดต่อเรา เราจะตอบกลับภายใน 24 ชั่วโมง",
+    "sendAnother": "ส่งข้อความอีกครั้ง"
+  }
+}

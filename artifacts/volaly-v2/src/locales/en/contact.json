@@ -1,0 +1,42 @@
+{
+  "seo": {
+    "title": "Contact — Volaly",
+    "description": "Get in touch with the Volaly team. Questions, demo requests or partnership enquiries — we respond within 24 hours in English, German or Thai."
+  },
+  "header": {
+    "eyebrow": "Contact",
+    "title": "Get in touch",
+    "subtitle": "Questions, demo requests or partnership enquiries — write to us and we'll get back to you within 24 hours."
+  },
+  "info": {
+    "email": { "title": "Email", "value": "info@volaly.com" },
+    "responseTime": { "title": "Response time", "value": "Within 24 hours" },
+    "languages": { "title": "Languages", "value": "English · Deutsch · ภาษาไทย" },
+    "liveChat": { "title": "Live Chat", "value": "Chat with Volaly AI now" }
+  },
+  "form": {
+    "nameLabel": "Name",
+    "namePlaceholder": "Jane Smith",
+    "emailLabel": "Email",
+    "emailPlaceholder": "jane@example.com",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "Please select…",
+    "subjectOptions": {
+      "demo": "Book a demo",
+      "pricing": "Pricing & packages",
+      "support": "Technical support",
+      "partnership": "Partnership",
+      "other": "Other"
+    },
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell us about your business and how we can help…",
+    "errorMessage": "Something went wrong. Please try again or email us directly.",
+    "sending": "Sending…",
+    "send": "Send message",
+    "agreementPre": "By submitting you agree to our ",
+    "privacyLink": "Privacy Policy",
+    "successTitle": "Message sent!",
+    "successBody": "Thanks for reaching out. We'll get back to you within 24 hours.",
+    "sendAnother": "Send another message"
+  }
+}

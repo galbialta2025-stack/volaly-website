@@ -1,0 +1,284 @@
+{
+  "page": {
+    "viewDemo": "Voir la démo",
+    "bookConsultation": "Réserver une consultation",
+    "resultsDisclaimer": "* Les résultats individuels peuvent varier et ne sont pas garantis.",
+    "problemEyebrow": "Le problème",
+    "problemTitlePre": "Ce qui freine ",
+    "problemTitlePost": "",
+    "systemEyebrow": "Le système Volaly",
+    "systemTitlePre": "Comment Volaly fait ",
+    "systemTitlePost": "grandir votre activité",
+    "systemSubtitle": "Visibilité, communication et revenus — automatisés de bout en bout.",
+    "faqEyebrow": "FAQ",
+    "faqTitlePre": "Questions fréquentes de ",
+    "faqSubtitle": "Tout ce qu'il faut savoir sur la visibilité et l'automatisation IA pour votre activité.",
+    "faqCta": "Voir Volaly en action",
+    "relatedLabel": "Également pertinent pour votre secteur :",
+    "moreIndustriesEyebrow": "Autres secteurs",
+    "moreIndustriesTitlePre": "Conçu aussi pour ",
+    "moreIndustriesTitleHighlight": "votre univers"
+  },
+  "industries": {
+    "gym": {
+      "name": "Salles de sport",
+      "eyebrow": "Salles de sport",
+      "headline": "Remplissez votre salle de",
+      "highlight": "membres en pilote automatique",
+      "subtitle": "L'IA répond à chaque demande en quelques secondes, réserve des séances d'essai et relance les prospects jusqu'à leur inscription — pendant que vous vous concentrez sur l'entraînement.",
+      "metaTitle": "Marketing et automatisation IA pour salles de sport — Volaly",
+      "metaDescription": "Volaly aide les salles de sport à être trouvées en ligne, à répondre instantanément à chaque prospect et à convertir les essais en membres payants.",
+      "videoTitle": "Volaly pour les salles de sport — démo de 2 minutes",
+      "stats": [
+        { "value": "+124%", "label": "Plus de séances d'essai réservées" },
+        { "value": "<30s", "label": "Temps de réponse moyen" },
+        { "value": "24h/24", "label": "Suivi des prospects" }
+      ],
+      "pains": [
+        "Les prospects écrivent le soir et n'ont jamais de réponse",
+        "Les visiteurs à l'essai ne sont jamais relancés",
+        "Le contenu social prend des heures chaque semaine"
+      ],
+      "solutions": [
+        { "title": "Réponses instantanées aux prospects", "desc": "Smart Chat répond aux questions tarifaires et de cours sur Instagram, LINE et WhatsApp 24h/24." },
+        { "title": "Réservations d'essai", "desc": "Transformez chaque conversation en séance d'essai réservée dans votre agenda." },
+        { "title": "Suivi des membres", "desc": "Rappels et offres automatiques qui convertissent les essais en adhésions." },
+        { "title": "Contenu en pilote automatique", "desc": "Posts, reels et promos conformes à votre marque, générés et publiés pour vous." }
+      ]
+    },
+    "dentist": {
+      "name": "Cabinets dentaires",
+      "eyebrow": "Dentistes",
+      "headline": "Gardez vos fauteuils pleins avec",
+      "highlight": "des rendez-vous patients automatisés",
+      "subtitle": "Volaly répond aux questions des patients, réserve des rendez-vous et réduit les absences — pour que votre accueil se concentre sur les soins.",
+      "metaTitle": "Réservation de patients et marketing IA pour dentistes — Volaly",
+      "metaDescription": "Volaly aide les cabinets dentaires à mieux se classer sur Google, à répondre instantanément aux demandes des patients et à remplir l'agenda automatiquement.",
+      "videoTitle": "Volaly pour les cabinets dentaires — démo de 2 minutes",
+      "stats": [
+        { "value": "+62%", "label": "Plus de rendez-vous réservés" },
+        { "value": "-41%", "label": "Moins d'absences" },
+        { "value": "5★", "label": "Croissance des avis" }
+      ],
+      "pains": [
+        "L'accueil est trop occupé pour répondre à chaque appel et chat",
+        "Les patients oublient leurs rendez-vous",
+        "Peu d'avis Google par rapport à la concurrence"
+      ],
+      "solutions": [
+        { "title": "Chat patient 24h/24", "desc": "Répondez instantanément aux questions de traitement, de prix et d'assurance dans n'importe quelle langue." },
+        { "title": "Planification intelligente", "desc": "Les patients réservent et reprogramment eux-mêmes — synchronisé avec votre agenda." },
+        { "title": "Rappels", "desc": "Confirmations et rappels automatiques qui réduisent considérablement les absences." },
+        { "title": "Moteur d'avis", "desc": "Invitez automatiquement les patients satisfaits à laisser des avis Google 5 étoiles." }
+      ]
+    },
+    "medical-beauty": {
+      "name": "Cliniques de beauté médicale",
+      "eyebrow": "Beauté médicale",
+      "headline": "Transformez l'attention en",
+      "highlight": "traitements à forte valeur",
+      "subtitle": "Les cliniques de beauté et d'esthétique gagnent par la visibilité et la rapidité. Volaly offre les deux — un contenu superbe et des consultations instantanées, conformes à votre marque.",
+      "metaTitle": "Marketing IA pour cliniques de beauté médicale et esthétique — Volaly",
+      "metaDescription": "Volaly génère du contenu conforme à votre marque, répond instantanément à chaque demande et réserve des consultations pour les cliniques de beauté médicale et esthétique.",
+      "videoTitle": "Volaly pour les cliniques de beauté médicale — démo de 2 minutes",
+      "stats": [
+        { "value": "+3,1x", "label": "Demandes de consultation" },
+        { "value": "+38%", "label": "Hausse moyenne des revenus" },
+        { "value": "6+", "label": "Canaux automatisés" }
+      ],
+      "pains": [
+        "Les demandes arrivent simultanément via 5 canaux différents",
+        "Le contenu doit avoir l'air premium — chaque jour",
+        "Les prospects à forte valeur se refroidissent sans suivi"
+      ],
+      "solutions": [
+        { "title": "Visuels premium", "desc": "Smart Images et Shorts créent quotidiennement un contenu soigné et conforme à votre marque." },
+        { "title": "Réservation de consultation", "desc": "Qualifiez l'intérêt et réservez des consultations payantes automatiquement." },
+        { "title": "Flux de vente additionnelle", "desc": "Smart Sale recommande des forfaits et des traitements complémentaires." },
+        { "title": "Boîte de réception unifiée", "desc": "Instagram, LINE, WhatsApp et chat web en un seul endroit propulsé par l'IA." }
+      ]
+    },
+    "visa-agency": {
+      "name": "Agences de visa",
+      "eyebrow": "Agences de visa",
+      "headline": "Répondez aux questions de visa",
+      "highlight": "instantanément, dans toutes les langues",
+      "subtitle": "Volaly gère les questions répétitives sur les documents et conditions 24h/24, qualifie les candidats et réserve des consultations pour votre équipe.",
+      "metaTitle": "Automatisation IA pour agences de visa — Volaly",
+      "metaDescription": "Volaly répond aux questions de visa 24h/24 dans n'importe quelle langue, qualifie les candidats et réserve automatiquement des consultations pour les agences de visa.",
+      "videoTitle": "Volaly pour les agences de visa — démo de 2 minutes",
+      "stats": [
+        { "value": "90%", "label": "Questions répondues automatiquement" },
+        { "value": "40+", "label": "Langues prises en charge" },
+        { "value": "24h/24", "label": "Disponibilité" }
+      ],
+      "pains": [
+        "Les mêmes questions posées des centaines de fois par semaine",
+        "Les clients écrivent dans de nombreuses langues différentes",
+        "Les candidats qualifiés se perdent dans la boîte de réception"
+      ],
+      "solutions": [
+        { "title": "IA multilingue", "desc": "Répondez avec précision dans la langue du candidat, 24 heures sur 24." },
+        { "title": "Accompagnement documentaire", "desc": "Guidez les candidats à travers les exigences et listes de contrôle étape par étape." },
+        { "title": "Qualification des prospects", "desc": "Seuls les candidats sérieux et qualifiés atteignent vos consultants." },
+        { "title": "Réservation de consultation", "desc": "Rendez-vous confirmés directement dans votre agenda." }
+      ]
+    },
+    "real-estate": {
+      "name": "Immobilier",
+      "eyebrow": "Immobilier",
+      "headline": "Qualifiez les acheteurs et",
+      "highlight": "réservez des visites automatiquement",
+      "subtitle": "Chaque demande immobilière obtient une réponse instantanée et informée. Volaly qualifie le budget et l'intention, puis réserve la visite pour vos agents.",
+      "metaTitle": "Qualification de prospects IA pour agences immobilières — Volaly",
+      "metaDescription": "Volaly répond instantanément à chaque demande immobilière, qualifie les acheteurs et réserve des visites automatiquement pour les agences immobilières.",
+      "videoTitle": "Volaly pour l'immobilier — démo de 2 minutes",
+      "stats": [
+        { "value": "+87%", "label": "Plus de visites réservées" },
+        { "value": "<1min", "label": "Temps de première réponse" },
+        { "value": "100%", "label": "Prospects suivis" }
+      ],
+      "pains": [
+        "Les acheteurs contactent trois agences — la plus rapide gagne",
+        "Les agents perdent du temps sur des prospects non qualifiés",
+        "Les annonces ont besoin de contenu frais en permanence"
+      ],
+      "solutions": [
+        { "title": "Réponse instantanée", "desc": "Soyez la première agence à répondre, chaque fois." },
+        { "title": "Qualification des acheteurs", "desc": "Budget, calendrier et intention capturés avant l'intervention de votre agent." },
+        { "title": "Planificateur de visites", "desc": "Visites confirmées réservées directement dans les agendas des agents." },
+        { "title": "Contenu d'annonce", "desc": "Publications immobilières, flyers et vidéos courtes automatisés." }
+      ]
+    },
+    "social-media-influencer": {
+      "name": "Influenceurs des réseaux sociaux",
+      "eyebrow": "Créateurs & influenceurs",
+      "headline": "Publiez plus, répondez plus vite,",
+      "highlight": "monétisez tout",
+      "subtitle": "Volaly produit du contenu quotidien, gère les DM et les demandes de marques, et transforme votre audience en véritable activité monétisée.",
+      "metaTitle": "Automatisation IA de contenu et DM pour influenceurs — Volaly",
+      "metaDescription": "Volaly crée du contenu quotidien, gère les DM et les demandes de marques, et aide les influenceurs des réseaux sociaux à monétiser leur audience.",
+      "videoTitle": "Volaly pour les créateurs — démo de 2 minutes",
+      "stats": [
+        { "value": "10x", "label": "Production de contenu plus rapide" },
+        { "value": "0", "label": "DM manqués" },
+        { "value": "+38%", "label": "Hausse des revenus" }
+      ],
+      "pains": [
+        "La production de contenu dévore toute la semaine",
+        "Des milliers de DM sans réponse",
+        "Deals de marque perdus à cause de réponses lentes"
+      ],
+      "solutions": [
+        { "title": "Moteur de contenu quotidien", "desc": "Smart Shorts et Images gardent votre fil actif sans vous épuiser." },
+        { "title": "Automatisation des DM", "desc": "L'IA répond aux fans et filtre les véritables demandes professionnelles." },
+        { "title": "Boîte de réception des deals de marque", "desc": "Demandes de collaboration qualifiées et organisées dans votre CRM." },
+        { "title": "Flux de monétisation", "desc": "Vendez des produits, formations et services directement dans le chat." }
+      ]
+    },
+    "car-rental": {
+      "name": "Location de voitures",
+      "eyebrow": "Location de voitures",
+      "headline": "Devis et réservations automatisés",
+      "highlight": "pour chaque véhicule",
+      "subtitle": "Volaly établit des devis, vérifie la disponibilité et confirme les locations 24h/24 — pour qu'aucun voyageur n'attende jamais de réponse.",
+      "metaTitle": "Automatisation des réservations IA pour sociétés de location de voitures — Volaly",
+      "metaDescription": "Volaly établit des devis, vérifie la disponibilité et confirme les réservations de location de voiture automatiquement, 24h/24, dans n'importe quelle langue.",
+      "videoTitle": "Volaly pour la location de voitures — démo de 2 minutes",
+      "stats": [
+        { "value": "+71%", "label": "Plus de locations confirmées" },
+        { "value": "24h/24", "label": "Devis et réservation" },
+        { "value": "40+", "label": "Langues" }
+      ],
+      "pains": [
+        "Les voyageurs demandent des devis à 3h du matin",
+        "Les questions de disponibilité se répètent sans fin",
+        "Réservations perdues face à des concurrents plus rapides"
+      ],
+      "solutions": [
+        { "title": "Devis instantané", "desc": "Tarifs, assurance et extras expliqués en quelques secondes." },
+        { "title": "Vérification de disponibilité", "desc": "L'IA confirme quels véhicules sont libres aux dates demandées." },
+        { "title": "Confirmation de réservation", "desc": "Cautions, documents et détails de prise en charge gérés dans le chat." },
+        { "title": "Visibilité locale", "desc": "Meilleur classement sur Google Maps là où les voyageurs recherchent." }
+      ]
+    },
+    "hotel": {
+      "name": "Hôtels & resorts",
+      "eyebrow": "Hôtels & resorts",
+      "headline": "Remplissez plus de chambres avec",
+      "highlight": "des réservations directes",
+      "subtitle": "Volaly répond instantanément aux questions des clients, stimule les réservations directes et développe vos avis 5 étoiles — en réduisant la dépendance aux OTA.",
+      "metaTitle": "Communication client et réservations directes IA pour hôtels — Volaly",
+      "metaDescription": "Volaly répond aux questions des clients 24h/24, stimule les réservations directes d'hôtel et développe les avis 5 étoiles — en réduisant la commission OTA.",
+      "videoTitle": "Volaly pour les hôtels — démo de 2 minutes",
+      "stats": [
+        { "value": "+46%", "label": "Plus de réservations directes" },
+        { "value": "5★", "label": "Croissance des avis" },
+        { "value": "24h/24", "label": "Assistance client" }
+      ],
+      "pains": [
+        "Commission OTA élevée sur chaque réservation",
+        "Les clients posent les mêmes questions toute la nuit",
+        "Les avis décident des réservations — et les vôtres sont maigres"
+      ],
+      "solutions": [
+        { "title": "Chat de réservation directe", "desc": "Guidez les clients de la question à la réservation directe confirmée." },
+        { "title": "Concierge 24h/24", "desc": "Questions sur l'enregistrement, les équipements et les transferts répondues instantanément." },
+        { "title": "Moteur d'avis", "desc": "Collectez automatiquement des avis 5 étoiles authentiques après chaque séjour." },
+        { "title": "Visibilité Google", "desc": "Meilleur classement sur Maps et dans la recherche à votre destination." }
+      ]
+    },
+    "bar": {
+      "name": "Bars & vie nocturne",
+      "eyebrow": "Bars & vie nocturne",
+      "headline": "Remplissez l'établissement",
+      "highlight": "chaque soir",
+      "subtitle": "Promotions d'événements, réservations de table et réponses instantanées — Volaly garde votre bar visible et vos tables réservées.",
+      "metaTitle": "Marketing IA et réservations pour bars et vie nocturne — Volaly",
+      "metaDescription": "Volaly fait la promotion de vos événements, répond instantanément aux clients et remplit les tables grâce à des réservations automatisées pour bars et lieux de vie nocturne.",
+      "videoTitle": "Volaly pour les bars — démo de 2 minutes",
+      "stats": [
+        { "value": "+2,4x", "label": "Réservations de table" },
+        { "value": "Quotidien", "label": "Contenu événementiel" },
+        { "value": "24h/24", "label": "Réponses aux clients" }
+      ],
+      "pains": [
+        "Chaque événement nécessite un nouveau contenu promotionnel",
+        "Les demandes de table arrivent par DM aux heures de pointe",
+        "L'affluence sans réservation dépend d'être trouvé en ligne"
+      ],
+      "solutions": [
+        { "title": "Promos d'événements", "desc": "Flyers, reels et posts pour chaque soirée, générés automatiquement." },
+        { "title": "Réservation de table", "desc": "Réservations confirmées dans le chat sans intervention du personnel." },
+        { "title": "Liste d'invités & VIP", "desc": "Capturez et organisez les habitués et clients VIP dans votre CRM." },
+        { "title": "Découverte locale", "desc": "Apparaissez sur Google et les réseaux sociaux quand on recherche une sortie nocturne à proximité." }
+      ]
+    },
+    "restaurant": {
+      "name": "Restaurants",
+      "eyebrow": "Restaurants",
+      "headline": "Gardez chaque table pleine avec",
+      "highlight": "des réservations instantanées",
+      "subtitle": "Volaly gère les réservations, les questions de menu et les demandes de livraison sur tous les canaux — et garde votre fil appétissant.",
+      "metaTitle": "Réservations et marketing IA pour restaurants — Volaly",
+      "metaDescription": "Volaly prend les réservations, répond aux questions de menu et fait la promotion de votre restaurant automatiquement sur Google, LINE, WhatsApp et les réseaux sociaux.",
+      "videoTitle": "Volaly pour les restaurants — démo de 2 minutes",
+      "stats": [
+        { "value": "+58%", "label": "Plus de réservations" },
+        { "value": "5★", "label": "Croissance des avis" },
+        { "value": "6+", "label": "Canaux automatisés" }
+      ],
+      "pains": [
+        "Le téléphone sonne pendant le coup de feu du dîner",
+        "Les questions sur le menu et les horaires ne s'arrêtent jamais",
+        "Le contenu culinaire doit être superbe chaque jour"
+      ],
+      "solutions": [
+        { "title": "IA de réservation", "desc": "Réservations confirmées instantanément sur le web, LINE, WhatsApp et Instagram." },
+        { "title": "Assistant menu", "desc": "Plats, allergènes, horaires et livraison répondus automatiquement." },
+        { "title": "Contenu culinaire", "desc": "Posts appétissants et vidéos courtes publiés pour vous." },
+        { "title": "Croissance des avis", "desc": "Transformez les clients satisfaits en un flux d'avis Google 5 étoiles." }
+      ]
+    }
+  }
+}

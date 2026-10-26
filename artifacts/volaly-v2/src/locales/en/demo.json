@@ -1,0 +1,135 @@
+{
+  "seo": {
+    "title": "Experience Volaly — Live Demo",
+    "description": "See how one upload becomes revenue, visibility and AI-powered customer conversations. Interactive demo — no signup required."
+  },
+  "hero": {
+    "badge": "Interactive Demo",
+    "titleLine1": "Experience",
+    "titleLine2": "Volaly.",
+    "subtitle": "See how one upload becomes revenue, visibility and AI-powered customer conversations.",
+    "startFree": "Start Free",
+    "bookDemo": "Book Demo"
+  },
+  "workflow": {
+    "eyebrow": "How It Works",
+    "titlePre": "One Upload. ",
+    "titleHighlight": "Everything Else Is Automatic.",
+    "subtitle": "Hover each step to see what Volaly creates for you.",
+    "nodes": {
+      "upload": { "label": "Upload", "sub": "One piece of content" },
+      "ai": { "label": "Volaly AI", "sub": "Understanding & processing" },
+      "growth": { "label": "Growth", "sub": "Revenue & audience" }
+    },
+    "split": {
+      "revenueLabel": "Revenue Suite",
+      "revenueSub": "AI FAQ · Shop · Voice · Memberships",
+      "visibilityLabel": "Visibility Suite",
+      "visibilitySub": "Shorts · Posts · SEO · Newsletter"
+    },
+    "automatic": "Automatic ✓"
+  },
+  "chat": {
+    "badge": "AI FAQ Demo",
+    "titlePre": "Your AI answers ",
+    "titleHighlight": "everything.",
+    "subtitle": "Click a question to see a live AI response.",
+    "titleBar": "Volaly AI — always on",
+    "live": "Live",
+    "tryAsking": "Try asking:",
+    "initialMessage": "Hi! I'm your Volaly AI. Click a question below or ask me anything about Volaly.",
+    "questions": [
+      {
+        "q": "What products do you recommend?",
+        "a": "Based on your content, I'd suggest starting with the Creator Shop and Memberships. Your audience engages most with educational content — digital products like guides and templates tend to convert at 8–12%. Want me to set up a shop preview?"
+      },
+      {
+        "q": "Tell me more about memberships.",
+        "a": "Memberships let you create recurring monthly revenue from your most loyal audience. You set the price, the perks and the content — Volaly handles billing, access control and reminders automatically. Most creators see their first members within the first week."
+      },
+      {
+        "q": "How does Smart Shorts work?",
+        "a": "Upload one long video and Volaly's AI identifies the best moments — hooks, highlights, punchlines — and cuts them into scroll-stopping short clips optimised for TikTok, Reels and YouTube Shorts. Each clip gets captions, branding and is scheduled for auto-publishing."
+      },
+      {
+        "q": "Can I connect YouTube?",
+        "a": "Yes! Connect YouTube in one click from your dashboard. Volaly will automatically pull in your latest uploads, generate Shorts, SEO articles, newsletters and social posts — all without you touching a thing."
+      }
+    ]
+  },
+  "voice": {
+    "eyebrow": "Voice AI",
+    "titlePre": "Talk to your ",
+    "titleHighlight": "AI persona.",
+    "subtitle": "Your audience can have real voice conversations with your AI — 24/7, in any language.",
+    "idleStatus": "Click the microphone to start a conversation.",
+    "demoOnly": "Demo only — no real audio required",
+    "lines": [
+      "Hi! I'm your Volaly AI. How can I help you today?",
+      "I can answer questions about your products, services or content.",
+      "Want to know more about memberships or the creator shop?",
+      "Go ahead — I'm listening."
+    ]
+  },
+  "shorts": {
+    "eyebrow": "Smart Shorts",
+    "titlePre": "One video. ",
+    "titleHighlight": "Ten clips. Auto-published.",
+    "subtitle": "Upload a long video and Volaly instantly creates, captions and schedules short-form content for every platform.",
+    "idle": {
+      "title": "Drop your long video here",
+      "sub": "or click to upload — MP4, MOV, AVI",
+      "cta": "Upload & Generate Shorts"
+    },
+    "processing": {
+      "title": "Volaly AI is processing…",
+      "sub": "Detecting highlights · Generating captions · Cutting clips"
+    },
+    "done": {
+      "title": "10 Shorts Generated!",
+      "sub": "Scheduled for TikTok · Reels · YouTube Shorts",
+      "resetHint": "Click to reset"
+    },
+    "steps": {
+      "upload": { "label": "Long Video", "sub": "Your upload" },
+      "ai": { "label": "Volaly AI", "sub": "Processing…" },
+      "shorts": { "label": "10 Shorts", "sub": "Auto-generated" },
+      "publish": { "label": "Auto Publish", "sub": "All platforms" }
+    }
+  },
+  "revenue": {
+    "eyebrow": "Revenue Dashboard",
+    "titlePre": "Your revenue, ",
+    "titleHighlight": "on autopilot.",
+    "subtitle": "Real-time metrics from your Creator Shop, memberships and affiliate earnings — all in one place.",
+    "titleBar": "Volaly Dashboard — Live",
+    "live": "Live",
+    "items": {
+      "revenue": "Revenue",
+      "orders": "Orders",
+      "visitors": "Visitors",
+      "members": "Members",
+      "growth": "Growth"
+    }
+  },
+  "visibility": {
+    "eyebrow": "Visibility Dashboard",
+    "titlePre": "Reach, ",
+    "titleHighlight": "everywhere.",
+    "subtitle": "Posts, views, clicks and Shorts — automatically tracked across every platform from one upload.",
+    "items": {
+      "posts": "Posts",
+      "views": "Views",
+      "clicks": "Clicks",
+      "reach": "Reach",
+      "shorts": "Shorts"
+    }
+  },
+  "finalCta": {
+    "titleLine1": "One Upload.",
+    "titleLine2": "Volaly Does the Rest.",
+    "subtitle": "Join creators and businesses who upload once and let Volaly handle everything else.",
+    "startFree": "Start Free",
+    "restart": "Restart Demo"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "seo": {
+    "title": "FAQ — Preguntas frecuentes | Volaly",
+    "description": "Respuestas a preguntas comunes sobre Volaly: qué es, para quién es, cómo funciona, la Revenue Suite, la Visibility Suite, seguridad, precios y cómo empezar."
+  },
+  "hero": {
+    "eyebrow": "FAQ",
+    "titleLine1": "Preguntas",
+    "titleLine2": "frecuentes.",
+    "subtitle": "Todo lo que necesitas saber sobre Volaly."
+  },
+  "page": {
+    "searchPlaceholder": "Buscar preguntas…",
+    "allTab": "Todas",
+    "resultsFoundOne": "1 resultado para",
+    "resultsFoundMany": "{{count}} resultados para",
+    "resultsNotFound": "Sin resultados para",
+    "noResultsTitle": "No se encontraron preguntas",
+    "noResultsSubtitle": "Prueba otras palabras clave o explora todas las categorías.",
+    "clearSearch": "Borrar búsqueda",
+    "ctaTitle": "¿Aún tienes preguntas?",
+    "ctaSubtitle": "Habla con Volaly AI: lo sabe todo sobre la plataforma y responde al instante.",
+    "ctaButton": "Iniciar chat",
+    "categories": [
+      {
+        "id": "general",
+        "label": "General",
+        "items": [
+          { "q": "¿Qué es Volaly?", "a": "Volaly es una plataforma de crecimiento impulsada por IA para creadores y empresas. Subes tu contenido una vez y Volaly lo transforma automáticamente en flujos de ingresos, visibilidad multiplataforma y conversaciones con clientes impulsadas por IA, sin trabajo manual." },
+          { "q": "¿Para quién es Volaly?", "a": "Volaly está pensado para creadores de contenido (youtubers, creadores de TikTok, podcasters, educadores, coaches) y empresas (restaurantes, hoteles, gimnasios, agencias inmobiliarias, clínicas dentales y más) que quieren crecer en línea sin dedicar horas al marketing manual." },
+          { "q": "¿Cómo funciona Volaly?", "a": "Conectas tus fuentes de contenido (YouTube, redes sociales, tus propias publicaciones) y la IA de Volaly procesa cada contenido. Crea clips cortos, artículos de blog, newsletters, páginas SEO, fichas de producto y conversaciones de IA con clientes, todo distribuido automáticamente en cada plataforma." },
+          { "q": "¿Qué hace diferente a Volaly?", "a": "La mayoría de las herramientas automatizan una sola cosa. Volaly lo automatiza todo. Una sola publicación activa un motor de crecimiento completo: Revenue Suite para la monetización y Visibility Suite para la distribución. No hay otra plataforma que conecte la creación de contenido directamente con los ingresos y el alcance en un solo flujo de trabajo." }
+        ]
+      },
+      {
+        "id": "revenue",
+        "label": "Revenue Suite",
+        "items": [
+          { "q": "¿Qué es Revenue Suite?", "a": "Revenue Suite es el motor de monetización de Volaly. Incluye FAQ con IA, Voice AI, Creator Shop, membresías, productos digitales y afiliados, todo impulsado automáticamente por tu contenido publicado." },
+          { "q": "¿Cómo funciona la FAQ con IA?", "a": "La FAQ con IA se entrena con tu contenido y responde preguntas de clientes o fans las 24 horas, en tu web, tu página de creador o incrustada en cualquier lugar. Suena como tú, usa tus productos y precios, y gestiona las objeciones automáticamente." },
+          { "q": "¿Qué es Voice AI?", "a": "Voice AI crea una persona de voz interactiva impulsada por tu contenido. Tu audiencia puede literalmente tener una conversación de voz en tiempo real con tu IA, respondiendo preguntas, recomendando productos y reservando citas a cualquier hora." },
+          { "q": "¿Puedo vender productos digitales?", "a": "Sí. Puedes vender ebooks, plantillas, cursos y cualquier producto descargable a través de tu Creator Shop impulsado por Volaly. La configuración toma minutos: Volaly gestiona los pagos, la entrega y el seguimiento automáticamente." },
+          { "q": "¿Puedo vender membresías?", "a": "Sí. Crea membresías escalonadas con beneficios y precios personalizados. Volaly gestiona la facturación recurrente, el control de acceso y la comunicación con los miembros automáticamente." },
+          { "q": "¿Puedo vender merchandising?", "a": "Sí. Conecta tu tienda de merchandising o crea una a través de Volaly. Tu IA puede recomendar y promocionar productos en cada conversación con clientes automáticamente." },
+          { "q": "¿Cómo funcionan los productos de afiliados?", "a": "Conecta tus enlaces de afiliado una vez y la IA de Volaly los recomendará de forma natural en las conversaciones relevantes con clientes. Ganas comisiones automáticamente sin añadir promoción manual a tu flujo de trabajo." }
+        ]
+      },
+      {
+        "id": "visibility",
+        "label": "Visibility Suite",
+        "items": [
+          { "q": "¿Qué es Visibility Suite?", "a": "Visibility Suite es el motor de distribución de Volaly. Una sola publicación se convierte automáticamente en clips cortos, artículos de blog extensos, ediciones de newsletter, páginas SEO y publicaciones sociales, publicados en todas las plataformas sin trabajo manual." },
+          { "q": "¿Qué son los Smart Shorts?", "a": "Smart Shorts usa IA para analizar tu video largo, identificar los momentos más fuertes (ganchos, destacados, remates) y crear automáticamente clips verticales optimizados para TikTok, Instagram Reels y YouTube Shorts, con subtítulos y marca incluidos." },
+          { "q": "¿Puede Volaly publicar automáticamente?", "a": "Sí. Conecta tus cuentas sociales una vez y Volaly gestiona toda la programación, el formato y la publicación. El contenido se adapta automáticamente al formato nativo, la proporción y el estilo de cada plataforma." },
+          { "q": "¿Puedo conectar mis cuentas sociales?", "a": "Sí. Volaly se conecta con YouTube, TikTok, Instagram, Facebook, LinkedIn, X y Threads. Conéctate una vez desde tu panel y cada futura publicación se distribuye automáticamente en todas las plataformas." },
+          { "q": "¿Volaly genera artículos de blog?", "a": "Sí. Cada publicación se transforma automáticamente en un artículo de blog extenso, optimizado para SEO y escrito con la voz de tu marca. Los artículos están estructurados para el posicionamiento en buscadores y se publican en tu blog o sitio conectado." },
+          { "q": "¿Volaly crea newsletters?", "a": "Sí. Cada publicación genera una edición de newsletter lista para enviar a tu lista de correo. Volaly se encarga de la redacción, el formato y la programación; tú solo revisas y apruebas." }
+        ]
+      },
+      {
+        "id": "creator",
+        "label": "Creador",
+        "items": [
+          { "q": "¿Pueden los creadores usar Volaly?", "a": "Por supuesto, Volaly está hecho para creadores. Ya sea que seas youtuber, creador de TikTok, podcaster, educador o coach, Volaly convierte tu contenido en membresías, productos digitales, una tienda de creador y distribución automática en cada plataforma." },
+          { "q": "¿Necesito 5.000 seguidores para unirme?", "a": "Solo para el plan Creator Partner (gratuito), que es solo por invitación. Los planes de pago Creator, Creator Pro y Creator Elite están abiertos a todos, sin importar el tamaño de la audiencia." },
+          { "q": "¿Qué es Creator Partner?", "a": "Creator Partner es nuestro plan gratuito, solo por invitación, para creadores establecidos (5.000+ seguidores o solicitantes aprobados). En lugar de una cuota mensual, Volaly obtiene una participación en los ingresos de las ventas que generas a través de la plataforma. Crecemos juntos." },
+          { "q": "¿Puedo migrar desde otra plataforma?", "a": "Sí. Si actualmente usas otra herramienta de creador o plataforma de monetización, nuestro equipo te ayudará a migrar tu audiencia, productos y contenido a Volaly. Contáctanos para un plan de migración personalizado." }
+        ]
+      },
+      {
+        "id": "business",
+        "label": "Empresas",
+        "items": [
+          { "q": "¿Pueden las empresas usar Volaly?", "a": "Sí. Volaly está diseñado tanto para creadores como para empresas locales o globales. Restaurantes, hoteles, gimnasios, clínicas dentales, agencias inmobiliarias, clínicas de belleza médica, empresas de alquiler de coches y muchas más usan Volaly para hacer crecer su presencia en línea y automatizar la comunicación con clientes." },
+          { "q": "¿Qué sectores son compatibles?", "a": "Volaly es compatible con restaurantes, hoteles, gimnasios, clínicas dentales, inmobiliarias, belleza médica, alquiler de coches, bares, agencias de redes sociales, agencias de visados y muchos más. Si tu negocio tiene clientes y crea algún tipo de contenido, Volaly puede automatizar tu crecimiento." },
+          { "q": "¿Puedo usar Volaly para varias ubicaciones?", "a": "Sí. Los planes Creator Elite y Enterprise admiten varias ubicaciones y miembros del equipo. Cada ubicación puede tener su propia persona de IA, catálogo de productos y distribución de contenido, todo gestionado desde un solo panel." }
+        ]
+      },
+      {
+        "id": "pricing",
+        "label": "Precios",
+        "items": [
+          { "q": "¿Cómo funciona la participación en ingresos?", "a": "En el plan Creator Partner (gratuito), Volaly obtiene un porcentaje de las ventas que realizas a través de la plataforma en lugar de cobrar una cuota mensual. En los planes de pago, la participación en ingresos disminuye significativamente, así que cuanto más ganas, mejor valor ofrece un plan de pago." },
+          { "q": "¿Puedo mejorar mi plan en cualquier momento?", "a": "Sí. Las mejoras de plan se aplican de inmediato y tus nuevas funciones están disponibles al instante. Las reducciones se aplican al inicio de tu siguiente ciclo de facturación para que siempre obtengas el valor completo de tu plan actual." },
+          { "q": "¿Puedo cancelar mi suscripción?", "a": "Sí. Cancela en cualquier momento desde tu panel, sin preguntas. Tu cuenta permanece activa hasta el final de tu período de facturación actual y conservas el acceso a todo tu contenido y datos." },
+          { "q": "¿Son mis clientes realmente míos?", "a": "100 %. Tus clientes, tus datos, tus relaciones. Volaly nunca contacta, comercializa ni monetiza a tu audiencia sin tu permiso explícito. Posees cada relación con clientes construida a través de la plataforma." }
+        ]
+      },
+      {
+        "id": "security",
+        "label": "Seguridad",
+        "items": [
+          { "q": "¿Está seguro mi contenido?", "a": "Sí. Todo el contenido está cifrado en tránsito y en reposo. Tus datos se almacenan en una infraestructura segura conforme a ISO 27001. Nunca compartimos, vendemos ni usamos tu contenido para entrenar modelos de terceros." },
+          { "q": "¿Quién tiene acceso a mis datos?", "a": "Solo tú y los miembros del equipo que autorices explícitamente tienen acceso a los datos de tu cuenta. El personal de Volaly solo puede acceder a tu cuenta con fines de soporte y únicamente con tu permiso." },
+          { "q": "¿Cumple Volaly con el RGPD?", "a": "Sí. Volaly cumple plenamente con el RGPD. Tienes control total sobre tus datos: puedes exportar o eliminar tu cuenta y todos los datos asociados en cualquier momento desde tu panel." }
+        ]
+      },
+      {
+        "id": "ai",
+        "label": "IA",
+        "items": [
+          { "q": "¿Cómo aprende la IA?", "a": "La IA de Volaly se entrena con el contenido que subes: tus videos, PDFs, sitios web e información de productos. Aprende tu tono, tus productos, tus precios y tu marca para que cada interacción se sienta como tú." },
+          { "q": "¿Mejora la IA con el tiempo?", "a": "Sí. Cuanto más contenido añades, más precisa y capaz se vuelve tu IA. Las conversaciones con clientes también ayudan a la IA a aprender qué preguntas hace más tu audiencia, por lo que mejora con cada interacción." },
+          { "q": "¿Puedo subir PDFs?", "a": "Sí. Sube guías de productos, menús, listas de precios, materiales de cursos o cualquier PDF, y la IA de Volaly aprenderá de ellos al instante. La IA puede luego referenciar y recomendar este contenido en conversaciones con clientes." },
+          { "q": "¿Puedo subir videos?", "a": "Sí. El video es el tipo de contenido principal de Volaly. Sube cualquier video y la IA lo transcribe, analiza y aprende de él, y luego usa ese conocimiento para potenciar tu FAQ con IA, Voice AI, Smart Shorts, artículos de blog y newsletters." },
+          { "q": "¿Puedo conectar mi sitio web?", "a": "Sí. Conecta la URL de tu sitio y la IA de Volaly rastreará y aprenderá de tu contenido existente: páginas, artículos de blog, descripciones de productos y preguntas frecuentes. Esto hace que tu IA conozca de inmediato tu negocio." }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "q": "¿Qué es Volaly?",
+      "parts": [
+        { "text": "Volaly es una plataforma impulsada por IA que ayuda a creadores y empresas a convertir cada publicación en ingresos y visibilidad. En lugar de usar varias herramientas a la vez, Volaly transforma automáticamente tu contenido en conversaciones con IA, productos digitales, contenido social inteligente y nuevas oportunidades de crecimiento. Descubre más sobre la " },
+        { "link": "revenue-suite", "text": "Revenue Suite" },
+        { "text": " y la " },
+        { "link": "visibility-suite", "text": "Visibility Suite" },
+        { "text": " para ver cómo funciona todo junto." }
+      ]
+    },
+    {
+      "q": "¿Para quién es Volaly?",
+      "parts": [
+        { "text": "Volaly está hecho para cualquiera que cree contenido para hacer crecer un negocio. Ya sea que seas creador, coach, hotel, restaurante, gimnasio, agencia inmobiliaria o negocio local, Volaly ayuda a automatizar conversaciones con clientes, aumentar la visibilidad y generar más ingresos con cada publicación. Explora la " },
+        { "link": "creator", "text": "página de Creador" },
+        { "text": " o las soluciones para empresas para ver cómo Volaly se adapta a tu forma de trabajar." }
+      ]
+    },
+    {
+      "q": "¿Cómo funciona Volaly?",
+      "parts": [
+        { "text": "Simplemente sube tu contenido o conecta tus cuentas de redes sociales. Volaly entiende automáticamente tu contenido, construye conocimiento con IA, crea conversaciones con clientes, genera nuevos materiales de marketing y ayuda a crecer tu negocio. Una sola publicación alimenta tanto la " },
+        { "link": "revenue-suite", "text": "Revenue Suite" },
+        { "text": " como la Visibility Suite, permitiéndote monetizar y escalar desde un único flujo de trabajo." }
+      ]
+    },
+    {
+      "q": "¿Qué es la Revenue Suite?",
+      "parts": [
+        { "text": "La Revenue Suite reúne todo lo que necesitas para monetizar tu contenido. FAQ con IA, Voice AI, Smart Shop, membresías y productos digitales trabajan juntos para responder preguntas, recomendar productos y generar ingresos automáticamente. En lugar de vender manualmente, Volaly ayuda a convertir visitantes en clientes todo el día. " },
+        { "link": "revenue-suite", "text": "Más información en la página de Revenue Suite." }
+      ]
+    },
+    {
+      "q": "¿Qué es la Visibility Suite?",
+      "parts": [
+        { "text": "La Visibility Suite te ayuda a llegar a más personas sin generar más trabajo. A partir de una sola publicación, Volaly genera automáticamente Smart Shorts, contenido para redes sociales, artículos de blog, newsletters y contenido SEO para múltiples plataformas. Crea una vez, publica en todas partes y sigue creciendo automáticamente. " },
+        { "link": "visibility-suite", "text": "Más información en la página de Visibility Suite." }
+      ]
+    },
+    {
+      "q": "¿Qué plataformas admite Volaly?",
+      "parts": [
+        { "text": "Volaly funciona con las plataformas que creadores y empresas ya utilizan. Según tu flujo de trabajo, esto incluye YouTube, Instagram, TikTok, Facebook, LinkedIn, X, WhatsApp y LINE. Se añaden nuevas integraciones con regularidad, permitiendo que Volaly se integre perfectamente en tu ecosistema existente en lugar de sustituirlo." }
+      ]
+    },
+    {
+      "q": "¿Necesito conocimientos técnicos?",
+      "parts": [
+        { "text": "No. Volaly está diseñado para creadores y empresas, no para desarrolladores. La mayoría de las funciones se manejan desde un panel intuitivo, sin programación ni configuraciones complejas. Simplemente conecta tus cuentas, sube tu contenido y deja que Volaly automatice el resto para que puedas enfocarte en crear y hacer crecer tu negocio." }
+      ]
+    },
+    {
+      "q": "¿Están seguros mis datos?",
+      "parts": [
+        { "text": "Sí. Proteger tus datos es una de nuestras máximas prioridades. Tu contenido, la información de tus clientes y las cuentas conectadas se gestionan siguiendo estándares de seguridad modernos y conexiones cifradas cuando corresponde. Mantienes el control total de tu contenido, mientras que Volaly solo procesa la información necesaria para prestar sus servicios impulsados por IA." }
+      ]
+    },
+    {
+      "q": "¿Puedo gestionar varias marcas o ubicaciones?",
+      "parts": [
+        { "text": "Sí. Volaly está diseñado para escalar junto con tu negocio. Ya sea que gestiones varios creadores, marcas, ubicaciones o clientes, todo se puede administrar desde una sola plataforma. Esto hace de Volaly una herramienta ideal para agencias, franquicias y negocios en crecimiento que buscan una automatización coherente en varias cuentas." }
+      ]
+    },
+    {
+      "q": "¿Cómo empiezo?",
+      "parts": [
+        { "text": "Empezar solo toma unos minutos. Crea tu cuenta, conecta tus redes sociales o sube tu primer contenido, y Volaly comenzará de inmediato a construir tu base de conocimiento con IA. A partir de ahí puedes activar la Revenue Suite, ampliar tu visibilidad y empezar a crecer automáticamente. " },
+        { "link": "pricing", "text": "Visita la página de Precios" },
+        { "text": " para elegir el plan que se ajuste a tu negocio." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "hero": {
+    "titleLine1": "Ein Upload.",
+    "titleLine2": "Volaly erledigt den Rest.",
+    "subtitle": "Verwandeln Sie jeden Inhalt automatisch in Sichtbarkeit und Wachstum auf jeder Plattform.",
+    "startFree": "Kostenlos starten",
+    "watchDemo": "Demo ansehen",
+    "benefits": ["Ein Upload", "Visibility Suite", "Alle Plattformen"]
+  },
+  "problem": {
+    "eyebrow": "Das Problem",
+    "titlePre": "Gute Unternehmen verlieren Kunden, ",
+    "titleHighlight": "die sie nie zu Gesicht bekommen.",
+    "subtitle": "Gut zu sein reicht nicht, wenn man Sie nicht findet und Sie nicht schnell genug antworten.",
+    "items": [
+      { "title": "Sie sind online unsichtbar", "desc": "Kunden finden Sie bei Google, in sozialen Medien oder auf Karten nicht — und entscheiden sich stattdessen für die Konkurrenz.", "stat": "70%", "label": "suchen vor dem Kauf" },
+      { "title": "Anfragen bleiben unbeantwortet", "desc": "Nachrichten auf LINE, WhatsApp und Instagram stapeln sich. Langsame Antworten bedeuten verlorene Buchungen.", "stat": "5 Min", "label": "dann ist der Lead weg" },
+      { "title": "Marketing frisst Ihre Zeit", "desc": "Inhalte posten, Leads nachfassen und Bewertungen verwalten ist manuell, inkonsistent und anstrengend.", "stat": "15 Std", "label": "verschwendet pro Woche" }
+    ]
+  },
+  "trustBar": {
+    "text": "Funktioniert mit den Plattformen, die Ihre Kunden bereits nutzen"
+  },
+  "visibility": {
+    "eyebrow": "Visibility Suite",
+    "titlePre": "Überall wachsen — mit ",
+    "titleHighlight": "einem einzigen Upload.",
+    "subtitle": "Ein Inhalt wird automatisch zu Dutzenden Assets für jede Plattform.",
+    "cards": [
+      { "title": "Smart Shorts", "desc": "Verwandelt ein langes Video automatisch in mehrere leistungsstarke Kurzvideos." },
+      { "title": "Auto Publishing", "desc": "Mit einem Upload überall veröffentlichen." },
+      { "title": "Social Media", "desc": "Automatisch Inhalte für Instagram, TikTok, Facebook, LinkedIn, X und YouTube erstellen." },
+      { "title": "SEO-Content", "desc": "Verwandelt jeden Upload mit KI-generierten Artikeln in Suchmaschinen-Traffic." },
+      { "title": "Newsletter", "desc": "Erstellt automatisch E-Mail-Kampagnen aus Ihren Inhalten." },
+      { "title": "Analytics", "desc": "Sehen Sie, welcher Content den meisten Umsatz und die meiste Sichtbarkeit bringt." }
+    ],
+    "flowCaption": "Von einem Upload zu überall",
+    "flowSteps": {
+      "upload": "Einmal hochladen",
+      "ai": "Volaly AI",
+      "shorts": "Shorts",
+      "social": "Social Posts",
+      "blog": "Blog & SEO",
+      "newsletter": "Newsletter",
+      "platforms": "Mehrere Plattformen",
+      "growth": "Reichweitenwachstum"
+    },
+    "highlight": {
+      "titlePre": "Ein Upload. ",
+      "titleHighlight": "Unbegrenzte Sichtbarkeit.",
+      "subtitle": "Statt für jede Plattform manuell Inhalte zu erstellen, passt Volaly jeden Upload automatisch für die relevanten Kanäle an."
+    },
+    "comparison": {
+      "withoutLabel": "Ohne Volaly",
+      "withLabel": "Mit Volaly",
+      "without": ["Einmal hochladen", "Eine Plattform erreichen", "Alles manuell erstellen", "Begrenzte Sichtbarkeit"],
+      "with": ["Einmal hochladen", "Überall veröffentlichen", "KI passt jedes Format an", "Maximale Reichweite"]
+    },
+    "cta": {
+      "title": "Automatisch überall wachsen.",
+      "button": "Visibility Suite entdecken"
+    }
+  },
+  "industries": {
+    "eyebrow": "Branchen",
+    "title": "Für jedes Unternehmen, das Inhalte erstellt.",
+    "subtitle": "Eine KI-Plattform. Endlose Möglichkeiten. Ob Creator, Hotel, Restaurant, Fitnessstudio oder Immobilienmakler — Volaly verwandelt jeden Upload in Umsatz und Sichtbarkeit.",
+    "outcomes": {
+      "gym": "Verwandelt jedes Training in Mitgliedschaften.",
+      "dentist": "Verwandelt Expertise in Vertrauen und Termine.",
+      "medical-beauty": "Verwandelt jede Behandlung in Termine.",
+      "visa-agency": "Verwandelt jede Anfrage in genehmigte Anträge.",
+      "real-estate": "Verwandelt jedes Exposé in qualifizierte Leads.",
+      "social-media-influencer": "Verwandelt jeden Upload in Umsatz.",
+      "car-rental": "Verwandelt jede Suche in eine bestätigte Buchung.",
+      "hotel": "Verwandelt jedes Zimmer in Buchungen.",
+      "bar": "Verwandelt jedes Event in volle Nächte.",
+      "restaurant": "Verwandelt jedes Gericht in Gäste."
+    },
+    "learnMore": "Mehr erfahren",
+    "bottomPre": "Ein Upload. ",
+    "bottomHighlight": "Verschiedene Branchen.",
+    "bottomLine2": "Dieselbe KI-Engine.",
+    "cta": "Alle Branchen entdecken"
+  },
+  "whoUses": {
+    "eyebrow": "Wer nutzt Volaly",
+    "title": "Für alle, die Inhalte erstellen.",
+    "subtitle": "Ob Sie eine persönliche Marke oder ein Unternehmen aufbauen — Volaly verwandelt jeden Upload in Umsatz und Sichtbarkeit.",
+    "audiences": [
+      {
+        "eyebrow": "Für Creator",
+        "desc": "Wachsen Sie schneller mit automatisierter Content-Verteilung auf jeder Plattform — aus einem einzigen Upload.",
+        "features": ["Smart Shorts", "Auto Publishing", "SEO-Content", "Newsletter", "Multi-Plattform"],
+        "cta": "Creator-Lösungen entdecken"
+      },
+      {
+        "eyebrow": "Für Unternehmen",
+        "desc": "Werden Sie von mehr Kunden gefunden und veröffentlichen Sie automatisch Inhalte auf jedem Kanal — aus einem einzigen Upload.",
+        "features": ["Smart Shorts", "Google Business", "Social Media", "SEO-Content", "Auto Publishing"],
+        "cta": "Business-Lösungen entdecken"
+      }
+    ],
+    "connecting": {
+      "titlePre": "Eine Plattform. ",
+      "titleHighlight": "Unterschiedliche Workflows.",
+      "subtitle": "Dieselbe KI-Engine treibt Creator, Hotels, Restaurants, Fitnessstudios, Immobilienmakler und jedes Unternehmen an, das Inhalte erstellt."
+    },
+    "dividerLabel": "Branchen"
+  },
+  "features": {
+    "eyebrow": "Plattform",
+    "titlePre": "Eine Plattform, ",
+    "titleHighlight": "jede Fähigkeit",
+    "subtitle": "Ein komplettes KI-Toolkit, um Marketing, Kommunikation und Vertrieb auf Autopilot laufen zu lassen.",
+    "items": {
+      "posting": "Automatisches Posten",
+      "googleBusiness": "Google Business",
+      "line": "LINE-Veröffentlichung",
+      "whatsapp": "WhatsApp-Veröffentlichung",
+      "analytics": "Analytics",
+      "multilang": "Mehrsprachig"
+    }
+  },
+  "why": {
+    "eyebrow": "Warum Volaly",
+    "titleLine1": "Ihr Content funktioniert bereits.",
+    "titleLine2": "Volaly lässt ihn härter arbeiten.",
+    "subtitle": "Nutzen Sie weiterhin YouTube, Instagram, TikTok, Facebook und Ihre bestehenden Tools. Volaly verbindet alles und verwandelt jeden Upload automatisch in Umsatz, Sichtbarkeit und KI-gestützte Kundenerlebnisse.",
+    "cards": [
+      { "title": "Ein Upload", "desc": "Laden Sie einmal hoch oder verbinden Sie Ihre Social-Accounts. Volaly übernimmt automatisch den Rest." },
+      { "title": "Sichtbarkeit zuerst", "desc": "Jeder Upload wird automatisch und ohne Mehraufwand zu Content für jede Plattform." },
+      { "title": "Funktioniert mit Ihren bestehenden Tools", "desc": "Kein Ersatz für YouTube, Instagram oder TikTok nötig. Volaly baut darauf auf." },
+      { "title": "Lernt ständig dazu", "desc": "Jeder neue Upload erweitert Ihr KI-Wissen, verbessert Kundengespräche und stärkt Ihr Unternehmen." }
+    ],
+    "traditional": {
+      "label": "Traditioneller Workflow",
+      "steps": ["Hochladen", "Eine Plattform", "Manuelle Arbeit", "Wiederholen"]
+    },
+    "volalyFlow": {
+      "label": "Volaly-Workflow",
+      "upload": "Hochladen",
+      "ai": "Volaly AI",
+      "visibilitySuite": "Visibility Suite",
+      "growth": "Automatisches Wachstum"
+    },
+    "bottom": {
+      "textPre": "Sie erstellen bereits Inhalte. ",
+      "textHighlight": "Volaly lässt jeden Upload härter arbeiten.",
+      "cta": "Volaly in Aktion sehen"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "titlePre": "Häufig gestellte ",
+    "titleHighlight": "Fragen",
+    "subtitle": "Alles, was Sie darüber wissen müssen, wie Volaly Ihr Unternehmen wachsen lässt."
+  },
+  "finalCta": {
+    "titlePre": "Verwandeln Sie Sichtbarkeit in ",
+    "titleHighlight": "Umsatz.",
+    "subtitle": "Buchen Sie eine Demo und erleben Sie, wie Volaly Ihr Unternehmen auf Autopilot wachsen lässt.",
+    "viewDemo": "Demo ansehen",
+    "bookConsultation": "Beratung buchen"
+  }
+}

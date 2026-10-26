@@ -1,0 +1,135 @@
+{
+  "seo": {
+    "title": "Découvrez Volaly — Démo en direct",
+    "description": "Découvrez comment un simple téléchargement se transforme en revenus, visibilité et conversations client assistées par IA. Démo interactive — sans inscription."
+  },
+  "hero": {
+    "badge": "Démo interactive",
+    "titleLine1": "Découvrez",
+    "titleLine2": "Volaly.",
+    "subtitle": "Découvrez comment un simple téléchargement se transforme en revenus, visibilité et conversations client assistées par IA.",
+    "startFree": "Commencer gratuitement",
+    "bookDemo": "Réserver une démo"
+  },
+  "workflow": {
+    "eyebrow": "Comment ça marche",
+    "titlePre": "Un téléchargement. ",
+    "titleHighlight": "Tout le reste est automatique.",
+    "subtitle": "Survolez chaque étape pour voir ce que Volaly crée pour vous.",
+    "nodes": {
+      "upload": { "label": "Téléchargement", "sub": "Un seul contenu" },
+      "ai": { "label": "Volaly AI", "sub": "Analyse & traitement" },
+      "growth": { "label": "Croissance", "sub": "Revenus & audience" }
+    },
+    "split": {
+      "revenueLabel": "Suite Revenus",
+      "revenueSub": "FAQ IA · Shop · Voix · Abonnements",
+      "visibilityLabel": "Suite Visibilité",
+      "visibilitySub": "Shorts · Posts · SEO · Newsletter"
+    },
+    "automatic": "Automatique ✓"
+  },
+  "chat": {
+    "badge": "Démo FAQ IA",
+    "titlePre": "Votre IA répond à ",
+    "titleHighlight": "tout.",
+    "subtitle": "Cliquez sur une question pour voir une réponse IA en direct.",
+    "titleBar": "Volaly AI — toujours disponible",
+    "live": "En direct",
+    "tryAsking": "Essayez de demander :",
+    "initialMessage": "Bonjour ! Je suis votre Volaly AI. Cliquez sur une question ci-dessous ou posez-moi n'importe quelle question sur Volaly.",
+    "questions": [
+      {
+        "q": "Quels produits recommandez-vous ?",
+        "a": "D'après votre contenu, je vous suggère de commencer par le Creator Shop et les Abonnements. Votre audience interagit le plus avec le contenu éducatif — les produits numériques comme les guides et modèles convertissent généralement entre 8–12 %. Voulez-vous que je prépare un aperçu de boutique ?"
+      },
+      {
+        "q": "Parlez-moi des abonnements.",
+        "a": "Les abonnements vous permettent de générer des revenus mensuels récurrents auprès de votre audience la plus fidèle. Vous fixez le prix, les avantages et le contenu — Volaly gère automatiquement la facturation, le contrôle d'accès et les rappels. La plupart des créateurs obtiennent leurs premiers membres dès la première semaine."
+      },
+      {
+        "q": "Comment fonctionne Smart Shorts ?",
+        "a": "Téléchargez une longue vidéo et l'IA de Volaly identifie les meilleurs moments — accroches, temps forts, punchlines — puis les découpe en clips courts percutants, optimisés pour TikTok, Reels et YouTube Shorts. Chaque clip reçoit des sous-titres, un habillage de marque et est programmé pour une publication automatique."
+      },
+      {
+        "q": "Puis-je connecter YouTube ?",
+        "a": "Oui ! Connectez YouTube en un clic depuis votre tableau de bord. Volaly récupère automatiquement vos dernières vidéos et génère des Shorts, des articles SEO, des newsletters et des publications sociales — sans que vous n'ayez à intervenir."
+      }
+    ]
+  },
+  "voice": {
+    "eyebrow": "IA vocale",
+    "titlePre": "Parlez à votre ",
+    "titleHighlight": "persona IA.",
+    "subtitle": "Votre audience peut avoir de vraies conversations vocales avec votre IA — 24h/24, dans n'importe quelle langue.",
+    "idleStatus": "Cliquez sur le micro pour démarrer une conversation.",
+    "demoOnly": "Démo uniquement — aucun audio réel requis",
+    "lines": [
+      "Bonjour ! Je suis votre Volaly AI. Comment puis-je vous aider aujourd'hui ?",
+      "Je peux répondre à vos questions sur vos produits, services ou contenus.",
+      "Vous voulez en savoir plus sur les abonnements ou le creator shop ?",
+      "Allez-y — je vous écoute."
+    ]
+  },
+  "shorts": {
+    "eyebrow": "Smart Shorts",
+    "titlePre": "Une vidéo. ",
+    "titleHighlight": "Dix clips. Publication automatique.",
+    "subtitle": "Téléchargez une longue vidéo et Volaly crée, sous-titre et programme instantanément du contenu court pour chaque plateforme.",
+    "idle": {
+      "title": "Déposez votre longue vidéo ici",
+      "sub": "ou cliquez pour télécharger — MP4, MOV, AVI",
+      "cta": "Télécharger et générer les Shorts"
+    },
+    "processing": {
+      "title": "Volaly AI traite votre vidéo…",
+      "sub": "Détection des temps forts · Génération des sous-titres · Découpe des clips"
+    },
+    "done": {
+      "title": "10 Shorts générés !",
+      "sub": "Programmés pour TikTok · Reels · YouTube Shorts",
+      "resetHint": "Cliquez pour réinitialiser"
+    },
+    "steps": {
+      "upload": { "label": "Vidéo longue", "sub": "Votre téléchargement" },
+      "ai": { "label": "Volaly AI", "sub": "Traitement…" },
+      "shorts": { "label": "10 Shorts", "sub": "Générés automatiquement" },
+      "publish": { "label": "Publication auto", "sub": "Toutes plateformes" }
+    }
+  },
+  "revenue": {
+    "eyebrow": "Tableau de bord des revenus",
+    "titlePre": "Vos revenus, ",
+    "titleHighlight": "en pilote automatique.",
+    "subtitle": "Mesures en temps réel de votre Creator Shop, abonnements et revenus d'affiliation — tout au même endroit.",
+    "titleBar": "Volaly Dashboard — En direct",
+    "live": "En direct",
+    "items": {
+      "revenue": "Revenus",
+      "orders": "Commandes",
+      "visitors": "Visiteurs",
+      "members": "Membres",
+      "growth": "Croissance"
+    }
+  },
+  "visibility": {
+    "eyebrow": "Tableau de bord de visibilité",
+    "titlePre": "Portée, ",
+    "titleHighlight": "partout.",
+    "subtitle": "Publications, vues, clics et Shorts — suivis automatiquement sur toutes les plateformes à partir d'un seul téléchargement.",
+    "items": {
+      "posts": "Publications",
+      "views": "Vues",
+      "clicks": "Clics",
+      "reach": "Portée",
+      "shorts": "Shorts"
+    }
+  },
+  "finalCta": {
+    "titleLine1": "Un téléchargement.",
+    "titleLine2": "Volaly s'occupe du reste.",
+    "subtitle": "Rejoignez les créateurs et entreprises qui téléchargent une seule fois et laissent Volaly gérer tout le reste.",
+    "startFree": "Commencer gratuitement",
+    "restart": "Relancer la démo"
+  }
+}

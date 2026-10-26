@@ -1,0 +1,30 @@
+{
+  "footer": {
+    "tagline": "Die Business-Growth-Plattform. Verwandeln Sie Sichtbarkeit mit KI in Umsatz.",
+    "platform": "Plattform",
+    "visibilitySuite": "Visibility Suite",
+    "howItWorks": "So funktioniert's",
+    "capabilities": "Funktionen",
+    "company": "Unternehmen",
+    "industries": "Branchen",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "privacyPolicy": "Datenschutz",
+    "terms": "AGB",
+    "cookiePolicy": "Cookie-Richtlinie",
+    "followUs": "Folgen Sie uns",
+    "disclaimer": "* Individuelle Ergebnisse können abweichen und sind nicht garantiert. Die gezeigten Statistiken stellen Ergebnisse ausgewählter Kunden dar und spiegeln möglicherweise keine typischen Ergebnisse wider. Vergangene Leistungen sind kein Hinweis auf zukünftige Ergebnisse.",
+    "copyright": "Alle Rechte vorbehalten."
+  },
+  "nav": {
+    "visibility": "Visibility",
+    "howItWorks": "So funktioniert's",
+    "industries": "Branchen",
+    "platform": "Plattform",
+    "faq": "FAQ",
+    "viewDemo": "Demo ansehen",
+    "chatAriaLabel": "Mit Volaly AI chatten",
+    "toggleMenuAriaLabel": "Menü umschalten",
+    "mainNavigationAriaLabel": "Hauptnavigation"
+  }
+}

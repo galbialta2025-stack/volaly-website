@@ -3,14 +3,8 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useAuth } from '../../hooks/use-auth'
-
-const loginSchema = z.object({
-  email: z.string().email('Bitte eine gültige Email-Adresse eingeben'),
-  password: z.string().min(6, 'Mindestens 6 Zeichen'),
-})
-
-type LoginForm = z.infer<typeof loginSchema>
 
 export const Route = createFileRoute('/$lang/login')({
   component: LoginPage,
@@ -18,9 +12,16 @@ export const Route = createFileRoute('/$lang/login')({
 
 function LoginPage() {
   const { lang } = Route.useParams()
+  const { t } = useTranslation('auth')
   const { signIn } = useAuth()
   const navigate = useNavigate()
   const [serverError, setServerError] = useState<string | null>(null)
+
+  const loginSchema = z.object({
+    email: z.string().email(t('login.emailError')),
+    password: z.string().min(6, t('login.passwordError')),
+  })
+  type LoginForm = z.infer<typeof loginSchema>
 
   const {
     register,
@@ -42,10 +43,10 @@ function LoginPage() {
 
   return (
     <div className="mx-auto flex min-h-[70vh] max-w-md flex-col justify-center px-4 py-16">
-      <h1 className="mb-6 text-2xl font-semibold">Login</h1>
+      <h1 className="mb-6 text-2xl font-semibold">{t('login.title')}</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
         <div>
-          <label htmlFor="email" className="mb-1 block text-sm font-medium">Email</label>
+          <label htmlFor="email" className="mb-1 block text-sm font-medium">{t('login.emailLabel')}</label>
           <input
             id="email"
             type="email"
@@ -57,7 +58,7 @@ function LoginPage() {
         </div>
 
         <div>
-          <label htmlFor="password" className="mb-1 block text-sm font-medium">Passwort</label>
+          <label htmlFor="password" className="mb-1 block text-sm font-medium">{t('login.passwordLabel')}</label>
           <input
             id="password"
             type="password"
@@ -75,13 +76,13 @@ function LoginPage() {
           disabled={isSubmitting}
           className="w-full rounded-md bg-black px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
         >
-          {isSubmitting ? 'Einloggen…' : 'Einloggen'}
+          {isSubmitting ? t('login.submitting') : t('login.submit')}
         </button>
       </form>
 
       <p className="mt-4 text-sm text-gray-600">
-        Noch kein Konto?{' '}
-        <Link to="/$lang/signup" params={{ lang }} className="font-medium underline">Registrieren</Link>
+        {t('login.noAccount')}{' '}
+        <Link to="/$lang/signup" params={{ lang }} className="font-medium underline">{t('login.signUpLink')}</Link>
       </p>
     </div>
   )

@@ -16,85 +16,46 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "./shared";
 import { Stagger, StaggerItem, Reveal } from "@/components/Motion";
 import { openDemo } from "@/lib/demo";
 
-/* ── Feature cards ── */
-const cards = [
-  {
-    icon: Clapperboard,
-    title: "Smart Shorts",
-    desc: "Turn one long video into multiple high-performing short videos automatically.",
-    accent: "from-brand-purple/20 to-brand-blue/20",
-    iconColor: "text-brand-purple",
-  },
-  {
-    icon: Send,
-    title: "Auto Publishing",
-    desc: "Publish everywhere from one upload.",
-    accent: "from-brand-blue/20 to-brand-cyan/20",
-    iconColor: "text-brand-blue",
-  },
-  {
-    icon: Share2,
-    title: "Social Media",
-    desc: "Create content for Instagram, TikTok, Facebook, LinkedIn, X and YouTube automatically.",
-    accent: "from-brand-pink/20 to-brand-purple/20",
-    iconColor: "text-brand-pink",
-  },
-  {
-    icon: Search,
-    title: "SEO Content",
-    desc: "Transform every upload into search traffic with AI-generated articles.",
-    accent: "from-brand-green/20 to-brand-cyan/20",
-    iconColor: "text-brand-green",
-  },
-  {
-    icon: Mail,
-    title: "Newsletter",
-    desc: "Automatically generate email campaigns from your content.",
-    accent: "from-brand-orange/20 to-brand-yellow/20",
-    iconColor: "text-brand-orange",
-  },
-  {
-    icon: BarChart3,
-    title: "Analytics",
-    desc: "See which content generates the most revenue and visibility.",
-    accent: "from-brand-blue/20 to-brand-purple/20",
-    iconColor: "text-brand-blue",
-  },
+/* ── Visual metadata kept in code; copy comes from i18n ── */
+const cardMeta = [
+  { icon: Clapperboard, accent: "from-brand-purple/20 to-brand-blue/20", iconColor: "text-brand-purple" },
+  { icon: Send, accent: "from-brand-blue/20 to-brand-cyan/20", iconColor: "text-brand-blue" },
+  { icon: Share2, accent: "from-brand-pink/20 to-brand-purple/20", iconColor: "text-brand-pink" },
+  { icon: Search, accent: "from-brand-green/20 to-brand-cyan/20", iconColor: "text-brand-green" },
+  { icon: Mail, accent: "from-brand-orange/20 to-brand-yellow/20", iconColor: "text-brand-orange" },
+  { icon: BarChart3, accent: "from-brand-blue/20 to-brand-purple/20", iconColor: "text-brand-blue" },
 ];
 
-/* ── Transformation flow steps ── */
-const flowSteps = [
-  { icon: Upload,      label: "Upload Once",        gradient: "from-brand-orange to-brand-pink" },
-  { icon: Sparkles,    label: "Volaly AI",           gradient: "from-brand-purple to-brand-blue" },
-  { icon: Clapperboard,label: "Shorts",              gradient: "from-brand-blue to-brand-cyan" },
-  { icon: Share2,      label: "Social Posts",        gradient: "from-brand-pink to-brand-purple" },
-  { icon: Search,      label: "Blog & SEO",          gradient: "from-brand-green to-brand-cyan" },
-  { icon: Mail,        label: "Newsletter",          gradient: "from-brand-orange to-brand-yellow" },
-  { icon: Globe,       label: "Multiple Platforms",  gradient: "from-brand-blue to-brand-purple" },
-  { icon: Users,       label: "Audience Growth",     gradient: "from-brand-green to-brand-blue", highlight: true },
+const flowStepMeta = [
+  { key: "upload", icon: Upload, gradient: "from-brand-orange to-brand-pink" },
+  { key: "ai", icon: Sparkles, gradient: "from-brand-purple to-brand-blue" },
+  { key: "shorts", icon: Clapperboard, gradient: "from-brand-blue to-brand-cyan" },
+  { key: "social", icon: Share2, gradient: "from-brand-pink to-brand-purple" },
+  { key: "blog", icon: Search, gradient: "from-brand-green to-brand-cyan" },
+  { key: "newsletter", icon: Mail, gradient: "from-brand-orange to-brand-yellow" },
+  { key: "platforms", icon: Globe, gradient: "from-brand-blue to-brand-purple" },
+  { key: "growth", icon: Users, gradient: "from-brand-green to-brand-blue", highlight: true },
 ];
 
-/* ── Comparison ── */
-const withoutVolaly = [
-  "Upload once",
-  "Reach one platform",
-  "Create everything manually",
-  "Limited visibility",
-];
-const withVolaly = [
-  "Upload once",
-  "Publish everywhere",
-  "AI adapts every format",
-  "Maximum reach",
-];
+interface VisCard {
+  title: string;
+  desc: string;
+}
 
 export function VisibilitySuite() {
+  const { t } = useTranslation("home");
   const reduce = useReducedMotion();
+
+  const cards = t("visibility.cards", { returnObjects: true }) as VisCard[];
+  const flowSteps = t("visibility.flowSteps", { returnObjects: true }) as Record<string, string>;
+  const withoutVolaly = t("visibility.comparison.without", { returnObjects: true }) as string[];
+  const withVolaly = t("visibility.comparison.with", { returnObjects: true }) as string[];
 
   return (
     <section id="visibility" className="relative scroll-mt-24 overflow-hidden py-32">
@@ -104,39 +65,42 @@ export function VisibilitySuite() {
 
         {/* Heading */}
         <SectionHeading
-          eyebrow="Visibility Suite"
-          title={<>Grow everywhere from a <span className="gradient-text-multi">single upload.</span></>}
-          subtitle="One piece of content automatically becomes dozens of assets for every platform."
+          eyebrow={t("visibility.eyebrow")}
+          title={<>{t("visibility.titlePre")}<span className="gradient-text-multi">{t("visibility.titleHighlight")}</span></>}
+          subtitle={t("visibility.subtitle")}
         />
 
         {/* Feature cards */}
         <Stagger className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" gap={0.07}>
-          {cards.map((c) => (
-            <StaggerItem key={c.title}>
-              <motion.div
-                whileHover={{ y: -4, scale: 1.01 }}
-                transition={{ duration: 0.22, ease: "easeOut" }}
-                className={`glass-card group h-full rounded-[22px] bg-gradient-to-br ${c.accent} p-7 transition-shadow duration-300 hover:shadow-[0_16px_48px_rgba(0,0,0,0.12)]`}
-              >
-                <div className={`mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-background/70 ${c.iconColor} shadow-soft transition-transform duration-300 group-hover:scale-110`}>
-                  <c.icon className="h-5 w-5" />
-                </div>
-                <h3 className="text-lg font-bold text-foreground">{c.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
-              </motion.div>
-            </StaggerItem>
-          ))}
+          {cards.map((c, i) => {
+            const meta = cardMeta[i];
+            return (
+              <StaggerItem key={c.title}>
+                <motion.div
+                  whileHover={{ y: -4, scale: 1.01 }}
+                  transition={{ duration: 0.22, ease: "easeOut" }}
+                  className={`glass-card group h-full rounded-[22px] bg-gradient-to-br ${meta.accent} p-7 transition-shadow duration-300 hover:shadow-[0_16px_48px_rgba(0,0,0,0.12)]`}
+                >
+                  <div className={`mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-background/70 ${meta.iconColor} shadow-soft transition-transform duration-300 group-hover:scale-110`}>
+                    <meta.icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground">{c.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
+                </motion.div>
+              </StaggerItem>
+            );
+          })}
         </Stagger>
 
         {/* Transformation animation */}
         <Reveal delay={0.1}>
           <div className="mt-24">
             <p className="mb-10 text-center text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              From one upload to everywhere
+              {t("visibility.flowCaption")}
             </p>
             <div className="mx-auto flex max-w-xs flex-col items-center">
-              {flowSteps.map((step, i) => (
-                <div key={step.label} className="flex w-full flex-col items-center">
+              {flowStepMeta.map((step, i) => (
+                <div key={step.key} className="flex w-full flex-col items-center">
                   <motion.div
                     initial={reduce ? undefined : { opacity: 0, x: i % 2 === 0 ? -16 : 16 }}
                     whileInView={reduce ? undefined : { opacity: 1, x: 0 }}
@@ -152,11 +116,11 @@ export function VisibilitySuite() {
                       <step.icon className="h-4 w-4 text-white" strokeWidth={1.8} />
                     </span>
                     <span className={`text-sm font-bold ${step.highlight ? "text-white" : "text-foreground"}`}>
-                      {step.label}
+                      {flowSteps[step.key]}
                     </span>
                   </motion.div>
 
-                  {i < flowSteps.length - 1 && (
+                  {i < flowStepMeta.length - 1 && (
                     <motion.div
                       initial={reduce ? undefined : { opacity: 0, scaleY: 0 }}
                       whileInView={reduce ? undefined : { opacity: 1, scaleY: 1 }}
@@ -184,11 +148,11 @@ export function VisibilitySuite() {
                 </span>
               </div>
               <h3 className="text-3xl font-black tracking-tight text-foreground sm:text-4xl">
-                One Upload.{" "}
-                <span className="gradient-text-multi">Unlimited Visibility.</span>
+                {t("visibility.highlight.titlePre")}
+                <span className="gradient-text-multi">{t("visibility.highlight.titleHighlight")}</span>
               </h3>
               <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
-                Instead of manually creating content for every platform, Volaly automatically adapts every upload for the channels that matter.
+                {t("visibility.highlight.subtitle")}
               </p>
             </div>
 
@@ -200,7 +164,7 @@ export function VisibilitySuite() {
                   <span className="grid h-7 w-7 place-items-center rounded-full bg-destructive/10">
                     <X className="h-3.5 w-3.5 text-destructive" />
                   </span>
-                  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Without Volaly</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">{t("visibility.comparison.withoutLabel")}</span>
                 </div>
                 <ul className="space-y-3">
                   {withoutVolaly.map((item) => (
@@ -220,7 +184,7 @@ export function VisibilitySuite() {
                   <span className="grid h-7 w-7 place-items-center rounded-full bg-brand-green/15">
                     <Check className="h-3.5 w-3.5 text-brand-green" />
                   </span>
-                  <span className="text-xs font-bold uppercase tracking-wider text-foreground/70">With Volaly</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-foreground/70">{t("visibility.comparison.withLabel")}</span>
                 </div>
                 <ul className="space-y-3">
                   {withVolaly.map((item) => (
@@ -241,10 +205,10 @@ export function VisibilitySuite() {
         <Reveal delay={0.1}>
           <div className="mt-16 flex flex-col items-center gap-6 text-center">
             <h3 className="text-3xl font-black tracking-tight text-foreground sm:text-4xl">
-              Grow Everywhere Automatically.
+              {t("visibility.cta.title")}
             </h3>
             <Button size="xl" variant="hero" onClick={openDemo}>
-              Explore Visibility Suite <ArrowRight className="h-4 w-4" />
+              {t("visibility.cta.button")} <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
         </Reveal>

@@ -1,0 +1,119 @@
+{
+  "seo": {
+    "title": "Tarifs — Choisissez comment vous voulez grandir | Volaly",
+    "description": "Trois formules pour votre croissance. Creator Partner (gratuit), Creator (199 $), Creator Pro (499 $), Creator Elite (999 $). La part de revenu diminue à mesure que vous grandissez."
+  },
+  "hero": {
+    "eyebrow": "Tarifs",
+    "titleLine1": "Choisissez comment",
+    "titleLine2": "vous voulez grandir.",
+    "subtitle": "Commencez avec la formule adaptée à aujourd'hui. Passez à la formule supérieure dès que votre activité se développe."
+  },
+  "plans": {
+    "partner": {
+      "badge": "Sur invitation uniquement",
+      "name": "Creator Partner",
+      "price": "Gratuit",
+      "priceSub": "Part de revenu uniquement",
+      "desc": "Grandissez avec Volaly sans aucun coût. Nous gagnons quand vous gagnez.",
+      "cta": "Postuler",
+      "requirements": ["5 000+ abonnés", "OU candidature approuvée"],
+      "revenueLabels": ["Produits numériques", "Merchandising", "Abonnements"],
+      "features": ["Revenue Suite", "Page Creator", "FAQ IA", "Voice AI", "Smart Shop"]
+    },
+    "creator": {
+      "name": "Creator",
+      "price": "199 $",
+      "priceSub": "/ mois",
+      "desc": "Tout ce qu'il faut pour monétiser et développer votre contenu.",
+      "cta": "Essai gratuit",
+      "revenueLabels": ["Produits numériques", "Merchandising", "Abonnements"],
+      "features": ["Revenue Suite", "Visibility Suite", "Smart Shorts", "Publication automatique", "Rédacteur de blog IA", "Newsletter"]
+    },
+    "pro": {
+      "badge": "Le plus populaire",
+      "name": "Creator Pro",
+      "price": "499 $",
+      "priceSub": "/ mois",
+      "desc": "Part de revenu réduite. Plus d'automatisation. Conçu pour une croissance sérieuse.",
+      "cta": "Passer à Pro",
+      "revenueLabels": ["Produits numériques", "Merchandising", "Abonnements"],
+      "features": ["Tout Creator inclus", "Publication multilingue", "Analyses avancées", "Support prioritaire", "Accès API", "Équipes"]
+    },
+    "elite": {
+      "badge": "Entreprise",
+      "name": "Creator Elite",
+      "price": "999 $",
+      "priceSub": "/ mois",
+      "desc": "Automatisation maximale, part de revenu minimale. Pour les meilleurs créateurs et agences.",
+      "cta": "Contacter les ventes",
+      "revenueLabels": ["Produits numériques", "Merchandising", "Abonnements"],
+      "features": ["Tout Creator Pro inclus", "Marque blanche", "Gestionnaire de compte dédié", "Intégrations personnalisées", "SLA", "Équipes illimitées"]
+    },
+    "requirementsLabel": "Conditions",
+    "revenueShareLabel": "Part de revenu",
+    "includedLabel": "Inclus"
+  },
+  "journey": {
+    "eyebrow": "Parcours d'évolution",
+    "titleLine1": "Plus vous grandissez,",
+    "titleLine2": "moins vous payez.",
+    "subtitle": "La part de revenu diminue à chaque niveau tandis que l'automatisation, les capacités d'IA et les fonctionnalités d'évolution augmentent. La croissance vous récompense toujours.",
+    "steps": [
+      { "sub": "Sur invitation uniquement", "tag": "Gratuit", "headline": "Aucun coût pour démarrer.", "desc": "Nous grandissons ensemble. Part de revenu plus élevée pendant que vous construisez votre audience — sans frais mensuels." },
+      { "sub": "199 $ / mois", "tag": "20 % de part", "headline": "Part réduite. Plus d'automatisation.", "desc": "Payez des frais mensuels fixes et conservez plus de chaque vente. Revenue Suite et Visibility Suite complètes incluses." },
+      { "sub": "499 $ / mois", "tag": "15 % de part", "headline": "Conçu pour une vraie échelle.", "desc": "Fonctionnalités IA avancées, publication multilingue, équipes et support prioritaire." },
+      { "sub": "999 $ / mois", "tag": "10 % de part", "headline": "Puissance maximale. Part minimale.", "desc": "Marque blanche, intégrations personnalisées, gestionnaire dédié et la part de revenu la plus basse de la plateforme." }
+    ]
+  },
+  "compare": {
+    "eyebrow": "Comparer les formules",
+    "titlePre": "Tout, côte à ",
+    "titleHighlight": "côte.",
+    "featureHeader": "Fonctionnalité",
+    "rows": {
+      "revenueSuite": "Revenue Suite",
+      "visibilitySuite": "Visibility Suite",
+      "ai": "IA (FAQ + Voice)",
+      "smartShorts": "Smart Shorts",
+      "automation": "Automatisation",
+      "support": "Support",
+      "apiAccess": "Accès API",
+      "whiteLabel": "Marque blanche",
+      "teams": "Équipes",
+      "analytics": "Analyses",
+      "multilang": "Multilingue"
+    },
+    "values": {
+      "basic": "Basique",
+      "full": "Complet",
+      "advanced": "Avancé",
+      "custom": "Personnalisé",
+      "email": "E-mail",
+      "priority": "Prioritaire",
+      "dedicated": "Dédié",
+      "standard": "Standard",
+      "upTo5": "Jusqu'à 5",
+      "unlimited": "Illimité"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "titlePre": "Questions sur les ",
+    "titleHighlight": "tarifs.",
+    "items": [
+      { "q": "Pourquoi un partage de revenu ?", "a": "Le partage de revenu aligne notre réussite sur la vôtre. Nous ne gagnons que lorsque vous gagnez — Volaly est donc toujours motivé à maximiser vos revenus. Plus vous grandissez et passez à des formules payantes, plus la part de revenu diminue et plus vous conservez de chaque vente." },
+      { "q": "Puis-je changer de formule à tout moment ?", "a": "Oui. Vous pouvez passer à une formule supérieure ou inférieure à tout moment depuis votre tableau de bord. Les mises à niveau prennent effet immédiatement ; les rétrogradations s'appliquent au début de votre prochain cycle de facturation." },
+      { "q": "Mon contenu m'appartient-il ?", "a": "À 100 %. Votre contenu vous appartient toujours. Volaly ne revendique jamais la propriété de ce que vous créez ou téléchargez. Nous le traitons pour générer des formats de contenu supplémentaires — qui vous appartiennent également." },
+      { "q": "Pourquoi Creator Partner est-il sur invitation uniquement ?", "a": "Creator Partner est notre formule la plus accompagnée. Nous travaillons en étroite collaboration avec chaque partenaire pour entraîner son persona IA, configurer sa boutique et optimiser sa stratégie de croissance. Le réserver aux invitations nous permet d'offrir une expérience premium à chaque créateur intégré." },
+      { "q": "Que se passe-t-il si je dépasse ma formule actuelle ?", "a": "Un excellent problème à avoir. Vous pouvez évoluer à tout moment — et plus vous montez, plus votre part de revenu diminue. La croissance sur Volaly vous récompense toujours avec de meilleures conditions économiques." }
+    ]
+  },
+  "finalCta": {
+    "titleLine1": "Prêt à laisser Volaly",
+    "titleLine2": "faire le reste ?",
+    "subtitle": "Commencez gratuitement. Aucune carte bancaire requise. Passez à la formule supérieure quand vous serez prêt à accélérer.",
+    "startFree": "Commencer gratuitement",
+    "bookDemo": "Réserver une démo"
+  }
+}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { useCurrentLocale } from "@/hooks/use-locale";
 import { SectionHeading } from "./shared";
 import { Reveal } from "@/components/Motion";
@@ -32,6 +33,7 @@ function FaqSchema({ faqs }: { faqs: FaqItem[] }) {
 }
 
 export function FAQ() {
+  const { t } = useTranslation("home");
   const [open, setOpen] = useState<number | null>(0);
   const locale = useCurrentLocale();
   const faqs = getFaqs(locale);
@@ -41,9 +43,9 @@ export function FAQ() {
       <FaqSchema faqs={faqs} />
       <div className="relative mx-auto max-w-3xl px-6">
         <SectionHeading
-          eyebrow="FAQ"
-          title={<>Frequently asked <span className="gradient-text-multi">questions</span></>}
-          subtitle="Everything you need to know about how Volaly grows your business."
+          eyebrow={t("faq.eyebrow")}
+          title={<>{t("faq.titlePre")}<span className="gradient-text-multi">{t("faq.titleHighlight")}</span></>}
+          subtitle={t("faq.subtitle")}
         />
         <div className="mt-12 space-y-3">
           {faqs.map((f, i) => {

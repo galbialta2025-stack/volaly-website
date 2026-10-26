@@ -1,38 +1,29 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
-import { industryPages } from "@/lib/industries-data";
+import { useTranslation } from "react-i18next";
+import { useIndustryPages } from "@/lib/industries-data";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "./shared";
 import { Stagger, StaggerItem, Reveal } from "@/components/Motion";
 import { openDemo } from "@/lib/demo";
 import { useCurrentLocale } from "@/hooks/use-locale";
 
-/** One outcome sentence per industry slug. */
-const outcomes: Record<string, string> = {
-  gym:                      "Turn every workout into memberships.",
-  dentist:                  "Turn expertise into trust and appointments.",
-  "medical-beauty":         "Turn every treatment into appointments.",
-  "visa-agency":            "Turn every enquiry into approved applications.",
-  "real-estate":            "Turn every listing into qualified leads.",
-  "social-media-influencer":"Turn every upload into revenue.",
-  "car-rental":             "Turn every search into a confirmed booking.",
-  hotel:                    "Turn every room into bookings.",
-  bar:                      "Turn every event into packed nights.",
-  restaurant:               "Turn every dish into customers.",
-};
-
 export function IndustriesGrid() {
+  const { t } = useTranslation("home");
   const locale = useCurrentLocale();
+  const outcomes = t("industries.outcomes", { returnObjects: true }) as Record<string, string>;
+  const industryPages = useIndustryPages();
+
   return (
     <section id="industries" className="relative scroll-mt-24 overflow-hidden bg-muted/20 py-28">
       <div className="relative mx-auto max-w-7xl px-6">
 
         {/* Heading */}
         <SectionHeading
-          eyebrow="Industries"
-          title="Built for Every Business That Creates Content."
-          subtitle="One AI platform. Endless possibilities. Whether you're a creator, hotel, restaurant, gym or real estate agency — Volaly transforms every upload into revenue and visibility."
+          eyebrow={t("industries.eyebrow")}
+          title={t("industries.title")}
+          subtitle={t("industries.subtitle")}
         />
 
         {/* Industry cards — 4-col desktop, 2-col tablet, 1-col mobile */}
@@ -66,7 +57,7 @@ export function IndustriesGrid() {
 
                   {/* Arrow */}
                   <div className="relative z-10 mt-4 inline-flex items-center gap-1 text-xs font-semibold text-brand-orange/70 transition-colors duration-200 group-hover:text-brand-orange">
-                    Learn more
+                    {t("industries.learnMore")}
                     <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" />
                   </div>
                 </motion.div>
@@ -79,9 +70,9 @@ export function IndustriesGrid() {
         <Reveal delay={0.1}>
           <div className="mt-16 flex flex-col items-center gap-1 text-center">
             <p className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
-              One Upload.{" "}
-              <span className="gradient-text-multi">Different Industries.</span>
-              <span className="block">Same AI Engine.</span>
+              {t("industries.bottomPre")}
+              <span className="gradient-text-multi">{t("industries.bottomHighlight")}</span>
+              <span className="block">{t("industries.bottomLine2")}</span>
             </p>
           </div>
         </Reveal>
@@ -90,7 +81,7 @@ export function IndustriesGrid() {
         <Reveal delay={0.15}>
           <div className="mt-8 flex justify-center">
             <Button variant="heroOutline" size="lg" onClick={openDemo}>
-              Explore All Industries <ArrowRight className="h-4 w-4" />
+              {t("industries.cta")} <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
         </Reveal>

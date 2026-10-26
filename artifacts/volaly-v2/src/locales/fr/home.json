@@ -1,0 +1,166 @@
+{
+  "hero": {
+    "titleLine1": "Un envoi.",
+    "titleLine2": "Volaly s'occupe du reste.",
+    "subtitle": "Transformez automatiquement chaque contenu en visibilité et en croissance sur toutes les plateformes.",
+    "startFree": "Commencer gratuitement",
+    "watchDemo": "Voir la démo",
+    "benefits": ["Un envoi", "Visibility Suite", "Toutes les plateformes"]
+  },
+  "problem": {
+    "eyebrow": "Le Problème",
+    "titlePre": "Les bonnes entreprises perdent des clients ",
+    "titleHighlight": "qu'elles ne voient même jamais.",
+    "subtitle": "Être bon ne suffit pas si l'on ne vous trouve pas et que vous ne répondez pas assez vite.",
+    "items": [
+      { "title": "Vous êtes invisible en ligne", "desc": "Les clients ne vous trouvent pas sur Google, les réseaux sociaux ou les cartes — ils choisissent donc un concurrent à la place.", "stat": "70%", "label": "font une recherche avant d'acheter" },
+      { "title": "Les demandes restent sans réponse", "desc": "Les messages sur LINE, WhatsApp et Instagram s'accumulent. Des réponses lentes signifient des réservations perdues.", "stat": "5 min", "label": "et le prospect est perdu" },
+      { "title": "Le marketing vous dévore votre temps", "desc": "Publier du contenu, relancer des prospects et gérer les avis est manuel, inconstant et épuisant.", "stat": "15h", "label": "perdues chaque semaine" }
+    ]
+  },
+  "trustBar": {
+    "text": "Compatible avec les plateformes que vos clients utilisent déjà"
+  },
+  "visibility": {
+    "eyebrow": "Visibility Suite",
+    "titlePre": "Développez-vous partout à partir d'",
+    "titleHighlight": "un seul envoi.",
+    "subtitle": "Un seul contenu se transforme automatiquement en dizaines de ressources pour chaque plateforme.",
+    "cards": [
+      { "title": "Smart Shorts", "desc": "Transformez automatiquement une longue vidéo en plusieurs courtes vidéos performantes." },
+      { "title": "Publication automatique", "desc": "Publiez partout à partir d'un seul envoi." },
+      { "title": "Réseaux sociaux", "desc": "Créez automatiquement du contenu pour Instagram, TikTok, Facebook, LinkedIn, X et YouTube." },
+      { "title": "Contenu SEO", "desc": "Transformez chaque envoi en trafic de recherche grâce à des articles générés par IA." },
+      { "title": "Newsletter", "desc": "Générez automatiquement des campagnes e-mail à partir de votre contenu." },
+      { "title": "Analytics", "desc": "Découvrez quel contenu génère le plus de revenus et de visibilité." }
+    ],
+    "flowCaption": "D'un seul envoi à partout",
+    "flowSteps": {
+      "upload": "Envoi unique",
+      "ai": "Volaly AI",
+      "shorts": "Shorts",
+      "social": "Posts sociaux",
+      "blog": "Blog & SEO",
+      "newsletter": "Newsletter",
+      "platforms": "Plusieurs plateformes",
+      "growth": "Croissance d'audience"
+    },
+    "highlight": {
+      "titlePre": "Un envoi. ",
+      "titleHighlight": "Visibilité illimitée.",
+      "subtitle": "Plutôt que de créer manuellement du contenu pour chaque plateforme, Volaly adapte automatiquement chaque envoi aux canaux qui comptent."
+    },
+    "comparison": {
+      "withoutLabel": "Sans Volaly",
+      "withLabel": "Avec Volaly",
+      "without": ["Envoi unique", "Une seule plateforme", "Tout créer manuellement", "Visibilité limitée"],
+      "with": ["Envoi unique", "Publication partout", "L'IA adapte chaque format", "Portée maximale"]
+    },
+    "cta": {
+      "title": "Développez-vous partout automatiquement.",
+      "button": "Découvrir la Visibility Suite"
+    }
+  },
+  "industries": {
+    "eyebrow": "Secteurs",
+    "title": "Conçu pour toute entreprise qui crée du contenu.",
+    "subtitle": "Une plateforme IA. Des possibilités infinies. Que vous soyez créateur, hôtel, restaurant, salle de sport ou agence immobilière — Volaly transforme chaque envoi en revenus et en visibilité.",
+    "outcomes": {
+      "gym": "Transformez chaque séance en adhésions.",
+      "dentist": "Transformez votre expertise en confiance et en rendez-vous.",
+      "medical-beauty": "Transformez chaque soin en rendez-vous.",
+      "visa-agency": "Transformez chaque demande en dossier approuvé.",
+      "real-estate": "Transformez chaque annonce en prospects qualifiés.",
+      "social-media-influencer": "Transformez chaque envoi en revenus.",
+      "car-rental": "Transformez chaque recherche en réservation confirmée.",
+      "hotel": "Transformez chaque chambre en réservations.",
+      "bar": "Transformez chaque événement en soirées pleines.",
+      "restaurant": "Transformez chaque plat en clients."
+    },
+    "learnMore": "En savoir plus",
+    "bottomPre": "Un envoi. ",
+    "bottomHighlight": "Des secteurs différents.",
+    "bottomLine2": "Le même moteur IA.",
+    "cta": "Découvrir tous les secteurs"
+  },
+  "whoUses": {
+    "eyebrow": "Qui utilise Volaly",
+    "title": "Conçu pour tous ceux qui créent du contenu.",
+    "subtitle": "Que vous développiez une marque personnelle ou une entreprise, Volaly transforme chaque envoi en revenus et en visibilité.",
+    "audiences": [
+      {
+        "eyebrow": "Pour les créateurs",
+        "desc": "Développez votre audience plus vite grâce à une distribution de contenu automatisée sur chaque plateforme — à partir d'un seul envoi.",
+        "features": ["Smart Shorts", "Publication automatique", "Contenu SEO", "Newsletter", "Multi-plateforme"],
+        "cta": "Découvrir les solutions créateurs"
+      },
+      {
+        "eyebrow": "Pour les entreprises",
+        "desc": "Soyez trouvé par plus de clients et publiez automatiquement du contenu sur chaque canal — à partir d'un seul envoi.",
+        "features": ["Smart Shorts", "Google Business", "Réseaux sociaux", "Contenu SEO", "Publication automatique"],
+        "cta": "Découvrir les solutions entreprises"
+      }
+    ],
+    "connecting": {
+      "titlePre": "Une plateforme. ",
+      "titleHighlight": "Des workflows différents.",
+      "subtitle": "Le même moteur IA fait tourner créateurs, hôtels, restaurants, salles de sport, agences immobilières et toute entreprise qui crée du contenu."
+    },
+    "dividerLabel": "Secteurs"
+  },
+  "features": {
+    "eyebrow": "Plateforme",
+    "titlePre": "Une plateforme, ",
+    "titleHighlight": "toutes les capacités",
+    "subtitle": "Une boîte à outils IA complète pour piloter marketing, communication et ventes en pilote automatique.",
+    "items": {
+      "posting": "Publication automatique",
+      "googleBusiness": "Google Business",
+      "line": "Publication LINE",
+      "whatsapp": "Publication WhatsApp",
+      "analytics": "Analytics",
+      "multilang": "Multilingue"
+    }
+  },
+  "why": {
+    "eyebrow": "Pourquoi Volaly",
+    "titleLine1": "Votre contenu fonctionne déjà.",
+    "titleLine2": "Volaly le fait travailler plus dur.",
+    "subtitle": "Continuez à utiliser YouTube, Instagram, TikTok, Facebook et vos outils existants. Volaly relie tout et transforme automatiquement chaque envoi en revenus, en visibilité et en expériences client pilotées par l'IA.",
+    "cards": [
+      { "title": "Un seul envoi", "desc": "Envoyez une fois ou connectez vos comptes sociaux. Volaly s'occupe automatiquement du reste." },
+      { "title": "La visibilité d'abord", "desc": "Chaque envoi devient du contenu pour chaque plateforme — automatiquement et sans effort supplémentaire." },
+      { "title": "Compatible avec vos outils existants", "desc": "Pas besoin de remplacer YouTube, Instagram ou TikTok. Volaly s'appuie dessus." },
+      { "title": "En apprentissage permanent", "desc": "Chaque nouvel envoi enrichit vos connaissances IA, améliore les conversations client et renforce votre entreprise." }
+    ],
+    "traditional": {
+      "label": "Workflow traditionnel",
+      "steps": ["Envoi", "Une plateforme", "Travail manuel", "Répéter"]
+    },
+    "volalyFlow": {
+      "label": "Workflow Volaly",
+      "upload": "Envoi",
+      "ai": "Volaly AI",
+      "visibilitySuite": "Visibility Suite",
+      "growth": "Croissance automatique"
+    },
+    "bottom": {
+      "textPre": "Vous créez déjà du contenu. ",
+      "textHighlight": "Volaly fait travailler chaque envoi plus dur.",
+      "cta": "Voir Volaly en action"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "titlePre": "Questions ",
+    "titleHighlight": "fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur la façon dont Volaly fait grandir votre entreprise."
+  },
+  "finalCta": {
+    "titlePre": "Transformez la visibilité en ",
+    "titleHighlight": "revenus.",
+    "subtitle": "Réservez une démo et découvrez comment Volaly fait grandir votre entreprise en pilote automatique.",
+    "viewDemo": "Voir la démo",
+    "bookConsultation": "Réserver une consultation"
+  }
+}

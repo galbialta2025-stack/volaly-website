@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Play, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { AuroraOrbs } from "@/components/Backdrop";
 import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
@@ -7,8 +8,8 @@ import { VideoEmbed } from "@/components/VideoEmbed";
 import { Eyebrow, SectionHeading } from "./shared";
 import { FinalCta } from "./FinalCta";
 import { openDemo } from "@/lib/demo";
-import { industryPages, type IndustryPageData } from "@/lib/industries-data";
-import { industryFaqs, relatedIndustries } from "@/lib/industry-faqs";
+import { useIndustryPages, useIndustryData, type IndustryPageData } from "@/lib/industries-data";
+import { useIndustryFaqs, relatedIndustries } from "@/lib/industry-faqs";
 import {
   Accordion,
   AccordionContent,
@@ -19,12 +20,15 @@ import { SEO } from "@/components/SEO";
 import { JsonLd } from "@/components/JsonLd";
 import { useCurrentLocale } from "@/hooks/use-locale";
 
-export function IndustryPage({ data }: { data: IndustryPageData }) {
+export function IndustryPage({ slug }: { slug: string }) {
+  const { t } = useTranslation("industries");
   const locale = useCurrentLocale();
+  const data = useIndustryData(slug);
+  const industryPages = useIndustryPages();
   const others = industryPages.filter((i) => i.slug !== data.slug).slice(0, 6);
-  const faqs = industryFaqs[data.slug] ?? [];
+  const faqs = useIndustryFaqs(data.slug);
   const related = (relatedIndustries[data.slug] ?? [])
-    .map((slug) => industryPages.find((p) => p.slug === slug))
+    .map((s) => industryPages.find((p) => p.slug === s))
     .filter(Boolean) as IndustryPageData[];
 
   const pageUrl = `https://volaly.com/${locale}/${data.slug}`;
@@ -99,14 +103,14 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
             <Reveal delay={0.15}>
               <div className="mt-9 flex flex-wrap gap-4">
                 <Button size="xl" variant="hero" className="rounded-full" onClick={openDemo}>
-                  View Demo <ArrowRight className="h-4 w-4" />
+                  {t("page.viewDemo")} <ArrowRight className="h-4 w-4" />
                 </Button>
                 <Button
                   size="xl"
                   className="rounded-full border border-border/70 bg-background/70 text-foreground backdrop-blur hover:bg-background"
                   onClick={openDemo}
                 >
-                  <Play className="h-4 w-4" /> Book Consultation
+                  <Play className="h-4 w-4" /> {t("page.bookConsultation")}
                 </Button>
               </div>
             </Reveal>
@@ -118,7 +122,7 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
                 </StaggerItem>
               ))}
             </Stagger>
-            <p className="mt-3 text-xs text-muted-foreground/60">* Individual results may vary and are not guaranteed.</p>
+            <p className="mt-3 text-xs text-muted-foreground/60">{t("page.resultsDisclaimer")}</p>
           </div>
 
           {/* Embedded video player */}
@@ -132,8 +136,8 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
       <section className="bg-mesh-soft relative overflow-hidden py-24">
         <div className="relative mx-auto max-w-7xl px-6">
           <SectionHeading
-            eyebrow="The problem"
-            title={<>What slows <span className="gradient-text-multi">{data.name}</span> down</>}
+            eyebrow={t("page.problemEyebrow")}
+            title={<>{t("page.problemTitlePre")}<span className="gradient-text-multi">{data.name}</span>{t("page.problemTitlePost")}</>}
           />
           <Stagger className="mt-12 grid gap-4 md:grid-cols-3" gap={0.06}>
             {data.pains.map((p) => (
@@ -155,9 +159,9 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
       <section className="bg-dots relative overflow-hidden py-24">
         <div className="relative mx-auto max-w-7xl px-6">
           <SectionHeading
-            eyebrow="The Volaly system"
-            title={<>How Volaly <span className="gradient-text-multi">grows your business</span></>}
-            subtitle="Visibility, communication and revenue — automated end to end."
+            eyebrow={t("page.systemEyebrow")}
+            title={<>{t("page.systemTitlePre")}<span className="gradient-text-multi">{t("page.systemTitlePost")}</span></>}
+            subtitle={t("page.systemSubtitle")}
           />
           <Stagger className="mt-12 grid gap-4 sm:grid-cols-2" gap={0.06}>
             {data.solutions.map((s) => (
@@ -186,14 +190,14 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
           <div className="relative mx-auto max-w-4xl px-6">
             <Reveal>
               <SectionHeading
-                eyebrow="FAQ"
+                eyebrow={t("page.faqEyebrow")}
                 title={
                   <>
-                    Common questions from{" "}
+                    {t("page.faqTitlePre")}
                     <span className="gradient-text-multi">{data.name}</span>
                   </>
                 }
-                subtitle="Everything you need to know about AI visibility and automation for your business."
+                subtitle={t("page.faqSubtitle")}
               />
             </Reveal>
 
@@ -217,7 +221,7 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
                           className="mt-3 rounded-full"
                           onClick={openDemo}
                         >
-                          See Volaly in action <ArrowRight className="h-3.5 w-3.5" />
+                          {t("page.faqCta")} <ArrowRight className="h-3.5 w-3.5" />
                         </Button>
                       )}
                     </AccordionContent>
@@ -231,7 +235,7 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
               <Reveal delay={0.15}>
                 <div className="mt-12 rounded-[24px] border border-border/60 bg-background/50 p-6 backdrop-blur">
                   <p className="text-sm font-semibold text-foreground">
-                    Also relevant for your sector:
+                    {t("page.relatedLabel")}
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
                     {related.map((r) => (
@@ -257,7 +261,7 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
       {/* Other industries */}
       <section className="bg-mesh-soft relative overflow-hidden py-24">
         <div className="relative mx-auto max-w-7xl px-6">
-          <SectionHeading eyebrow="More industries" title={<>Also built for <span className="gradient-text-multi">your world</span></>} />
+          <SectionHeading eyebrow={t("page.moreIndustriesEyebrow")} title={<>{t("page.moreIndustriesTitlePre")}<span className="gradient-text-multi">{t("page.moreIndustriesTitleHighlight")}</span></>} />
           <Stagger className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" gap={0.05}>
             {others.map((o) => (
               <StaggerItem key={o.slug}>

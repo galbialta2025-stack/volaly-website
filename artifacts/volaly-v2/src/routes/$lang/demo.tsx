@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 import {
   Upload, Sparkles, DollarSign, Rocket, TrendingUp, Plus,
   Mic, MicOff, MessageSquare, Bot, ArrowRight, Play,
@@ -20,56 +21,30 @@ export const Route = createFileRoute("/$lang/demo")({
 });
 
 /* ═══════════════════════════════════════
-   MOCK DATA
+   STATIC VISUAL METADATA (non-translatable)
 ═══════════════════════════════════════ */
 
-const chatQuestions = [
-  {
-    q: "What products do you recommend?",
-    a: "Based on your content, I'd suggest starting with the Creator Shop and Memberships. Your audience engages most with educational content — digital products like guides and templates tend to convert at 8–12%. Want me to set up a shop preview?",
-  },
-  {
-    q: "Tell me more about memberships.",
-    a: "Memberships let you create recurring monthly revenue from your most loyal audience. You set the price, the perks and the content — Volaly handles billing, access control and reminders automatically. Most creators see their first members within the first week.",
-  },
-  {
-    q: "How does Smart Shorts work?",
-    a: "Upload one long video and Volaly's AI identifies the best moments — hooks, highlights, punchlines — and cuts them into scroll-stopping short clips optimised for TikTok, Reels and YouTube Shorts. Each clip gets captions, branding and is scheduled for auto-publishing.",
-  },
-  {
-    q: "Can I connect YouTube?",
-    a: "Yes! Connect YouTube in one click from your dashboard. Volaly will automatically pull in your latest uploads, generate Shorts, SEO articles, newsletters and social posts — all without you touching a thing.",
-  },
+const revenueDashboardMeta = [
+  { key: "revenue", icon: CircleDollarSign, value: "€ 4,280", change: "+38%",  gradient: "from-brand-orange/20 to-brand-yellow/20", ic: "text-brand-orange" },
+  { key: "orders",  icon: ShoppingCart,     value: "142",     change: "+22%",  gradient: "from-brand-blue/20 to-brand-cyan/20",   ic: "text-brand-blue" },
+  { key: "visitors",icon: Eye,              value: "12,440",  change: "+67%",  gradient: "from-brand-purple/20 to-brand-pink/20", ic: "text-brand-purple" },
+  { key: "members", icon: Users,            value: "89",      change: "+14",   gradient: "from-brand-green/20 to-brand-cyan/20",  ic: "text-brand-green" },
+  { key: "growth",  icon: TrendingUp,       value: "+38%",    change: "MoM",   gradient: "from-brand-pink/20 to-brand-orange/20", ic: "text-brand-pink" },
 ];
 
-const voiceLines = [
-  "Hi! I'm your Volaly AI. How can I help you today?",
-  "I can answer questions about your products, services or content.",
-  "Want to know more about memberships or the creator shop?",
-  "Go ahead — I'm listening.",
+const visibilityDashboardMeta = [
+  { key: "posts",  icon: Send,        value: "284",    change: "auto",   gradient: "from-brand-blue/20 to-brand-purple/20", ic: "text-brand-blue" },
+  { key: "views",  icon: Eye,         value: "1.2M",   change: "+124%",  gradient: "from-brand-purple/20 to-brand-blue/20", ic: "text-brand-purple" },
+  { key: "clicks", icon: MousePointer,value: "48K",    change: "+89%",   gradient: "from-brand-orange/20 to-brand-yellow/20", ic: "text-brand-orange" },
+  { key: "reach",  icon: Users,       value: "340K",   change: "+201%",  gradient: "from-brand-green/20 to-brand-cyan/20", ic: "text-brand-green" },
+  { key: "shorts", icon: Clapperboard,value: "96",     change: "auto",   gradient: "from-brand-pink/20 to-brand-purple/20", ic: "text-brand-pink" },
 ];
 
-const revenueDashboard = [
-  { icon: CircleDollarSign, label: "Revenue",     value: "€ 4,280", change: "+38%",  gradient: "from-brand-orange/20 to-brand-yellow/20", ic: "text-brand-orange" },
-  { icon: ShoppingCart,     label: "Orders",      value: "142",     change: "+22%",  gradient: "from-brand-blue/20 to-brand-cyan/20",   ic: "text-brand-blue" },
-  { icon: Eye,              label: "Visitors",    value: "12,440",  change: "+67%",  gradient: "from-brand-purple/20 to-brand-pink/20", ic: "text-brand-purple" },
-  { icon: Users,            label: "Members",     value: "89",      change: "+14",   gradient: "from-brand-green/20 to-brand-cyan/20",  ic: "text-brand-green" },
-  { icon: TrendingUp,       label: "Growth",      value: "+38%",    change: "MoM",   gradient: "from-brand-pink/20 to-brand-orange/20", ic: "text-brand-pink" },
-];
-
-const visibilityDashboard = [
-  { icon: Send,        label: "Posts",  value: "284",    change: "auto",   gradient: "from-brand-blue/20 to-brand-purple/20", ic: "text-brand-blue" },
-  { icon: Eye,         label: "Views",  value: "1.2M",   change: "+124%",  gradient: "from-brand-purple/20 to-brand-blue/20", ic: "text-brand-purple" },
-  { icon: MousePointer,label: "Clicks", value: "48K",    change: "+89%",   gradient: "from-brand-orange/20 to-brand-yellow/20", ic: "text-brand-orange" },
-  { icon: Users,       label: "Reach",  value: "340K",   change: "+201%",  gradient: "from-brand-green/20 to-brand-cyan/20", ic: "text-brand-green" },
-  { icon: Clapperboard,label: "Shorts", value: "96",     change: "auto",   gradient: "from-brand-pink/20 to-brand-purple/20", ic: "text-brand-pink" },
-];
-
-const shortsSteps = [
-  { icon: Upload,      label: "Long Video",    sub: "Your upload",   gradient: "from-brand-orange to-brand-pink" },
-  { icon: Sparkles,    label: "Volaly AI",     sub: "Processing…",   gradient: "from-brand-purple to-brand-blue" },
-  { icon: Clapperboard,label: "10 Shorts",     sub: "Auto-generated",gradient: "from-brand-blue to-brand-cyan" },
-  { icon: Send,        label: "Auto Publish",  sub: "All platforms", gradient: "from-brand-green to-brand-cyan", highlight: true },
+const shortsStepsMeta = [
+  { key: "upload",  icon: Upload,      gradient: "from-brand-orange to-brand-pink" },
+  { key: "ai",      icon: Sparkles,    gradient: "from-brand-purple to-brand-blue" },
+  { key: "shorts",  icon: Clapperboard,gradient: "from-brand-blue to-brand-cyan" },
+  { key: "publish", icon: Send,        gradient: "from-brand-green to-brand-cyan", highlight: true },
 ];
 
 /* ═══════════════════════════════════════
@@ -78,11 +53,12 @@ const shortsSteps = [
 
 function DemoPage() {
   const { lang } = Route.useParams();
+  const { t } = useTranslation("demo");
   return (
     <>
       <SEO
-        title="Experience Volaly — Live Demo"
-        description="See how one upload becomes revenue, visibility and AI-powered customer conversations. Interactive demo — no signup required."
+        title={t("seo.title")}
+        description={t("seo.description")}
         canonical={`https://volaly.com/${lang}/demo`}
       />
 
@@ -103,6 +79,7 @@ function DemoPage() {
 ═══════════════════════════════════════ */
 
 function HeroSection() {
+  const { t } = useTranslation("demo");
   return (
     <section className="bg-aurora noise relative overflow-hidden pt-36 pb-28">
       <AuroraOrbs />
@@ -110,7 +87,7 @@ function HeroSection() {
       <div className="relative mx-auto max-w-4xl px-6 text-center">
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <span className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground shadow-soft backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5 text-brand-orange" /> Interactive Demo
+            <Sparkles className="h-3.5 w-3.5 text-brand-orange" /> {t("hero.badge")}
           </span>
         </motion.div>
         <motion.h1
@@ -119,8 +96,8 @@ function HeroSection() {
           transition={{ duration: 0.75, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
           className="mt-7 text-[clamp(3rem,7vw,6rem)] font-black leading-[0.93] tracking-tight text-foreground"
         >
-          Experience
-          <span className="block gradient-text-multi">Volaly.</span>
+          {t("hero.titleLine1")}
+          <span className="block gradient-text-multi">{t("hero.titleLine2")}</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -128,7 +105,7 @@ function HeroSection() {
           transition={{ duration: 0.7, delay: 0.18 }}
           className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground"
         >
-          See how one upload becomes revenue, visibility and AI-powered customer conversations.
+          {t("hero.subtitle")}
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -137,10 +114,10 @@ function HeroSection() {
           className="mt-10 flex flex-wrap justify-center gap-4"
         >
           <Button size="xl" variant="hero" onClick={openDemo}>
-            Start Free <ArrowRight className="h-4 w-4" />
+            {t("hero.startFree")} <ArrowRight className="h-4 w-4" />
           </Button>
           <Button size="xl" variant="heroOutline" onClick={openDemo}>
-            <Play className="h-4 w-4" /> Book Demo
+            <Play className="h-4 w-4" /> {t("hero.bookDemo")}
           </Button>
         </motion.div>
       </div>
@@ -152,25 +129,33 @@ function HeroSection() {
    SECTION 2 — INTERACTIVE WORKFLOW
 ═══════════════════════════════════════ */
 
-const workflowNodes = [
-  { icon: Upload,   label: "Upload",           sub: "One piece of content",  gradient: "from-brand-orange to-brand-pink" },
-  { icon: Sparkles, label: "Volaly AI",         sub: "Understanding & processing", gradient: "from-brand-purple to-brand-blue" },
-  null,
-  { icon: TrendingUp, label: "Growth",          sub: "Revenue & audience",   gradient: "from-brand-green to-brand-blue", highlight: true },
-];
-
 function WorkflowSection() {
+  const { t } = useTranslation("demo");
   const reduce = useReducedMotion();
   const [activeNode, setActiveNode] = useState<number | null>(null);
+
+  type WorkflowNode = {
+    key: "upload" | "ai" | "growth";
+    icon: typeof Upload;
+    gradient: string;
+    highlight?: boolean;
+  };
+
+  const workflowNodes: Array<WorkflowNode | null> = [
+    { key: "upload", icon: Upload,     gradient: "from-brand-orange to-brand-pink" },
+    { key: "ai",     icon: Sparkles,   gradient: "from-brand-purple to-brand-blue" },
+    null,
+    { key: "growth", icon: TrendingUp, gradient: "from-brand-green to-brand-blue", highlight: true },
+  ];
 
   return (
     <section className="relative overflow-hidden py-32">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-brand-purple/[0.03] to-background" />
       <div className="relative mx-auto max-w-3xl px-6">
         <SectionHeading
-          eyebrow="How It Works"
-          title={<>One Upload. <span className="gradient-text-multi">Everything Else Is Automatic.</span></>}
-          subtitle="Hover each step to see what Volaly creates for you."
+          eyebrow={t("workflow.eyebrow")}
+          title={<>{t("workflow.titlePre")}<span className="gradient-text-multi">{t("workflow.titleHighlight")}</span></>}
+          subtitle={t("workflow.subtitle")}
         />
         <div className="mt-16 flex flex-col items-center gap-0">
           {workflowNodes.map((node, i) => {
@@ -186,18 +171,20 @@ function WorkflowSection() {
                     transition={{ duration: 0.55, delay: 0.35 }}
                     className="grid grid-cols-[1fr_auto_1fr] items-stretch gap-3"
                   >
-                    <WorkflowCard icon={DollarSign} label="Revenue Suite" sub="AI FAQ · Shop · Voice · Memberships" gradient="from-brand-orange to-brand-yellow" />
+                    <WorkflowCard icon={DollarSign} label={t("workflow.split.revenueLabel")} sub={t("workflow.split.revenueSub")} gradient="from-brand-orange to-brand-yellow" />
                     <div className="flex items-center justify-center">
                       <Plus className="h-5 w-5 text-muted-foreground/40" />
                     </div>
-                    <WorkflowCard icon={Rocket} label="Visibility Suite" sub="Shorts · Posts · SEO · Newsletter" gradient="from-brand-blue to-brand-cyan" />
+                    <WorkflowCard icon={Rocket} label={t("workflow.split.visibilityLabel")} sub={t("workflow.split.visibilitySub")} gradient="from-brand-blue to-brand-cyan" />
                   </motion.div>
                   <Connector reduce={reduce} delay={0.5} />
                 </div>
               );
             }
+            const label = t(`workflow.nodes.${node.key}.label`);
+            const sub = t(`workflow.nodes.${node.key}.sub`);
             return (
-              <div key={node.label} className="w-full">
+              <div key={node.key} className="w-full">
                 {i > 0 && i !== 2 && <Connector reduce={reduce} delay={i * 0.12} />}
                 <motion.div
                   initial={reduce ? undefined : { opacity: 0, y: 12 }}
@@ -217,8 +204,8 @@ function WorkflowSection() {
                     <node.icon className="h-5 w-5 text-white" strokeWidth={1.8} />
                   </span>
                   <div>
-                    <div className={`text-base font-extrabold ${node.highlight ? "text-white" : "text-foreground"}`}>{node.label}</div>
-                    <div className={`text-xs ${node.highlight ? "text-white/70" : "text-muted-foreground"}`}>{node.sub}</div>
+                    <div className={`text-base font-extrabold ${node.highlight ? "text-white" : "text-foreground"}`}>{label}</div>
+                    <div className={`text-xs ${node.highlight ? "text-white/70" : "text-muted-foreground"}`}>{sub}</div>
                   </div>
                   {activeNode === i && !node.highlight && (
                     <motion.span
@@ -226,7 +213,7 @@ function WorkflowSection() {
                       animate={{ opacity: 1, x: 0 }}
                       className="ml-auto rounded-full bg-brand-orange/10 px-3 py-1 text-xs font-semibold text-brand-orange"
                     >
-                      Automatic ✓
+                      {t("workflow.automatic")}
                     </motion.span>
                   )}
                 </motion.div>
@@ -273,15 +260,18 @@ function Connector({ reduce, delay }: { reduce: boolean | null; delay: number })
 ═══════════════════════════════════════ */
 
 type Message = { role: "user" | "ai"; text: string };
+type ChatQuestion = { q: string; a: string };
 
 function AIChatSection() {
+  const { t } = useTranslation("demo");
+  const chatQuestions = t("chat.questions", { returnObjects: true }) as ChatQuestion[];
   const [messages, setMessages] = useState<Message[]>([
-    { role: "ai", text: "Hi! I'm your Volaly AI. Click a question below or ask me anything about Volaly." },
+    { role: "ai", text: t("chat.initialMessage") },
   ]);
   const [typing, setTyping] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
 
-  const handleQuestion = (q: typeof chatQuestions[0]) => {
+  const handleQuestion = (q: ChatQuestion) => {
     if (typing) return;
     setMessages((m) => [...m, { role: "user", text: q.q }]);
     setTyping(true);
@@ -301,15 +291,15 @@ function AIChatSection() {
       <div className="relative mx-auto max-w-3xl px-6">
         <div className="mx-auto mb-12 max-w-2xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-white/70">
-            <MessageSquare className="h-3.5 w-3.5" /> AI FAQ Demo
+            <MessageSquare className="h-3.5 w-3.5" /> {t("chat.badge")}
           </span>
           <Reveal delay={0.05}>
             <h2 className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl">
-              Your AI answers <span className="gradient-text-multi">everything.</span>
+              {t("chat.titlePre")}<span className="gradient-text-multi">{t("chat.titleHighlight")}</span>
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-4 text-base text-white/60">Click a question to see a live AI response.</p>
+            <p className="mt-4 text-base text-white/60">{t("chat.subtitle")}</p>
           </Reveal>
         </div>
 
@@ -320,10 +310,10 @@ function AIChatSection() {
             <span className="h-2.5 w-2.5 rounded-full bg-brand-orange/70" />
             <span className="h-2.5 w-2.5 rounded-full bg-brand-yellow/60" />
             <span className="h-2.5 w-2.5 rounded-full bg-brand-green/60" />
-            <span className="ml-3 text-xs font-semibold text-white/50">Volaly AI — always on</span>
+            <span className="ml-3 text-xs font-semibold text-white/50">{t("chat.titleBar")}</span>
             <span className="ml-auto flex items-center gap-1.5 text-xs text-brand-green">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-brand-green" />
-              Live
+              {t("chat.live")}
             </span>
           </div>
 
@@ -367,7 +357,7 @@ function AIChatSection() {
 
           {/* Suggestion buttons */}
           <div className="border-t border-white/10 p-4">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/40">Try asking:</p>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/40">{t("chat.tryAsking")}</p>
             <div className="flex flex-wrap gap-2">
               {chatQuestions.map((q) => (
                 <button
@@ -392,6 +382,8 @@ function AIChatSection() {
 ═══════════════════════════════════════ */
 
 function VoiceAISection() {
+  const { t } = useTranslation("demo");
+  const voiceLines = t("voice.lines", { returnObjects: true }) as string[];
   const [active, setActive] = useState(false);
   const [lineIndex, setLineIndex] = useState(0);
   const reduce = useReducedMotion();
@@ -406,9 +398,9 @@ function VoiceAISection() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-brand-purple/[0.04] to-background" />
       <div className="relative mx-auto max-w-2xl px-6 text-center">
         <SectionHeading
-          eyebrow="Voice AI"
-          title={<>Talk to your <span className="gradient-text-multi">AI persona.</span></>}
-          subtitle="Your audience can have real voice conversations with your AI — 24/7, in any language."
+          eyebrow={t("voice.eyebrow")}
+          title={<>{t("voice.titlePre")}<span className="gradient-text-multi">{t("voice.titleHighlight")}</span></>}
+          subtitle={t("voice.subtitle")}
         />
 
         <div className="mt-16 flex flex-col items-center gap-8">
@@ -476,11 +468,11 @@ function VoiceAISection() {
                   : "border-border/60 bg-muted/40 text-muted-foreground"
               }`}
             >
-              {active ? voiceLines[lineIndex] : "Click the microphone to start a conversation."}
+              {active ? voiceLines[lineIndex] : t("voice.idleStatus")}
             </motion.div>
           </AnimatePresence>
 
-          <p className="text-xs text-muted-foreground/60">Demo only — no real audio required</p>
+          <p className="text-xs text-muted-foreground/60">{t("voice.demoOnly")}</p>
         </div>
       </div>
     </section>
@@ -492,6 +484,7 @@ function VoiceAISection() {
 ═══════════════════════════════════════ */
 
 function ShortsSection() {
+  const { t } = useTranslation("demo");
   const [stage, setStage] = useState<"idle" | "processing" | "done">("idle");
   const reduce = useReducedMotion();
 
@@ -505,9 +498,9 @@ function ShortsSection() {
     <section className="relative overflow-hidden bg-muted/20 py-32">
       <div className="relative mx-auto max-w-3xl px-6">
         <SectionHeading
-          eyebrow="Smart Shorts"
-          title={<>One video. <span className="gradient-text-multi">Ten clips. Auto-published.</span></>}
-          subtitle="Upload a long video and Volaly instantly creates, captions and schedules short-form content for every platform."
+          eyebrow={t("shorts.eyebrow")}
+          title={<>{t("shorts.titlePre")}<span className="gradient-text-multi">{t("shorts.titleHighlight")}</span></>}
+          subtitle={t("shorts.subtitle")}
         />
 
         <Reveal delay={0.1}>
@@ -532,10 +525,10 @@ function ShortsSection() {
                     <div className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand-orange/20 to-brand-pink/20">
                       <Upload className="h-7 w-7 text-brand-orange" />
                     </div>
-                    <p className="text-base font-bold text-foreground">Drop your long video here</p>
-                    <p className="text-sm text-muted-foreground">or click to upload — MP4, MOV, AVI</p>
+                    <p className="text-base font-bold text-foreground">{t("shorts.idle.title")}</p>
+                    <p className="text-sm text-muted-foreground">{t("shorts.idle.sub")}</p>
                     <span className="mt-2 rounded-full bg-brand-orange px-5 py-2 text-sm font-bold text-white shadow-soft">
-                      Upload & Generate Shorts
+                      {t("shorts.idle.cta")}
                     </span>
                   </motion.div>
                 )}
@@ -548,8 +541,8 @@ function ShortsSection() {
                     >
                       <Sparkles className="h-7 w-7 text-white" />
                     </motion.div>
-                    <p className="text-base font-bold text-foreground">Volaly AI is processing…</p>
-                    <p className="text-sm text-muted-foreground">Detecting highlights · Generating captions · Cutting clips</p>
+                    <p className="text-base font-bold text-foreground">{t("shorts.processing.title")}</p>
+                    <p className="text-sm text-muted-foreground">{t("shorts.processing.sub")}</p>
                     <div className="mt-2 h-1.5 w-48 overflow-hidden rounded-full bg-border">
                       <motion.div
                         className="h-full bg-gradient-to-r from-brand-purple to-brand-blue"
@@ -564,9 +557,9 @@ function ShortsSection() {
                     <div className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand-green to-brand-cyan">
                       <CheckCircle2 className="h-7 w-7 text-white" />
                     </div>
-                    <p className="text-base font-extrabold gradient-text-multi">10 Shorts Generated!</p>
-                    <p className="text-sm text-muted-foreground">Scheduled for TikTok · Reels · YouTube Shorts</p>
-                    <span className="mt-1 text-xs text-muted-foreground/60">Click to reset</span>
+                    <p className="text-base font-extrabold gradient-text-multi">{t("shorts.done.title")}</p>
+                    <p className="text-sm text-muted-foreground">{t("shorts.done.sub")}</p>
+                    <span className="mt-1 text-xs text-muted-foreground/60">{t("shorts.done.resetHint")}</span>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -580,13 +573,13 @@ function ShortsSection() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="mt-8 flex items-center justify-center gap-2"
               >
-                {shortsSteps.map((s, i) => (
-                  <div key={s.label} className="flex items-center gap-2">
+                {shortsStepsMeta.map((s, i) => (
+                  <div key={s.key} className="flex items-center gap-2">
                     <div className={`flex flex-col items-center gap-1.5 rounded-[16px] bg-gradient-to-br ${s.gradient} px-4 py-3 text-center`}>
                       <s.icon className="h-4 w-4 text-white" strokeWidth={1.8} />
-                      <span className="text-xs font-bold text-white">{s.label}</span>
+                      <span className="text-xs font-bold text-white">{t(`shorts.steps.${s.key}.label`)}</span>
                     </div>
-                    {i < shortsSteps.length - 1 && <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground/40" />}
+                    {i < shortsStepsMeta.length - 1 && <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground/40" />}
                   </div>
                 ))}
               </motion.div>
@@ -603,16 +596,17 @@ function ShortsSection() {
 ═══════════════════════════════════════ */
 
 function RevenueDashboardSection() {
+  const { t } = useTranslation("demo");
   return (
     <section className="relative overflow-hidden py-32">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-brand-orange/[0.03] to-background" />
       <div className="relative mx-auto max-w-5xl px-6">
         <SectionHeading
-          eyebrow="Revenue Dashboard"
-          title={<>Your revenue, <span className="gradient-text-multi">on autopilot.</span></>}
-          subtitle="Real-time metrics from your Creator Shop, memberships and affiliate earnings — all in one place."
+          eyebrow={t("revenue.eyebrow")}
+          title={<>{t("revenue.titlePre")}<span className="gradient-text-multi">{t("revenue.titleHighlight")}</span></>}
+          subtitle={t("revenue.subtitle")}
         />
-        <DashboardCard items={revenueDashboard} barGradient="from-brand-orange to-brand-pink" delay={0.1} />
+        <DashboardCard itemsMeta={revenueDashboardMeta} labelNamespace="revenue" titleBar={t("revenue.titleBar")} live={t("revenue.live")} barGradient="from-brand-orange to-brand-pink" delay={0.1} />
       </div>
     </section>
   );
@@ -623,29 +617,37 @@ function RevenueDashboardSection() {
 ═══════════════════════════════════════ */
 
 function VisibilityDashboardSection() {
+  const { t } = useTranslation("demo");
   return (
     <section className="relative overflow-hidden bg-muted/20 py-32">
       <div className="relative mx-auto max-w-5xl px-6">
         <SectionHeading
-          eyebrow="Visibility Dashboard"
-          title={<>Reach, <span className="gradient-text-multi">everywhere.</span></>}
-          subtitle="Posts, views, clicks and Shorts — automatically tracked across every platform from one upload."
+          eyebrow={t("visibility.eyebrow")}
+          title={<>{t("visibility.titlePre")}<span className="gradient-text-multi">{t("visibility.titleHighlight")}</span></>}
+          subtitle={t("visibility.subtitle")}
         />
-        <DashboardCard items={visibilityDashboard} barGradient="from-brand-blue to-brand-purple" delay={0.1} />
+        <DashboardCard itemsMeta={visibilityDashboardMeta} labelNamespace="visibility" titleBar={t("revenue.titleBar")} live={t("revenue.live")} barGradient="from-brand-blue to-brand-purple" delay={0.1} />
       </div>
     </section>
   );
 }
 
 function DashboardCard({
-  items,
+  itemsMeta,
+  labelNamespace,
+  titleBar,
+  live,
   barGradient,
   delay,
 }: {
-  items: typeof revenueDashboard;
+  itemsMeta: typeof revenueDashboardMeta;
+  labelNamespace: "revenue" | "visibility";
+  titleBar: string;
+  live: string;
   barGradient: string;
   delay: number;
 }) {
+  const { t } = useTranslation("demo");
   const barHeights = [55, 72, 48, 88, 65, 79, 95];
   return (
     <Reveal delay={delay}>
@@ -655,10 +657,10 @@ function DashboardCard({
           <span className="h-3 w-3 rounded-full bg-brand-orange/60" />
           <span className="h-3 w-3 rounded-full bg-brand-yellow/60" />
           <span className="h-3 w-3 rounded-full bg-brand-green/60" />
-          <span className="ml-4 text-xs font-semibold text-muted-foreground">Volaly Dashboard — Live</span>
+          <span className="ml-4 text-xs font-semibold text-muted-foreground">{titleBar}</span>
           <span className="ml-auto flex items-center gap-1.5 text-xs text-brand-green">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-brand-green" />
-            Live
+            {live}
           </span>
         </div>
         <div className="p-6">
@@ -677,9 +679,9 @@ function DashboardCard({
           </div>
           {/* Metric cards */}
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
-            {items.map((d, i) => (
+            {itemsMeta.map((d, i) => (
               <motion.div
-                key={d.label}
+                key={d.key}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -690,7 +692,7 @@ function DashboardCard({
                   <d.icon className="h-4 w-4" />
                 </div>
                 <div className="text-xl font-extrabold gradient-text-multi">{d.value}</div>
-                <div className="mt-0.5 text-xs text-muted-foreground">{d.label}</div>
+                <div className="mt-0.5 text-xs text-muted-foreground">{t(`${labelNamespace}.items.${d.key}`)}</div>
                 <div className="mt-1 text-xs font-semibold text-brand-green">{d.change}</div>
               </motion.div>
             ))}
@@ -706,6 +708,7 @@ function DashboardCard({
 ═══════════════════════════════════════ */
 
 function FinalCtaSection() {
+  const { t } = useTranslation("demo");
   return (
     <section className="px-4 py-28 sm:px-6">
       <Reveal>
@@ -714,22 +717,22 @@ function FinalCtaSection() {
           <div className="bg-grid pointer-events-none absolute inset-0 opacity-20 [mask-image:radial-gradient(60%_60%_at_50%_50%,black,transparent)]" />
           <div className="relative">
             <h2 className="text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
-              One Upload.
-              <span className="block gradient-text-multi">Volaly Does the Rest.</span>
+              {t("finalCta.titleLine1")}
+              <span className="block gradient-text-multi">{t("finalCta.titleLine2")}</span>
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-lg text-white/70">
-              Join creators and businesses who upload once and let Volaly handle everything else.
+              {t("finalCta.subtitle")}
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Button size="xl" variant="hero" className="rounded-full" onClick={openDemo}>
-                Start Free <ArrowRight className="h-4 w-4" />
+                {t("finalCta.startFree")} <ArrowRight className="h-4 w-4" />
               </Button>
               <Button
                 size="xl"
                 className="rounded-full border border-white/30 bg-white/10 text-white backdrop-blur hover:bg-white/20"
                 onClick={openDemo}
               >
-                <RefreshCw className="h-4 w-4" /> Restart Demo
+                <RefreshCw className="h-4 w-4" /> {t("finalCta.restart")}
               </Button>
             </div>
           </div>

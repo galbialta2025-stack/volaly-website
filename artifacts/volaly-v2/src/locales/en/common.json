@@ -1,4 +1,21 @@
 {
+  "footer": {
+    "tagline": "The Business Growth Platform. Turn visibility into revenue with AI.",
+    "platform": "Platform",
+    "visibilitySuite": "Visibility Suite",
+    "howItWorks": "How It Works",
+    "capabilities": "Capabilities",
+    "company": "Company",
+    "industries": "Industries",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms",
+    "cookiePolicy": "Cookie Policy",
+    "followUs": "Follow Us",
+    "disclaimer": "* Individual results may vary and are not guaranteed. Statistics shown represent outcomes reported by select clients and may not reflect typical results. Past performance is not indicative of future results.",
+    "copyright": "All rights reserved."
+  },
   "nav": {
     "visibility": "Visibility",
     "howItWorks": "How It Works",

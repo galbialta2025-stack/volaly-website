@@ -1,0 +1,284 @@
+{
+  "page": {
+    "viewDemo": "Xem demo",
+    "bookConsultation": "Đặt lịch tư vấn",
+    "resultsDisclaimer": "* Kết quả cá nhân có thể khác nhau và không được đảm bảo.",
+    "problemEyebrow": "Vấn đề",
+    "problemTitlePre": "Điều gì đang làm chậm ",
+    "problemTitlePost": "",
+    "systemEyebrow": "Hệ thống Volaly",
+    "systemTitlePre": "Cách Volaly giúp ",
+    "systemTitlePost": "doanh nghiệp của bạn tăng trưởng",
+    "systemSubtitle": "Khả năng hiển thị, giao tiếp và doanh thu — được tự động hóa từ đầu đến cuối.",
+    "faqEyebrow": "FAQ",
+    "faqTitlePre": "Câu hỏi thường gặp từ ",
+    "faqSubtitle": "Mọi điều bạn cần biết về khả năng hiển thị và tự động hóa AI cho doanh nghiệp của bạn.",
+    "faqCta": "Xem Volaly hoạt động",
+    "relatedLabel": "Cũng liên quan đến ngành của bạn:",
+    "moreIndustriesEyebrow": "Các ngành khác",
+    "moreIndustriesTitlePre": "Cũng được xây dựng cho ",
+    "moreIndustriesTitleHighlight": "thế giới của bạn"
+  },
+  "industries": {
+    "gym": {
+      "name": "Phòng Gym & Trung Tâm Thể Hình",
+      "eyebrow": "Phòng Gym & Thể Hình",
+      "headline": "Lấp đầy phòng gym của bạn với",
+      "highlight": "hội viên ở chế độ tự động",
+      "subtitle": "AI trả lời mọi câu hỏi trong vài giây, đặt lịch buổi tập thử và theo đuổi khách hàng tiềm năng cho đến khi họ đăng ký — trong khi bạn tập trung vào huấn luyện.",
+      "metaTitle": "Marketing và Tự động hóa AI cho Phòng Gym — Volaly",
+      "metaDescription": "Volaly giúp phòng gym và trung tâm thể hình được tìm thấy trực tuyến, trả lời mọi khách hàng tiềm năng ngay lập tức và chuyển đổi buổi tập thử thành hội viên trả phí.",
+      "videoTitle": "Volaly cho phòng gym — demo 2 phút",
+      "stats": [
+        { "value": "+124%", "label": "Nhiều lượt đặt tập thử hơn" },
+        { "value": "<30s", "label": "Thời gian phản hồi trung bình" },
+        { "value": "24/7", "label": "Theo đuổi khách hàng tiềm năng" }
+      ],
+      "pains": [
+        "Khách hàng nhắn tin vào ban đêm và không bao giờ nhận được phản hồi",
+        "Khách tập thử không bao giờ được theo đuổi",
+        "Nội dung mạng xã hội tốn hàng giờ mỗi tuần"
+      ],
+      "solutions": [
+        { "title": "Phản hồi khách hàng ngay lập tức", "desc": "Smart Chat trả lời câu hỏi về giá và lớp học trên Instagram, LINE và WhatsApp suốt 24/7." },
+        { "title": "Đặt lịch tập thử", "desc": "Biến mỗi cuộc hội thoại thành một buổi tập thử được đặt lịch trong lịch của bạn." },
+        { "title": "Theo đuổi hội viên", "desc": "Nhắc nhở và ưu đãi tự động giúp chuyển đổi buổi tập thử thành hội viên." },
+        { "title": "Nội dung tự động", "desc": "Bài đăng, reel và khuyến mãi đúng thương hiệu được tạo và xuất bản cho bạn." }
+      ]
+    },
+    "dentist": {
+      "name": "Phòng Khám Nha Khoa",
+      "eyebrow": "Nha Khoa",
+      "headline": "Luôn đầy ghế khám với",
+      "highlight": "đặt lịch bệnh nhân tự động",
+      "subtitle": "Volaly trả lời câu hỏi bệnh nhân, đặt lịch hẹn và giảm số lượng lỡ hẹn — để quầy lễ tân của bạn tập trung vào chăm sóc.",
+      "metaTitle": "Đặt Lịch Bệnh Nhân & Marketing AI cho Nha Khoa — Volaly",
+      "metaDescription": "Volaly giúp phòng khám nha khoa xếp hạng cao hơn trên Google, trả lời yêu cầu bệnh nhân ngay lập tức và lấp đầy lịch hẹn tự động.",
+      "videoTitle": "Volaly cho phòng khám nha khoa — demo 2 phút",
+      "stats": [
+        { "value": "+62%", "label": "Nhiều lịch hẹn được đặt hơn" },
+        { "value": "-41%", "label": "Giảm lỡ hẹn" },
+        { "value": "5★", "label": "Tăng trưởng đánh giá" }
+      ],
+      "pains": [
+        "Lễ tân quá bận để trả lời mọi cuộc gọi và chat",
+        "Bệnh nhân quên lịch hẹn",
+        "Ít đánh giá Google so với đối thủ"
+      ],
+      "solutions": [
+        { "title": "Chat bệnh nhân 24/7", "desc": "Trả lời câu hỏi về điều trị, giá cả và bảo hiểm ngay lập tức bằng mọi ngôn ngữ." },
+        { "title": "Lập lịch thông minh", "desc": "Bệnh nhân tự đặt và đổi lịch hẹn — đồng bộ với lịch của bạn." },
+        { "title": "Nhắc nhở", "desc": "Xác nhận và nhắc nhở tự động giúp giảm đáng kể tình trạng lỡ hẹn." },
+        { "title": "Công cụ đánh giá", "desc": "Tự động mời bệnh nhân hài lòng để lại đánh giá 5 sao trên Google." }
+      ]
+    },
+    "medical-beauty": {
+      "name": "Phòng Khám Thẩm Mỹ Y Tế",
+      "eyebrow": "Thẩm Mỹ Y Tế",
+      "headline": "Biến sự chú ý thành",
+      "highlight": "các liệu trình giá trị cao",
+      "subtitle": "Các phòng khám thẩm mỹ và làm đẹp thắng nhờ khả năng hiển thị và tốc độ. Volaly mang lại cả hai — nội dung ấn tượng cùng với tư vấn ngay lập tức, đúng thương hiệu.",
+      "metaTitle": "Marketing AI cho Phòng Khám Thẩm Mỹ Y Tế — Volaly",
+      "metaDescription": "Volaly tạo nội dung đúng thương hiệu, trả lời mọi yêu cầu ngay lập tức và đặt lịch tư vấn cho phòng khám thẩm mỹ y tế.",
+      "videoTitle": "Volaly cho phòng khám thẩm mỹ y tế — demo 2 phút",
+      "stats": [
+        { "value": "+3,1x", "label": "Yêu cầu tư vấn" },
+        { "value": "+38%", "label": "Tăng doanh thu trung bình" },
+        { "value": "6+", "label": "Kênh được tự động hóa" }
+      ],
+      "pains": [
+        "Yêu cầu đến từ 5 kênh khác nhau cùng một lúc",
+        "Nội dung phải trông cao cấp — mỗi ngày",
+        "Khách hàng tiềm năng giá trị cao nguội lạnh nếu không theo đuổi"
+      ],
+      "solutions": [
+        { "title": "Hình ảnh cao cấp", "desc": "Smart Images và Shorts tạo nội dung chỉn chu, đúng thương hiệu mỗi ngày." },
+        { "title": "Đặt lịch tư vấn", "desc": "Xác định mức độ quan tâm và đặt lịch tư vấn trả phí tự động." },
+        { "title": "Luồng bán thêm", "desc": "Smart Sale đề xuất các gói và liệu trình tiếp theo." },
+        { "title": "Hộp thư thống nhất", "desc": "Instagram, LINE, WhatsApp và chat web trong một nơi được hỗ trợ bởi AI." }
+      ]
+    },
+    "visa-agency": {
+      "name": "Công Ty Dịch Vụ Visa",
+      "eyebrow": "Dịch Vụ Visa",
+      "headline": "Trả lời câu hỏi về visa",
+      "highlight": "ngay lập tức, bằng mọi ngôn ngữ",
+      "subtitle": "Volaly xử lý các câu hỏi lặp lại về hồ sơ và yêu cầu suốt 24/7, đánh giá người nộp đơn và đặt lịch tư vấn cho đội ngũ của bạn.",
+      "metaTitle": "Tự Động Hóa AI cho Công Ty Dịch Vụ Visa — Volaly",
+      "metaDescription": "Volaly trả lời câu hỏi về visa 24/7 bằng mọi ngôn ngữ, đánh giá người nộp đơn và tự động đặt lịch tư vấn cho các công ty dịch vụ visa.",
+      "videoTitle": "Volaly cho dịch vụ visa — demo 2 phút",
+      "stats": [
+        { "value": "90%", "label": "Câu hỏi được trả lời tự động" },
+        { "value": "40+", "label": "Ngôn ngữ được hỗ trợ" },
+        { "value": "24/7", "label": "Khả năng sẵn sàng" }
+      ],
+      "pains": [
+        "Những câu hỏi giống nhau được hỏi hàng trăm lần mỗi tuần",
+        "Khách hàng viết bằng nhiều ngôn ngữ khác nhau",
+        "Người nộp đơn đủ điều kiện bị thất lạc trong hộp thư đến"
+      ],
+      "solutions": [
+        { "title": "AI đa ngôn ngữ", "desc": "Trả lời chính xác bằng ngôn ngữ của người nộp đơn, suốt ngày đêm." },
+        { "title": "Hướng dẫn hồ sơ", "desc": "Hướng dẫn người nộp đơn qua các yêu cầu và danh sách kiểm tra từng bước." },
+        { "title": "Đánh giá khách hàng tiềm năng", "desc": "Chỉ những người nộp đơn nghiêm túc, đủ điều kiện mới đến được các chuyên viên tư vấn của bạn." },
+        { "title": "Đặt lịch tư vấn", "desc": "Lịch hẹn được xác nhận trực tiếp vào lịch của bạn." }
+      ]
+    },
+    "real-estate": {
+      "name": "Bất Động Sản",
+      "eyebrow": "Bất Động Sản",
+      "headline": "Đánh giá người mua và",
+      "highlight": "đặt lịch xem nhà tự động",
+      "subtitle": "Mỗi yêu cầu về bất động sản đều nhận được phản hồi ngay lập tức, có thông tin. Volaly đánh giá ngân sách và mục đích, sau đó đặt lịch xem nhà cho các chuyên viên của bạn.",
+      "metaTitle": "Đánh Giá Khách Hàng Tiềm Năng AI cho Công Ty Bất Động Sản — Volaly",
+      "metaDescription": "Volaly trả lời mọi yêu cầu bất động sản ngay lập tức, đánh giá người mua và tự động đặt lịch xem nhà cho các công ty bất động sản.",
+      "videoTitle": "Volaly cho bất động sản — demo 2 phút",
+      "stats": [
+        { "value": "+87%", "label": "Nhiều lịch xem nhà được đặt hơn" },
+        { "value": "<1 phút", "label": "Thời gian phản hồi đầu tiên" },
+        { "value": "100%", "label": "Khách hàng tiềm năng được theo đuổi" }
+      ],
+      "pains": [
+        "Người mua liên hệ với ba công ty — ai nhanh nhất thắng",
+        "Chuyên viên lãng phí thời gian với khách hàng tiềm năng không đủ điều kiện",
+        "Các danh sách cần nội dung mới liên tục"
+      ],
+      "solutions": [
+        { "title": "Phản hồi ngay lập tức", "desc": "Luôn là công ty đầu tiên trả lời, mỗi lần." },
+        { "title": "Đánh giá người mua", "desc": "Ngân sách, thời gian và mục đích được thu thập trước khi chuyên viên của bạn vào cuộc." },
+        { "title": "Lập lịch xem nhà", "desc": "Lịch xem nhà được xác nhận đặt trực tiếp vào lịch của chuyên viên." },
+        { "title": "Nội dung danh sách", "desc": "Bài đăng bất động sản, tờ rơi và video ngắn được tự động hóa." }
+      ]
+    },
+    "social-media-influencer": {
+      "name": "Người Ảnh Hưởng Mạng Xã Hội",
+      "eyebrow": "Nhà Sáng Tạo & Influencer",
+      "headline": "Đăng nhiều hơn, trả lời nhanh hơn,",
+      "highlight": "kiếm tiền từ mọi thứ",
+      "subtitle": "Volaly sản xuất nội dung hàng ngày, xử lý DM và yêu cầu từ thương hiệu, biến khán giả của bạn thành một doanh nghiệp thực sự, kiếm được tiền.",
+      "metaTitle": "Tự Động Hóa Nội Dung & DM với AI cho Influencer — Volaly",
+      "metaDescription": "Volaly tạo nội dung hàng ngày, xử lý DM và yêu cầu từ thương hiệu, giúp những người ảnh hưởng trên mạng xã hội kiếm tiền từ khán giả của họ.",
+      "videoTitle": "Volaly cho nhà sáng tạo — demo 2 phút",
+      "stats": [
+        { "value": "10 lần", "label": "Tạo nội dung nhanh hơn" },
+        { "value": "0", "label": "DM bị bỏ lỡ" },
+        { "value": "+38%", "label": "Tăng doanh thu" }
+      ],
+      "pains": [
+        "Sản xuất nội dung chiếm hết cả tuần",
+        "Hàng ngàn DM chưa được trả lời",
+        "Các hợp đồng thương hiệu bị mất vì trả lời chậm"
+      ],
+      "solutions": [
+        { "title": "Công cụ tạo nội dung hàng ngày", "desc": "Smart Shorts và Images giữ trang của bạn luôn sống động mà không kiệt sức." },
+        { "title": "Tự động hóa DM", "desc": "AI trả lời người theo dõi và lọc ra các yêu cầu kinh doanh thực sự." },
+        { "title": "Hộp thư hợp đồng thương hiệu", "desc": "Yêu cầu hợp tác được đánh giá và tổ chức trong CRM của bạn." },
+        { "title": "Luồng kiếm tiền", "desc": "Bán sản phẩm, khóa học và dịch vụ trực tiếp trong chat." }
+      ]
+    },
+    "car-rental": {
+      "name": "Cho Thuê Xe",
+      "eyebrow": "Cho Thuê Xe",
+      "headline": "Báo giá và đặt xe tự động",
+      "highlight": "cho mọi loại xe",
+      "subtitle": "Volaly báo giá, kiểm tra tình trạng sẵn có và xác nhận thuê xe suốt 24/7 — để không du khách nào phải chờ câu trả lời.",
+      "metaTitle": "Tự Động Hóa Đặt Xe với AI cho Công Ty Cho Thuê Xe — Volaly",
+      "metaDescription": "Volaly báo giá, kiểm tra tình trạng sẵn có và xác nhận đặt xe cho thuê tự động, suốt 24/7, bằng mọi ngôn ngữ.",
+      "videoTitle": "Volaly cho thuê xe — demo 2 phút",
+      "stats": [
+        { "value": "+71%", "label": "Nhiều lượt thuê xe được xác nhận hơn" },
+        { "value": "24/7", "label": "Báo giá và đặt xe" },
+        { "value": "40+", "label": "Ngôn ngữ" }
+      ],
+      "pains": [
+        "Du khách yêu cầu báo giá vào lúc 3 giờ sáng",
+        "Các câu hỏi về tình trạng sẵn có lặp lại liên tục",
+        "Mất đơn đặt xe vào tay đối thủ nhanh hơn"
+      ],
+      "solutions": [
+        { "title": "Báo giá ngay lập tức", "desc": "Giá cả, bảo hiểm và các tùy chọn thêm được giải thích trong vài giây." },
+        { "title": "Kiểm tra tình trạng sẵn có", "desc": "AI xác nhận xe nào còn trống cho các ngày được yêu cầu." },
+        { "title": "Xác nhận đặt xe", "desc": "Tiền đặt cọc, hồ sơ và chi tiết nhận xe được xử lý trong chat." },
+        { "title": "Khả năng hiển thị địa phương", "desc": "Xếp hạng cao hơn trên Google Maps nơi du khách tìm kiếm." }
+      ]
+    },
+    "hotel": {
+      "name": "Khách Sạn & Khu Nghỉ Dưỡng",
+      "eyebrow": "Khách Sạn & Khu Nghỉ Dưỡng",
+      "headline": "Lấp đầy nhiều phòng hơn với",
+      "highlight": "đặt phòng trực tiếp",
+      "subtitle": "Volaly trả lời câu hỏi của khách ngay lập tức, thúc đẩy đặt phòng trực tiếp và tăng đánh giá 5 sao của bạn — giảm sự phụ thuộc vào OTA.",
+      "metaTitle": "Giao Tiếp Khách Hàng & Đặt Phòng Trực Tiếp với AI cho Khách Sạn — Volaly",
+      "metaDescription": "Volaly trả lời câu hỏi của khách 24/7, thúc đẩy đặt phòng khách sạn trực tiếp và tăng đánh giá 5 sao — giảm hoa hồng OTA.",
+      "videoTitle": "Volaly cho khách sạn — demo 2 phút",
+      "stats": [
+        { "value": "+46%", "label": "Nhiều đặt phòng trực tiếp hơn" },
+        { "value": "5★", "label": "Tăng trưởng đánh giá" },
+        { "value": "24/7", "label": "Hỗ trợ khách hàng" }
+      ],
+      "pains": [
+        "Hoa hồng OTA cao trên mỗi lần đặt phòng",
+        "Khách hỏi những câu hỏi giống nhau suốt đêm",
+        "Đánh giá quyết định việc đặt phòng — và đánh giá của bạn còn ít"
+      ],
+      "solutions": [
+        { "title": "Chat đặt phòng trực tiếp", "desc": "Hướng dẫn khách từ câu hỏi đến đặt phòng trực tiếp được xác nhận." },
+        { "title": "Lễ tân 24/7", "desc": "Câu hỏi về nhận phòng, tiện nghi và đưa đón được trả lời ngay lập tức." },
+        { "title": "Công cụ đánh giá", "desc": "Tự động thu thập các đánh giá 5 sao chân thực sau mỗi kỳ lưu trú." },
+        { "title": "Khả năng hiển thị Google", "desc": "Xếp hạng cao hơn trên Maps và tìm kiếm tại điểm đến của bạn." }
+      ]
+    },
+    "bar": {
+      "name": "Quán Bar & Cuộc Sống Về Đêm",
+      "eyebrow": "Quán Bar & Cuộc Sống Về Đêm",
+      "headline": "Lấp đầy không gian",
+      "highlight": "mỗi đêm",
+      "subtitle": "Quảng bá sự kiện, đặt bàn và trả lời ngay lập tức — Volaly giữ cho quán bar của bạn luôn hiện diện và bàn luôn được đặt.",
+      "metaTitle": "Marketing và Đặt Bàn với AI cho Quán Bar và Cuộc Sống Về Đêm — Volaly",
+      "metaDescription": "Volaly quảng bá sự kiện của bạn, trả lời khách ngay lập tức và lấp đầy bàn với các lượt đặt bàn tự động cho quán bar và địa điểm giải trí về đêm.",
+      "videoTitle": "Volaly cho quán bar — demo 2 phút",
+      "stats": [
+        { "value": "+2,4 lần", "label": "Đặt bàn" },
+        { "value": "Hàng ngày", "label": "Nội dung sự kiện" },
+        { "value": "24/7", "label": "Phản hồi khách hàng" }
+      ],
+      "pains": [
+        "Mỗi sự kiện cần nội dung quảng bá mới",
+        "Yêu cầu đặt bàn đến qua DM vào giờ cao điểm",
+        "Lượng khách vãng lai phụ thuộc vào việc được tìm thấy trực tuyến"
+      ],
+      "solutions": [
+        { "title": "Quảng bá sự kiện", "desc": "Tờ rơi, reel và bài đăng cho mỗi đêm, được tạo tự động." },
+        { "title": "Đặt bàn", "desc": "Đặt bàn được xác nhận trong chat mà không cần nhân viên can thiệp." },
+        { "title": "Danh sách khách & VIP", "desc": "Thu thập và tổ chức khách quen và khách VIP trong CRM của bạn." },
+        { "title": "Khám phá địa phương", "desc": "Xuất hiện trên Google và mạng xã hội khi mọi người tìm kiếm cuộc sống về đêm gần đó." }
+      ]
+    },
+    "restaurant": {
+      "name": "Nhà Hàng",
+      "eyebrow": "Nhà Hàng",
+      "headline": "Luôn đầy bàn với",
+      "highlight": "đặt bàn ngay lập tức",
+      "subtitle": "Volaly xử lý đặt bàn, câu hỏi về thực đơn và yêu cầu giao hàng trên mọi kênh — và giữ cho trang của bạn luôn trông ngon miệng.",
+      "metaTitle": "Đặt Bàn và Marketing với AI cho Nhà Hàng — Volaly",
+      "metaDescription": "Volaly nhận đặt bàn, trả lời câu hỏi về thực đơn và quảng bá nhà hàng của bạn tự động trên Google, LINE, WhatsApp và mạng xã hội.",
+      "videoTitle": "Volaly cho nhà hàng — demo 2 phút",
+      "stats": [
+        { "value": "+58%", "label": "Nhiều lượt đặt bàn hơn" },
+        { "value": "5★", "label": "Tăng trưởng đánh giá" },
+        { "value": "6+", "label": "Kênh được tự động hóa" }
+      ],
+      "pains": [
+        "Điện thoại reo trong giờ cao điểm bữa tối",
+        "Câu hỏi về thực đơn và giờ mở cửa không bao giờ dừng",
+        "Nội dung món ăn phải trông tuyệt vời mỗi ngày"
+      ],
+      "solutions": [
+        { "title": "AI đặt bàn", "desc": "Đặt bàn được xác nhận ngay lập tức trên web, LINE, WhatsApp và Instagram." },
+        { "title": "Trợ lý thực đơn", "desc": "Món ăn, chất gây dị ứng, giờ mở cửa và giao hàng được trả lời tự động." },
+        { "title": "Nội dung món ăn", "desc": "Bài đăng hấp dẫn và video ngắn được xuất bản cho bạn." },
+        { "title": "Tăng trưởng đánh giá", "desc": "Biến khách hàng hài lòng thành luồng đánh giá 5 sao trên Google." }
+      ]
+    }
+  }
+}

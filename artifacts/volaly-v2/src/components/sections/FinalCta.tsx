@@ -1,10 +1,12 @@
 import { Play, ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { AuroraOrbs } from "@/components/Backdrop";
 import { Reveal } from "@/components/Motion";
 import { openDemo } from "@/lib/demo";
 
 export function FinalCta() {
+  const { t } = useTranslation("home");
   return (
     <section className="px-4 py-28 sm:px-6">
       <Reveal>
@@ -13,21 +15,21 @@ export function FinalCta() {
           <div className="bg-grid pointer-events-none absolute inset-0 opacity-20 [mask-image:radial-gradient(60%_60%_at_50%_50%,black,transparent)]" />
           <div className="relative">
             <h2 className="text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
-              Turn visibility into <span className="gradient-text-multi">revenue.</span>
+              {t("finalCta.titlePre")}<span className="gradient-text-multi">{t("finalCta.titleHighlight")}</span>
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-lg text-white/70">
-              Book a demo and see how Volaly grows your business on autopilot.
+              {t("finalCta.subtitle")}
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Button size="xl" variant="hero" className="rounded-full" onClick={openDemo}>
-                View Demo <ArrowRight className="h-4 w-4" />
+                {t("finalCta.viewDemo")} <ArrowRight className="h-4 w-4" />
               </Button>
               <Button
                 size="xl"
                 className="rounded-full border border-white/30 bg-white/10 text-white backdrop-blur hover:bg-white/20"
                 onClick={openDemo}
               >
-                <Play className="h-4 w-4" /> Book Consultation
+                <Play className="h-4 w-4" /> {t("finalCta.bookConsultation")}
               </Button>
             </div>
           </div>

@@ -1,0 +1,42 @@
+{
+  "seo": {
+    "title": "Kontakt — Volaly",
+    "description": "Nehmen Sie Kontakt mit dem Volaly-Team auf. Fragen, Demo-Anfragen oder Partnerschaftsanfragen — wir antworten innerhalb von 24 Stunden auf Englisch, Deutsch oder Thai."
+  },
+  "header": {
+    "eyebrow": "Kontakt",
+    "title": "Nehmen Sie Kontakt auf",
+    "subtitle": "Fragen, Demo-Anfragen oder Partnerschaftsanfragen — schreiben Sie uns, wir melden uns innerhalb von 24 Stunden bei Ihnen."
+  },
+  "info": {
+    "email": { "title": "E-Mail", "value": "info@volaly.com" },
+    "responseTime": { "title": "Antwortzeit", "value": "Innerhalb von 24 Stunden" },
+    "languages": { "title": "Sprachen", "value": "English · Deutsch · ภาษาไทย" },
+    "liveChat": { "title": "Live-Chat", "value": "Jetzt mit Volaly AI chatten" }
+  },
+  "form": {
+    "nameLabel": "Name",
+    "namePlaceholder": "Jane Smith",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "jane@example.com",
+    "subjectLabel": "Betreff",
+    "subjectPlaceholder": "Bitte auswählen…",
+    "subjectOptions": {
+      "demo": "Demo buchen",
+      "pricing": "Preise & Pakete",
+      "support": "Technischer Support",
+      "partnership": "Partnerschaft",
+      "other": "Sonstiges"
+    },
+    "messageLabel": "Nachricht",
+    "messagePlaceholder": "Erzählen Sie uns von Ihrem Unternehmen und wie wir helfen können…",
+    "errorMessage": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt per E-Mail.",
+    "sending": "Wird gesendet…",
+    "send": "Nachricht senden",
+    "agreementPre": "Mit dem Absenden stimmen Sie unserer ",
+    "privacyLink": "Datenschutzerklärung",
+    "successTitle": "Nachricht gesendet!",
+    "successBody": "Vielen Dank für Ihre Nachricht. Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
+    "sendAnother": "Weitere Nachricht senden"
+  }
+}

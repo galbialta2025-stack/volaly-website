@@ -1,0 +1,119 @@
+{
+  "seo": {
+    "title": "Preise — Wählen Sie, wie Sie wachsen wollen | Volaly",
+    "description": "Drei Pläne für Ihr Wachstum. Creator Partner (kostenlos), Creator (199 $), Creator Pro (499 $), Creator Elite (999 $). Die Umsatzbeteiligung sinkt, je mehr Sie wachsen."
+  },
+  "hero": {
+    "eyebrow": "Preise",
+    "titleLine1": "Wählen Sie, wie Sie",
+    "titleLine2": "wachsen wollen.",
+    "subtitle": "Starten Sie mit dem Plan, der heute zu Ihnen passt. Upgraden Sie, wann immer Ihr Geschäft wächst."
+  },
+  "plans": {
+    "partner": {
+      "badge": "Nur auf Einladung",
+      "name": "Creator Partner",
+      "price": "Kostenlos",
+      "priceSub": "Nur Umsatzbeteiligung",
+      "desc": "Wachsen Sie mit Volaly zu null Kosten. Wir verdienen, wenn Sie verdienen.",
+      "cta": "Jetzt bewerben",
+      "requirements": ["5.000+ Follower", "ODER genehmigte Bewerbung"],
+      "revenueLabels": ["Digitale Produkte", "Merchandise", "Mitgliedschaften"],
+      "features": ["Revenue Suite", "Creator-Seite", "KI-FAQ", "Voice AI", "Smart Shop"]
+    },
+    "creator": {
+      "name": "Creator",
+      "price": "199 $",
+      "priceSub": "/ Monat",
+      "desc": "Alles, was Sie brauchen, um Ihre Inhalte zu monetarisieren und zu wachsen.",
+      "cta": "Kostenlos testen",
+      "revenueLabels": ["Digitale Produkte", "Merchandise", "Mitgliedschaften"],
+      "features": ["Revenue Suite", "Visibility Suite", "Smart Shorts", "Automatisches Veröffentlichen", "KI-Blog-Autor", "Newsletter"]
+    },
+    "pro": {
+      "badge": "Am beliebtesten",
+      "name": "Creator Pro",
+      "price": "499 $",
+      "priceSub": "/ Monat",
+      "desc": "Niedrigere Umsatzbeteiligung. Mehr Automatisierung. Für ernsthaftes Wachstum.",
+      "cta": "Upgraden",
+      "revenueLabels": ["Digitale Produkte", "Merchandise", "Mitgliedschaften"],
+      "features": ["Alles aus Creator", "Mehrsprachige Veröffentlichung", "Erweiterte Analysen", "Priority-Support", "API-Zugang", "Teams"]
+    },
+    "elite": {
+      "badge": "Enterprise",
+      "name": "Creator Elite",
+      "price": "999 $",
+      "priceSub": "/ Monat",
+      "desc": "Maximale Automatisierung, minimale Umsatzbeteiligung. Für Top-Creator und Agenturen.",
+      "cta": "Vertrieb kontaktieren",
+      "revenueLabels": ["Digitale Produkte", "Merchandise", "Mitgliedschaften"],
+      "features": ["Alles aus Creator Pro", "White Label", "Dedizierter Account Manager", "Individuelle Integrationen", "SLA", "Unbegrenzte Teams"]
+    },
+    "requirementsLabel": "Voraussetzungen",
+    "revenueShareLabel": "Umsatzbeteiligung",
+    "includedLabel": "Enthalten"
+  },
+  "journey": {
+    "eyebrow": "Upgrade-Verlauf",
+    "titleLine1": "Je mehr Sie wachsen,",
+    "titleLine2": "desto weniger zahlen Sie.",
+    "subtitle": "Die Umsatzbeteiligung sinkt auf jeder Stufe, während Automatisierung, KI-Funktionen und Skalierungsfunktionen zunehmen. Wachstum zahlt sich bei Volaly immer aus.",
+    "steps": [
+      { "sub": "Nur auf Einladung", "tag": "Kostenlos", "headline": "Null Kosten zum Start.", "desc": "Wir wachsen gemeinsam. Höhere Umsatzbeteiligung, während Sie Ihr Publikum aufbauen — ohne monatliche Gebühren." },
+      { "sub": "199 $ / Monat", "tag": "20 % Anteil", "headline": "Niedrigerer Anteil. Mehr Automatisierung.", "desc": "Zahlen Sie eine feste monatliche Gebühr und behalten Sie mehr von jedem Verkauf. Vollständige Revenue- und Visibility-Suite inklusive." },
+      { "sub": "499 $ / Monat", "tag": "15 % Anteil", "headline": "Für ernsthafte Skalierung gebaut.", "desc": "Erweiterte KI-Funktionen, mehrsprachige Veröffentlichung, Teams und Priority-Support." },
+      { "sub": "999 $ / Monat", "tag": "10 % Anteil", "headline": "Maximale Leistung. Minimaler Anteil.", "desc": "White-Label, individuelle Integrationen, dedizierter Manager und die niedrigste Umsatzbeteiligung der Plattform." }
+    ]
+  },
+  "compare": {
+    "eyebrow": "Pläne vergleichen",
+    "titlePre": "Alles im direkten ",
+    "titleHighlight": "Vergleich.",
+    "featureHeader": "Funktion",
+    "rows": {
+      "revenueSuite": "Revenue Suite",
+      "visibilitySuite": "Visibility Suite",
+      "ai": "KI (FAQ + Voice)",
+      "smartShorts": "Smart Shorts",
+      "automation": "Automatisierung",
+      "support": "Support",
+      "apiAccess": "API-Zugang",
+      "whiteLabel": "White Label",
+      "teams": "Teams",
+      "analytics": "Analysen",
+      "multilang": "Mehrsprachig"
+    },
+    "values": {
+      "basic": "Basis",
+      "full": "Vollständig",
+      "advanced": "Erweitert",
+      "custom": "Individuell",
+      "email": "E-Mail",
+      "priority": "Priority",
+      "dedicated": "Dediziert",
+      "standard": "Standard",
+      "upTo5": "Bis zu 5",
+      "unlimited": "Unbegrenzt"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "titlePre": "Fragen zu den ",
+    "titleHighlight": "Preisen beantwortet.",
+    "items": [
+      { "q": "Warum Umsatzbeteiligung?", "a": "Die Umsatzbeteiligung richtet unseren Erfolg an Ihrem aus. Wir verdienen nur, wenn Sie verdienen — deshalb ist Volaly stets motiviert, Ihren Umsatz zu maximieren. Je mehr Sie wachsen und auf kostenpflichtige Pläne upgraden, desto geringer wird die Umsatzbeteiligung und desto mehr behalten Sie von jedem Verkauf." },
+      { "q": "Kann ich jederzeit upgraden?", "a": "Ja. Sie können Ihren Plan jederzeit über Ihr Dashboard upgraden oder downgraden. Upgrades werden sofort wirksam; Downgrades gelten ab Beginn Ihres nächsten Abrechnungszyklus." },
+      { "q": "Gehören mir meine Inhalte?", "a": "Zu 100 %. Ihre Inhalte gehören immer Ihnen. Volaly beansprucht niemals Eigentum an etwas, das Sie erstellen oder hochladen. Wir verarbeiten sie, um zusätzliche Content-Formate zu erzeugen — die ebenfalls Ihnen gehören." },
+      { "q": "Warum ist Creator Partner nur auf Einladung?", "a": "Creator Partner ist unser betreuungsintensivster Plan. Wir arbeiten eng mit jedem Partner zusammen, um die KI-Persona zu trainieren, den Shop einzurichten und die Wachstumsstrategie zu optimieren. Die Begrenzung auf Einladungen stellt sicher, dass wir jedem Creator ein Premium-Erlebnis bieten können." },
+      { "q": "Was passiert, wenn ich über meinen aktuellen Plan hinauswachse?", "a": "Ein schönes Problem. Sie können jederzeit upgraden — und je höher Sie steigen, desto niedriger ist Ihre Umsatzbeteiligung. Wachstum bei Volaly zahlt sich immer mit besseren Konditionen aus." }
+    ]
+  },
+  "finalCta": {
+    "titleLine1": "Bereit, Volaly",
+    "titleLine2": "den Rest erledigen zu lassen?",
+    "subtitle": "Starten Sie kostenlos. Keine Kreditkarte erforderlich. Upgraden Sie, wenn Sie bereit sind, schneller zu wachsen.",
+    "startFree": "Kostenlos starten",
+    "bookDemo": "Demo buchen"
+  }
+}

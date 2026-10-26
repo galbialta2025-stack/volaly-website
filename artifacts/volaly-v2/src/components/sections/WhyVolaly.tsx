@@ -10,60 +10,33 @@ import {
   Rocket,
 } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "./shared";
 import { Stagger, StaggerItem, Reveal } from "@/components/Motion";
 import { openDemo } from "@/lib/demo";
 
-/* ── Four reason cards ── */
-const cards = [
-  {
-    icon: Upload,
-    title: "One Upload",
-    desc: "Upload once or connect your social accounts. Volaly automatically handles everything else.",
-    gradient: "from-brand-orange/15 to-brand-pink/15",
-    iconGradient: "from-brand-orange to-brand-pink",
-  },
-  {
-    icon: TrendingUp,
-    title: "Visibility First",
-    desc: "Every upload becomes content for every platform — automatically and without extra effort.",
-    gradient: "from-brand-green/15 to-brand-cyan/15",
-    iconGradient: "from-brand-green to-brand-cyan",
-  },
-  {
-    icon: Plug,
-    title: "Works With Your Existing Tools",
-    desc: "No need to replace YouTube, Instagram or TikTok. Volaly builds on top of them.",
-    gradient: "from-brand-blue/15 to-brand-purple/15",
-    iconGradient: "from-brand-blue to-brand-purple",
-  },
-  {
-    icon: BrainCircuit,
-    title: "Always Learning",
-    desc: "Every new upload expands your AI knowledge, improves customer conversations and strengthens your business.",
-    gradient: "from-brand-purple/15 to-brand-pink/15",
-    iconGradient: "from-brand-purple to-brand-pink",
-  },
+/* ── Four reason cards (visual metadata; copy from i18n) ── */
+const cardMeta = [
+  { icon: Upload, gradient: "from-brand-orange/15 to-brand-pink/15", iconGradient: "from-brand-orange to-brand-pink" },
+  { icon: TrendingUp, gradient: "from-brand-green/15 to-brand-cyan/15", iconGradient: "from-brand-green to-brand-cyan" },
+  { icon: Plug, gradient: "from-brand-blue/15 to-brand-purple/15", iconGradient: "from-brand-blue to-brand-purple" },
+  { icon: BrainCircuit, gradient: "from-brand-purple/15 to-brand-pink/15", iconGradient: "from-brand-purple to-brand-pink" },
 ];
 
-/* ── Workflow steps ── */
-const traditional = [
-  { label: "Upload", icon: Upload },
-  { label: "One Platform", icon: XCircle },
-  { label: "Manual Work", icon: XCircle },
-  { label: "Repeat", icon: XCircle },
-];
+const traditionalIcons = [Upload, XCircle, XCircle, XCircle];
 
-const volalyFlow = [
-  { label: "Upload", icon: Upload, split: false },
-  { label: "Volaly AI", icon: Sparkles, split: false },
-  { label: "split", icon: Sparkles, split: true },
-  { label: "Automatic Growth", icon: CheckCircle2, split: false, highlight: true },
-];
+interface WhyCard {
+  title: string;
+  desc: string;
+}
 
 export function WhyVolaly() {
+  const { t } = useTranslation("home");
   const reduce = useReducedMotion();
+
+  const cards = t("why.cards", { returnObjects: true }) as WhyCard[];
+  const traditionalSteps = t("why.traditional.steps", { returnObjects: true }) as string[];
 
   return (
     <section id="why" className="bg-dots relative scroll-mt-24 overflow-hidden py-32">
@@ -71,28 +44,31 @@ export function WhyVolaly() {
 
         {/* Heading */}
         <SectionHeading
-          eyebrow="Why Volaly"
-          title={<>Your Content Already Works.<br /><span className="gradient-text-multi">Volaly Makes It Work Harder.</span></>}
-          subtitle="Keep using YouTube, Instagram, TikTok, Facebook and your existing tools. Volaly connects everything and automatically turns every upload into revenue, visibility and AI-powered customer experiences."
+          eyebrow={t("why.eyebrow")}
+          title={<>{t("why.titleLine1")}<br /><span className="gradient-text-multi">{t("why.titleLine2")}</span></>}
+          subtitle={t("why.subtitle")}
         />
 
         {/* Four cards */}
         <Stagger className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4" gap={0.08}>
-          {cards.map((c) => (
-            <StaggerItem key={c.title}>
-              <motion.div
-                whileHover={{ y: -5 }}
-                transition={{ duration: 0.22, ease: "easeOut" }}
-                className={`glass-card group h-full rounded-[22px] bg-gradient-to-br ${c.gradient} p-7 transition-shadow duration-300 hover:shadow-[0_16px_48px_rgba(0,0,0,0.10)]`}
-              >
-                <div className={`mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br ${c.iconGradient} text-white shadow-soft transition-transform duration-300 group-hover:scale-110`}>
-                  <c.icon className="h-5 w-5" strokeWidth={1.8} />
-                </div>
-                <h3 className="text-base font-extrabold text-foreground">{c.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
-              </motion.div>
-            </StaggerItem>
-          ))}
+          {cards.map((c, i) => {
+            const meta = cardMeta[i];
+            return (
+              <StaggerItem key={c.title}>
+                <motion.div
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.22, ease: "easeOut" }}
+                  className={`glass-card group h-full rounded-[22px] bg-gradient-to-br ${meta.gradient} p-7 transition-shadow duration-300 hover:shadow-[0_16px_48px_rgba(0,0,0,0.10)]`}
+                >
+                  <div className={`mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br ${meta.iconGradient} text-white shadow-soft transition-transform duration-300 group-hover:scale-110`}>
+                    <meta.icon className="h-5 w-5" strokeWidth={1.8} />
+                  </div>
+                  <h3 className="text-base font-extrabold text-foreground">{c.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
+                </motion.div>
+              </StaggerItem>
+            );
+          })}
         </Stagger>
 
         {/* Workflow comparison panels */}
@@ -106,23 +82,26 @@ export function WhyVolaly() {
                   <XCircle className="h-4 w-4 text-muted-foreground/60" />
                 </span>
                 <span className="text-sm font-bold uppercase tracking-wider text-muted-foreground">
-                  Traditional Workflow
+                  {t("why.traditional.label")}
                 </span>
               </div>
               <div className="flex flex-col items-start gap-0">
-                {traditional.map((step, i) => (
-                  <div key={step.label} className="flex w-full flex-col">
-                    <div className="flex items-center gap-3 rounded-xl border border-border/50 bg-background/50 px-4 py-3">
-                      <step.icon className="h-4 w-4 shrink-0 text-muted-foreground/50" />
-                      <span className="text-sm text-muted-foreground">{step.label}</span>
-                    </div>
-                    {i < traditional.length - 1 && (
-                      <div className="ml-5 flex h-6 items-center">
-                        <div className="h-full w-px bg-border/50" />
+                {traditionalSteps.map((label, i) => {
+                  const Icon = traditionalIcons[i];
+                  return (
+                    <div key={label} className="flex w-full flex-col">
+                      <div className="flex items-center gap-3 rounded-xl border border-border/50 bg-background/50 px-4 py-3">
+                        <Icon className="h-4 w-4 shrink-0 text-muted-foreground/50" />
+                        <span className="text-sm text-muted-foreground">{label}</span>
                       </div>
-                    )}
-                  </div>
-                ))}
+                      {i < traditionalSteps.length - 1 && (
+                        <div className="ml-5 flex h-6 items-center">
+                          <div className="h-full w-px bg-border/50" />
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
@@ -133,14 +112,14 @@ export function WhyVolaly() {
                   <CheckCircle2 className="h-4 w-4 text-brand-green" />
                 </span>
                 <span className="text-sm font-bold uppercase tracking-wider text-foreground/70">
-                  Volaly Workflow
+                  {t("why.volalyFlow.label")}
                 </span>
               </div>
 
               {/* Upload */}
               <FlowRow
                 icon={Upload}
-                label="Upload"
+                label={t("why.volalyFlow.upload")}
                 gradient="from-brand-orange to-brand-pink"
                 reduce={reduce}
                 delay={0}
@@ -150,7 +129,7 @@ export function WhyVolaly() {
               {/* Volaly AI */}
               <FlowRow
                 icon={Sparkles}
-                label="Volaly AI"
+                label={t("why.volalyFlow.ai")}
                 gradient="from-brand-purple to-brand-blue"
                 reduce={reduce}
                 delay={0.08}
@@ -166,7 +145,7 @@ export function WhyVolaly() {
                 className="flex flex-col items-center gap-1.5 rounded-xl border border-border/50 bg-background/60 px-3 py-2.5 text-center"
               >
                 <Rocket className="h-4 w-4 text-brand-blue" />
-                <span className="text-xs font-bold text-foreground/80">Visibility Suite</span>
+                <span className="text-xs font-bold text-foreground/80">{t("why.volalyFlow.visibilitySuite")}</span>
               </motion.div>
               <FlowDot />
 
@@ -179,7 +158,7 @@ export function WhyVolaly() {
                 className="flex items-center gap-3 rounded-xl bg-gradient-to-r from-brand-green to-brand-cyan px-4 py-3 shadow-[0_4px_20px_oklch(0.68_0.2_140/0.30)]"
               >
                 <CheckCircle2 className="h-4 w-4 shrink-0 text-white" />
-                <span className="text-sm font-extrabold text-white">Automatic Growth</span>
+                <span className="text-sm font-extrabold text-white">{t("why.volalyFlow.growth")}</span>
               </motion.div>
             </div>
           </div>
@@ -189,11 +168,11 @@ export function WhyVolaly() {
         <Reveal delay={0.1}>
           <div className="mt-16 flex flex-col items-center gap-6 text-center">
             <p className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
-              You already create content.{" "}
-              <span className="gradient-text-multi">Volaly makes every upload work harder.</span>
+              {t("why.bottom.textPre")}
+              <span className="gradient-text-multi">{t("why.bottom.textHighlight")}</span>
             </p>
             <Button size="xl" variant="hero" onClick={openDemo}>
-              See Volaly in Action <ArrowRight className="h-4 w-4" />
+              {t("why.bottom.cta")} <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
         </Reveal>

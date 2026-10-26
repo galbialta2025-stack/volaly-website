@@ -1,0 +1,166 @@
+{
+  "hero": {
+    "titleLine1": "One Upload.",
+    "titleLine2": "Volaly Does the Rest.",
+    "subtitle": "Turn every piece of content into visibility and growth across every platform — automatically.",
+    "startFree": "Start Free",
+    "watchDemo": "Watch Demo",
+    "benefits": ["One Upload", "Visibility Suite", "All Platforms"]
+  },
+  "problem": {
+    "eyebrow": "The Problem",
+    "titlePre": "Great businesses lose customers ",
+    "titleHighlight": "they never even see.",
+    "subtitle": "Being good isn't enough if people can't find you and you can't reply fast enough.",
+    "items": [
+      { "title": "You're invisible online", "desc": "Customers can't find you on Google, social media or maps — so they choose a competitor instead.", "stat": "70%", "label": "search before they buy" },
+      { "title": "Enquiries go unanswered", "desc": "Messages on LINE, WhatsApp and Instagram pile up. Slow replies mean lost bookings.", "stat": "5 min", "label": "and the lead is gone" },
+      { "title": "Marketing eats your time", "desc": "Posting content, chasing leads and managing reviews is manual, inconsistent and exhausting.", "stat": "15h", "label": "wasted every week" }
+    ]
+  },
+  "trustBar": {
+    "text": "Works with the platforms your customers already use"
+  },
+  "visibility": {
+    "eyebrow": "Visibility Suite",
+    "titlePre": "Grow everywhere from a ",
+    "titleHighlight": "single upload.",
+    "subtitle": "One piece of content automatically becomes dozens of assets for every platform.",
+    "cards": [
+      { "title": "Smart Shorts", "desc": "Turn one long video into multiple high-performing short videos automatically." },
+      { "title": "Auto Publishing", "desc": "Publish everywhere from one upload." },
+      { "title": "Social Media", "desc": "Create content for Instagram, TikTok, Facebook, LinkedIn, X and YouTube automatically." },
+      { "title": "SEO Content", "desc": "Transform every upload into search traffic with AI-generated articles." },
+      { "title": "Newsletter", "desc": "Automatically generate email campaigns from your content." },
+      { "title": "Analytics", "desc": "See which content generates the most revenue and visibility." }
+    ],
+    "flowCaption": "From one upload to everywhere",
+    "flowSteps": {
+      "upload": "Upload Once",
+      "ai": "Volaly AI",
+      "shorts": "Shorts",
+      "social": "Social Posts",
+      "blog": "Blog & SEO",
+      "newsletter": "Newsletter",
+      "platforms": "Multiple Platforms",
+      "growth": "Audience Growth"
+    },
+    "highlight": {
+      "titlePre": "One Upload. ",
+      "titleHighlight": "Unlimited Visibility.",
+      "subtitle": "Instead of manually creating content for every platform, Volaly automatically adapts every upload for the channels that matter."
+    },
+    "comparison": {
+      "withoutLabel": "Without Volaly",
+      "withLabel": "With Volaly",
+      "without": ["Upload once", "Reach one platform", "Create everything manually", "Limited visibility"],
+      "with": ["Upload once", "Publish everywhere", "AI adapts every format", "Maximum reach"]
+    },
+    "cta": {
+      "title": "Grow Everywhere Automatically.",
+      "button": "Explore Visibility Suite"
+    }
+  },
+  "industries": {
+    "eyebrow": "Industries",
+    "title": "Built for Every Business That Creates Content.",
+    "subtitle": "One AI platform. Endless possibilities. Whether you're a creator, hotel, restaurant, gym or real estate agency — Volaly transforms every upload into revenue and visibility.",
+    "outcomes": {
+      "gym": "Turn every workout into memberships.",
+      "dentist": "Turn expertise into trust and appointments.",
+      "medical-beauty": "Turn every treatment into appointments.",
+      "visa-agency": "Turn every enquiry into approved applications.",
+      "real-estate": "Turn every listing into qualified leads.",
+      "social-media-influencer": "Turn every upload into revenue.",
+      "car-rental": "Turn every search into a confirmed booking.",
+      "hotel": "Turn every room into bookings.",
+      "bar": "Turn every event into packed nights.",
+      "restaurant": "Turn every dish into customers."
+    },
+    "learnMore": "Learn more",
+    "bottomPre": "One Upload. ",
+    "bottomHighlight": "Different Industries.",
+    "bottomLine2": "Same AI Engine.",
+    "cta": "Explore All Industries"
+  },
+  "whoUses": {
+    "eyebrow": "Who Uses Volaly",
+    "title": "Built for Everyone Who Creates Content.",
+    "subtitle": "Whether you are growing a personal brand or a business, Volaly turns every upload into revenue and visibility.",
+    "audiences": [
+      {
+        "eyebrow": "For Creators",
+        "desc": "Grow your audience faster with automated content distribution across every platform — from a single upload.",
+        "features": ["Smart Shorts", "Auto Publishing", "SEO Content", "Newsletter", "Multi-platform"],
+        "cta": "Explore Creator Solutions"
+      },
+      {
+        "eyebrow": "For Businesses",
+        "desc": "Get found by more customers and publish content across every channel automatically — from a single upload.",
+        "features": ["Smart Shorts", "Google Business", "Social Media", "SEO Content", "Auto Publishing"],
+        "cta": "Explore Business Solutions"
+      }
+    ],
+    "connecting": {
+      "titlePre": "One Platform. ",
+      "titleHighlight": "Different Workflows.",
+      "subtitle": "The same AI engine powers creators, hotels, restaurants, gyms, real estate agencies and every business that creates content."
+    },
+    "dividerLabel": "Industries"
+  },
+  "features": {
+    "eyebrow": "Platform",
+    "titlePre": "One platform, ",
+    "titleHighlight": "every capability",
+    "subtitle": "A complete AI toolkit to run marketing, communication and sales on autopilot.",
+    "items": {
+      "posting": "Automatic Posting",
+      "googleBusiness": "Google Business",
+      "line": "LINE Publishing",
+      "whatsapp": "WhatsApp Publishing",
+      "analytics": "Analytics",
+      "multilang": "Multi-language"
+    }
+  },
+  "why": {
+    "eyebrow": "Why Volaly",
+    "titleLine1": "Your Content Already Works.",
+    "titleLine2": "Volaly Makes It Work Harder.",
+    "subtitle": "Keep using YouTube, Instagram, TikTok, Facebook and your existing tools. Volaly connects everything and automatically turns every upload into revenue, visibility and AI-powered customer experiences.",
+    "cards": [
+      { "title": "One Upload", "desc": "Upload once or connect your social accounts. Volaly automatically handles everything else." },
+      { "title": "Visibility First", "desc": "Every upload becomes content for every platform — automatically and without extra effort." },
+      { "title": "Works With Your Existing Tools", "desc": "No need to replace YouTube, Instagram or TikTok. Volaly builds on top of them." },
+      { "title": "Always Learning", "desc": "Every new upload expands your AI knowledge, improves customer conversations and strengthens your business." }
+    ],
+    "traditional": {
+      "label": "Traditional Workflow",
+      "steps": ["Upload", "One Platform", "Manual Work", "Repeat"]
+    },
+    "volalyFlow": {
+      "label": "Volaly Workflow",
+      "upload": "Upload",
+      "ai": "Volaly AI",
+      "visibilitySuite": "Visibility Suite",
+      "growth": "Automatic Growth"
+    },
+    "bottom": {
+      "textPre": "You already create content. ",
+      "textHighlight": "Volaly makes every upload work harder.",
+      "cta": "See Volaly in Action"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "titlePre": "Frequently asked ",
+    "titleHighlight": "questions",
+    "subtitle": "Everything you need to know about how Volaly grows your business."
+  },
+  "finalCta": {
+    "titlePre": "Turn visibility into ",
+    "titleHighlight": "revenue.",
+    "subtitle": "Book a demo and see how Volaly grows your business on autopilot.",
+    "viewDemo": "View Demo",
+    "bookConsultation": "Book Consultation"
+  }
+}

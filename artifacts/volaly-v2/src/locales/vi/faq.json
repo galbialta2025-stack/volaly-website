@@ -1,0 +1,185 @@
+{
+  "seo": {
+    "title": "FAQ — Câu hỏi thường gặp | Volaly",
+    "description": "Giải đáp các câu hỏi thường gặp về Volaly: đó là gì, dành cho ai, hoạt động ra sao, Revenue Suite, Visibility Suite, bảo mật, giá cả và cách bắt đầu."
+  },
+  "hero": {
+    "eyebrow": "FAQ",
+    "titleLine1": "Câu Hỏi",
+    "titleLine2": "Thường Gặp.",
+    "subtitle": "Mọi điều bạn cần biết về Volaly."
+  },
+  "page": {
+    "searchPlaceholder": "Tìm kiếm câu hỏi…",
+    "allTab": "Tất cả",
+    "resultsFoundOne": "1 kết quả cho",
+    "resultsFoundMany": "{{count}} kết quả cho",
+    "resultsNotFound": "Không có kết quả cho",
+    "noResultsTitle": "Không tìm thấy câu hỏi nào",
+    "noResultsSubtitle": "Hãy thử các từ khóa khác hoặc xem tất cả danh mục.",
+    "clearSearch": "Xóa tìm kiếm",
+    "ctaTitle": "Vẫn còn câu hỏi?",
+    "ctaSubtitle": "Trò chuyện với Volaly AI — nó biết mọi thứ về nền tảng và trả lời ngay lập tức.",
+    "ctaButton": "Bắt đầu trò chuyện",
+    "categories": [
+      {
+        "id": "general",
+        "label": "Chung",
+        "items": [
+          { "q": "Volaly là gì?", "a": "Volaly là nền tảng tăng trưởng được hỗ trợ bởi AI dành cho nhà sáng tạo và doanh nghiệp. Bạn tải nội dung lên một lần và Volaly tự động biến nó thành các luồng doanh thu, khả năng hiển thị trên nhiều nền tảng và các cuộc hội thoại khách hàng do AI hỗ trợ — không cần thao tác thủ công." },
+          { "q": "Volaly dành cho ai?", "a": "Volaly được xây dựng cho nhà sáng tạo nội dung (YouTuber, nhà sáng tạo TikTok, podcaster, nhà giáo dục, huấn luyện viên) và doanh nghiệp (nhà hàng, khách sạn, phòng gym, công ty bất động sản, phòng khám nha khoa và nhiều hơn nữa) muốn phát triển trực tuyến mà không cần dành nhiều giờ cho marketing thủ công." },
+          { "q": "Volaly hoạt động như thế nào?", "a": "Bạn kết nối các nguồn nội dung của mình (YouTube, mạng xã hội, nội dung tự tải lên) và AI của Volaly xử lý từng nội dung. Nó tạo ra các clip ngắn, bài viết blog, bản tin, trang SEO, danh sách sản phẩm và các cuộc hội thoại AI với khách hàng — tất cả được phân phối tự động đến mọi nền tảng." },
+          { "q": "Điều gì làm Volaly khác biệt?", "a": "Hầu hết các công cụ chỉ tự động hóa một việc. Volaly tự động hóa mọi thứ. Một lần tải lên kích hoạt toàn bộ bộ máy phát triển — Revenue Suite để kiếm tiền và Visibility Suite để phân phối. Không có nền tảng khác kết nối trực tiếp việc tạo nội dung với doanh thu và phạm vi tiếp cận trong một quy trình làm việc duy nhất." }
+        ]
+      },
+      {
+        "id": "revenue",
+        "label": "Revenue Suite",
+        "items": [
+          { "q": "Revenue Suite là gì?", "a": "Revenue Suite là động cơ kiếm tiền trong Volaly. Nó bao gồm FAQ AI, Voice AI, Creator Shop, Hội viên, Sản phẩm số và Affiliate — tất cả được vận hành tự động bởi nội dung bạn đã tải lên." },
+          { "q": "FAQ AI hoạt động như thế nào?", "a": "FAQ AI được huấn luyện dựa trên nội dung của bạn và trả lời câu hỏi của khách hàng hoặc người hâm mộ 24/7 — trên trang web, trang Creator của bạn hoặc được nhúng ở bất kỳ đâu. Nó nghe giống bạn, sử dụng sản phẩm và giá của bạn, và xử lý các phản đối một cách tự động." },
+          { "q": "Voice AI là gì?", "a": "Voice AI tạo ra một persona giọng nói tương tác được vận hành bởi nội dung của bạn. Khán giả của bạn có thể thực sự có một cuộc trò chuyện bằng giọng nói theo thời gian thực với AI của bạn — trả lời câu hỏi, đề xuất sản phẩm và đặt lịch hẹn suốt ngày đêm." },
+          { "q": "Tôi có thể bán sản phẩm số không?", "a": "Có. Bạn có thể bán ebook, mẫu thiết kế, khóa học và bất kỳ sản phẩm có thể tải xuống thông qua Creator Shop được hỗ trợ bởi Volaly. Việc thiết lập chỉ mất vài phút — Volaly xử lý thanh toán, giao hàng và theo dõi sau bán hàng một cách tự động." },
+          { "q": "Tôi có thể bán hội viên không?", "a": "Có. Tạo các hạng hội viên với đặc quyền và mức giá tùy chỉnh. Volaly tự động quản lý thanh toán định kỳ, kiểm soát quyền truy cập và giao tiếp với hội viên." },
+          { "q": "Tôi có thể bán hàng hóa không?", "a": "Có. Kết nối cửa hàng hàng hóa của bạn hoặc thiết lập một cửa hàng thông qua Volaly. AI của bạn có thể tự động đề xuất và quảng bá sản phẩm trong mỗi cuộc hội thoại với khách hàng." },
+          { "q": "Sản phẩm affiliate hoạt động như thế nào?", "a": "Kết nối liên kết affiliate của bạn một lần và AI của Volaly sẽ tự nhiên đề xuất chúng trong các cuộc hội thoại khách hàng liên quan. Bạn tự động kiếm hoa hồng mà không cần thêm bất kỳ hoạt động quảng bá thủ công nào vào quy trình làm việc của mình." }
+        ]
+      },
+      {
+        "id": "visibility",
+        "label": "Visibility Suite",
+        "items": [
+          { "q": "Visibility Suite là gì?", "a": "Visibility Suite là động cơ phân phối trong Volaly. Một lần tải lên tự động trở thành các clip ngắn, bài viết blog dài, bản tin, trang SEO và bài đăng mạng xã hội — được xuất bản trên mọi nền tảng mà không cần thao tác thủ công." },
+          { "q": "Smart Shorts là gì?", "a": "Smart Shorts sử dụng AI để xem video dài của bạn, xác định những khoảnh khắc mạnh nhất (hook, điểm nổi bật, câu chốt) và tự động tạo ra các clip dọc được tối ưu hóa cho nền tảng dành cho TikTok, Instagram Reels và YouTube Shorts — hoàn chỉnh với phụ đề và nhận diện thương hiệu." },
+          { "q": "Volaly có thể xuất bản tự động không?", "a": "Có. Kết nối tài khoản mạng xã hội của bạn một lần và Volaly sẽ xử lý toàn bộ việc lập lịch, định dạng và xuất bản. Nội dung được tự động điều chỉnh theo định dạng gốc, tỷ lệ khung hình và phong cách của từng nền tảng." },
+          { "q": "Tôi có thể kết nối tài khoản mạng xã hội của mình không?", "a": "Có. Volaly kết nối với YouTube, TikTok, Instagram, Facebook, LinkedIn, X và Threads. Kết nối một lần từ bảng điều khiển của bạn và mọi nội dung tải lên trong tương lai sẽ được tự động phân phối trên tất cả các nền tảng." },
+          { "q": "Volaly có tạo bài viết blog không?", "a": "Có. Mỗi lần tải lên sẽ được tự động chuyển đổi thành một bài viết blog dài, được tối ưu hóa SEO, viết theo giọng điệu thương hiệu của bạn. Các bài viết được cấu trúc để xếp hạng tìm kiếm và xuất bản lên blog hoặc trang web được kết nối của bạn." },
+          { "q": "Volaly có tạo bản tin không?", "a": "Có. Mỗi lần tải lên tạo ra một ấn bản bản tin sẵn sàng để gửi đến danh sách email của bạn. Volaly xử lý việc viết, định dạng và lập lịch — bạn chỉ cần xem lại và phê duyệt." }
+        ]
+      },
+      {
+        "id": "creator",
+        "label": "Nhà Sáng Tạo",
+        "items": [
+          { "q": "Nhà sáng tạo có thể sử dụng Volaly không?", "a": "Chắc chắn rồi — Volaly được xây dựng cho nhà sáng tạo. Cho dù bạn là YouTuber, nhà sáng tạo TikTok, podcaster, nhà giáo dục hay huấn luyện viên, Volaly biến nội dung của bạn thành hội viên, sản phẩm số, cửa hàng creator và phân phối tự động trên mọi nền tảng." },
+          { "q": "Tôi có cần 5.000 người theo dõi để tham gia không?", "a": "Chỉ dành cho gói Creator Partner (miễn phí), chỉ dành theo lời mời. Các gói trả phí Creator, Creator Pro và Creator Elite mở cho tất cả mọi người, bất kể quy mô khán giả." },
+          { "q": "Creator Partner là gì?", "a": "Creator Partner là gói miễn phí, chỉ dành theo lời mời của chúng tôi cho các nhà sáng tạo đã có tên tuổi (5.000+ người theo dõi hoặc đơn đăng ký được phê duyệt). Thay vì phí hàng tháng, Volaly nhận một phần doanh thu từ các giao dịch bán hàng bạn tạo ra qua nền tảng. Chúng ta cùng phát triển." },
+          { "q": "Tôi có thể chuyển từ nền tảng khác không?", "a": "Có. Nếu bạn hiện đang sử dụng một công cụ creator hoặc nền tảng kiếm tiền khác, đội ngũ của chúng tôi sẽ giúp bạn chuyển khán giả, sản phẩm và nội dung sang Volaly. Liên hệ với chúng tôi để có kế hoạch chuyển đổi được cá nhân hóa." }
+        ]
+      },
+      {
+        "id": "business",
+        "label": "Doanh Nghiệp",
+        "items": [
+          { "q": "Doanh nghiệp có thể sử dụng Volaly không?", "a": "Có. Volaly được thiết kế cho cả nhà sáng tạo và doanh nghiệp địa phương/toàn cầu. Nhà hàng, khách sạn, phòng gym, phòng khám nha khoa, công ty bất động sản, phòng khám thẩm mỹ y tế, công ty cho thuê xe và nhiều doanh nghiệp khác sử dụng Volaly để phát triển sự hiện diện trực tuyến và tự động hóa giao tiếp với khách hàng." },
+          { "q": "Những ngành nào được hỗ trợ?", "a": "Volaly hỗ trợ nhà hàng, khách sạn, phòng gym, phòng khám nha khoa, bất động sản, thẩm mỹ y tế, cho thuê xe, quán bar, agency mạng xã hội, công ty visa và nhiều ngành khác. Nếu doanh nghiệp của bạn có khách hàng và tạo ra bất kỳ hình thức nội dung nào, Volaly có thể tự động hóa sự phát triển của bạn." },
+          { "q": "Tôi có thể sử dụng Volaly cho nhiều địa điểm không?", "a": "Có. Các gói Creator Elite và Enterprise hỗ trợ nhiều địa điểm và thành viên trong nhóm. Mỗi địa điểm có thể có persona AI, danh mục sản phẩm và phân phối nội dung riêng — tất cả được quản lý từ một bảng điều khiển." }
+        ]
+      },
+      {
+        "id": "pricing",
+        "label": "Giá",
+        "items": [
+          { "q": "Chia sẻ doanh thu hoạt động như thế nào?", "a": "Với gói Creator Partner (miễn phí), Volaly nhận một tỷ lệ phần trăm từ các giao dịch bán hàng bạn thực hiện qua nền tảng thay vì tính phí hàng tháng. Với các gói trả phí, tỷ lệ chia sẻ doanh thu giảm đáng kể — vì vậy bạn càng kiếm được nhiều, gói trả phí càng trở nên có giá trị hơn." },
+          { "q": "Tôi có thể nâng cấp gói của mình bất cứ lúc nào không?", "a": "Có. Nâng cấp có hiệu lực ngay lập tức và các tính năng mới của bạn có sẵn ngay. Hạ cấp áp dụng từ đầu kỳ thanh toán tiếp theo để bạn luôn nhận được giá trị đầy đủ từ gói hiện tại." },
+          { "q": "Tôi có thể hủy đăng ký của mình không?", "a": "Có. Hủy bất cứ lúc nào từ bảng điều khiển của bạn — không cần giải thích. Tài khoản của bạn vẫn hoạt động đến hết kỳ thanh toán hiện tại và bạn vẫn giữ quyền truy cập vào toàn bộ nội dung và dữ liệu của mình." },
+          { "q": "Tôi có sở hữu khách hàng của mình không?", "a": "100%. Khách hàng của bạn, dữ liệu của bạn, các mối quan hệ của bạn. Volaly không bao giờ liên hệ, tiếp thị hoặc kiếm tiền từ khán giả của bạn mà không có sự cho phép rõ ràng của bạn. Bạn sở hữu mọi mối quan hệ khách hàng được xây dựng qua nền tảng." }
+        ]
+      },
+      {
+        "id": "security",
+        "label": "Bảo Mật",
+        "items": [
+          { "q": "Nội dung của tôi có an toàn không?", "a": "Có. Tất cả nội dung được mã hóa trong quá trình truyền và khi lưu trữ. Dữ liệu của bạn được lưu trữ trong hạ tầng an toàn, tuân thủ ISO 27001. Chúng tôi không bao giờ chia sẻ, bán hoặc sử dụng nội dung của bạn để huấn luyện các mô hình của bên thứ ba." },
+          { "q": "Ai có quyền truy cập vào dữ liệu của tôi?", "a": "Chỉ bạn và các thành viên trong nhóm mà bạn cho phép rõ ràng mới có quyền truy cập vào dữ liệu tài khoản của bạn. Nhân viên Volaly chỉ có thể truy cập tài khoản của bạn cho mục đích hỗ trợ và chỉ khi có sự cho phép của bạn." },
+          { "q": "Volaly có tuân thủ GDPR không?", "a": "Có. Volaly hoàn toàn tuân thủ GDPR. Bạn có toàn quyền kiểm soát dữ liệu của mình — bạn có thể xuất hoặc xóa tài khoản và toàn bộ dữ liệu liên quan bất cứ lúc nào từ bảng điều khiển." }
+        ]
+      },
+      {
+        "id": "ai",
+        "label": "AI",
+        "items": [
+          { "q": "AI học như thế nào?", "a": "AI của Volaly được huấn luyện trên nội dung bạn tải lên — video, PDF, trang web và thông tin sản phẩm của bạn. Nó học giọng điệu, sản phẩm, giá cả và thương hiệu của bạn để mỗi tương tác đều giống như chính bạn." },
+          { "q": "AI có cải thiện theo thời gian không?", "a": "Có. Bạn thêm càng nhiều nội dung, AI của bạn càng trở nên chính xác và có khả năng hơn. Các cuộc hội thoại với khách hàng cũng giúp AI học những câu hỏi khán giả của bạn hỏi nhiều nhất — vì vậy nó cải thiện qua từng tương tác." },
+          { "q": "Tôi có thể tải lên PDF không?", "a": "Có. Tải lên hướng dẫn sản phẩm, thực đơn, danh sách giá, tài liệu khóa học hoặc bất kỳ PDF nào và AI của Volaly sẽ học từ chúng ngay lập tức. Sau đó AI có thể tham khảo và đề xuất nội dung này trong các cuộc hội thoại với khách hàng." },
+          { "q": "Tôi có thể tải lên video không?", "a": "Có. Video là loại nội dung chính của Volaly. Tải lên bất kỳ video nào và AI sẽ chuyển thành văn bản, phân tích và học từ đó — sau đó sử dụng kiến thức đó để vận hành FAQ AI, Voice AI, Smart Shorts, bài viết blog và bản tin của bạn." },
+          { "q": "Tôi có thể kết nối trang web của mình không?", "a": "Có. Kết nối URL trang web của bạn và AI của Volaly sẽ thu thập và học từ nội dung hiện có của bạn — trang, bài viết blog, mô tả sản phẩm và FAQ. Điều này giúp AI của bạn ngay lập tức hiểu biết về doanh nghiệp của bạn." }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "q": "Volaly là gì?",
+      "parts": [
+        { "text": "Volaly là nền tảng được hỗ trợ bởi AI giúp các nhà sáng tạo và doanh nghiệp biến mỗi nội dung đăng tải thành doanh thu và khả năng hiển thị. Thay vì phải xoay quanh nhiều công cụ, Volaly tự động chuyển đổi nội dung của bạn thành các cuộc hội thoại AI, sản phẩm số, nội dung mạng xã hội thông minh và những cơ hội phát triển mới. Tìm hiểu thêm về " },
+        { "link": "revenue-suite", "text": "Revenue Suite" },
+        { "text": " và " },
+        { "link": "visibility-suite", "text": "Visibility Suite" },
+        { "text": " để xem mọi thứ hoạt động cùng nhau như thế nào." }
+      ]
+    },
+    {
+      "q": "Volaly dành cho ai?",
+      "parts": [
+        { "text": "Volaly được xây dựng cho bất kỳ ai tạo nội dung để phát triển doanh nghiệp. Cho dù bạn là nhà sáng tạo, huấn luyện viên, khách sạn, nhà hàng, phòng gym, công ty bất động sản hay doanh nghiệp địa phương, Volaly giúp tự động hóa các cuộc hội thoại với khách hàng, tăng khả năng hiển thị và tạo thêm doanh thu từ mỗi nội dung đăng tải. Khám phá " },
+        { "link": "creator", "text": "trang Creator" },
+        { "text": " hoặc các giải pháp dành cho doanh nghiệp để xem Volaly thích ứng với quy trình làm việc của bạn như thế nào." }
+      ]
+    },
+    {
+      "q": "Volaly hoạt động như thế nào?",
+      "parts": [
+        { "text": "Chỉ cần tải lên nội dung của bạn hoặc kết nối tài khoản mạng xã hội. Volaly tự động hiểu nội dung của bạn, xây dựng kiến thức AI, tạo các cuộc hội thoại với khách hàng, tạo ra các tài sản marketing mới và giúp doanh nghiệp của bạn phát triển. Một lần tải lên cung cấp năng lượng cho cả " },
+        { "link": "revenue-suite", "text": "Revenue Suite" },
+        { "text": " và Visibility Suite, cho phép bạn kiếm tiền và mở rộng quy mô chỉ từ một quy trình làm việc duy nhất." }
+      ]
+    },
+    {
+      "q": "Revenue Suite là gì?",
+      "parts": [
+        { "text": "Revenue Suite tập hợp mọi thứ bạn cần để kiếm tiền từ nội dung của mình. FAQ AI, Voice AI, Smart Shop, Hội viên và Sản phẩm số cùng hoạt động để trả lời câu hỏi, đề xuất sản phẩm và tự động tạo doanh thu. Thay vì bán hàng thủ công, Volaly giúp chuyển đổi khách truy cập thành khách hàng suốt ngày đêm. " },
+        { "link": "revenue-suite", "text": "Tìm hiểu thêm trên trang Revenue Suite." }
+      ]
+    },
+    {
+      "q": "Visibility Suite là gì?",
+      "parts": [
+        { "text": "Visibility Suite giúp bạn tiếp cận nhiều người hơn mà không cần làm thêm việc. Từ một lần tải lên, Volaly tự động tạo ra Smart Shorts, nội dung mạng xã hội, bài viết blog, bản tin và nội dung SEO cho nhiều nền tảng. Tạo một lần, xuất bản ở mọi nơi và tiếp tục phát triển tự động. " },
+        { "link": "visibility-suite", "text": "Tìm hiểu thêm trên trang Visibility Suite." }
+      ]
+    },
+    {
+      "q": "Volaly hỗ trợ những nền tảng nào?",
+      "parts": [
+        { "text": "Volaly hoạt động với các nền tảng mà nhà sáng tạo và doanh nghiệp đã sử dụng. Tùy theo quy trình làm việc của bạn, bao gồm YouTube, Instagram, TikTok, Facebook, LinkedIn, X, WhatsApp và LINE. Các tích hợp mới được thêm vào thường xuyên, giúp Volaly phù hợp một cách liền mạch với hệ sinh thái hiện có của bạn thay vì thay thế nó." }
+      ]
+    },
+    {
+      "q": "Tôi có cần kỹ năng kỹ thuật không?",
+      "parts": [
+        { "text": "Không. Volaly được thiết kế cho nhà sáng tạo và doanh nghiệp — không phải cho nhà phát triển. Hầu hết các tính năng hoạt động qua một bảng điều khiển trực quan, không cần viết mã hay thiết lập phức tạp. Chỉ cần kết nối tài khoản của bạn, tải lên nội dung và để Volaly tự động hóa phần còn lại để bạn có thể tập trung vào việc sáng tạo và phát triển doanh nghiệp." }
+      ]
+    },
+    {
+      "q": "Dữ liệu của tôi có an toàn không?",
+      "parts": [
+        { "text": "Có. Bảo vệ dữ liệu của bạn là một trong những ưu tiên cao nhất của chúng tôi. Nội dung, thông tin khách hàng và các tài khoản được kết nối của bạn được xử lý theo các tiêu chuẩn an ninh hiện đại và kết nối được mã hóa khi có thể áp dụng. Bạn vẫn hoàn toàn kiểm soát nội dung của mình trong khi Volaly chỉ xử lý thông tin cần thiết để cung cấp các dịch vụ được hỗ trợ bởi AI." }
+      ]
+    },
+    {
+      "q": "Tôi có thể quản lý nhiều thương hiệu hoặc địa điểm không?",
+      "parts": [
+        { "text": "Có. Volaly được xây dựng để mở rộng quy mô cùng với doanh nghiệp của bạn. Cho dù bạn quản lý nhiều nhà sáng tạo, thương hiệu, địa điểm hay khách hàng, mọi thứ đều có thể được quản lý từ một nền tảng duy nhất. Điều này làm cho Volaly trở nên lý tưởng cho các agency, nhượng quyền và doanh nghiệp đang phát triển muốn tự động hóa nhất quán trên nhiều tài khoản." }
+      ]
+    },
+    {
+      "q": "Tôi bắt đầu như thế nào?",
+      "parts": [
+        { "text": "Bắt đầu chỉ mất vài phút. Tạo tài khoản của bạn, kết nối các kênh mạng xã hội hoặc tải lên nội dung đầu tiên, và Volaly sẽ ngay lập tức bắt đầu xây dựng cơ sở kiến thức AI của bạn. Từ đó, bạn có thể kích hoạt Revenue Suite, mở rộng khả năng hiển thị và bắt đầu phát triển tự động. " },
+        { "link": "pricing", "text": "Truy cập trang Giá" },
+        { "text": " để chọn gói phù hợp với doanh nghiệp của bạn." }
+      ]
+    }
+  ]
+}

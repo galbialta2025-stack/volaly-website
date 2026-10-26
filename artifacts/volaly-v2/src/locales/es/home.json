@@ -1,0 +1,166 @@
+{
+  "hero": {
+    "titleLine1": "Una subida.",
+    "titleLine2": "Volaly hace el resto.",
+    "subtitle": "Convierte automáticamente cada contenido en visibilidad y crecimiento en todas las plataformas.",
+    "startFree": "Empezar gratis",
+    "watchDemo": "Ver demo",
+    "benefits": ["Una subida", "Visibility Suite", "Todas las plataformas"]
+  },
+  "problem": {
+    "eyebrow": "El Problema",
+    "titlePre": "Los buenos negocios pierden clientes ",
+    "titleHighlight": "que ni siquiera llegan a ver.",
+    "subtitle": "Ser bueno no basta si no te encuentran y no respondes con suficiente rapidez.",
+    "items": [
+      { "title": "Eres invisible en internet", "desc": "Los clientes no te encuentran en Google, redes sociales o mapas — y eligen a la competencia en su lugar.", "stat": "70%", "label": "buscan antes de comprar" },
+      { "title": "Las consultas quedan sin respuesta", "desc": "Los mensajes en LINE, WhatsApp e Instagram se acumulan. Responder lento significa reservas perdidas.", "stat": "5 min", "label": "y el cliente potencial se va" },
+      { "title": "El marketing te consume el tiempo", "desc": "Publicar contenido, dar seguimiento a clientes potenciales y gestionar reseñas es manual, inconsistente y agotador.", "stat": "15h", "label": "perdidas cada semana" }
+    ]
+  },
+  "trustBar": {
+    "text": "Funciona con las plataformas que tus clientes ya usan"
+  },
+  "visibility": {
+    "eyebrow": "Visibility Suite",
+    "titlePre": "Crece en todas partes a partir de ",
+    "titleHighlight": "una sola subida.",
+    "subtitle": "Un solo contenido se convierte automáticamente en docenas de recursos para cada plataforma.",
+    "cards": [
+      { "title": "Smart Shorts", "desc": "Convierte un vídeo largo en varios vídeos cortos de alto rendimiento automáticamente." },
+      { "title": "Publicación automática", "desc": "Publica en todas partes desde una sola subida." },
+      { "title": "Redes sociales", "desc": "Crea contenido para Instagram, TikTok, Facebook, LinkedIn, X y YouTube automáticamente." },
+      { "title": "Contenido SEO", "desc": "Convierte cada subida en tráfico de búsqueda con artículos generados por IA." },
+      { "title": "Newsletter", "desc": "Genera campañas de email automáticamente a partir de tu contenido." },
+      { "title": "Analytics", "desc": "Descubre qué contenido genera más ingresos y visibilidad." }
+    ],
+    "flowCaption": "De una subida a todas partes",
+    "flowSteps": {
+      "upload": "Sube una vez",
+      "ai": "Volaly AI",
+      "shorts": "Shorts",
+      "social": "Publicaciones sociales",
+      "blog": "Blog y SEO",
+      "newsletter": "Newsletter",
+      "platforms": "Múltiples plataformas",
+      "growth": "Crecimiento de audiencia"
+    },
+    "highlight": {
+      "titlePre": "Una subida. ",
+      "titleHighlight": "Visibilidad ilimitada.",
+      "subtitle": "En lugar de crear contenido manualmente para cada plataforma, Volaly adapta automáticamente cada subida a los canales que importan."
+    },
+    "comparison": {
+      "withoutLabel": "Sin Volaly",
+      "withLabel": "Con Volaly",
+      "without": ["Sube una vez", "Llega a una plataforma", "Crea todo manualmente", "Visibilidad limitada"],
+      "with": ["Sube una vez", "Publica en todas partes", "La IA adapta cada formato", "Alcance máximo"]
+    },
+    "cta": {
+      "title": "Crece en todas partes automáticamente.",
+      "button": "Explorar Visibility Suite"
+    }
+  },
+  "industries": {
+    "eyebrow": "Sectores",
+    "title": "Hecho para cualquier negocio que crea contenido.",
+    "subtitle": "Una plataforma de IA. Posibilidades infinitas. Seas creador, hotel, restaurante, gimnasio o inmobiliaria — Volaly convierte cada subida en ingresos y visibilidad.",
+    "outcomes": {
+      "gym": "Convierte cada entrenamiento en membresías.",
+      "dentist": "Convierte tu experiencia en confianza y citas.",
+      "medical-beauty": "Convierte cada tratamiento en citas.",
+      "visa-agency": "Convierte cada consulta en solicitudes aprobadas.",
+      "real-estate": "Convierte cada anuncio en clientes potenciales cualificados.",
+      "social-media-influencer": "Convierte cada subida en ingresos.",
+      "car-rental": "Convierte cada búsqueda en una reserva confirmada.",
+      "hotel": "Convierte cada habitación en reservas.",
+      "bar": "Convierte cada evento en noches llenas.",
+      "restaurant": "Convierte cada plato en clientes."
+    },
+    "learnMore": "Saber más",
+    "bottomPre": "Una subida. ",
+    "bottomHighlight": "Distintos sectores.",
+    "bottomLine2": "El mismo motor de IA.",
+    "cta": "Explorar todos los sectores"
+  },
+  "whoUses": {
+    "eyebrow": "Quién usa Volaly",
+    "title": "Hecho para todos los que crean contenido.",
+    "subtitle": "Tanto si estás creciendo una marca personal como un negocio, Volaly convierte cada subida en ingresos y visibilidad.",
+    "audiences": [
+      {
+        "eyebrow": "Para creadores",
+        "desc": "Crece tu audiencia más rápido con distribución de contenido automatizada en cada plataforma — desde una sola subida.",
+        "features": ["Smart Shorts", "Publicación automática", "Contenido SEO", "Newsletter", "Multiplataforma"],
+        "cta": "Explorar soluciones para creadores"
+      },
+      {
+        "eyebrow": "Para negocios",
+        "desc": "Haz que más clientes te encuentren y publica contenido en cada canal automáticamente — desde una sola subida.",
+        "features": ["Smart Shorts", "Google Business", "Redes sociales", "Contenido SEO", "Publicación automática"],
+        "cta": "Explorar soluciones para negocios"
+      }
+    ],
+    "connecting": {
+      "titlePre": "Una plataforma. ",
+      "titleHighlight": "Distintos flujos de trabajo.",
+      "subtitle": "El mismo motor de IA impulsa a creadores, hoteles, restaurantes, gimnasios, inmobiliarias y cualquier negocio que crea contenido."
+    },
+    "dividerLabel": "Sectores"
+  },
+  "features": {
+    "eyebrow": "Plataforma",
+    "titlePre": "Una plataforma, ",
+    "titleHighlight": "todas las capacidades",
+    "subtitle": "Un conjunto de herramientas de IA completo para gestionar marketing, comunicación y ventas en piloto automático.",
+    "items": {
+      "posting": "Publicación automática",
+      "googleBusiness": "Google Business",
+      "line": "Publicación en LINE",
+      "whatsapp": "Publicación en WhatsApp",
+      "analytics": "Analytics",
+      "multilang": "Multilingüe"
+    }
+  },
+  "why": {
+    "eyebrow": "Por qué Volaly",
+    "titleLine1": "Tu contenido ya funciona.",
+    "titleLine2": "Volaly hace que trabaje más.",
+    "subtitle": "Sigue usando YouTube, Instagram, TikTok, Facebook y tus herramientas actuales. Volaly lo conecta todo y convierte automáticamente cada subida en ingresos, visibilidad y experiencias de cliente impulsadas por IA.",
+    "cards": [
+      { "title": "Una subida", "desc": "Sube una vez o conecta tus cuentas sociales. Volaly se encarga automáticamente del resto." },
+      { "title": "Visibilidad primero", "desc": "Cada subida se convierte en contenido para cada plataforma — automáticamente y sin esfuerzo extra." },
+      { "title": "Funciona con tus herramientas actuales", "desc": "No hace falta sustituir YouTube, Instagram o TikTok. Volaly se construye sobre ellas." },
+      { "title": "Aprende constantemente", "desc": "Cada nueva subida amplía tu conocimiento de IA, mejora las conversaciones con clientes y fortalece tu negocio." }
+    ],
+    "traditional": {
+      "label": "Flujo de trabajo tradicional",
+      "steps": ["Subir", "Una plataforma", "Trabajo manual", "Repetir"]
+    },
+    "volalyFlow": {
+      "label": "Flujo de trabajo Volaly",
+      "upload": "Subir",
+      "ai": "Volaly AI",
+      "visibilitySuite": "Visibility Suite",
+      "growth": "Crecimiento automático"
+    },
+    "bottom": {
+      "textPre": "Ya creas contenido. ",
+      "textHighlight": "Volaly hace que cada subida trabaje más.",
+      "cta": "Ver Volaly en acción"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "titlePre": "Preguntas ",
+    "titleHighlight": "frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre cómo Volaly hace crecer tu negocio."
+  },
+  "finalCta": {
+    "titlePre": "Convierte visibilidad en ",
+    "titleHighlight": "ingresos.",
+    "subtitle": "Reserva una demo y descubre cómo Volaly hace crecer tu negocio en piloto automático.",
+    "viewDemo": "Ver demo",
+    "bookConsultation": "Reservar consulta"
+  }
+}

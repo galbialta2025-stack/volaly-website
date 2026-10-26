@@ -1,0 +1,42 @@
+{
+  "seo": {
+    "title": "Contact — Volaly",
+    "description": "Contactez l'équipe Volaly. Questions, demandes de démo ou propositions de partenariat — nous répondons en 24 heures en anglais, allemand ou thaï."
+  },
+  "header": {
+    "eyebrow": "Contact",
+    "title": "Contactez-nous",
+    "subtitle": "Questions, demandes de démo ou propositions de partenariat — écrivez-nous et nous vous répondrons dans les 24 heures."
+  },
+  "info": {
+    "email": { "title": "Email", "value": "info@volaly.com" },
+    "responseTime": { "title": "Délai de réponse", "value": "Sous 24 heures" },
+    "languages": { "title": "Langues", "value": "English · Deutsch · ภาษาไทย" },
+    "liveChat": { "title": "Chat en direct", "value": "Discutez avec Volaly AI dès maintenant" }
+  },
+  "form": {
+    "nameLabel": "Nom",
+    "namePlaceholder": "Jane Smith",
+    "emailLabel": "Email",
+    "emailPlaceholder": "jane@example.com",
+    "subjectLabel": "Sujet",
+    "subjectPlaceholder": "Veuillez sélectionner…",
+    "subjectOptions": {
+      "demo": "Réserver une démo",
+      "pricing": "Tarifs & forfaits",
+      "support": "Support technique",
+      "partnership": "Partenariat",
+      "other": "Autre"
+    },
+    "messageLabel": "Message",
+    "messagePlaceholder": "Parlez-nous de votre activité et de la façon dont nous pouvons vous aider…",
+    "errorMessage": "Une erreur est survenue. Veuillez réessayer ou nous écrire directement par email.",
+    "sending": "Envoi en cours…",
+    "send": "Envoyer le message",
+    "agreementPre": "En soumettant ce formulaire, vous acceptez notre ",
+    "privacyLink": "Politique de confidentialité",
+    "successTitle": "Message envoyé !",
+    "successBody": "Merci de nous avoir contactés. Nous vous répondrons dans les 24 heures.",
+    "sendAnother": "Envoyer un autre message"
+  }
+}

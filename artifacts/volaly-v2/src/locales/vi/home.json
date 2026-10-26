@@ -1,0 +1,166 @@
+{
+  "hero": {
+    "titleLine1": "Một Lần Tải Lên.",
+    "titleLine2": "Volaly Lo Phần Còn Lại.",
+    "subtitle": "Tự động biến mỗi nội dung thành khả năng hiển thị và tăng trưởng trên mọi nền tảng.",
+    "startFree": "Bắt Đầu Miễn Phí",
+    "watchDemo": "Xem Demo",
+    "benefits": ["Một Lần Tải Lên", "Visibility Suite", "Mọi Nền Tảng"]
+  },
+  "problem": {
+    "eyebrow": "Vấn Đề",
+    "titlePre": "Những doanh nghiệp tốt đang mất khách hàng ",
+    "titleHighlight": "mà họ chưa từng thấy.",
+    "subtitle": "Chỉ giỏi thôi chưa đủ nếu khách hàng không tìm thấy bạn và bạn không phản hồi đủ nhanh.",
+    "items": [
+      { "title": "Bạn vô hình trên mạng", "desc": "Khách hàng không tìm thấy bạn trên Google, mạng xã hội hay bản đồ — nên họ chọn đối thủ cạnh tranh thay vào đó.", "stat": "70%", "label": "tìm kiếm trước khi mua" },
+      { "title": "Tin nhắn không được trả lời", "desc": "Tin nhắn trên LINE, WhatsApp và Instagram chất đống. Phản hồi chậm đồng nghĩa với việc mất đơn đặt.", "stat": "5 phút", "label": "là khách hàng tiềm năng biến mất" },
+      { "title": "Marketing ngốn hết thời gian của bạn", "desc": "Đăng bài, theo dõi khách hàng tiềm năng và quản lý đánh giá là công việc thủ công, thiếu nhất quán và mệt mỏi.", "stat": "15 giờ", "label": "lãng phí mỗi tuần" }
+    ]
+  },
+  "trustBar": {
+    "text": "Hoạt động với các nền tảng khách hàng của bạn đã sử dụng"
+  },
+  "visibility": {
+    "eyebrow": "Visibility Suite",
+    "titlePre": "Phát triển ở khắp mọi nơi chỉ từ ",
+    "titleHighlight": "một lần tải lên.",
+    "subtitle": "Một nội dung tự động trở thành hàng chục tài nguyên cho mọi nền tảng.",
+    "cards": [
+      { "title": "Smart Shorts", "desc": "Tự động biến một video dài thành nhiều video ngắn hiệu quả cao." },
+      { "title": "Tự Động Đăng Bài", "desc": "Đăng ở mọi nơi chỉ từ một lần tải lên." },
+      { "title": "Mạng Xã Hội", "desc": "Tự động tạo nội dung cho Instagram, TikTok, Facebook, LinkedIn, X và YouTube." },
+      { "title": "Nội Dung SEO", "desc": "Biến mỗi lần tải lên thành lưu lượng tìm kiếm bằng các bài viết do AI tạo ra." },
+      { "title": "Bản Tin", "desc": "Tự động tạo các chiến dịch email từ nội dung của bạn." },
+      { "title": "Phân Tích", "desc": "Xem nội dung nào tạo ra doanh thu và khả năng hiển thị nhiều nhất." }
+    ],
+    "flowCaption": "Từ một lần tải lên đến mọi nơi",
+    "flowSteps": {
+      "upload": "Tải Lên Một Lần",
+      "ai": "Volaly AI",
+      "shorts": "Shorts",
+      "social": "Bài Đăng Mạng Xã Hội",
+      "blog": "Blog & SEO",
+      "newsletter": "Bản Tin",
+      "platforms": "Nhiều Nền Tảng",
+      "growth": "Tăng Trưởng Khán Giả"
+    },
+    "highlight": {
+      "titlePre": "Một lần tải lên. ",
+      "titleHighlight": "Khả năng hiển thị không giới hạn.",
+      "subtitle": "Thay vì tự tạo nội dung thủ công cho từng nền tảng, Volaly tự động điều chỉnh mỗi lần tải lên cho các kênh quan trọng."
+    },
+    "comparison": {
+      "withoutLabel": "Không Có Volaly",
+      "withLabel": "Có Volaly",
+      "without": ["Tải lên một lần", "Tiếp cận một nền tảng", "Tự tạo mọi thứ thủ công", "Khả năng hiển thị hạn chế"],
+      "with": ["Tải lên một lần", "Đăng ở mọi nơi", "AI điều chỉnh mọi định dạng", "Tiếp cận tối đa"]
+    },
+    "cta": {
+      "title": "Tự động phát triển ở mọi nơi.",
+      "button": "Khám Phá Visibility Suite"
+    }
+  },
+  "industries": {
+    "eyebrow": "Ngành Nghề",
+    "title": "Dành cho mọi doanh nghiệp tạo nội dung.",
+    "subtitle": "Một nền tảng AI. Vô vàn khả năng. Dù bạn là nhà sáng tạo nội dung, khách sạn, nhà hàng, phòng gym hay công ty bất động sản — Volaly biến mỗi lần tải lên thành doanh thu và khả năng hiển thị.",
+    "outcomes": {
+      "gym": "Biến mỗi buổi tập thành hội viên.",
+      "dentist": "Biến chuyên môn thành sự tin tưởng và lịch hẹn.",
+      "medical-beauty": "Biến mỗi liệu trình thành lịch hẹn.",
+      "visa-agency": "Biến mỗi yêu cầu thành hồ sơ được duyệt.",
+      "real-estate": "Biến mỗi tin đăng thành khách hàng tiềm năng chất lượng.",
+      "social-media-influencer": "Biến mỗi lần tải lên thành doanh thu.",
+      "car-rental": "Biến mỗi tìm kiếm thành đơn đặt xe đã xác nhận.",
+      "hotel": "Biến mỗi phòng thành đơn đặt phòng.",
+      "bar": "Biến mỗi sự kiện thành đêm đông khách.",
+      "restaurant": "Biến mỗi món ăn thành khách hàng."
+    },
+    "learnMore": "Tìm hiểu thêm",
+    "bottomPre": "Một lần tải lên. ",
+    "bottomHighlight": "Nhiều ngành nghề khác nhau.",
+    "bottomLine2": "Cùng một công nghệ AI.",
+    "cta": "Khám Phá Tất Cả Ngành Nghề"
+  },
+  "whoUses": {
+    "eyebrow": "Ai Sử Dụng Volaly",
+    "title": "Dành cho mọi người tạo nội dung.",
+    "subtitle": "Dù bạn đang xây dựng thương hiệu cá nhân hay doanh nghiệp, Volaly biến mỗi lần tải lên thành doanh thu và khả năng hiển thị.",
+    "audiences": [
+      {
+        "eyebrow": "Dành Cho Nhà Sáng Tạo",
+        "desc": "Phát triển khán giả nhanh hơn với việc phân phối nội dung tự động trên mọi nền tảng — chỉ từ một lần tải lên.",
+        "features": ["Smart Shorts", "Tự Động Đăng Bài", "Nội Dung SEO", "Bản Tin", "Đa Nền Tảng"],
+        "cta": "Khám Phá Giải Pháp Cho Nhà Sáng Tạo"
+      },
+      {
+        "eyebrow": "Dành Cho Doanh Nghiệp",
+        "desc": "Được nhiều khách hàng tìm thấy hơn và tự động đăng nội dung trên mọi kênh — chỉ từ một lần tải lên.",
+        "features": ["Smart Shorts", "Google Business", "Mạng Xã Hội", "Nội Dung SEO", "Tự Động Đăng Bài"],
+        "cta": "Khám Phá Giải Pháp Cho Doanh Nghiệp"
+      }
+    ],
+    "connecting": {
+      "titlePre": "Một nền tảng. ",
+      "titleHighlight": "Nhiều quy trình khác nhau.",
+      "subtitle": "Cùng một công nghệ AI vận hành cho nhà sáng tạo, khách sạn, nhà hàng, phòng gym, công ty bất động sản và mọi doanh nghiệp tạo nội dung."
+    },
+    "dividerLabel": "Ngành Nghề"
+  },
+  "features": {
+    "eyebrow": "Nền Tảng",
+    "titlePre": "Một nền tảng, ",
+    "titleHighlight": "đầy đủ tính năng",
+    "subtitle": "Một bộ công cụ AI hoàn chỉnh để vận hành marketing, giao tiếp và bán hàng tự động.",
+    "items": {
+      "posting": "Tự Động Đăng Bài",
+      "googleBusiness": "Google Business",
+      "line": "Đăng Bài LINE",
+      "whatsapp": "Đăng Bài WhatsApp",
+      "analytics": "Phân Tích",
+      "multilang": "Đa Ngôn Ngữ"
+    }
+  },
+  "why": {
+    "eyebrow": "Tại Sao Chọn Volaly",
+    "titleLine1": "Nội dung của bạn đã hoạt động hiệu quả.",
+    "titleLine2": "Volaly giúp nó hoạt động mạnh mẽ hơn.",
+    "subtitle": "Tiếp tục sử dụng YouTube, Instagram, TikTok, Facebook và các công cụ hiện có của bạn. Volaly kết nối mọi thứ và tự động biến mỗi lần tải lên thành doanh thu, khả năng hiển thị và trải nghiệm khách hàng được hỗ trợ bởi AI.",
+    "cards": [
+      { "title": "Một Lần Tải Lên", "desc": "Tải lên một lần hoặc kết nối tài khoản mạng xã hội của bạn. Volaly tự động xử lý mọi thứ còn lại." },
+      { "title": "Ưu Tiên Khả Năng Hiển Thị", "desc": "Mỗi lần tải lên trở thành nội dung cho mọi nền tảng — tự động và không cần nỗ lực thêm." },
+      { "title": "Hoạt Động Với Công Cụ Hiện Có Của Bạn", "desc": "Không cần thay thế YouTube, Instagram hay TikTok. Volaly xây dựng dựa trên các nền tảng đó." },
+      { "title": "Luôn Học Hỏi", "desc": "Mỗi lần tải lên mới mở rộng kiến thức AI, cải thiện các cuộc trò chuyện với khách hàng và củng cố doanh nghiệp của bạn." }
+    ],
+    "traditional": {
+      "label": "Quy Trình Truyền Thống",
+      "steps": ["Tải Lên", "Một Nền Tảng", "Công Việc Thủ Công", "Lặp Lại"]
+    },
+    "volalyFlow": {
+      "label": "Quy Trình Volaly",
+      "upload": "Tải Lên",
+      "ai": "Volaly AI",
+      "visibilitySuite": "Visibility Suite",
+      "growth": "Tăng Trưởng Tự Động"
+    },
+    "bottom": {
+      "textPre": "Bạn đã tạo nội dung rồi. ",
+      "textHighlight": "Volaly giúp mỗi lần tải lên hoạt động mạnh mẽ hơn.",
+      "cta": "Xem Volaly Hoạt Động"
+    }
+  },
+  "faq": {
+    "eyebrow": "Câu Hỏi Thường Gặp",
+    "titlePre": "Câu hỏi ",
+    "titleHighlight": "thường gặp",
+    "subtitle": "Mọi thứ bạn cần biết về cách Volaly giúp doanh nghiệp của bạn phát triển."
+  },
+  "finalCta": {
+    "titlePre": "Biến khả năng hiển thị thành ",
+    "titleHighlight": "doanh thu.",
+    "subtitle": "Đặt lịch demo và xem Volaly giúp doanh nghiệp của bạn phát triển tự động như thế nào.",
+    "viewDemo": "Xem Demo",
+    "bookConsultation": "Đặt Lịch Tư Vấn"
+  }
+}

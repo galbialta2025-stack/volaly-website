@@ -1,0 +1,119 @@
+{
+  "seo": {
+    "title": "Pricing — Choose How You Want To Grow | Volaly",
+    "description": "Three plans built around your growth. Creator Partner (free), Creator ($199), Creator Pro ($499), Creator Elite ($999). Revenue share decreases as you scale."
+  },
+  "hero": {
+    "eyebrow": "Pricing",
+    "titleLine1": "Choose How You",
+    "titleLine2": "Want To Grow.",
+    "subtitle": "Start with the plan that fits today. Upgrade whenever your business grows."
+  },
+  "plans": {
+    "partner": {
+      "badge": "Invitation Only",
+      "name": "Creator Partner",
+      "price": "Free",
+      "priceSub": "Revenue share only",
+      "desc": "Grow with Volaly at zero cost. We earn when you earn.",
+      "cta": "Apply Now",
+      "requirements": ["5,000+ Followers", "OR Approved Application"],
+      "revenueLabels": ["Digital Products", "Merch", "Memberships"],
+      "features": ["Revenue Suite", "Creator Page", "AI FAQ", "Voice AI", "Smart Shop"]
+    },
+    "creator": {
+      "name": "Creator",
+      "price": "$199",
+      "priceSub": "/ month",
+      "desc": "Everything you need to monetise and grow your content.",
+      "cta": "Start Free Trial",
+      "revenueLabels": ["Digital Products", "Merch", "Memberships"],
+      "features": ["Revenue Suite", "Visibility Suite", "Smart Shorts", "Auto Publishing", "AI Blog Writer", "Newsletter"]
+    },
+    "pro": {
+      "badge": "Most Popular",
+      "name": "Creator Pro",
+      "price": "$499",
+      "priceSub": "/ month",
+      "desc": "Lower revenue share. More automation. Built for serious growth.",
+      "cta": "Upgrade",
+      "revenueLabels": ["Digital Products", "Merch", "Memberships"],
+      "features": ["Everything in Creator", "Multi-language Publishing", "Advanced Analytics", "Priority Support", "API Access", "Teams"]
+    },
+    "elite": {
+      "badge": "Enterprise",
+      "name": "Creator Elite",
+      "price": "$999",
+      "priceSub": "/ month",
+      "desc": "Maximum automation, minimum revenue share. For top creators and agencies.",
+      "cta": "Contact Sales",
+      "revenueLabels": ["Digital Products", "Merch", "Memberships"],
+      "features": ["Everything in Creator Pro", "White Label", "Dedicated Account Manager", "Custom Integrations", "SLA", "Unlimited Teams"]
+    },
+    "requirementsLabel": "Requirements",
+    "revenueShareLabel": "Revenue Share",
+    "includedLabel": "Included"
+  },
+  "journey": {
+    "eyebrow": "Upgrade Journey",
+    "titleLine1": "The More You Grow,",
+    "titleLine2": "The Less You Pay.",
+    "subtitle": "Revenue share decreases at every level while automation, AI capabilities and scaling features increase. Growth always rewards you.",
+    "steps": [
+      { "sub": "Invitation Only", "tag": "Free", "headline": "Zero cost to start.", "desc": "We grow together. Higher revenue share while you build your audience — no monthly fees." },
+      { "sub": "$199 / month", "tag": "20% share", "headline": "Lower share. More automation.", "desc": "Pay a fixed monthly fee and keep more of every sale. Full Revenue + Visibility Suites included." },
+      { "sub": "$499 / month", "tag": "15% share", "headline": "Built for serious scale.", "desc": "Advanced AI features, multi-language publishing, teams and priority support." },
+      { "sub": "$999 / month", "tag": "10% share", "headline": "Maximum power. Minimum share.", "desc": "White-label, custom integrations, dedicated manager and the lowest revenue share on the platform." }
+    ]
+  },
+  "compare": {
+    "eyebrow": "Compare Plans",
+    "titlePre": "Everything side ",
+    "titleHighlight": "by side.",
+    "featureHeader": "Feature",
+    "rows": {
+      "revenueSuite": "Revenue Suite",
+      "visibilitySuite": "Visibility Suite",
+      "ai": "AI (FAQ + Voice)",
+      "smartShorts": "Smart Shorts",
+      "automation": "Automation",
+      "support": "Support",
+      "apiAccess": "API Access",
+      "whiteLabel": "White Label",
+      "teams": "Teams",
+      "analytics": "Analytics",
+      "multilang": "Multi-language"
+    },
+    "values": {
+      "basic": "Basic",
+      "full": "Full",
+      "advanced": "Advanced",
+      "custom": "Custom",
+      "email": "Email",
+      "priority": "Priority",
+      "dedicated": "Dedicated",
+      "standard": "Standard",
+      "upTo5": "Up to 5",
+      "unlimited": "Unlimited"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "titlePre": "Pricing ",
+    "titleHighlight": "questions answered.",
+    "items": [
+      { "q": "Why revenue sharing?", "a": "Revenue sharing aligns our success with yours. We only earn when you earn — so Volaly is always motivated to maximise your revenue. As you grow and upgrade to paid plans, the revenue share decreases and you keep more of every sale." },
+      { "q": "Can I upgrade anytime?", "a": "Yes. You can upgrade or downgrade your plan at any time from your dashboard. Upgrades take effect immediately; downgrades apply at the start of your next billing cycle." },
+      { "q": "Do I own my content?", "a": "100%. Your content is always yours. Volaly never claims ownership of anything you create or upload. We process it to generate additional content formats — all of which belong to you." },
+      { "q": "Why is Creator Partner invitation only?", "a": "Creator Partner is our highest-touch plan. We work closely with each partner to train their AI persona, set up their shop and optimise their growth strategy. Keeping it invitation-only ensures we can deliver a premium experience to every creator we onboard." },
+      { "q": "What happens if I grow beyond my current plan?", "a": "Great problem to have. You can upgrade at any time — and the higher you go, the lower your revenue share. Growth on Volaly always rewards you with better economics." }
+    ]
+  },
+  "finalCta": {
+    "titleLine1": "Ready To Let Volaly",
+    "titleLine2": "Do The Rest?",
+    "subtitle": "Start free. No credit card required. Upgrade when you're ready to grow faster.",
+    "startFree": "Start Free",
+    "bookDemo": "Book Demo"
+  }
+}

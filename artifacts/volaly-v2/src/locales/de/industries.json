@@ -1,0 +1,284 @@
+{
+  "page": {
+    "viewDemo": "Demo ansehen",
+    "bookConsultation": "Beratung buchen",
+    "resultsDisclaimer": "* Individuelle Ergebnisse können variieren und werden nicht garantiert.",
+    "problemEyebrow": "Das Problem",
+    "problemTitlePre": "Was ",
+    "problemTitlePost": " ausbremst",
+    "systemEyebrow": "Das Volaly-System",
+    "systemTitlePre": "So lässt Volaly ",
+    "systemTitlePost": "Ihr Geschäft wachsen",
+    "systemSubtitle": "Sichtbarkeit, Kommunikation und Umsatz — Ende-zu-Ende automatisiert.",
+    "faqEyebrow": "FAQ",
+    "faqTitlePre": "Häufige Fragen von ",
+    "faqSubtitle": "Alles, was Sie über KI-Sichtbarkeit und Automatisierung für Ihr Geschäft wissen müssen.",
+    "faqCta": "Volaly in Aktion sehen",
+    "relatedLabel": "Auch relevant für Ihre Branche:",
+    "moreIndustriesEyebrow": "Weitere Branchen",
+    "moreIndustriesTitlePre": "Auch gebaut für ",
+    "moreIndustriesTitleHighlight": "Ihre Welt"
+  },
+  "industries": {
+    "gym": {
+      "name": "Fitnessstudios",
+      "eyebrow": "Fitnessstudios",
+      "headline": "Füllen Sie Ihr Studio mit",
+      "highlight": "Mitgliedern im Autopilot",
+      "subtitle": "KI beantwortet jede Anfrage in Sekunden, bucht Probetrainings und bleibt bei Leads dran, bis sie Mitglied werden — während Sie sich aufs Training konzentrieren.",
+      "metaTitle": "KI-Marketing & Automatisierung für Fitnessstudios — Volaly",
+      "metaDescription": "Volaly hilft Fitnessstudios, online gefunden zu werden, jeden Lead sofort zu beantworten und Probetrainings in zahlende Mitglieder zu verwandeln.",
+      "videoTitle": "Volaly für Fitnessstudios — 2-Minuten-Demo",
+      "stats": [
+        { "value": "+124%", "label": "Mehr Probetraining-Buchungen" },
+        { "value": "<30s", "label": "Durchschnittliche Antwortzeit" },
+        { "value": "24/7", "label": "Lead-Nachverfolgung" }
+      ],
+      "pains": [
+        "Leads schreiben nachts und bekommen nie eine Antwort",
+        "Probetraining-Besucher werden nie nachverfolgt",
+        "Social-Content kostet jede Woche Stunden"
+      ],
+      "solutions": [
+        { "title": "Sofortige Lead-Antworten", "desc": "Smart Chat beantwortet Preis- und Kursfragen auf Instagram, LINE und WhatsApp rund um die Uhr." },
+        { "title": "Probetraining-Buchungen", "desc": "Verwandeln Sie jedes Gespräch in ein gebuchtes Probetraining in Ihrem Kalender." },
+        { "title": "Mitglieder-Nachverfolgung", "desc": "Automatische Erinnerungen und Angebote, die Probetrainings in Mitgliedschaften verwandeln." },
+        { "title": "Content im Autopilot", "desc": "Markenkonforme Posts, Reels und Promos werden für Sie erstellt und veröffentlicht." }
+      ]
+    },
+    "dentist": {
+      "name": "Zahnarztpraxen",
+      "eyebrow": "Zahnärzte",
+      "headline": "Volle Behandlungsstühle durch",
+      "highlight": "automatisierte Patiententermine",
+      "subtitle": "Volaly beantwortet Patientenfragen, bucht Termine und reduziert No-Shows — damit sich Ihre Rezeption auf die Betreuung konzentrieren kann.",
+      "metaTitle": "KI-Terminbuchung & Marketing für Zahnärzte — Volaly",
+      "metaDescription": "Volaly hilft Zahnarztpraxen, bei Google besser zu ranken, Patientenanfragen sofort zu beantworten und den Terminkalender automatisch zu füllen.",
+      "videoTitle": "Volaly für Zahnarztpraxen — 2-Minuten-Demo",
+      "stats": [
+        { "value": "+62%", "label": "Mehr gebuchte Termine" },
+        { "value": "-41%", "label": "Weniger No-Shows" },
+        { "value": "5★", "label": "Bewertungswachstum" }
+      ],
+      "pains": [
+        "Die Rezeption ist zu beschäftigt, um jeden Anruf und Chat zu beantworten",
+        "Patienten vergessen Termine",
+        "Wenige Google-Bewertungen im Vergleich zur Konkurrenz"
+      ],
+      "solutions": [
+        { "title": "24/7-Patientenchat", "desc": "Beantworten Sie Behandlungs-, Preis- und Versicherungsfragen sofort in jeder Sprache." },
+        { "title": "Smarte Terminplanung", "desc": "Patienten buchen und verschieben Termine selbst — synchron mit Ihrem Kalender." },
+        { "title": "Erinnerungen", "desc": "Automatische Bestätigungen und Erinnerungen, die No-Shows drastisch reduzieren." },
+        { "title": "Bewertungs-Engine", "desc": "Laden Sie zufriedene Patienten automatisch ein, 5-Sterne-Google-Bewertungen abzugeben." }
+      ]
+    },
+    "medical-beauty": {
+      "name": "Medical-Beauty-Kliniken",
+      "eyebrow": "Medical Beauty",
+      "headline": "Verwandeln Sie Aufmerksamkeit in",
+      "highlight": "hochwertige Behandlungen",
+      "subtitle": "Beauty- und Ästhetikkliniken gewinnen durch Sichtbarkeit und Geschwindigkeit. Volaly liefert beides — beeindruckenden Content plus sofortige, markenkonforme Beratungen.",
+      "metaTitle": "KI-Marketing für Medical-Beauty- & Ästhetikkliniken — Volaly",
+      "metaDescription": "Volaly erstellt markenkonformen Content, beantwortet jede Anfrage sofort und bucht Beratungstermine für Medical-Beauty- und Ästhetikkliniken.",
+      "videoTitle": "Volaly für Medical-Beauty-Kliniken — 2-Minuten-Demo",
+      "stats": [
+        { "value": "+3,1x", "label": "Beratungsanfragen" },
+        { "value": "+38%", "label": "Durchschnittlicher Umsatzzuwachs" },
+        { "value": "6+", "label": "Automatisierte Kanäle" }
+      ],
+      "pains": [
+        "Anfragen kommen gleichzeitig aus 5 verschiedenen Kanälen",
+        "Content muss jeden einzelnen Tag hochwertig aussehen",
+        "Hochwertige Leads kühlen ohne Nachverfolgung ab"
+      ],
+      "solutions": [
+        { "title": "Premium-Visuals", "desc": "Smart Images und Shorts erstellen täglich polierten, markenkonformen Content." },
+        { "title": "Beratungsbuchung", "desc": "Interesse qualifizieren und bezahlte Beratungen automatisch buchen." },
+        { "title": "Upsell-Flows", "desc": "Smart Sale empfiehlt Pakete und Folgebehandlungen." },
+        { "title": "Einheitlicher Posteingang", "desc": "Instagram, LINE, WhatsApp und Web-Chat an einem KI-gestützten Ort." }
+      ]
+    },
+    "visa-agency": {
+      "name": "Visa-Agenturen",
+      "eyebrow": "Visa-Agenturen",
+      "headline": "Beantworten Sie Visafragen",
+      "highlight": "sofort, in jeder Sprache",
+      "subtitle": "Volaly übernimmt wiederkehrende Fragen zu Dokumenten und Anforderungen rund um die Uhr, qualifiziert Antragsteller und bucht Beratungen für Ihr Team.",
+      "metaTitle": "KI-Automatisierung für Visa-Agenturen — Volaly",
+      "metaDescription": "Volaly beantwortet Visafragen rund um die Uhr in jeder Sprache, qualifiziert Antragsteller und bucht automatisch Beratungen für Visa-Agenturen.",
+      "videoTitle": "Volaly für Visa-Agenturen — 2-Minuten-Demo",
+      "stats": [
+        { "value": "90%", "label": "Automatisch beantwortete Fragen" },
+        { "value": "40+", "label": "Unterstützte Sprachen" },
+        { "value": "24/7", "label": "Verfügbarkeit" }
+      ],
+      "pains": [
+        "Dieselben Fragen werden hunderte Mal pro Woche gestellt",
+        "Kunden schreiben in vielen verschiedenen Sprachen",
+        "Qualifizierte Antragsteller gehen im Posteingang verloren"
+      ],
+      "solutions": [
+        { "title": "Mehrsprachige KI", "desc": "Antworten Sie rund um die Uhr präzise in der Sprache des Antragstellers." },
+        { "title": "Dokumentenbegleitung", "desc": "Führen Sie Antragsteller Schritt für Schritt durch Anforderungen und Checklisten." },
+        { "title": "Lead-Qualifizierung", "desc": "Nur ernsthafte, qualifizierte Antragsteller erreichen Ihre Berater." },
+        { "title": "Beratungsbuchung", "desc": "Bestätigte Termine direkt in Ihrem Kalender." }
+      ]
+    },
+    "real-estate": {
+      "name": "Immobilien",
+      "eyebrow": "Immobilien",
+      "headline": "Qualifizieren Sie Käufer und",
+      "highlight": "buchen Sie Besichtigungen automatisch",
+      "subtitle": "Jede Immobilienanfrage erhält eine sofortige, fundierte Antwort. Volaly qualifiziert Budget und Absicht und bucht dann die Besichtigung für Ihre Makler.",
+      "metaTitle": "KI-Lead-Qualifizierung für Immobilienagenturen — Volaly",
+      "metaDescription": "Volaly beantwortet jede Immobilienanfrage sofort, qualifiziert Käufer und bucht Besichtigungen automatisch für Immobilienagenturen.",
+      "videoTitle": "Volaly für Immobilien — 2-Minuten-Demo",
+      "stats": [
+        { "value": "+87%", "label": "Mehr gebuchte Besichtigungen" },
+        { "value": "<1min", "label": "Erste Antwortzeit" },
+        { "value": "100%", "label": "Nachverfolgte Leads" }
+      ],
+      "pains": [
+        "Käufer kontaktieren drei Agenturen — die schnellste gewinnt",
+        "Makler verschwenden Zeit mit unqualifizierten Leads",
+        "Angebote brauchen ständig neuen Content"
+      ],
+      "solutions": [
+        { "title": "Sofortige Antwort", "desc": "Seien Sie jedes Mal die erste Agentur, die antwortet." },
+        { "title": "Käufer-Qualifizierung", "desc": "Budget, Zeitrahmen und Absicht werden erfasst, bevor Ihr Makler einsteigt." },
+        { "title": "Besichtigungsplaner", "desc": "Bestätigte Besichtigungen direkt im Maklerkalender gebucht." },
+        { "title": "Angebots-Content", "desc": "Automatisierte Immobilien-Posts, Flyer und Kurzvideos." }
+      ]
+    },
+    "social-media-influencer": {
+      "name": "Social-Media-Influencer",
+      "eyebrow": "Creator & Influencer",
+      "headline": "Mehr posten, schneller antworten,",
+      "highlight": "alles monetarisieren",
+      "subtitle": "Volaly produziert täglichen Content, übernimmt DMs und Markenanfragen und verwandelt Ihr Publikum in ein echtes, monetarisiertes Geschäft.",
+      "metaTitle": "KI-Content & DM-Automatisierung für Influencer — Volaly",
+      "metaDescription": "Volaly erstellt täglichen Content, übernimmt DMs und Markenanfragen und hilft Social-Media-Influencern, ihr Publikum zu monetarisieren.",
+      "videoTitle": "Volaly für Creator — 2-Minuten-Demo",
+      "stats": [
+        { "value": "10x", "label": "Schnellerer Content-Output" },
+        { "value": "0", "label": "Verpasste DMs" },
+        { "value": "+38%", "label": "Umsatzzuwachs" }
+      ],
+      "pains": [
+        "Content-Produktion frisst die ganze Woche",
+        "Tausende unbeantwortete DMs",
+        "Markendeals gehen durch langsame Antworten verloren"
+      ],
+      "solutions": [
+        { "title": "Tägliche Content-Engine", "desc": "Smart Shorts und Images halten Ihren Feed lebendig, ohne Sie auszubrennen." },
+        { "title": "DM-Automatisierung", "desc": "KI antwortet Fans und filtert echte Geschäftsanfragen heraus." },
+        { "title": "Markendeal-Posteingang", "desc": "Kooperationsanfragen qualifiziert und in Ihrem CRM organisiert." },
+        { "title": "Monetarisierungs-Flows", "desc": "Verkaufen Sie Produkte, Kurse und Dienstleistungen direkt im Chat." }
+      ]
+    },
+    "car-rental": {
+      "name": "Autovermietung",
+      "eyebrow": "Autovermietung",
+      "headline": "Automatisierte Angebote und",
+      "highlight": "Buchungen für jedes Fahrzeug",
+      "subtitle": "Volaly erstellt Angebote, prüft die Verfügbarkeit und bestätigt Mietverträge rund um die Uhr — damit kein Reisender je auf eine Antwort warten muss.",
+      "metaTitle": "KI-Buchungsautomatisierung für Autovermietungen — Volaly",
+      "metaDescription": "Volaly erstellt Angebote, prüft die Verfügbarkeit und bestätigt Mietwagenbuchungen automatisch, rund um die Uhr, in jeder Sprache.",
+      "videoTitle": "Volaly für Autovermietung — 2-Minuten-Demo",
+      "stats": [
+        { "value": "+71%", "label": "Mehr bestätigte Mietverträge" },
+        { "value": "24/7", "label": "Angebote und Buchung" },
+        { "value": "40+", "label": "Sprachen" }
+      ],
+      "pains": [
+        "Reisende fragen nachts um 3 Uhr nach Angeboten",
+        "Verfügbarkeitsfragen wiederholen sich endlos",
+        "Buchungen gehen an schnellere Konkurrenten verloren"
+      ],
+      "solutions": [
+        { "title": "Sofortige Angebote", "desc": "Tarife, Versicherung und Extras in Sekunden erklärt." },
+        { "title": "Verfügbarkeitsprüfung", "desc": "KI bestätigt, welche Fahrzeuge für die gewünschten Termine frei sind." },
+        { "title": "Buchungsbestätigung", "desc": "Kautionen, Dokumente und Abholdetails werden im Chat abgewickelt." },
+        { "title": "Lokale Sichtbarkeit", "desc": "Besseres Ranking auf Google Maps, wo Reisende suchen." }
+      ]
+    },
+    "hotel": {
+      "name": "Hotels & Resorts",
+      "eyebrow": "Hotels & Resorts",
+      "headline": "Mehr Zimmer füllen mit",
+      "highlight": "Direktbuchungen",
+      "subtitle": "Volaly beantwortet Gästefragen sofort, treibt Direktbuchungen an und steigert Ihre 5-Sterne-Bewertungen — und reduziert die OTA-Abhängigkeit.",
+      "metaTitle": "KI-Gästekommunikation & Direktbuchungen für Hotels — Volaly",
+      "metaDescription": "Volaly beantwortet Gästefragen rund um die Uhr, treibt Direktbuchungen für Hotels an und steigert 5-Sterne-Bewertungen — und reduziert die OTA-Provision.",
+      "videoTitle": "Volaly für Hotels — 2-Minuten-Demo",
+      "stats": [
+        { "value": "+46%", "label": "Mehr Direktbuchungen" },
+        { "value": "5★", "label": "Bewertungswachstum" },
+        { "value": "24/7", "label": "Gästesupport" }
+      ],
+      "pains": [
+        "Hohe OTA-Provision auf jede Buchung",
+        "Gäste stellen die ganze Nacht die gleichen Fragen",
+        "Bewertungen entscheiden über Buchungen — und Ihre sind dünn"
+      ],
+      "solutions": [
+        { "title": "Direktbuchungs-Chat", "desc": "Führen Sie Gäste von der Frage zur bestätigten Direktbuchung." },
+        { "title": "24/7-Concierge", "desc": "Check-in-, Ausstattungs- und Transferfragen werden sofort beantwortet." },
+        { "title": "Bewertungs-Engine", "desc": "Sammeln Sie automatisch authentische 5-Sterne-Bewertungen nach jedem Aufenthalt." },
+        { "title": "Google-Sichtbarkeit", "desc": "Besseres Ranking auf Maps und in der Suche an Ihrem Reiseziel." }
+      ]
+    },
+    "bar": {
+      "name": "Bars & Nightlife",
+      "eyebrow": "Bars & Nightlife",
+      "headline": "Füllen Sie den Laden",
+      "highlight": "jeden einzelnen Abend",
+      "subtitle": "Event-Promos, Tischreservierungen und sofortige Antworten — Volaly hält Ihre Bar sichtbar und Ihre Tische gebucht.",
+      "metaTitle": "KI-Marketing & Reservierungen für Bars und Nightlife — Volaly",
+      "metaDescription": "Volaly bewirbt Ihre Events, antwortet Gästen sofort und füllt Tische mit automatisierten Reservierungen für Bars und Nightlife-Locations.",
+      "videoTitle": "Volaly für Bars — 2-Minuten-Demo",
+      "stats": [
+        { "value": "+2,4x", "label": "Tischreservierungen" },
+        { "value": "Täglich", "label": "Event-Content" },
+        { "value": "24/7", "label": "Gästeantworten" }
+      ],
+      "pains": [
+        "Jedes Event braucht neuen Promo-Content",
+        "Tischanfragen kommen zu Stoßzeiten per DM",
+        "Spontanbesuche hängen davon ab, online gefunden zu werden"
+      ],
+      "solutions": [
+        { "title": "Event-Promos", "desc": "Flyer, Reels und Posts für jeden Abend, automatisch generiert." },
+        { "title": "Tischbuchung", "desc": "Reservierungen werden im Chat ohne Personalaufwand bestätigt." },
+        { "title": "Gästeliste & VIP", "desc": "Stammgäste und VIP-Gäste erfassen und in Ihrem CRM organisieren." },
+        { "title": "Lokale Entdeckung", "desc": "Erscheinen Sie bei Google und Social, wenn Menschen in der Nähe nach Nightlife suchen." }
+      ]
+    },
+    "restaurant": {
+      "name": "Restaurants",
+      "eyebrow": "Restaurants",
+      "headline": "Jeden Tisch füllen mit",
+      "highlight": "sofortigen Reservierungen",
+      "subtitle": "Volaly übernimmt Reservierungen, Menüfragen und Lieferanfragen auf jedem Kanal — und hält Ihren Feed appetitlich.",
+      "metaTitle": "KI-Reservierungen & Marketing für Restaurants — Volaly",
+      "metaDescription": "Volaly nimmt Reservierungen an, beantwortet Menüfragen und bewirbt Ihr Restaurant automatisch auf Google, LINE, WhatsApp und Social Media.",
+      "videoTitle": "Volaly für Restaurants — 2-Minuten-Demo",
+      "stats": [
+        { "value": "+58%", "label": "Mehr Reservierungen" },
+        { "value": "5★", "label": "Bewertungswachstum" },
+        { "value": "6+", "label": "Automatisierte Kanäle" }
+      ],
+      "pains": [
+        "Das Telefon klingelt während des Abendandrangs",
+        "Fragen zu Menü und Öffnungszeiten hören nie auf",
+        "Food-Content muss täglich großartig aussehen"
+      ],
+      "solutions": [
+        { "title": "Reservierungs-KI", "desc": "Buchungen werden sofort auf Web, LINE, WhatsApp und Instagram bestätigt." },
+        { "title": "Menü-Assistent", "desc": "Gerichte, Allergene, Öffnungszeiten und Lieferung werden automatisch beantwortet." },
+        { "title": "Food-Content", "desc": "Appetitliche Posts und Kurzvideos werden für Sie veröffentlicht." },
+        { "title": "Bewertungswachstum", "desc": "Verwandeln Sie zufriedene Gäste in einen Strom von 5-Sterne-Google-Bewertungen." }
+      ]
+    }
+  }
+}

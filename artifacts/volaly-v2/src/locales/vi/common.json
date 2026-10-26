@@ -1,0 +1,30 @@
+{
+  "footer": {
+    "tagline": "Nền tảng tăng trưởng doanh nghiệp. Biến khả năng hiển thị thành doanh thu với AI.",
+    "platform": "Nền Tảng",
+    "visibilitySuite": "Visibility Suite",
+    "howItWorks": "Cách Hoạt Động",
+    "capabilities": "Tính Năng",
+    "company": "Công Ty",
+    "industries": "Ngành Nghề",
+    "faq": "Câu Hỏi Thường Gặp",
+    "contact": "Liên Hệ",
+    "privacyPolicy": "Chính Sách Bảo Mật",
+    "terms": "Điều Khoản",
+    "cookiePolicy": "Chính Sách Cookie",
+    "followUs": "Theo Dõi Chúng Tôi",
+    "disclaimer": "* Kết quả cá nhân có thể khác nhau và không được đảm bảo. Số liệu thống kê hiển thị đại diện cho kết quả được báo cáo bởi một số khách hàng nhất định và có thể không phản ánh kết quả điển hình. Hiệu suất trong quá khứ không phải là chỉ báo cho kết quả trong tương lai.",
+    "copyright": "Đã đăng ký bản quyền."
+  },
+  "nav": {
+    "visibility": "Khả Năng Hiển Thị",
+    "howItWorks": "Cách Hoạt Động",
+    "industries": "Ngành Nghề",
+    "platform": "Nền Tảng",
+    "faq": "Câu Hỏi Thường Gặp",
+    "viewDemo": "Xem Demo",
+    "chatAriaLabel": "Trò chuyện với Volaly AI",
+    "toggleMenuAriaLabel": "Bật/tắt menu",
+    "mainNavigationAriaLabel": "Điều hướng chính"
+  }
+}

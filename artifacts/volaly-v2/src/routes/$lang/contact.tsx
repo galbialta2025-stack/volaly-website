@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 import { Mail, MessageCircle, CheckCircle, Send, Clock, Globe } from "lucide-react";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { SEO } from "@/components/SEO";
@@ -13,47 +14,33 @@ export const Route = createFileRoute("/$lang/contact")({
 
 const WEBHOOK_URL = import.meta.env.VITE_N8N_CHAT_WEBHOOK as string | undefined;
 
-const infoCards = [
-  {
-    icon: Mail,
-    title: "Email",
-    value: "info@volaly.com",
-    href: "mailto:info@volaly.com",
-    accent: "text-brand-orange",
-  },
-  {
-    icon: Clock,
-    title: "Response time",
-    value: "Within 24 hours",
-    href: null,
-    accent: "text-brand-blue",
-  },
-  {
-    icon: Globe,
-    title: "Languages",
-    value: "English · Deutsch · ภาษาไทย",
-    href: null,
-    accent: "text-brand-purple",
-  },
-  {
-    icon: MessageCircle,
-    title: "Live Chat",
-    value: "Chat with Volaly AI now",
-    href: null,
-    accent: "text-brand-orange",
-    action: true,
-  },
+type InfoCardMeta = {
+  key: string;
+  icon: typeof Mail;
+  href: string | null;
+  accent: string;
+  action?: boolean;
+};
+
+const infoCardMeta: InfoCardMeta[] = [
+  { key: "email", icon: Mail, href: "mailto:info@volaly.com", accent: "text-brand-orange" },
+  { key: "responseTime", icon: Clock, href: null, accent: "text-brand-blue" },
+  { key: "languages", icon: Globe, href: null, accent: "text-brand-purple" },
+  { key: "liveChat", icon: MessageCircle, href: null, accent: "text-brand-orange", action: true },
 ];
 
 function ContactPage() {
   const { lang } = Route.useParams();
+  const { t } = useTranslation("contact");
+  const info = t("info", { returnObjects: true }) as Record<string, { title: string; value: string }>;
+  const subjectOptions = t("form.subjectOptions", { returnObjects: true }) as Record<string, string>;
+
   const contactSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    name: "Contact — Volaly",
+    name: t("seo.title"),
     url: `https://volaly.com/${lang}/contact`,
-    description:
-      "Contact the Volaly team. We respond within 24 hours in English, German or Thai.",
+    description: t("seo.description"),
     publisher: { "@id": "https://volaly.com/#organization" },
   };
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -100,16 +87,16 @@ function ContactPage() {
   return (
     <>
       <SEO
-        title="Contact — Volaly"
-        description="Get in touch with the Volaly team. Questions, demo requests or partnership enquiries — we respond within 24 hours in English, German or Thai."
+        title={t("seo.title")}
+        description={t("seo.description")}
         canonical={`https://volaly.com/${lang}/contact`}
       />
       <JsonLd schema={contactSchema} />
 
       <PageHeader
-        eyebrow="Contact"
-        title="Get in touch"
-        subtitle="Questions, demo requests or partnership enquiries — write to us and we'll get back to you within 24 hours."
+        eyebrow={t("header.eyebrow")}
+        title={t("header.title")}
+        subtitle={t("header.subtitle")}
       />
 
       <section className="pb-28 pt-4">
@@ -124,9 +111,9 @@ function ContactPage() {
                     <span className="grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-brand-orange/20 to-brand-blue/20">
                       <CheckCircle className="h-8 w-8 text-brand-orange" />
                     </span>
-                    <h2 className="text-xl font-bold text-foreground">Message sent!</h2>
+                    <h2 className="text-xl font-bold text-foreground">{t("form.successTitle")}</h2>
                     <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-                      Thanks for reaching out. We'll get back to you within 24 hours.
+                      {t("form.successBody")}
                     </p>
                     <Button
                       variant="hero"
@@ -136,7 +123,7 @@ function ContactPage() {
                         setStatus("idle");
                       }}
                     >
-                      Send another message
+                      {t("form.sendAnother")}
                     </Button>
                   </div>
                 ) : (
@@ -144,13 +131,13 @@ function ContactPage() {
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div className="space-y-1.5">
                         <label className="text-xs font-semibold text-foreground" htmlFor="name">
-                          Name <span className="text-brand-orange">*</span>
+                          {t("form.nameLabel")} <span className="text-brand-orange">*</span>
                         </label>
                         <input
                           id="name"
                           type="text"
                           required
-                          placeholder="Jane Smith"
+                          placeholder={t("form.namePlaceholder")}
                           className={inputClass}
                           value={form.name}
                           onChange={set("name")}
@@ -159,13 +146,13 @@ function ContactPage() {
                       </div>
                       <div className="space-y-1.5">
                         <label className="text-xs font-semibold text-foreground" htmlFor="email">
-                          Email <span className="text-brand-orange">*</span>
+                          {t("form.emailLabel")} <span className="text-brand-orange">*</span>
                         </label>
                         <input
                           id="email"
                           type="email"
                           required
-                          placeholder="jane@example.com"
+                          placeholder={t("form.emailPlaceholder")}
                           className={inputClass}
                           value={form.email}
                           onChange={set("email")}
@@ -176,7 +163,7 @@ function ContactPage() {
 
                     <div className="space-y-1.5">
                       <label className="text-xs font-semibold text-foreground" htmlFor="subject">
-                        Subject
+                        {t("form.subjectLabel")}
                       </label>
                       <select
                         id="subject"
@@ -185,24 +172,22 @@ function ContactPage() {
                         onChange={set("subject")}
                         disabled={status === "sending"}
                       >
-                        <option value="">Please select…</option>
-                        <option value="Book a demo">Book a demo</option>
-                        <option value="Pricing & packages">Pricing & packages</option>
-                        <option value="Technical support">Technical support</option>
-                        <option value="Partnership">Partnership</option>
-                        <option value="Other">Other</option>
+                        <option value="">{t("form.subjectPlaceholder")}</option>
+                        {Object.entries(subjectOptions).map(([key, label]) => (
+                          <option key={key} value={label}>{label}</option>
+                        ))}
                       </select>
                     </div>
 
                     <div className="space-y-1.5">
                       <label className="text-xs font-semibold text-foreground" htmlFor="message">
-                        Message <span className="text-brand-orange">*</span>
+                        {t("form.messageLabel")} <span className="text-brand-orange">*</span>
                       </label>
                       <textarea
                         id="message"
                         required
                         rows={5}
-                        placeholder="Tell us about your business and how we can help…"
+                        placeholder={t("form.messagePlaceholder")}
                         className={`${inputClass} resize-none`}
                         value={form.message}
                         onChange={set("message")}
@@ -212,7 +197,7 @@ function ContactPage() {
 
                     {status === "error" && (
                       <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
-                        Something went wrong. Please try again or email us directly.
+                        {t("form.errorMessage")}
                       </p>
                     )}
 
@@ -224,16 +209,16 @@ function ContactPage() {
                       disabled={status === "sending" || !form.name || !form.email || !form.message}
                     >
                       {status === "sending" ? (
-                        "Sending…"
+                        t("form.sending")
                       ) : (
                         <>
-                          Send message <Send className="h-4 w-4" />
+                          {t("form.send")} <Send className="h-4 w-4" />
                         </>
                       )}
                     </Button>
                     <p className="text-center text-xs text-muted-foreground/60">
-                      By submitting you agree to our{" "}
-                      <Link to="/$lang/privacy" params={{ lang }} className="underline hover:text-foreground">Privacy Policy</Link>.
+                      {t("form.agreementPre")}
+                      <Link to="/$lang/privacy" params={{ lang }} className="underline hover:text-foreground">{t("form.privacyLink")}</Link>.
                     </p>
                   </form>
                 )}
@@ -242,60 +227,63 @@ function ContactPage() {
 
             {/* ── Info cards ── */}
             <Stagger className="flex flex-col gap-4" gap={0.07}>
-              {infoCards.map((card) => (
-                <StaggerItem key={card.title}>
-                  {card.href ? (
-                    <a
-                      href={card.href}
-                      className="gradient-border flex items-start gap-4 rounded-[22px] p-5 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow-orange)]"
-                    >
-                      <span className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-orange/15 to-brand-blue/15 ${card.accent}`}>
-                        <card.icon className="h-5 w-5" />
-                      </span>
-                      <div>
-                        <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                          {card.title}
+              {infoCardMeta.map((card) => {
+                const content = info[card.key];
+                return (
+                  <StaggerItem key={card.key}>
+                    {card.href ? (
+                      <a
+                        href={card.href}
+                        className="gradient-border flex items-start gap-4 rounded-[22px] p-5 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow-orange)]"
+                      >
+                        <span className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-orange/15 to-brand-blue/15 ${card.accent}`}>
+                          <card.icon className="h-5 w-5" />
+                        </span>
+                        <div>
+                          <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                            {content.title}
+                          </div>
+                          <div className="mt-1 text-sm font-medium text-foreground">{content.value}</div>
                         </div>
-                        <div className="mt-1 text-sm font-medium text-foreground">{card.value}</div>
-                      </div>
-                    </a>
-                  ) : card.action ? (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        // Trigger the chat bubble in the navbar
-                        const bubble = document.querySelector<HTMLButtonElement>(
-                          'button[aria-label="Chat with Volaly AI"]',
-                        );
-                        bubble?.click();
-                      }}
-                      className="gradient-border flex w-full items-start gap-4 rounded-[22px] p-5 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow-orange)]"
-                    >
-                      <span className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-orange/15 to-brand-blue/15 ${card.accent}`}>
-                        <card.icon className="h-5 w-5" />
-                      </span>
-                      <div className="text-left">
-                        <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                          {card.title}
+                      </a>
+                    ) : card.action ? (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          // Trigger the chat bubble in the navbar
+                          const bubble = document.querySelector<HTMLButtonElement>(
+                            'button[aria-label="Chat with Volaly AI"]',
+                          );
+                          bubble?.click();
+                        }}
+                        className="gradient-border flex w-full items-start gap-4 rounded-[22px] p-5 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow-orange)]"
+                      >
+                        <span className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-orange/15 to-brand-blue/15 ${card.accent}`}>
+                          <card.icon className="h-5 w-5" />
+                        </span>
+                        <div className="text-left">
+                          <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                            {content.title}
+                          </div>
+                          <div className="mt-1 text-sm font-medium text-foreground">{content.value}</div>
                         </div>
-                        <div className="mt-1 text-sm font-medium text-foreground">{card.value}</div>
-                      </div>
-                    </button>
-                  ) : (
-                    <div className="gradient-border flex items-start gap-4 rounded-[22px] p-5 shadow-soft">
-                      <span className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-orange/15 to-brand-blue/15 ${card.accent}`}>
-                        <card.icon className="h-5 w-5" />
-                      </span>
-                      <div>
-                        <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                          {card.title}
+                      </button>
+                    ) : (
+                      <div className="gradient-border flex items-start gap-4 rounded-[22px] p-5 shadow-soft">
+                        <span className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-orange/15 to-brand-blue/15 ${card.accent}`}>
+                          <card.icon className="h-5 w-5" />
+                        </span>
+                        <div>
+                          <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                            {content.title}
+                          </div>
+                          <div className="mt-1 text-sm font-medium text-foreground">{content.value}</div>
                         </div>
-                        <div className="mt-1 text-sm font-medium text-foreground">{card.value}</div>
                       </div>
-                    </div>
-                  )}
-                </StaggerItem>
-              ))}
+                    )}
+                  </StaggerItem>
+                );
+              })}
             </Stagger>
           </div>
         </div>

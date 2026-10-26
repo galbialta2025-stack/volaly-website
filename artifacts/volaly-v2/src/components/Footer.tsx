@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Youtube } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Logo } from "./Logo";
-import { industryPages } from "@/lib/industries-data";
+import { useIndustryPages } from "@/lib/industries-data";
 import { useCurrentLocale } from "@/hooks/use-locale";
 
 function FacebookIcon({ className }: { className?: string }) {
@@ -56,7 +57,9 @@ const socials = [
 ];
 
 export function Footer() {
+  const { t } = useTranslation();
   const locale = useCurrentLocale();
+  const industryPages = useIndustryPages();
   return (
     <footer className="relative overflow-hidden border-t border-border/60 bg-background">
       <div className="bg-mesh-soft pointer-events-none absolute inset-0 opacity-60" />
@@ -67,30 +70,30 @@ export function Footer() {
               <Logo withTagline />
             </div>
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-              The Business Growth Platform. Turn visibility into revenue with AI.
+              {t("footer.tagline")}
             </p>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-foreground">Platform</h4>
+            <h4 className="text-sm font-semibold text-foreground">{t("footer.platform")}</h4>
             <ul className="mt-4 space-y-2.5 text-sm">
-              <li><a href={`/${locale}#visibility`} className="text-muted-foreground hover:text-foreground">Visibility Suite</a></li>
-              <li><a href={`/${locale}#how-it-works`} className="text-muted-foreground hover:text-foreground">How It Works</a></li>
-              <li><a href={`/${locale}#platform`} className="text-muted-foreground hover:text-foreground">Capabilities</a></li>
+              <li><a href={`/${locale}#visibility`} className="text-muted-foreground hover:text-foreground">{t("footer.visibilitySuite")}</a></li>
+              <li><a href={`/${locale}#how-it-works`} className="text-muted-foreground hover:text-foreground">{t("footer.howItWorks")}</a></li>
+              <li><a href={`/${locale}#platform`} className="text-muted-foreground hover:text-foreground">{t("footer.capabilities")}</a></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-foreground">Company</h4>
+            <h4 className="text-sm font-semibold text-foreground">{t("footer.company")}</h4>
             <ul className="mt-4 space-y-2.5 text-sm">
-              <li><a href={`/${locale}#industries`} className="text-muted-foreground hover:text-foreground">Industries</a></li>
-              <li><a href={`/${locale}#faq`} className="text-muted-foreground hover:text-foreground">FAQ</a></li>
-              <li><Link to="/$lang/contact" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">Contact</Link></li>
-              <li><Link to="/$lang/privacy" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">Privacy Policy</Link></li>
-              <li><Link to="/$lang/terms" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">Terms</Link></li>
-              <li><Link to="/$lang/cookie-policy" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">Cookie Policy</Link></li>
+              <li><a href={`/${locale}#industries`} className="text-muted-foreground hover:text-foreground">{t("footer.industries")}</a></li>
+              <li><a href={`/${locale}#faq`} className="text-muted-foreground hover:text-foreground">{t("footer.faq")}</a></li>
+              <li><Link to="/$lang/contact" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">{t("footer.contact")}</Link></li>
+              <li><Link to="/$lang/privacy" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">{t("footer.privacyPolicy")}</Link></li>
+              <li><Link to="/$lang/terms" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">{t("footer.terms")}</Link></li>
+              <li><Link to="/$lang/cookie-policy" params={{ lang: locale }} className="text-muted-foreground hover:text-foreground">{t("footer.cookiePolicy")}</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-foreground">Industries</h4>
+            <h4 className="text-sm font-semibold text-foreground">{t("footer.industries")}</h4>
             <ul className="mt-4 grid grid-cols-1 gap-2.5 text-sm sm:grid-cols-2 md:grid-cols-1">
               {industryPages.map((ind) => (
                 <li key={ind.slug}>
@@ -102,7 +105,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-foreground">Follow Us</h4>
+            <h4 className="text-sm font-semibold text-foreground">{t("footer.followUs")}</h4>
             <div className="mt-4 flex gap-3">
               {socials.map(({ Icon, label, href, color }) => (
                 <a
@@ -121,12 +124,10 @@ export function Footer() {
         </div>
         <div className="mt-12 border-t border-border/60 pt-6 space-y-2">
           <p className="text-xs text-muted-foreground/70 max-w-2xl leading-relaxed">
-            * Individual results may vary and are not guaranteed. Statistics shown represent outcomes
-            reported by select clients and may not reflect typical results. Past performance is not
-            indicative of future results.
+            {t("footer.disclaimer")}
           </p>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Volaly. All rights reserved.
+            © {new Date().getFullYear()} Volaly. {t("footer.copyright")}
           </p>
         </div>
       </div>

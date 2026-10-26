@@ -1,0 +1,42 @@
+{
+  "seo": {
+    "title": "Liên Hệ — Volaly",
+    "description": "Liên hệ với nhóm Volaly. Câu hỏi, yêu cầu demo hoặc đề xuất hợp tác — chúng tôi phản hồi trong vòng 24 giờ bằng tiếng Anh, tiếng Đức hoặc tiếng Thái."
+  },
+  "header": {
+    "eyebrow": "Liên Hệ",
+    "title": "Liên hệ với chúng tôi",
+    "subtitle": "Câu hỏi, yêu cầu demo hoặc đề xuất hợp tác — hãy viết cho chúng tôi và chúng tôi sẽ phản hồi trong vòng 24 giờ."
+  },
+  "info": {
+    "email": { "title": "Email", "value": "info@volaly.com" },
+    "responseTime": { "title": "Thời gian phản hồi", "value": "Trong vòng 24 giờ" },
+    "languages": { "title": "Ngôn ngữ", "value": "English · Deutsch · ภาษาไทย" },
+    "liveChat": { "title": "Trò Chuyện Trực Tiếp", "value": "Trò chuyện với Volaly AI ngay" }
+  },
+  "form": {
+    "nameLabel": "Họ tên",
+    "namePlaceholder": "Nguyễn Văn A",
+    "emailLabel": "Email",
+    "emailPlaceholder": "ten@example.com",
+    "subjectLabel": "Chủ đề",
+    "subjectPlaceholder": "Vui lòng chọn…",
+    "subjectOptions": {
+      "demo": "Đặt lịch demo",
+      "pricing": "Giá & gói dịch vụ",
+      "support": "Hỗ trợ kỹ thuật",
+      "partnership": "Hợp tác",
+      "other": "Khác"
+    },
+    "messageLabel": "Nội dung",
+    "messagePlaceholder": "Hãy cho chúng tôi biết về doanh nghiệp của bạn và cách chúng tôi có thể hỗ trợ…",
+    "errorMessage": "Đã xảy ra lỗi. Vui lòng thử lại hoặc gửi email trực tiếp cho chúng tôi.",
+    "sending": "Đang gửi…",
+    "send": "Gửi tin nhắn",
+    "agreementPre": "Bằng việc gửi, bạn đồng ý với ",
+    "privacyLink": "Chính Sách Bảo Mật",
+    "successTitle": "Đã gửi tin nhắn!",
+    "successBody": "Cảm ơn bạn đã liên hệ. Chúng tôi sẽ phản hồi trong vòng 24 giờ.",
+    "sendAnother": "Gửi tin nhắn khác"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "seo": {
+    "title": "Precios — Elige cómo quieres crecer | Volaly",
+    "description": "Tres planes pensados para tu crecimiento. Creator Partner (gratis), Creator (199 $), Creator Pro (499 $), Creator Elite (999 $). La participación en ingresos disminuye a medida que creces."
+  },
+  "hero": {
+    "eyebrow": "Precios",
+    "titleLine1": "Elige cómo",
+    "titleLine2": "quieres crecer.",
+    "subtitle": "Empieza con el plan que se ajuste a hoy. Mejora de plan en cuanto tu negocio crezca."
+  },
+  "plans": {
+    "partner": {
+      "badge": "Solo por invitación",
+      "name": "Creator Partner",
+      "price": "Gratis",
+      "priceSub": "Solo participación en ingresos",
+      "desc": "Crece con Volaly sin ningún coste. Ganamos cuando tú ganas.",
+      "cta": "Solicitar ahora",
+      "requirements": ["5.000+ seguidores", "O solicitud aprobada"],
+      "revenueLabels": ["Productos digitales", "Merchandising", "Membresías"],
+      "features": ["Revenue Suite", "Página de creador", "FAQ con IA", "Voice AI", "Smart Shop"]
+    },
+    "creator": {
+      "name": "Creator",
+      "price": "199 $",
+      "priceSub": "/ mes",
+      "desc": "Todo lo que necesitas para monetizar y hacer crecer tu contenido.",
+      "cta": "Empezar prueba gratuita",
+      "revenueLabels": ["Productos digitales", "Merchandising", "Membresías"],
+      "features": ["Revenue Suite", "Visibility Suite", "Smart Shorts", "Publicación automática", "Redactor de blog con IA", "Newsletter"]
+    },
+    "pro": {
+      "badge": "Más popular",
+      "name": "Creator Pro",
+      "price": "499 $",
+      "priceSub": "/ mes",
+      "desc": "Menor participación en ingresos. Más automatización. Pensado para un crecimiento serio.",
+      "cta": "Mejorar plan",
+      "revenueLabels": ["Productos digitales", "Merchandising", "Membresías"],
+      "features": ["Todo lo de Creator", "Publicación multilingüe", "Analítica avanzada", "Soporte prioritario", "Acceso a la API", "Equipos"]
+    },
+    "elite": {
+      "badge": "Empresas",
+      "name": "Creator Elite",
+      "price": "999 $",
+      "priceSub": "/ mes",
+      "desc": "Automatización máxima, participación en ingresos mínima. Para los mejores creadores y agencias.",
+      "cta": "Contactar con ventas",
+      "revenueLabels": ["Productos digitales", "Merchandising", "Membresías"],
+      "features": ["Todo lo de Creator Pro", "Marca blanca", "Gestor de cuenta dedicado", "Integraciones personalizadas", "SLA", "Equipos ilimitados"]
+    },
+    "requirementsLabel": "Requisitos",
+    "revenueShareLabel": "Participación en ingresos",
+    "includedLabel": "Incluido"
+  },
+  "journey": {
+    "eyebrow": "Recorrido de mejora",
+    "titleLine1": "Cuanto más creces,",
+    "titleLine2": "menos pagas.",
+    "subtitle": "La participación en ingresos disminuye en cada nivel mientras aumentan la automatización, las capacidades de IA y las funciones de escalado. El crecimiento siempre te recompensa.",
+    "steps": [
+      { "sub": "Solo por invitación", "tag": "Gratis", "headline": "Cero coste para empezar.", "desc": "Crecemos juntos. Mayor participación en ingresos mientras construyes tu audiencia — sin cuotas mensuales." },
+      { "sub": "199 $ / mes", "tag": "20 % de participación", "headline": "Menor participación. Más automatización.", "desc": "Paga una cuota mensual fija y conserva más de cada venta. Revenue Suite y Visibility Suite completas incluidas." },
+      { "sub": "499 $ / mes", "tag": "15 % de participación", "headline": "Pensado para una escala seria.", "desc": "Funciones de IA avanzadas, publicación multilingüe, equipos y soporte prioritario." },
+      { "sub": "999 $ / mes", "tag": "10 % de participación", "headline": "Máxima potencia. Mínima participación.", "desc": "Marca blanca, integraciones personalizadas, gestor dedicado y la participación en ingresos más baja de la plataforma." }
+    ]
+  },
+  "compare": {
+    "eyebrow": "Comparar planes",
+    "titlePre": "Todo, lado a ",
+    "titleHighlight": "lado.",
+    "featureHeader": "Función",
+    "rows": {
+      "revenueSuite": "Revenue Suite",
+      "visibilitySuite": "Visibility Suite",
+      "ai": "IA (FAQ + Voice)",
+      "smartShorts": "Smart Shorts",
+      "automation": "Automatización",
+      "support": "Soporte",
+      "apiAccess": "Acceso a la API",
+      "whiteLabel": "Marca blanca",
+      "teams": "Equipos",
+      "analytics": "Analítica",
+      "multilang": "Multilingüe"
+    },
+    "values": {
+      "basic": "Básico",
+      "full": "Completo",
+      "advanced": "Avanzado",
+      "custom": "Personalizado",
+      "email": "Correo electrónico",
+      "priority": "Prioritario",
+      "dedicated": "Dedicado",
+      "standard": "Estándar",
+      "upTo5": "Hasta 5",
+      "unlimited": "Ilimitado"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "titlePre": "Preguntas sobre ",
+    "titleHighlight": "precios respondidas.",
+    "items": [
+      { "q": "¿Por qué participación en ingresos?", "a": "La participación en ingresos alinea nuestro éxito con el tuyo. Solo ganamos cuando tú ganas, así que Volaly siempre está motivada para maximizar tus ingresos. A medida que crezcas y mejores a planes de pago, la participación en ingresos disminuye y conservas más de cada venta." },
+      { "q": "¿Puedo cambiar de plan en cualquier momento?", "a": "Sí. Puedes mejorar o reducir tu plan en cualquier momento desde tu panel. Las mejoras de plan se aplican de inmediato; las reducciones se aplican al inicio de tu siguiente ciclo de facturación." },
+      { "q": "¿El contenido es mío?", "a": "100 %. Tu contenido siempre es tuyo. Volaly nunca reclama la propiedad de nada que crees o subas. Lo procesamos para generar formatos de contenido adicionales, que también te pertenecen." },
+      { "q": "¿Por qué Creator Partner es solo por invitación?", "a": "Creator Partner es nuestro plan con mayor acompañamiento. Trabajamos estrechamente con cada partner para entrenar su persona de IA, configurar su tienda y optimizar su estrategia de crecimiento. Mantenerlo por invitación nos permite ofrecer una experiencia premium a cada creador que incorporamos." },
+      { "q": "¿Qué pasa si crezco más allá de mi plan actual?", "a": "Un gran problema que tener. Puedes mejorar de plan en cualquier momento, y cuanto más subas, menor será tu participación en ingresos. El crecimiento en Volaly siempre te recompensa con mejores condiciones económicas." }
+    ]
+  },
+  "finalCta": {
+    "titleLine1": "¿Listo para que Volaly",
+    "titleLine2": "haga el resto?",
+    "subtitle": "Empieza gratis. No se requiere tarjeta de crédito. Mejora de plan cuando estés listo para crecer más rápido.",
+    "startFree": "Empezar gratis",
+    "bookDemo": "Reservar demo"
+  }
+}

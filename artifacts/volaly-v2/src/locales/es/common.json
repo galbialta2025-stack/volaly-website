@@ -1,0 +1,30 @@
+{
+  "footer": {
+    "tagline": "La plataforma de crecimiento empresarial. Convierte la visibilidad en ingresos con IA.",
+    "platform": "Plataforma",
+    "visibilitySuite": "Visibility Suite",
+    "howItWorks": "Cómo funciona",
+    "capabilities": "Funciones",
+    "company": "Empresa",
+    "industries": "Sectores",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "privacyPolicy": "Política de privacidad",
+    "terms": "Términos",
+    "cookiePolicy": "Política de cookies",
+    "followUs": "Síguenos",
+    "disclaimer": "* Los resultados individuales pueden variar y no están garantizados. Las estadísticas mostradas representan resultados reportados por determinados clientes y pueden no reflejar resultados típicos. El rendimiento pasado no es indicativo de resultados futuros.",
+    "copyright": "Todos los derechos reservados."
+  },
+  "nav": {
+    "visibility": "Visibilidad",
+    "howItWorks": "Cómo funciona",
+    "industries": "Sectores",
+    "platform": "Plataforma",
+    "faq": "FAQ",
+    "viewDemo": "Ver demo",
+    "chatAriaLabel": "Chatear con Volaly AI",
+    "toggleMenuAriaLabel": "Alternar menú",
+    "mainNavigationAriaLabel": "Navegación principal"
+  }
+}

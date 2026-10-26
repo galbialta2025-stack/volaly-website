@@ -1,0 +1,119 @@
+{
+  "seo": {
+    "title": "Giá — Chọn cách bạn muốn phát triển | Volaly",
+    "description": "Ba gói được xây dựng cho sự phát triển của bạn. Creator Partner (miễn phí), Creator (199 $), Creator Pro (499 $), Creator Elite (999 $). Tỷ lệ chia sẻ doanh thu giảm khi bạn mở rộng quy mô."
+  },
+  "hero": {
+    "eyebrow": "Giá",
+    "titleLine1": "Chọn cách bạn",
+    "titleLine2": "muốn phát triển.",
+    "subtitle": "Bắt đầu với gói phù hợp với hiện tại. Nâng cấp bất cứ khi nào doanh nghiệp của bạn phát triển."
+  },
+  "plans": {
+    "partner": {
+      "badge": "Chỉ theo lời mời",
+      "name": "Creator Partner",
+      "price": "Miễn phí",
+      "priceSub": "Chỉ chia sẻ doanh thu",
+      "desc": "Phát triển cùng Volaly với chi phí bằng không. Chúng tôi kiếm được khi bạn kiếm được.",
+      "cta": "Đăng ký ngay",
+      "requirements": ["5.000+ người theo dõi", "HOẶC đơn đăng ký được phê duyệt"],
+      "revenueLabels": ["Sản phẩm số", "Hàng hóa", "Hội viên"],
+      "features": ["Revenue Suite", "Trang Creator", "FAQ AI", "Voice AI", "Smart Shop"]
+    },
+    "creator": {
+      "name": "Creator",
+      "price": "199 $",
+      "priceSub": "/ tháng",
+      "desc": "Mọi thứ bạn cần để kiếm tiền và phát triển nội dung của mình.",
+      "cta": "Bắt đầu dùng thử miễn phí",
+      "revenueLabels": ["Sản phẩm số", "Hàng hóa", "Hội viên"],
+      "features": ["Revenue Suite", "Visibility Suite", "Smart Shorts", "Tự động xuất bản", "Trình viết blog AI", "Bản tin"]
+    },
+    "pro": {
+      "badge": "Phổ biến nhất",
+      "name": "Creator Pro",
+      "price": "499 $",
+      "priceSub": "/ tháng",
+      "desc": "Tỷ lệ chia sẻ doanh thu thấp hơn. Nhiều tự động hóa hơn. Được xây dựng cho sự phát triển nghiêm túc.",
+      "cta": "Nâng cấp",
+      "revenueLabels": ["Sản phẩm số", "Hàng hóa", "Hội viên"],
+      "features": ["Mọi thứ trong Creator", "Xuất bản đa ngôn ngữ", "Phân tích nâng cao", "Hỗ trợ ưu tiên", "Truy cập API", "Nhóm"]
+    },
+    "elite": {
+      "badge": "Doanh nghiệp",
+      "name": "Creator Elite",
+      "price": "999 $",
+      "priceSub": "/ tháng",
+      "desc": "Tự động hóa tối đa, chia sẻ doanh thu tối thiểu. Dành cho những nhà sáng tạo và agency hàng đầu.",
+      "cta": "Liên hệ bộ phận bán hàng",
+      "revenueLabels": ["Sản phẩm số", "Hàng hóa", "Hội viên"],
+      "features": ["Mọi thứ trong Creator Pro", "White Label", "Quản lý tài khoản chuyên biệt", "Tích hợp tùy chỉnh", "SLA", "Nhóm không giới hạn"]
+    },
+    "requirementsLabel": "Yêu cầu",
+    "revenueShareLabel": "Chia sẻ doanh thu",
+    "includedLabel": "Bao gồm"
+  },
+  "journey": {
+    "eyebrow": "Hành trình nâng cấp",
+    "titleLine1": "Bạn phát triển càng nhiều,",
+    "titleLine2": "bạn trả càng ít.",
+    "subtitle": "Tỷ lệ chia sẻ doanh thu giảm ở mỗi cấp độ khi khả năng tự động hóa, AI và tính năng mở rộng quy mô tăng lên. Sự phát triển trên Volaly luôn mang lại phần thưởng cho bạn.",
+    "steps": [
+      { "sub": "Chỉ theo lời mời", "tag": "Miễn phí", "headline": "Không tốn chi phí để bắt đầu.", "desc": "Chúng ta cùng phát triển. Chia sẻ doanh thu cao hơn trong khi bạn xây dựng khán giả — không có phí hàng tháng." },
+      { "sub": "199 $ / tháng", "tag": "Chia sẻ 20%", "headline": "Tỷ lệ chia sẻ thấp hơn. Tự động hóa nhiều hơn.", "desc": "Trả một khoản phí cố định hàng tháng và giữ lại nhiều hơn từ mỗi lần bán. Bao gồm đầy đủ Revenue và Visibility Suite." },
+      { "sub": "499 $ / tháng", "tag": "Chia sẻ 15%", "headline": "Được xây dựng cho quy mô nghiêm túc.", "desc": "Tính năng AI nâng cao, xuất bản đa ngôn ngữ, nhóm và hỗ trợ ưu tiên." },
+      { "sub": "999 $ / tháng", "tag": "Chia sẻ 10%", "headline": "Sức mạnh tối đa. Chia sẻ tối thiểu.", "desc": "White-label, tích hợp tùy chỉnh, quản lý chuyên biệt và tỷ lệ chia sẻ doanh thu thấp nhất trên nền tảng." }
+    ]
+  },
+  "compare": {
+    "eyebrow": "So sánh các gói",
+    "titlePre": "Mọi thứ, cạnh ",
+    "titleHighlight": "nhau.",
+    "featureHeader": "Tính năng",
+    "rows": {
+      "revenueSuite": "Revenue Suite",
+      "visibilitySuite": "Visibility Suite",
+      "ai": "AI (FAQ + Voice)",
+      "smartShorts": "Smart Shorts",
+      "automation": "Tự động hóa",
+      "support": "Hỗ trợ",
+      "apiAccess": "Truy cập API",
+      "whiteLabel": "White Label",
+      "teams": "Nhóm",
+      "analytics": "Phân tích",
+      "multilang": "Đa ngôn ngữ"
+    },
+    "values": {
+      "basic": "Cơ bản",
+      "full": "Đầy đủ",
+      "advanced": "Nâng cao",
+      "custom": "Tùy chỉnh",
+      "email": "Email",
+      "priority": "Ưu tiên",
+      "dedicated": "Chuyên biệt",
+      "standard": "Tiêu chuẩn",
+      "upTo5": "Tối đa 5",
+      "unlimited": "Không giới hạn"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "titlePre": "Giải đáp câu hỏi về ",
+    "titleHighlight": "giá cả.",
+    "items": [
+      { "q": "Tại sao lại chia sẻ doanh thu?", "a": "Chia sẻ doanh thu gắn kết thành công của chúng tôi với thành công của bạn. Chúng tôi chỉ kiếm được khi bạn kiếm được — vì vậy Volaly luôn có động lực để tối đa hóa doanh thu của bạn. Khi bạn phát triển và nâng cấp lên các gói trả phí, tỷ lệ chia sẻ doanh thu giảm và bạn giữ lại nhiều hơn từ mỗi lần bán." },
+      { "q": "Tôi có thể nâng cấp bất cứ lúc nào không?", "a": "Có. Bạn có thể nâng cấp hoặc hạ cấp gói của mình bất cứ lúc nào từ bảng điều khiển. Nâng cấp có hiệu lực ngay lập tức; hạ cấp áp dụng từ đầu kỳ thanh toán tiếp theo." },
+      { "q": "Tôi có sở hữu nội dung của mình không?", "a": "100%. Nội dung của bạn luôn thuộc về bạn. Volaly không bao giờ tuyên bố quyền sở hữu đối với bất cứ điều gì bạn tạo hoặc tải lên. Chúng tôi xử lý nội dung đó để tạo thêm các định dạng nội dung khác — tất cả đều thuộc về bạn." },
+      { "q": "Tại sao Creator Partner chỉ dành cho lời mời?", "a": "Creator Partner là gói được hỗ trợ sát sao nhất của chúng tôi. Chúng tôi làm việc chặt chẽ với từng đối tác để huấn luyện persona AI, thiết lập cửa hàng và tối ưu hóa chiến lược phát triển của họ. Việc giữ gói này chỉ theo lời mời giúp chúng tôi đảm bảo mang lại trải nghiệm cao cấp cho mỗi nhà sáng tạo." },
+      { "q": "Điều gì xảy ra nếu tôi phát triển vượt quá gói hiện tại?", "a": "Đó là một vấn đề tốt để có. Bạn có thể nâng cấp bất cứ lúc nào — và càng lên cao, tỷ lệ chia sẻ doanh thu của bạn càng thấp. Sự phát triển trên Volaly luôn mang lại cho bạn những điều kiện kinh tế tốt hơn." }
+    ]
+  },
+  "finalCta": {
+    "titleLine1": "Sẵn sàng để Volaly",
+    "titleLine2": "làm phần còn lại?",
+    "subtitle": "Bắt đầu miễn phí. Không cần thẻ tín dụng. Nâng cấp khi bạn sẵn sàng phát triển nhanh hơn.",
+    "startFree": "Bắt đầu miễn phí",
+    "bookDemo": "Đặt lịch demo"
+  }
+}
