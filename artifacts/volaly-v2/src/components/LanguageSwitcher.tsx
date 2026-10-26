@@ -53,7 +53,7 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
       {open && (
         <div
           role="menu"
-          className="glass-nav absolute right-0 top-full mt-2 flex items-center gap-1.5 rounded-2xl border border-white/80 p-1.5 shadow-soft"
+          className="glass-nav absolute right-0 top-full mt-2 flex items-center gap-1.5 rounded-2xl border border-white/80 p-1.5 shadow-soft [transform:translateZ(0)]"
         >
           {SUPPORTED_LOCALES.map((locale) => (
             <button
