@@ -15,7 +15,8 @@
     "followUs": "Suivez-nous",
     "disclaimer": "* Les résultats individuels peuvent varier et ne sont pas garantis. Les statistiques présentées correspondent aux résultats rapportés par certains clients et peuvent ne pas refléter des résultats typiques. Les performances passées ne préjugent pas des résultats futurs.",
     "copyright": "Tous droits réservés.",
-    "imprint": "Mentions légales"
+    "imprint": "Mentions légales",
+    "dpa": "Accord de traitement des données (DPA)"
   },
   "nav": {
     "visibility": "Visibilité",
@@ -31,5 +32,8 @@
   "chat": {
     "aiNotice": "Vous discutez avec un assistant IA. Merci de ne pas partager de données personnelles sensibles.",
     "privacyLink": "Politique de confidentialité"
+  },
+  "legal": {
+    "englishOnly": "Nos documents juridiques sont disponibles uniquement en anglais. La version anglaise fait foi."
   }
 }

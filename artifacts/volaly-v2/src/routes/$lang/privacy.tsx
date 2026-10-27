@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { PageHeader } from "@/components/sections/PageHeader";
-import { SEO } from "@/components/SEO";
+import { LegalLayout, LegalList, LegalSection, LegalTable } from "@/components/legal/LegalLayout";
+import { LEGAL_EFFECTIVE_DATE, LEGAL_ENTITY } from "@/lib/legal";
 
 export const Route = createFileRoute("/$lang/privacy")({
   component: PrivacyPage,
@@ -8,167 +8,243 @@ export const Route = createFileRoute("/$lang/privacy")({
 
 function PrivacyPage() {
   const { lang } = Route.useParams();
+  const linkClass = "text-foreground underline underline-offset-2";
+  const mail = (
+    <a href={`mailto:${LEGAL_ENTITY.email}`} className={linkClass}>
+      {LEGAL_ENTITY.email}
+    </a>
+  );
+
   return (
-    <>
-      <SEO
-        title="Privacy Policy — Volaly"
-        description="Read Volaly's Privacy Policy. Learn what data we collect, how we use it, your rights under CCPA, and how to contact us about your personal information."
-        canonical={`https://volaly.com/${lang}/privacy`}
-      />
-      <PageHeader eyebrow="Legal" title="Privacy Policy" subtitle="Effective date: August 1, 2025 · Last updated: August 1, 2025" />
-      <section className="pb-24">
-        <div className="mx-auto max-w-3xl space-y-10 px-6 text-muted-foreground">
+    <LegalLayout
+      slug="privacy"
+      title="Privacy Policy"
+      description="How Volaly (SmartAI Platforms LLC) processes personal data: purposes, legal bases, service providers, international transfers and your rights under the GDPR, Thailand's PDPA and the Swiss FADP."
+      subtitle={`Effective date: ${LEGAL_EFFECTIVE_DATE}`}
+    >
+      <LegalSection title="1. Controller">
+        <p>
+          The controller for the processing described in this policy is {LEGAL_ENTITY.name},{" "}
+          {LEGAL_ENTITY.street}, {LEGAL_ENTITY.city}, {LEGAL_ENTITY.country} ("Volaly", "we",
+          "us"). Volaly is a brand of {LEGAL_ENTITY.name}. For any privacy question or request,
+          contact us at {mail}.
+        </p>
+        <p>
+          This policy applies to our website, our platform and our own business communication. It
+          is designed to meet the requirements of the EU General Data Protection Regulation (GDPR),
+          Thailand's Personal Data Protection Act B.E. 2562 (PDPA) and the Swiss Federal Act on Data
+          Protection (FADP), to the extent these laws apply.
+        </p>
+      </LegalSection>
 
-          <div className="space-y-3">
-            <h2 className="text-lg font-semibold text-foreground">1. Who We Are</h2>
-            <p>
-              Volaly ("Volaly," "we," "us," or "our") is a software-as-a-service platform that helps
-              local businesses improve their online visibility, automate guest communication, and grow
-              revenue. Our registered contact address is hello@thaisolutions.ai.
-            </p>
-          </div>
+      <LegalSection title="2. Data we process on behalf of our customers">
+        <p>
+          Our customers are businesses. When they use Volaly to communicate with their own
+          customers, guests or staff, publish content or manage leads and bookings, we process that
+          personal data on their behalf as a processor. In that case, the customer is the
+          controller and its own privacy notice applies. Our obligations are set out in our{" "}
+          <Link to="/$lang/dpa" params={{ lang }} className={linkClass}>
+            Data Processing Addendum
+          </Link>
+          . If you are a customer, guest or employee of a business that uses Volaly, please contact
+          that business first; we will support it in handling your request.
+        </p>
+      </LegalSection>
 
-          <div className="space-y-3">
-            <h2 className="text-lg font-semibold text-foreground">2. Information We Collect</h2>
-            <p>We may collect the following categories of personal information:</p>
-            <ul className="ml-4 list-disc space-y-1.5">
-              <li><strong>Contact and identity data</strong> — name, email address, phone number, and company name you provide when submitting a form, booking a consultation, or contacting us.</li>
-              <li><strong>Usage and log data</strong> — IP address, browser type, pages visited, time on site, and referring URL, collected automatically when you visit our website.</li>
-              <li><strong>Cookie and tracking data</strong> — information collected through cookies and similar technologies (see Section 5).</li>
-              <li><strong>Communications</strong> — messages you send us via email, chat, or contact forms.</li>
-            </ul>
-            <p>We do not collect sensitive personal information such as Social Security numbers, financial account numbers, or health data through this website.</p>
-          </div>
+      <LegalSection title="3. Data we process as controller, purposes and legal bases">
+        <LegalTable
+          head={["Situation", "Data", "Purpose", "Legal basis"]}
+          rows={[
+            [
+              "Visiting our website",
+              "IP address, date and time, requested page, browser and device information, referrer (server logs of our hosting provider)",
+              "Delivering the website, security, preventing abuse, troubleshooting",
+              "Legitimate interest in a secure, functioning website (GDPR Art. 6(1)(f); PDPA s. 24(5))",
+            ],
+            [
+              "Contact form",
+              "Name, email, subject, message",
+              "Answering your enquiry",
+              "Pre-contractual steps or legitimate interest in answering enquiries (GDPR Art. 6(1)(b), (f); PDPA s. 24(3), (5))",
+            ],
+            [
+              "Website chat (AI assistant)",
+              "Your messages, the conversation history of the session, a random session ID",
+              "Answering your questions about Volaly with an AI assistant",
+              "Pre-contractual steps or legitimate interest (GDPR Art. 6(1)(b), (f); PDPA s. 24(3), (5))",
+            ],
+            [
+              "Creating and using an account",
+              "Company name, email, password (stored as a hash), confirmation of business status, date and version of accepted Terms, language, usage and credit data",
+              "Providing the platform, managing your account, support",
+              "Performance of a contract (GDPR Art. 6(1)(b); PDPA s. 24(3))",
+            ],
+            [
+              "Purchases and billing",
+              "Company and billing details, plan, invoices, payment status (card data is handled by our payment provider, not by us)",
+              "Billing, accounting, tax compliance",
+              "Contract and legal obligations (GDPR Art. 6(1)(b), (c); PDPA s. 24(3), (6))",
+            ],
+            [
+              "Business development",
+              "Business contact details of venues and their representatives (name, role, business, publicly available contact channels), communication history",
+              "Contacting businesses that may be interested in our services and following up on enquiries",
+              "Legitimate interest in B2B marketing (GDPR Art. 6(1)(f); PDPA s. 24(5)); you can object at any time",
+            ],
+            [
+              "Newsletters and product news",
+              "Email, name, company",
+              "Sending information about our services",
+              "Your consent (GDPR Art. 6(1)(a); PDPA s. 19) or, for existing customers, our legitimate interest where permitted by law; you can unsubscribe at any time",
+            ],
+            [
+              "Legal claims",
+              "Data relevant to the dispute",
+              "Establishing, exercising or defending legal claims",
+              "Legitimate interest (GDPR Art. 6(1)(f); PDPA s. 24(5))",
+            ],
+          ]}
+        />
+        <p>
+          Where we rely on legitimate interest, you have the right to object (see Section 8). We do
+          not sell personal data and do not use it for advertising profiles. We do not use your chat
+          messages to train AI models.
+        </p>
+      </LegalSection>
 
-          <div className="space-y-3">
-            <h2 className="text-lg font-semibold text-foreground">3. How We Use Your Information</h2>
-            <p>We use the information we collect to:</p>
-            <ul className="ml-4 list-disc space-y-1.5">
-              <li>Respond to your enquiries and provide our services.</li>
-              <li>Send you product updates, promotional communications, and offers (you may opt out at any time).</li>
-              <li>Improve and personalise the website experience.</li>
-              <li>Analyse usage patterns and optimise our marketing.</li>
-              <li>Comply with legal obligations.</li>
-            </ul>
-          </div>
+      <LegalSection title="4. AI processing">
+        <p>
+          Our website chat and several platform features use AI models provided by third parties.
+          Text you enter in the chat is sent, together with the conversation history of the
+          session, through our automation server to an AI model provider to generate a reply.
+          Please do not enter sensitive personal data in the chat. We do not make decisions based
+          solely on automated processing that produce legal or similarly significant effects for
+          you.
+        </p>
+      </LegalSection>
 
-          <div className="space-y-3">
-            <h2 className="text-lg font-semibold text-foreground">4. Sharing Your Information</h2>
-            <p>
-              We do not sell your personal information to third parties. We may share your information
-              with trusted service providers who assist us in operating our website and delivering our
-              services (for example, email platforms, analytics providers, and customer relationship
-              management tools). These providers are contractually required to keep your information
-              confidential and use it only to provide services to us.
-            </p>
-            <p>
-              We may also disclose your information when required by law, court order, or government
-              authority, or to protect the rights, property, or safety of Volaly, our users, or the
-              public.
-            </p>
-          </div>
+      <LegalSection title="5. Service providers and recipients">
+        <p>
+          We use the following service providers, who process personal data on our behalf under
+          data processing terms and only as instructed by us:
+        </p>
+        <LegalTable
+          head={["Provider", "Purpose", "Processing location"]}
+          rows={[
+            ["Cloudflare, Inc.", "Website hosting and content delivery", "USA and global edge network"],
+            ["Supabase, Inc.", "Database and user authentication", "India (AWS, Mumbai)"],
+            ["Hostinger", "Server for our automation workflows (website chat, contact form, platform automations)", "Malaysia (Kuala Lumpur)"],
+            ["OpenRouter, Inc.", "Routing of requests to AI models", "USA"],
+            ["Google LLC", "AI models (Gemini) and spreadsheets", "USA"],
+            ["Stripe, Inc.", "Payment processing", "USA"],
+            ["Cloudinary Ltd.", "Storage and processing of images and videos", "USA"],
+            ["Creatomate", "Video rendering", "Netherlands"],
+            ["Cartesia", "Text-to-speech", "USA"],
+          ]}
+        />
+        <p>
+          When you or our customers connect messaging or social media channels, data is exchanged
+          with the operators of those channels (for example Meta Platforms for Facebook, Instagram,
+          Messenger and WhatsApp, or LY Corporation for LINE). These operators act under their own
+          privacy policies. We also disclose data to authorities, courts or advisers where required
+          by law or necessary to protect our rights.
+        </p>
+      </LegalSection>
 
-          <div className="space-y-3">
-            <h2 className="text-lg font-semibold text-foreground">5. Cookies and Tracking Technologies</h2>
-            <p>
-              Our website uses cookies and similar tracking technologies to improve functionality and
-              analyse site traffic. Cookies are small text files stored on your device. We use:
-            </p>
-            <ul className="ml-4 list-disc space-y-1.5">
-              <li><strong>Essential cookies</strong> — necessary for the website to function correctly.</li>
-              <li><strong>Analytics cookies</strong> — help us understand how visitors interact with our site (e.g. Google Analytics).</li>
-            </ul>
-            <p>
-              You can control cookies through your browser settings. Please see our{" "}
-              <Link to="/$lang/cookie-policy" params={{ lang }} className="text-foreground underline underline-offset-2">Cookie Policy</Link>{" "}
-              for full details.
-            </p>
-          </div>
+      <LegalSection title="6. International transfers">
+        <p>
+          We are a US company and our providers process data in the USA, India, Malaysia and other
+          countries listed above. These countries may not offer a level of data protection
+          equivalent to your home country. Where the GDPR or the FADP applies, we protect transfers
+          with the European Commission's Standard Contractual Clauses (with the Swiss amendments
+          where relevant) or rely on an adequacy decision, such as the EU-US Data Privacy Framework
+          for certified US recipients. Where the PDPA applies, we use appropriate safeguards under
+          Sections 28 and 29 PDPA, such as standard contractual clauses. You can request a copy of
+          the relevant safeguards at {mail}.
+        </p>
+      </LegalSection>
 
-          <div className="space-y-3">
-            <h2 className="text-lg font-semibold text-foreground">6. Data Retention</h2>
-            <p>
-              We retain personal information only as long as necessary to fulfil the purposes described
-              in this policy or as required by law. Contact enquiry data is typically retained for up
-              to 36 months. Usage and log data may be retained for up to 24 months for analytics
-              purposes. You may request deletion at any time (see Section 7).
-            </p>
-          </div>
+      <LegalSection title="7. Retention">
+        <LegalList>
+          <li>Server logs: according to our hosting provider's standard log retention, used for security only.</li>
+          <li>Contact form and chat messages: up to 24 months after our last contact, unless they lead to a contract.</li>
+          <li>Account data: for the duration of the contract and up to 30 days after termination to allow data export; then deleted.</li>
+          <li>Billing records: as long as required by applicable tax and commercial law.</li>
+          <li>Business development data: until you object, or 24 months after the last interaction.</li>
+          <li>Newsletter data: until you unsubscribe or withdraw consent.</li>
+        </LegalList>
+      </LegalSection>
 
-          <div className="space-y-3">
-            <h2 className="text-lg font-semibold text-foreground">7. Your Rights</h2>
-            <p>Depending on your location, you may have the following rights regarding your personal information:</p>
-            <ul className="ml-4 list-disc space-y-1.5">
-              <li><strong>Right to know</strong> — request disclosure of the categories and specific pieces of personal information we have collected about you.</li>
-              <li><strong>Right to delete</strong> — request that we delete personal information we have collected from you, subject to certain exceptions.</li>
-              <li><strong>Right to opt out</strong> — we do not sell personal information. If this changes, we will provide an opt-out mechanism.</li>
-              <li><strong>Right to non-discrimination</strong> — we will not discriminate against you for exercising any of these rights.</li>
-              <li><strong>Right to correct</strong> — request correction of inaccurate personal information.</li>
-            </ul>
-            <p>
-              To exercise any of these rights, please contact us at{" "}
-              <a href="mailto:hello@thaisolutions.ai" className="text-foreground underline underline-offset-2">hello@thaisolutions.ai</a>.
-              We will respond within 45 days as required by applicable law.
-            </p>
-          </div>
+      <LegalSection title="8. Your rights">
+        <p>Depending on the law that applies to you, you have the right to:</p>
+        <LegalList>
+          <li>access the personal data we hold about you and receive a copy;</li>
+          <li>have inaccurate data corrected and incomplete data completed;</li>
+          <li>have your data deleted or anonymized;</li>
+          <li>restrict or suspend processing;</li>
+          <li>receive your data in a structured, machine-readable format and have it transmitted to another controller (data portability);</li>
+          <li>
+            <strong className="text-foreground">object</strong> to processing based on legitimate
+            interest, and to direct marketing at any time;
+          </li>
+          <li>withdraw consent at any time, without affecting processing carried out before withdrawal;</li>
+          <li>
+            lodge a complaint with a supervisory authority, in particular the data protection
+            authority of the EU or EEA country where you live or work, Thailand's Personal Data
+            Protection Committee, or the Swiss Federal Data Protection and Information Commissioner
+            (FDPIC).
+          </li>
+        </LegalList>
+        <p>
+          To exercise your rights, email {mail}. We may ask you to verify your identity. We respond
+          within one month (GDPR) or within the time limit required by the applicable law.
+        </p>
+      </LegalSection>
 
-          <div className="space-y-3">
-            <h2 className="text-lg font-semibold text-foreground">8. California Residents — CCPA Notice</h2>
-            <p>
-              If you are a California resident, the California Consumer Privacy Act (CCPA) provides you
-              with specific rights regarding your personal information. In addition to the rights listed
-              in Section 7, California residents may also submit a verifiable consumer request through
-              an authorised agent by providing written proof of authorisation.
-            </p>
-            <p>
-              In the preceding 12 months, we have collected the following CCPA categories of personal
-              information: Identifiers (name, email, IP address); Internet or other electronic network
-              activity (usage data, cookies); and Commercial information (services requested). We
-              collect this information for the business purposes described in Section 3. We do not sell
-              or share (as defined under CCPA) personal information.
-            </p>
-          </div>
+      <LegalSection title="9. Cookies and local storage">
+        <p>
+          We do not use analytics, advertising or tracking cookies. We only store information on
+          your device that is strictly necessary for features you use, such as your language choice,
+          your chat session and your login. Videos are loaded from YouTube only after you click
+          play. Details are in our{" "}
+          <Link to="/$lang/cookie-policy" params={{ lang }} className={linkClass}>
+            Cookie Policy
+          </Link>
+          .
+        </p>
+      </LegalSection>
 
-          <div className="space-y-3">
-            <h2 className="text-lg font-semibold text-foreground">9. Security</h2>
-            <p>
-              We implement industry-standard technical and organisational measures to protect your
-              personal information against unauthorised access, alteration, disclosure, or destruction.
-              However, no method of transmission over the internet or electronic storage is 100% secure,
-              and we cannot guarantee absolute security.
-            </p>
-          </div>
+      <LegalSection title="10. Security">
+        <p>
+          We use technical and organizational measures appropriate to the risk, including encrypted
+          connections (TLS), encryption at rest by our hosting providers, access restricted to
+          authorized persons, and authentication for administrative access. No method of
+          transmission or storage is completely secure, but we work to protect your data and will
+          notify you and the authorities of personal data breaches where required by law.
+        </p>
+      </LegalSection>
 
-          <div className="space-y-3">
-            <h2 className="text-lg font-semibold text-foreground">10. Children's Privacy</h2>
-            <p>
-              Our services are not directed to individuals under the age of 16. We do not knowingly
-              collect personal information from children under 16. If you believe we have inadvertently
-              collected such information, please contact us and we will delete it promptly.
-            </p>
-          </div>
+      <LegalSection title="11. Children">
+        <p>
+          Our services are intended for businesses and are not directed at persons under 18. We do
+          not knowingly collect personal data from children.
+        </p>
+      </LegalSection>
 
-          <div className="space-y-3">
-            <h2 className="text-lg font-semibold text-foreground">11. Changes to This Policy</h2>
-            <p>
-              We may update this Privacy Policy from time to time. When we do, we will update the
-              "Last updated" date at the top of this page. Continued use of our website after any
-              changes constitutes your acceptance of the updated policy. We encourage you to review
-              this page periodically.
-            </p>
-          </div>
+      <LegalSection title="12. Changes to this policy">
+        <p>
+          We update this policy when our processing or the law changes. The effective date at the
+          top shows the current version. We will inform customers of material changes by email or
+          in the platform.
+        </p>
+      </LegalSection>
 
-          <div className="space-y-3">
-            <h2 className="text-lg font-semibold text-foreground">12. Contact Us</h2>
-            <p>
-              If you have any questions or concerns about this Privacy Policy or our data practices,
-              please contact us at:{" "}
-              <a href="mailto:hello@thaisolutions.ai" className="text-foreground underline underline-offset-2">hello@thaisolutions.ai</a>
-            </p>
-          </div>
-
-        </div>
-      </section>
-    </>
+      <LegalSection title="13. Contact">
+        <p>
+          {LEGAL_ENTITY.name}, {LEGAL_ENTITY.street}, {LEGAL_ENTITY.city}, {LEGAL_ENTITY.country}.
+          Email: {mail}
+        </p>
+      </LegalSection>
+    </LegalLayout>
   );
 }

@@ -28,6 +28,7 @@ import { Route as LangImprintRouteImport } from './routes/$lang/imprint'
 import { Route as LangHotelRouteImport } from './routes/$lang/hotel'
 import { Route as LangGymRouteImport } from './routes/$lang/gym'
 import { Route as LangFaqRouteImport } from './routes/$lang/faq'
+import { Route as LangDpaRouteImport } from './routes/$lang/dpa'
 import { Route as LangDentistRouteImport } from './routes/$lang/dentist'
 import { Route as LangDemoRouteImport } from './routes/$lang/demo'
 import { Route as LangCreatorRouteImport } from './routes/$lang/creator'
@@ -133,6 +134,11 @@ const LangFaqRoute = LangFaqRouteImport.update({
   path: '/faq',
   getParentRoute: () => LangRouteRoute,
 } as any)
+const LangDpaRoute = LangDpaRouteImport.update({
+  id: '/dpa',
+  path: '/dpa',
+  getParentRoute: () => LangRouteRoute,
+} as any)
 const LangDentistRoute = LangDentistRouteImport.update({
   id: '/dentist',
   path: '/dentist',
@@ -186,6 +192,7 @@ export interface FileRoutesByFullPath {
   '/$lang/creator': typeof LangCreatorRoute
   '/$lang/demo': typeof LangDemoRoute
   '/$lang/dentist': typeof LangDentistRoute
+  '/$lang/dpa': typeof LangDpaRoute
   '/$lang/faq': typeof LangFaqRoute
   '/$lang/gym': typeof LangGymRoute
   '/$lang/hotel': typeof LangHotelRoute
@@ -214,6 +221,7 @@ export interface FileRoutesByTo {
   '/$lang/creator': typeof LangCreatorRoute
   '/$lang/demo': typeof LangDemoRoute
   '/$lang/dentist': typeof LangDentistRoute
+  '/$lang/dpa': typeof LangDpaRoute
   '/$lang/faq': typeof LangFaqRoute
   '/$lang/gym': typeof LangGymRoute
   '/$lang/hotel': typeof LangHotelRoute
@@ -244,6 +252,7 @@ export interface FileRoutesById {
   '/$lang/creator': typeof LangCreatorRoute
   '/$lang/demo': typeof LangDemoRoute
   '/$lang/dentist': typeof LangDentistRoute
+  '/$lang/dpa': typeof LangDpaRoute
   '/$lang/faq': typeof LangFaqRoute
   '/$lang/gym': typeof LangGymRoute
   '/$lang/hotel': typeof LangHotelRoute
@@ -275,6 +284,7 @@ export interface FileRouteTypes {
     | '/$lang/creator'
     | '/$lang/demo'
     | '/$lang/dentist'
+    | '/$lang/dpa'
     | '/$lang/faq'
     | '/$lang/gym'
     | '/$lang/hotel'
@@ -303,6 +313,7 @@ export interface FileRouteTypes {
     | '/$lang/creator'
     | '/$lang/demo'
     | '/$lang/dentist'
+    | '/$lang/dpa'
     | '/$lang/faq'
     | '/$lang/gym'
     | '/$lang/hotel'
@@ -332,6 +343,7 @@ export interface FileRouteTypes {
     | '/$lang/creator'
     | '/$lang/demo'
     | '/$lang/dentist'
+    | '/$lang/dpa'
     | '/$lang/faq'
     | '/$lang/gym'
     | '/$lang/hotel'
@@ -491,6 +503,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangFaqRouteImport
       parentRoute: typeof LangRouteRoute
     }
+    '/$lang/dpa': {
+      id: '/$lang/dpa'
+      path: '/dpa'
+      fullPath: '/$lang/dpa'
+      preLoaderRoute: typeof LangDpaRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
     '/$lang/dentist': {
       id: '/$lang/dentist'
       path: '/dentist'
@@ -559,6 +578,7 @@ interface LangRouteRouteChildren {
   LangCreatorRoute: typeof LangCreatorRoute
   LangDemoRoute: typeof LangDemoRoute
   LangDentistRoute: typeof LangDentistRoute
+  LangDpaRoute: typeof LangDpaRoute
   LangFaqRoute: typeof LangFaqRoute
   LangGymRoute: typeof LangGymRoute
   LangHotelRoute: typeof LangHotelRoute
@@ -586,6 +606,7 @@ const LangRouteRouteChildren: LangRouteRouteChildren = {
   LangCreatorRoute: LangCreatorRoute,
   LangDemoRoute: LangDemoRoute,
   LangDentistRoute: LangDentistRoute,
+  LangDpaRoute: LangDpaRoute,
   LangFaqRoute: LangFaqRoute,
   LangGymRoute: LangGymRoute,
   LangHotelRoute: LangHotelRoute,

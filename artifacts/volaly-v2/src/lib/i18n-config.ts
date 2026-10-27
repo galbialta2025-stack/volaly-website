@@ -1,9 +1,18 @@
-// Single source of truth for which languages the site supports.
-// Adding a language here is what makes the /$lang/ route segment accept it
-// and makes it show up in the Navbar language switcher.
-export const SUPPORTED_LOCALES = ['en', 'de', 'th', 'fr', 'es', 'vi'] as const;
+// All languages that have translations in /src/locales.
+export const ALL_LOCALES = ['en', 'de', 'th', 'fr', 'es', 'vi'] as const;
 
-export type Locale = (typeof SUPPORTED_LOCALES)[number];
+export type Locale = (typeof ALL_LOCALES)[number];
+
+// Languages currently live on the site (routing, language switcher, hreflang).
+// Current market focus is Thailand, so only English and Thai are active.
+// To re-enable a language (e.g. for the DACH launch), add it here — its
+// translations are already in place. Links to inactive languages are
+// redirected to the English version (see routes/$lang/route.tsx).
+export const SUPPORTED_LOCALES: readonly Locale[] = ['en', 'th'];
+
+export function isKnownLocale(value: string | undefined): value is Locale {
+  return !!value && (ALL_LOCALES as readonly string[]).includes(value);
+}
 
 export const DEFAULT_LOCALE: Locale = 'en';
 
