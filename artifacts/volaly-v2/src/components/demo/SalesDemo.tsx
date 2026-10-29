@@ -153,7 +153,7 @@ export function SalesDemo({ lang, venueId }: { lang: string; venueId?: string })
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: dir * -60 }}
             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-            className="flex min-h-full w-full items-center py-4 md:h-full md:py-0"
+            className="flex min-h-full w-full items-start py-2 md:h-full md:items-center md:py-0"
           >
             <Component venue={venue} lang={lang} onRestart={restart} />
           </motion.div>

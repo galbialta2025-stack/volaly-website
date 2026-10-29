@@ -25,8 +25,8 @@ export function ChapterLayout({
   aside?: ReactNode;
 }) {
   return (
-    <div className="mx-auto grid h-full w-full max-w-6xl items-center gap-6 px-4 sm:px-6 md:grid-cols-[minmax(0,1fr)_minmax(0,360px)] md:gap-12 lg:gap-16">
-      <div className="order-2 flex flex-col gap-5 md:order-1">
+    <div className="mx-auto flex h-full w-full max-w-6xl flex-col gap-3 overflow-hidden px-4 sm:px-6 md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,360px)] md:items-center md:gap-12 lg:gap-16">
+      <div className="order-2 flex min-h-0 flex-shrink flex-col gap-2 md:order-1 md:gap-5">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -94,7 +94,7 @@ export function ChapterLayout({
         initial={{ opacity: 0, y: 30, rotate: 1.5 }}
         animate={{ opacity: 1, y: 0, rotate: 0 }}
         transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-        className="order-1 w-full md:order-2"
+        className="order-1 min-h-0 w-full flex-shrink-0 basis-[42vh] overflow-hidden md:basis-auto md:overflow-visible md:order-2"
       >
         {stage}
       </motion.div>
