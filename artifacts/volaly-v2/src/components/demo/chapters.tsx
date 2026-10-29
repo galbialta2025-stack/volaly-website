@@ -132,19 +132,6 @@ export function HookChapter({ venue }: ChapterProps) {
         ))}
       </div>
 
-      {venue.stats?.[0] && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.9 }}
-          className="relative hidden md:flex flex-col items-center"
-        >
-          <span className="text-4xl font-black tabular-nums text-white md:text-6xl">
-            <CountUp to={venue.stats[0].value} />
-          </span>
-          <span className="mt-1 text-sm text-white/55">{venue.stats[0].label}</span>
-        </motion.div>
-      )}
     </div>
   );
 }
