@@ -267,3 +267,12 @@
 @utility animate-dash {
   animation: dash-flow 1s linear infinite;
 }
+
+/* Push Netlify badge below the demo footer so it never overlaps nav buttons */
+#netlify-badge {
+  bottom: 0 !important;
+  z-index: 10 !important;
+  opacity: 0.5 !important;
+  transform: scale(0.75) !important;
+  transform-origin: bottom right !important;
+}
