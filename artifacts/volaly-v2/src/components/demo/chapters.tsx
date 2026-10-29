@@ -99,7 +99,7 @@ export function HookChapter({ venue }: ChapterProps) {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-        className="relative max-w-4xl text-[clamp(2.6rem,7vw,6rem)] font-black leading-[0.95] tracking-tight text-white"
+        className="relative max-w-4xl text-[clamp(2rem,5.5vw,5rem)] font-black leading-[1.02] tracking-tight text-white"
       >
         One photo.
         <span className="block gradient-text-multi">Five ways to get seen.</span>
