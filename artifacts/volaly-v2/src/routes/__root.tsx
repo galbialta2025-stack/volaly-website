@@ -161,15 +161,6 @@ function RootComponent() {
     };
   }, [pathname]);
 
-  // The sales demo is a full-screen presentation: no navbar, footer or modals.
-  if (/^\/[a-z]{2}\/demo(\/|$)/.test(pathname)) {
-    return (
-      <QueryClientProvider client={queryClient}>
-        <Outlet />
-      </QueryClientProvider>
-    );
-  }
-
   return (
     <QueryClientProvider client={queryClient}>
       <JsonLd schema={SITE_SCHEMA} />

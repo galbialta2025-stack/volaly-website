@@ -16,8 +16,8 @@ import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
 import { openDemo } from "@/lib/demo";
 
-export const Route = createFileRoute("/$lang/intro")({
-  component: IntroPage,
+export const Route = createFileRoute("/$lang/demo")({
+  component: DemoPage,
 });
 
 /* ═══════════════════════════════════════
@@ -51,15 +51,15 @@ const shortsStepsMeta = [
    PAGE
 ═══════════════════════════════════════ */
 
-function IntroPage() {
+function DemoPage() {
   const { lang } = Route.useParams();
-  const { t } = useTranslation("intro");
+  const { t } = useTranslation("demo");
   return (
     <>
       <SEO
         title={t("seo.title")}
         description={t("seo.description")}
-        canonical={`https://volaly.com/${lang}/intro`}
+        canonical={`https://volaly.com/${lang}/demo`}
       />
 
       <HeroSection />
@@ -79,7 +79,7 @@ function IntroPage() {
 ═══════════════════════════════════════ */
 
 function HeroSection() {
-  const { t } = useTranslation("intro");
+  const { t } = useTranslation("demo");
   return (
     <section className="bg-aurora noise relative overflow-hidden pt-36 pb-28">
       <AuroraOrbs />
@@ -130,7 +130,7 @@ function HeroSection() {
 ═══════════════════════════════════════ */
 
 function WorkflowSection() {
-  const { t } = useTranslation("intro");
+  const { t } = useTranslation("demo");
   const reduce = useReducedMotion();
   const [activeNode, setActiveNode] = useState<number | null>(null);
 
@@ -263,7 +263,7 @@ type Message = { role: "user" | "ai"; text: string };
 type ChatQuestion = { q: string; a: string };
 
 function AIChatSection() {
-  const { t } = useTranslation("intro");
+  const { t } = useTranslation("demo");
   const chatQuestions = t("chat.questions", { returnObjects: true }) as ChatQuestion[];
   const [messages, setMessages] = useState<Message[]>([
     { role: "ai", text: t("chat.initialMessage") },
@@ -382,7 +382,7 @@ function AIChatSection() {
 ═══════════════════════════════════════ */
 
 function VoiceAISection() {
-  const { t } = useTranslation("intro");
+  const { t } = useTranslation("demo");
   const voiceLines = t("voice.lines", { returnObjects: true }) as string[];
   const [active, setActive] = useState(false);
   const [lineIndex, setLineIndex] = useState(0);
@@ -484,7 +484,7 @@ function VoiceAISection() {
 ═══════════════════════════════════════ */
 
 function ShortsSection() {
-  const { t } = useTranslation("intro");
+  const { t } = useTranslation("demo");
   const [stage, setStage] = useState<"idle" | "processing" | "done">("idle");
   const reduce = useReducedMotion();
 
@@ -596,7 +596,7 @@ function ShortsSection() {
 ═══════════════════════════════════════ */
 
 function RevenueDashboardSection() {
-  const { t } = useTranslation("intro");
+  const { t } = useTranslation("demo");
   return (
     <section className="relative overflow-hidden py-32">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-brand-orange/[0.03] to-background" />
@@ -617,7 +617,7 @@ function RevenueDashboardSection() {
 ═══════════════════════════════════════ */
 
 function VisibilityDashboardSection() {
-  const { t } = useTranslation("intro");
+  const { t } = useTranslation("demo");
   return (
     <section className="relative overflow-hidden bg-muted/20 py-32">
       <div className="relative mx-auto max-w-5xl px-6">
@@ -647,7 +647,7 @@ function DashboardCard({
   barGradient: string;
   delay: number;
 }) {
-  const { t } = useTranslation("intro");
+  const { t } = useTranslation("demo");
   const barHeights = [55, 72, 48, 88, 65, 79, 95];
   return (
     <Reveal delay={delay}>
@@ -708,7 +708,7 @@ function DashboardCard({
 ═══════════════════════════════════════ */
 
 function FinalCtaSection() {
-  const { t } = useTranslation("intro");
+  const { t } = useTranslation("demo");
   return (
     <section className="px-4 py-28 sm:px-6">
       <Reveal>

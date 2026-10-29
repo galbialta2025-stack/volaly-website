@@ -24,21 +24,19 @@ import { Route as LangPrivacyRouteImport } from './routes/$lang/privacy'
 import { Route as LangPricingRouteImport } from './routes/$lang/pricing'
 import { Route as LangMedicalBeautyRouteImport } from './routes/$lang/medical-beauty'
 import { Route as LangLoginRouteImport } from './routes/$lang/login'
-import { Route as LangIntroRouteImport } from './routes/$lang/intro'
 import { Route as LangImprintRouteImport } from './routes/$lang/imprint'
 import { Route as LangHotelRouteImport } from './routes/$lang/hotel'
 import { Route as LangGymRouteImport } from './routes/$lang/gym'
 import { Route as LangFaqRouteImport } from './routes/$lang/faq'
 import { Route as LangDpaRouteImport } from './routes/$lang/dpa'
 import { Route as LangDentistRouteImport } from './routes/$lang/dentist'
+import { Route as LangDemoRouteImport } from './routes/$lang/demo'
 import { Route as LangCreatorRouteImport } from './routes/$lang/creator'
 import { Route as LangCookiePolicyRouteImport } from './routes/$lang/cookie-policy'
 import { Route as LangContactRouteImport } from './routes/$lang/contact'
 import { Route as LangCarRentalRouteImport } from './routes/$lang/car-rental'
 import { Route as LangBarRouteImport } from './routes/$lang/bar'
 import { Route as LangAccountRouteImport } from './routes/$lang/account'
-import { Route as LangDemoIndexRouteImport } from './routes/$lang/demo/index'
-import { Route as LangDemoVenueRouteImport } from './routes/$lang/demo/$venue'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -116,11 +114,6 @@ const LangLoginRoute = LangLoginRouteImport.update({
   path: '/login',
   getParentRoute: () => LangRouteRoute,
 } as any)
-const LangIntroRoute = LangIntroRouteImport.update({
-  id: '/intro',
-  path: '/intro',
-  getParentRoute: () => LangRouteRoute,
-} as any)
 const LangImprintRoute = LangImprintRouteImport.update({
   id: '/imprint',
   path: '/imprint',
@@ -149,6 +142,11 @@ const LangDpaRoute = LangDpaRouteImport.update({
 const LangDentistRoute = LangDentistRouteImport.update({
   id: '/dentist',
   path: '/dentist',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangDemoRoute = LangDemoRouteImport.update({
+  id: '/demo',
+  path: '/demo',
   getParentRoute: () => LangRouteRoute,
 } as any)
 const LangCreatorRoute = LangCreatorRouteImport.update({
@@ -181,16 +179,6 @@ const LangAccountRoute = LangAccountRouteImport.update({
   path: '/account',
   getParentRoute: () => LangRouteRoute,
 } as any)
-const LangDemoIndexRoute = LangDemoIndexRouteImport.update({
-  id: '/demo/',
-  path: '/demo/',
-  getParentRoute: () => LangRouteRoute,
-} as any)
-const LangDemoVenueRoute = LangDemoVenueRouteImport.update({
-  id: '/demo/$venue',
-  path: '/demo/$venue',
-  getParentRoute: () => LangRouteRoute,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -202,13 +190,13 @@ export interface FileRoutesByFullPath {
   '/$lang/contact': typeof LangContactRoute
   '/$lang/cookie-policy': typeof LangCookiePolicyRoute
   '/$lang/creator': typeof LangCreatorRoute
+  '/$lang/demo': typeof LangDemoRoute
   '/$lang/dentist': typeof LangDentistRoute
   '/$lang/dpa': typeof LangDpaRoute
   '/$lang/faq': typeof LangFaqRoute
   '/$lang/gym': typeof LangGymRoute
   '/$lang/hotel': typeof LangHotelRoute
   '/$lang/imprint': typeof LangImprintRoute
-  '/$lang/intro': typeof LangIntroRoute
   '/$lang/login': typeof LangLoginRoute
   '/$lang/medical-beauty': typeof LangMedicalBeautyRoute
   '/$lang/pricing': typeof LangPricingRoute
@@ -221,8 +209,6 @@ export interface FileRoutesByFullPath {
   '/$lang/visa-agency': typeof LangVisaAgencyRoute
   '/$lang/visibility-suite': typeof LangVisibilitySuiteRoute
   '/$lang/': typeof LangIndexRoute
-  '/$lang/demo/$venue': typeof LangDemoVenueRoute
-  '/$lang/demo/': typeof LangDemoIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -233,13 +219,13 @@ export interface FileRoutesByTo {
   '/$lang/contact': typeof LangContactRoute
   '/$lang/cookie-policy': typeof LangCookiePolicyRoute
   '/$lang/creator': typeof LangCreatorRoute
+  '/$lang/demo': typeof LangDemoRoute
   '/$lang/dentist': typeof LangDentistRoute
   '/$lang/dpa': typeof LangDpaRoute
   '/$lang/faq': typeof LangFaqRoute
   '/$lang/gym': typeof LangGymRoute
   '/$lang/hotel': typeof LangHotelRoute
   '/$lang/imprint': typeof LangImprintRoute
-  '/$lang/intro': typeof LangIntroRoute
   '/$lang/login': typeof LangLoginRoute
   '/$lang/medical-beauty': typeof LangMedicalBeautyRoute
   '/$lang/pricing': typeof LangPricingRoute
@@ -252,8 +238,6 @@ export interface FileRoutesByTo {
   '/$lang/visa-agency': typeof LangVisaAgencyRoute
   '/$lang/visibility-suite': typeof LangVisibilitySuiteRoute
   '/$lang': typeof LangIndexRoute
-  '/$lang/demo/$venue': typeof LangDemoVenueRoute
-  '/$lang/demo': typeof LangDemoIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -266,13 +250,13 @@ export interface FileRoutesById {
   '/$lang/contact': typeof LangContactRoute
   '/$lang/cookie-policy': typeof LangCookiePolicyRoute
   '/$lang/creator': typeof LangCreatorRoute
+  '/$lang/demo': typeof LangDemoRoute
   '/$lang/dentist': typeof LangDentistRoute
   '/$lang/dpa': typeof LangDpaRoute
   '/$lang/faq': typeof LangFaqRoute
   '/$lang/gym': typeof LangGymRoute
   '/$lang/hotel': typeof LangHotelRoute
   '/$lang/imprint': typeof LangImprintRoute
-  '/$lang/intro': typeof LangIntroRoute
   '/$lang/login': typeof LangLoginRoute
   '/$lang/medical-beauty': typeof LangMedicalBeautyRoute
   '/$lang/pricing': typeof LangPricingRoute
@@ -285,8 +269,6 @@ export interface FileRoutesById {
   '/$lang/visa-agency': typeof LangVisaAgencyRoute
   '/$lang/visibility-suite': typeof LangVisibilitySuiteRoute
   '/$lang/': typeof LangIndexRoute
-  '/$lang/demo/$venue': typeof LangDemoVenueRoute
-  '/$lang/demo/': typeof LangDemoIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -300,13 +282,13 @@ export interface FileRouteTypes {
     | '/$lang/contact'
     | '/$lang/cookie-policy'
     | '/$lang/creator'
+    | '/$lang/demo'
     | '/$lang/dentist'
     | '/$lang/dpa'
     | '/$lang/faq'
     | '/$lang/gym'
     | '/$lang/hotel'
     | '/$lang/imprint'
-    | '/$lang/intro'
     | '/$lang/login'
     | '/$lang/medical-beauty'
     | '/$lang/pricing'
@@ -319,8 +301,6 @@ export interface FileRouteTypes {
     | '/$lang/visa-agency'
     | '/$lang/visibility-suite'
     | '/$lang/'
-    | '/$lang/demo/$venue'
-    | '/$lang/demo/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -331,13 +311,13 @@ export interface FileRouteTypes {
     | '/$lang/contact'
     | '/$lang/cookie-policy'
     | '/$lang/creator'
+    | '/$lang/demo'
     | '/$lang/dentist'
     | '/$lang/dpa'
     | '/$lang/faq'
     | '/$lang/gym'
     | '/$lang/hotel'
     | '/$lang/imprint'
-    | '/$lang/intro'
     | '/$lang/login'
     | '/$lang/medical-beauty'
     | '/$lang/pricing'
@@ -350,8 +330,6 @@ export interface FileRouteTypes {
     | '/$lang/visa-agency'
     | '/$lang/visibility-suite'
     | '/$lang'
-    | '/$lang/demo/$venue'
-    | '/$lang/demo'
   id:
     | '__root__'
     | '/'
@@ -363,13 +341,13 @@ export interface FileRouteTypes {
     | '/$lang/contact'
     | '/$lang/cookie-policy'
     | '/$lang/creator'
+    | '/$lang/demo'
     | '/$lang/dentist'
     | '/$lang/dpa'
     | '/$lang/faq'
     | '/$lang/gym'
     | '/$lang/hotel'
     | '/$lang/imprint'
-    | '/$lang/intro'
     | '/$lang/login'
     | '/$lang/medical-beauty'
     | '/$lang/pricing'
@@ -382,8 +360,6 @@ export interface FileRouteTypes {
     | '/$lang/visa-agency'
     | '/$lang/visibility-suite'
     | '/$lang/'
-    | '/$lang/demo/$venue'
-    | '/$lang/demo/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -499,13 +475,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangLoginRouteImport
       parentRoute: typeof LangRouteRoute
     }
-    '/$lang/intro': {
-      id: '/$lang/intro'
-      path: '/intro'
-      fullPath: '/$lang/intro'
-      preLoaderRoute: typeof LangIntroRouteImport
-      parentRoute: typeof LangRouteRoute
-    }
     '/$lang/imprint': {
       id: '/$lang/imprint'
       path: '/imprint'
@@ -546,6 +515,13 @@ declare module '@tanstack/react-router' {
       path: '/dentist'
       fullPath: '/$lang/dentist'
       preLoaderRoute: typeof LangDentistRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/demo': {
+      id: '/$lang/demo'
+      path: '/demo'
+      fullPath: '/$lang/demo'
+      preLoaderRoute: typeof LangDemoRouteImport
       parentRoute: typeof LangRouteRoute
     }
     '/$lang/creator': {
@@ -590,20 +566,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangAccountRouteImport
       parentRoute: typeof LangRouteRoute
     }
-    '/$lang/demo/': {
-      id: '/$lang/demo/'
-      path: '/demo'
-      fullPath: '/$lang/demo/'
-      preLoaderRoute: typeof LangDemoIndexRouteImport
-      parentRoute: typeof LangRouteRoute
-    }
-    '/$lang/demo/$venue': {
-      id: '/$lang/demo/$venue'
-      path: '/demo/$venue'
-      fullPath: '/$lang/demo/$venue'
-      preLoaderRoute: typeof LangDemoVenueRouteImport
-      parentRoute: typeof LangRouteRoute
-    }
   }
 }
 
@@ -614,13 +576,13 @@ interface LangRouteRouteChildren {
   LangContactRoute: typeof LangContactRoute
   LangCookiePolicyRoute: typeof LangCookiePolicyRoute
   LangCreatorRoute: typeof LangCreatorRoute
+  LangDemoRoute: typeof LangDemoRoute
   LangDentistRoute: typeof LangDentistRoute
   LangDpaRoute: typeof LangDpaRoute
   LangFaqRoute: typeof LangFaqRoute
   LangGymRoute: typeof LangGymRoute
   LangHotelRoute: typeof LangHotelRoute
   LangImprintRoute: typeof LangImprintRoute
-  LangIntroRoute: typeof LangIntroRoute
   LangLoginRoute: typeof LangLoginRoute
   LangMedicalBeautyRoute: typeof LangMedicalBeautyRoute
   LangPricingRoute: typeof LangPricingRoute
@@ -633,8 +595,6 @@ interface LangRouteRouteChildren {
   LangVisaAgencyRoute: typeof LangVisaAgencyRoute
   LangVisibilitySuiteRoute: typeof LangVisibilitySuiteRoute
   LangIndexRoute: typeof LangIndexRoute
-  LangDemoVenueRoute: typeof LangDemoVenueRoute
-  LangDemoIndexRoute: typeof LangDemoIndexRoute
 }
 
 const LangRouteRouteChildren: LangRouteRouteChildren = {
@@ -644,13 +604,13 @@ const LangRouteRouteChildren: LangRouteRouteChildren = {
   LangContactRoute: LangContactRoute,
   LangCookiePolicyRoute: LangCookiePolicyRoute,
   LangCreatorRoute: LangCreatorRoute,
+  LangDemoRoute: LangDemoRoute,
   LangDentistRoute: LangDentistRoute,
   LangDpaRoute: LangDpaRoute,
   LangFaqRoute: LangFaqRoute,
   LangGymRoute: LangGymRoute,
   LangHotelRoute: LangHotelRoute,
   LangImprintRoute: LangImprintRoute,
-  LangIntroRoute: LangIntroRoute,
   LangLoginRoute: LangLoginRoute,
   LangMedicalBeautyRoute: LangMedicalBeautyRoute,
   LangPricingRoute: LangPricingRoute,
@@ -663,8 +623,6 @@ const LangRouteRouteChildren: LangRouteRouteChildren = {
   LangVisaAgencyRoute: LangVisaAgencyRoute,
   LangVisibilitySuiteRoute: LangVisibilitySuiteRoute,
   LangIndexRoute: LangIndexRoute,
-  LangDemoVenueRoute: LangDemoVenueRoute,
-  LangDemoIndexRoute: LangDemoIndexRoute,
 }
 
 const LangRouteRouteWithChildren = LangRouteRoute._addFileChildren(
