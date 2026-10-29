@@ -118,7 +118,23 @@ const DELUZION: DemoVenue = {
       staffOnFlyer: "2",
     },
   },
-  animate: SHARED_ANIMATE,
+  animate: [
+    {
+      id: "deluzion-halloween",
+      label: "Bar · Halloween Party",
+      src: "/demo/deluzion/animate-halloween.mp4",
+      poster: "/demo/deluzion/animate-halloween-poster.webp",
+      prompt: "Animate the Halloween makeup — glowing eyes, bats flying, spooky aura",
+    },
+    {
+      id: "deluzion-ice-birthday",
+      label: "Bar · Ice Birthday Party",
+      src: "/demo/deluzion/animate-ice-birthday.mp4",
+      poster: "/demo/deluzion/animate-ice-birthday-poster.webp",
+      prompt: "Make the ice crystals sparkle and the dress shimmer with light rays",
+    },
+    ...SHARED_ANIMATE.filter((a) => !["smartbar-halloween", "smartbar-ice-birthday"].includes(a.id)),
+  ],
   wall: [1, 2, 3, 4, 5, 6].map((i) => `/demo/deluzion/wall-${i}.webp`),
 };
 
