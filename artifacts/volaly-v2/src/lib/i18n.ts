@@ -46,12 +46,12 @@ import esIndustryFaqs from '@/locales/es/industry-faqs.json';
 import viIndustryFaqs from '@/locales/vi/industry-faqs.json';
 import thIndustryFaqs from '@/locales/th/industry-faqs.json';
 
-import enDemo from '@/locales/en/demo.json';
-import deDemo from '@/locales/de/demo.json';
-import frDemo from '@/locales/fr/demo.json';
-import esDemo from '@/locales/es/demo.json';
-import viDemo from '@/locales/vi/demo.json';
-import thDemo from '@/locales/th/demo.json';
+import enIntro from '@/locales/en/intro.json';
+import deIntro from '@/locales/de/intro.json';
+import frIntro from '@/locales/fr/intro.json';
+import esIntro from '@/locales/es/intro.json';
+import viIntro from '@/locales/vi/intro.json';
+import thIntro from '@/locales/th/intro.json';
 
 import enContact from '@/locales/en/contact.json';
 import deContact from '@/locales/de/contact.json';
@@ -71,12 +71,12 @@ import thAuth from '@/locales/th/auth.json';
 // all 6 languages. Remaining per-page namespaces are added incrementally as
 // each page's content is translated (Step 2, page by page).
 const resources = {
-  en: { common: enCommon, home: enHome, pricing: enPricing, faq: enFaq, industries: enIndustries, 'industry-faqs': enIndustryFaqs, demo: enDemo, contact: enContact, auth: enAuth },
-  de: { common: deCommon, home: deHome, pricing: dePricing, faq: deFaq, industries: deIndustries, 'industry-faqs': deIndustryFaqs, demo: deDemo, contact: deContact, auth: deAuth },
-  fr: { common: frCommon, home: frHome, pricing: frPricing, faq: frFaq, industries: frIndustries, 'industry-faqs': frIndustryFaqs, demo: frDemo, contact: frContact, auth: frAuth },
-  es: { common: esCommon, home: esHome, pricing: esPricing, faq: esFaq, industries: esIndustries, 'industry-faqs': esIndustryFaqs, demo: esDemo, contact: esContact, auth: esAuth },
-  vi: { common: viCommon, home: viHome, pricing: viPricing, faq: viFaq, industries: viIndustries, 'industry-faqs': viIndustryFaqs, demo: viDemo, contact: viContact, auth: viAuth },
-  th: { common: thCommon, home: thHome, pricing: thPricing, faq: thFaq, industries: thIndustries, 'industry-faqs': thIndustryFaqs, demo: thDemo, contact: thContact, auth: thAuth },
+  en: { common: enCommon, home: enHome, pricing: enPricing, faq: enFaq, industries: enIndustries, 'industry-faqs': enIndustryFaqs, intro: enIntro, contact: enContact, auth: enAuth },
+  de: { common: deCommon, home: deHome, pricing: dePricing, faq: deFaq, industries: deIndustries, 'industry-faqs': deIndustryFaqs, intro: deIntro, contact: deContact, auth: deAuth },
+  fr: { common: frCommon, home: frHome, pricing: frPricing, faq: frFaq, industries: frIndustries, 'industry-faqs': frIndustryFaqs, intro: frIntro, contact: frContact, auth: frAuth },
+  es: { common: esCommon, home: esHome, pricing: esPricing, faq: esFaq, industries: esIndustries, 'industry-faqs': esIndustryFaqs, intro: esIntro, contact: esContact, auth: esAuth },
+  vi: { common: viCommon, home: viHome, pricing: viPricing, faq: viFaq, industries: viIndustries, 'industry-faqs': viIndustryFaqs, intro: viIntro, contact: viContact, auth: viAuth },
+  th: { common: thCommon, home: thHome, pricing: thPricing, faq: thFaq, industries: thIndustries, 'industry-faqs': thIndustryFaqs, intro: thIntro, contact: thContact, auth: thAuth },
 };
 
 void i18next
@@ -87,7 +87,7 @@ void i18next
     supportedLngs: SUPPORTED_LOCALES,
     fallbackLng: DEFAULT_LOCALE,
     defaultNS: 'common',
-    ns: ['common', 'home', 'pricing', 'faq', 'industries', 'industry-faqs', 'demo', 'contact', 'auth'],
+    ns: ['common', 'home', 'pricing', 'faq', 'industries', 'industry-faqs', 'intro', 'contact', 'auth'],
     interpolation: {
       escapeValue: false,
     },
