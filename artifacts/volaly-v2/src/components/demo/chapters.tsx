@@ -52,7 +52,7 @@ function CountUp({ to, duration = 1.6 }: { to: number; duration?: number }) {
 export function HookChapter({ venue }: ChapterProps) {
   const tilts = [-9, 6, -4, 8, -6, 4];
   return (
-    <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-center justify-start overflow-y-auto pt-10 text-center sm:px-6 md:justify-center md:overflow-visible md:pt-0 px-4">
+    <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-center justify-center gap-4 px-4 text-center sm:px-6 md:gap-6">
       {/* floating real results */}
       <div aria-hidden className="pointer-events-none absolute inset-0 hidden md:block">
         {venue.wall.slice(0, 6).map((src, i) => {
@@ -99,7 +99,7 @@ export function HookChapter({ venue }: ChapterProps) {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-        className="relative max-w-4xl text-[clamp(2rem,5.5vw,5rem)] font-black leading-[1.02] tracking-tight text-white"
+        className="relative max-w-4xl text-[clamp(1.7rem,4.8vw,5rem)] font-black leading-[1.02] tracking-tight text-white"
       >
         One photo.
         <span className="block gradient-text-multi">Five ways to get seen.</span>
@@ -109,13 +109,13 @@ export function HookChapter({ venue }: ChapterProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: EASE, delay: 0.25 }}
-        className="relative mt-6 max-w-xl text-base text-white/65 md:text-lg"
+        className="relative max-w-xl text-sm text-white/65 md:text-base"
       >
         The Volaly Visibility Suite turns what you already have — photos, videos, a line in a sheet — into posts, reels,
         stories and flyers. All from LINE.
       </motion.p>
 
-      <div className="relative mt-9 flex max-w-3xl flex-wrap justify-center gap-2.5">
+      <div className="relative flex max-w-3xl flex-wrap justify-center gap-2">
         {TOOLS.map((t, i) => (
           <motion.div
             key={t.name}
@@ -137,9 +137,9 @@ export function HookChapter({ venue }: ChapterProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9 }}
-          className="relative mt-10 flex flex-col items-center"
+          className="relative flex flex-col items-center"
         >
-          <span className="text-5xl font-black tabular-nums text-white md:text-6xl">
+          <span className="text-4xl font-black tabular-nums text-white md:text-6xl">
             <CountUp to={venue.stats[0].value} />
           </span>
           <span className="mt-1 text-sm text-white/55">{venue.stats[0].label}</span>
