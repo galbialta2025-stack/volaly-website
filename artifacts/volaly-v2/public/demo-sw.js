@@ -8,7 +8,7 @@
  * Every other request passes through untouched, so the rest of the site
  * behaves exactly as without a service worker.
  */
-const CACHE = "volaly-demo-v1";
+const CACHE = "volaly-demo-v2";
 const SHELL = "/__demo_shell__";
 
 const isDemoNavigation = (url) => /^\/[a-z]{2}\/demo(\/|$)/.test(url.pathname);
@@ -57,7 +57,15 @@ self.addEventListener("message", (event) => {
       }
       await Promise.all(
         data.urls.slice(1).map((u) =>
-          cache.match(u).then((hit) => hit || cache.add(u)).catch(() => undefined),
+          cache.match(u).then(async (hit) => {
+            if (hit) return;
+            try {
+              const res = await fetch(u);
+              if (res.ok) await cache.put(u, res);
+            } catch (_) {
+              /* offline — skip */
+            }
+          }),
         ),
       );
     })(),
