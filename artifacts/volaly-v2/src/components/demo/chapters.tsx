@@ -52,7 +52,7 @@ function CountUp({ to, duration = 1.6 }: { to: number; duration?: number }) {
 export function HookChapter({ venue }: ChapterProps) {
   const tilts = [-9, 6, -4, 8, -6, 4];
   return (
-    <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-center justify-center px-4 text-center sm:px-6">
+    <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col items-center justify-start overflow-y-auto pt-10 text-center sm:px-6 md:justify-center md:overflow-visible md:pt-0 px-4">
       {/* floating real results */}
       <div aria-hidden className="pointer-events-none absolute inset-0 hidden md:block">
         {venue.wall.slice(0, 6).map((src, i) => {
