@@ -113,7 +113,7 @@ export function SalesDemo({ lang, venueId }: { lang: string; venueId?: string })
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_60%_at_50%_40%,transparent,rgba(0,0,0,0.55))]" />
 
       {/* Top bar */}
-      <header className="relative z-20 flex items-center justify-between gap-3 px-4 py-3 sm:px-6">
+      <header className="sticky top-0 z-20 flex items-center justify-between gap-3 bg-[oklch(0.15_0.03_265/0.85)] px-4 py-3 backdrop-blur-md sm:px-6">
         <div className="flex min-w-0 items-center gap-3">
           <img src="/volaly-logo-v2.png" alt="Volaly" className="h-8 w-auto sm:h-9" />
         </div>
@@ -155,7 +155,7 @@ export function SalesDemo({ lang, venueId }: { lang: string; venueId?: string })
       </main>
 
       {/* Controls */}
-      <footer className="relative z-[100000] flex items-center gap-3 px-4 pb-[max(52px,env(safe-area-inset-bottom))] pt-3 sm:px-6 md:pb-[max(12px,env(safe-area-inset-bottom))]">
+      <footer className="sticky bottom-0 z-[100000] flex items-center gap-3 bg-[oklch(0.15_0.03_265/0.85)] px-4 pb-[max(52px,env(safe-area-inset-bottom))] pt-3 backdrop-blur-md sm:px-6 md:pb-[max(12px,env(safe-area-inset-bottom))]">
         <button
           type="button"
           onClick={back}
