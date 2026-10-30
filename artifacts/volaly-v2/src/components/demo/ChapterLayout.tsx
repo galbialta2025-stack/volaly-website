@@ -92,7 +92,7 @@ export function ChapterLayout({
         )}
 
         {controls && <div className="flex flex-wrap items-center gap-2">{controls}</div>}
-        {aside && <div className="min-h-0 overflow-y-auto">{aside}</div>}
+        {aside && <div>{aside}</div>}
       </div>
 
       {/* ── Right column: phone + shareBar below ── */}
@@ -110,7 +110,6 @@ export function ChapterLayout({
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: EASE, delay: 0.4 }}
-            className="hidden md:block"
           >
             {shareBar}
           </motion.div>

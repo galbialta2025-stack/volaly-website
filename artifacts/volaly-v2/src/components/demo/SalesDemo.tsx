@@ -155,7 +155,7 @@ export function SalesDemo({ lang, venueId }: { lang: string; venueId?: string })
       </main>
 
       {/* Controls */}
-      <footer className="relative z-[100000] flex items-center gap-3 px-4 pb-[max(12px,env(safe-area-inset-bottom))] pt-3 sm:px-6">
+      <footer className="relative z-[100000] flex items-center gap-3 px-4 pb-[max(52px,env(safe-area-inset-bottom))] pt-3 sm:px-6 md:pb-[max(12px,env(safe-area-inset-bottom))]">
         <button
           type="button"
           onClick={back}

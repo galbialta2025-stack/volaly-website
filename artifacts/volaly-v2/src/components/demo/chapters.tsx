@@ -243,26 +243,32 @@ export function ImagesChapter({ venue }: ChapterProps) {
         steps: ["Photo in LINE", "Logo + caption", "FB & IG post"],
       }}
       aside={
-        <AnimatePresence mode="wait">
-          {p < 2 ? (
-            <motion.div key="orig" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-              className="inline-flex items-center gap-2 self-start rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white/70">
-              Original photo
-            </motion.div>
-          ) : (
-            <motion.div key="ready" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 self-start rounded-full bg-black/60 px-3 py-1.5 text-[12px] font-bold text-white backdrop-blur border border-white/15">
-              <FaFacebook className="h-3.5 w-3.5 text-[#1877f2]" />
-              <FaInstagram className="h-3.5 w-3.5 text-[#e1306c]" />
-              Ready to post
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <motion.div key="orig" initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+          className="inline-flex items-center gap-2 self-start rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white/70">
+          Original photo
+        </motion.div>
       }
       shareBar={
         <div className="flex flex-col gap-2">
-          <ShareBar />
-          {p >= 2 && <CaptionCard text={venue.images.caption} />}
+          <AnimatePresence mode="wait">
+            {p < 2 ? (
+              <motion.div key="sharebar-only" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                <ShareBar />
+              </motion.div>
+            ) : (
+              <motion.div key="sharebar-ready" initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col gap-2">
+                <div className="flex items-center gap-2">
+                  <ShareBar />
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 text-[12px] font-bold text-white backdrop-blur border border-white/15 whitespace-nowrap">
+                    <FaFacebook className="h-3.5 w-3.5 text-[#1877f2]" />
+                    <FaInstagram className="h-3.5 w-3.5 text-[#e1306c]" />
+                    Ready to post
+                  </span>
+                </div>
+                <CaptionCard text={venue.images.caption} />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       }
       stage={
@@ -490,14 +496,14 @@ export function ShortsChapter({ venue }: ChapterProps) {
           )}
         </>
       }
-      aside={
-        <div className="inline-flex items-center gap-2 self-start rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[12px] font-bold text-white/80">
-          <FaInstagram className="h-3.5 w-3.5 text-[#e1306c]" /> Vertical video · Reels
-        </div>
-      }
       shareBar={
         <div className="flex flex-col gap-2">
-          <ShareBar />
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[12px] font-bold text-white/80 whitespace-nowrap">
+              <FaInstagram className="h-3.5 w-3.5 text-[#e1306c]" /> Vertical video · Reels
+            </span>
+            <ShareBar />
+          </div>
           {current && <CaptionCard text={current.caption} />}
         </div>
       }
@@ -704,7 +710,12 @@ export function PromoChapter({ venue }: ChapterProps) {
           )}
         </div>
       }
-      shareBar={<ShareBar />}
+      shareBar={
+        <div className="flex flex-col gap-2">
+          <ShareBar />
+          {p >= 4 && <CaptionCard text={venue.promo.caption} />}
+        </div>
+      }
       stage={
         <PhoneFrame>
           <div className="absolute inset-0 bg-[linear-gradient(180deg,#1b2433,#0e1218)]">
