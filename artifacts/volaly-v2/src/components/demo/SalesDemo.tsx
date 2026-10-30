@@ -116,14 +116,8 @@ export function SalesDemo({ lang, venueId }: { lang: string; venueId?: string })
       <header className="relative z-20 flex items-center justify-between gap-3 px-4 py-3 sm:px-6">
         <div className="flex min-w-0 items-center gap-3">
           <img src="/volaly-logo-v2.png" alt="Volaly" className="h-8 w-auto sm:h-9" />
-          <span className="hidden rounded-full border border-brand-yellow/40 bg-brand-yellow/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-brand-yellow sm:inline">
-            Demo · prepared examples
-          </span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="rounded-full border border-brand-yellow/40 bg-brand-yellow/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-yellow sm:hidden">
-            Demo
-          </span>
           <button
             type="button"
             onClick={restart}
@@ -161,7 +155,7 @@ export function SalesDemo({ lang, venueId }: { lang: string; venueId?: string })
       </main>
 
       {/* Controls */}
-      <footer className="relative z-20 flex items-center gap-3 px-4 pb-[max(12px,env(safe-area-inset-bottom))] pt-3 sm:px-6">
+      <footer className="relative z-[100000] flex items-center gap-3 px-4 pb-[max(12px,env(safe-area-inset-bottom))] pt-3 sm:px-6">
         <button
           type="button"
           onClick={back}

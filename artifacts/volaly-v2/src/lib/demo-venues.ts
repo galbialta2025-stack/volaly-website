@@ -44,7 +44,7 @@ export interface DemoVenue {
   /** Accent colour used for the venue's chat avatar and highlights. */
   accent: string;
   stats?: { label: string; value: number }[];
-  images: { before: string; after: string; caption: string };
+  images: { before: string; after: string; caption: string; staffName?: string };
   shorts: {
     slideshow?: DemoVideo & { sources: string[]; caption: string };
     clipping?: DemoVideo & { caption: string };
@@ -94,6 +94,7 @@ const DELUZION: DemoVenue = {
     before: "/demo/deluzion/images-before.webp",
     after: "/demo/deluzion/images-after.webp",
     caption: PROMO_CAPTION_DELUZION,
+    staffName: "Honey",
   },
   shorts: {
     slideshow: {

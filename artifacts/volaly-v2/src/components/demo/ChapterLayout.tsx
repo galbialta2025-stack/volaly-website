@@ -12,21 +12,26 @@ export interface ChapterInfo {
   credits?: string;
 }
 
-/** Two-column chapter: talking points left, phone stage right (stacked on phones). */
+/** Two-column chapter: talking points left, phone stage right (stacked on phones).
+ *  shareBar — rendered below the phone on desktop (right column), hidden on mobile.
+ */
 export function ChapterLayout({
   info,
   stage,
   controls,
   aside,
+  shareBar,
 }: {
   info: ChapterInfo;
   stage: ReactNode;
   controls?: ReactNode;
   aside?: ReactNode;
+  shareBar?: ReactNode;
 }) {
   return (
-    <div className="mx-auto flex h-full w-full max-w-6xl flex-col gap-3 overflow-hidden px-4 sm:px-6 md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,360px)] md:items-center md:gap-12 lg:gap-16">
-      <div className="order-2 flex min-h-0 flex-shrink flex-col gap-2 md:order-1 md:gap-5">
+    <div className="mx-auto flex h-full w-full max-w-6xl flex-col gap-3 overflow-hidden px-4 sm:px-6 md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,520px)] md:items-center md:gap-6 lg:gap-10">
+      {/* ── Left column: text + controls + aside ── */}
+      <div className="order-2 flex min-h-0 flex-shrink flex-col gap-2 md:order-1 md:gap-4">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,7 +52,7 @@ export function ChapterLayout({
           initial={{ opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: EASE, delay: 0.05 }}
-          className="text-[clamp(1.9rem,4.2vw,3.4rem)] font-black leading-[1.02] tracking-tight text-white"
+          className="text-[clamp(1.15rem,2.6vw,2.2rem)] font-black leading-[1.05] tracking-tight text-white"
         >
           {info.title}
         </motion.h2>
@@ -56,7 +61,7 @@ export function ChapterLayout({
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: EASE, delay: 0.12 }}
-          className="max-w-xl text-base leading-relaxed text-white/65 md:text-lg"
+          className="max-w-xl text-sm leading-relaxed text-white/65 md:text-base"
         >
           {info.description}
         </motion.p>
@@ -72,7 +77,7 @@ export function ChapterLayout({
                 className="flex items-center gap-2"
               >
                 <span
-                  className={`rounded-xl px-3 py-2 text-[13px] font-semibold ${
+                  className={`rounded-xl px-3 py-1.5 text-[12px] font-semibold ${
                     i === 1
                       ? "bg-gradient-to-r from-brand-purple to-brand-blue text-white"
                       : "border border-white/12 bg-white/[0.06] text-white/85"
@@ -86,18 +91,31 @@ export function ChapterLayout({
           </div>
         )}
 
-        {controls && <div className="flex flex-wrap items-center gap-2.5">{controls}</div>}
-        {aside}
+        {controls && <div className="flex flex-wrap items-center gap-2">{controls}</div>}
+        {aside && <div className="min-h-0 overflow-y-auto">{aside}</div>}
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 30, rotate: 1.5 }}
-        animate={{ opacity: 1, y: 0, rotate: 0 }}
-        transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-        className="order-1 min-h-0 w-full flex-shrink-0 basis-[42vh] overflow-hidden md:basis-auto md:overflow-visible md:order-2"
-      >
-        {stage}
-      </motion.div>
+      {/* ── Right column: phone + shareBar below ── */}
+      <div className="order-1 flex min-h-0 flex-col gap-3 md:order-2">
+        <motion.div
+          initial={{ opacity: 0, y: 30, rotate: 1.5 }}
+          animate={{ opacity: 1, y: 0, rotate: 0 }}
+          transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
+          className="min-h-0 w-full flex-shrink-0 basis-[65vh] overflow-hidden md:basis-auto md:overflow-visible"
+        >
+          {stage}
+        </motion.div>
+        {shareBar && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: EASE, delay: 0.4 }}
+            className="hidden md:block"
+          >
+            {shareBar}
+          </motion.div>
+        )}
+      </div>
     </div>
   );
 }

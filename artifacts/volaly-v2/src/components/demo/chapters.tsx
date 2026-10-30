@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import { motion, AnimatePresence, animate, useMotionValue, useTransform } from "motion/react";
 import { Check, Sparkles, Clapperboard, Image as ImageIcon, Megaphone, Wand2, CircleDashed, ArrowRight } from "lucide-react";
-import { FaFacebook, FaInstagram, FaThreads, FaLine } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaThreads, FaLine, FaTiktok } from "react-icons/fa6";
 import { Link } from "@tanstack/react-router";
 import type { DemoVenue, ShortsVariant } from "@/lib/demo-venues";
 import { DEMO_CREDIT_COSTS, DEMO_PLANS } from "@/lib/demo-venues";
@@ -36,6 +36,37 @@ const TOOLS = [
   { name: "Smart Promo", icon: Megaphone, color: "from-brand-yellow to-brand-orange" },
   { name: "Smart Animate", icon: Wand2, color: "from-brand-cyan to-brand-blue" },
 ];
+
+/* ─── Share bar ─── */
+const SHARE_CHANNELS = [
+  { label: "FB Groups", icon: FaFacebook, color: "#1877f2" },
+  { label: "IG Stories", icon: FaInstagram, color: "#e1306c" },
+  { label: "GMB", icon: null, color: "#34a853", emoji: "G" },
+  { label: "TT Stories", icon: FaTiktok, color: "#ffffff" },
+] as const;
+
+function ShareBar() {
+  return (
+    <div className="flex flex-wrap items-center gap-2 pt-1">
+      <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/40">Share to</span>
+      {SHARE_CHANNELS.map((ch) => (
+        <span
+          key={ch.label}
+          className="inline-flex items-center gap-1.5 rounded-full border border-white/12 bg-white/[0.06] px-3 py-1.5 text-[12px] font-semibold text-white"
+        >
+          {"icon" in ch && ch.icon ? (
+            <ch.icon className="h-3.5 w-3.5 flex-shrink-0" style={{ color: ch.color }} />
+          ) : (
+            <span className="flex h-3.5 w-3.5 items-center justify-center rounded-full text-[9px] font-black" style={{ backgroundColor: ch.color, color: "#fff" }}>
+              {(ch as { emoji: string }).emoji}
+            </span>
+          )}
+          {ch.label}
+        </span>
+      ))}
+    </div>
+  );
+}
 
 /* ═══════════════════ 0 · INTRO ═══════════════════ */
 
@@ -196,13 +227,12 @@ function CompareImage({ before, after }: { before: string; after: string }) {
 }
 
 export function ImagesChapter({ venue }: ChapterProps) {
-  const p = usePhases([500, 1500, 2900, 4300]);
+  const p = usePhases([600, 1800, 3200]);
   return (
     <ChapterLayout
       info={{
         number: 1,
         tool: "Smart Images",
-        credits: "1 credit",
         title: (
           <>
             Snap it. <span className="gradient-text-multi">Post it.</span>
@@ -212,36 +242,64 @@ export function ImagesChapter({ venue }: ChapterProps) {
           "Staff send photos to the venue's Volaly LINE. Volaly adds the logo, writes caption and hashtags and posts to Facebook and Instagram.",
         steps: ["Photo in LINE", "Logo + caption", "FB & IG post"],
       }}
-      aside={p >= 4 ? <CaptionCard text={venue.images.caption} className="hidden md:block" /> : null}
+      aside={
+        <AnimatePresence mode="wait">
+          {p < 2 ? (
+            <motion.div key="orig" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+              className="inline-flex items-center gap-2 self-start rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white/70">
+              Original photo
+            </motion.div>
+          ) : (
+            <motion.div key="ready" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
+              className="inline-flex items-center gap-2 self-start rounded-full bg-black/60 px-3 py-1.5 text-[12px] font-bold text-white backdrop-blur border border-white/15">
+              <FaFacebook className="h-3.5 w-3.5 text-[#1877f2]" />
+              <FaInstagram className="h-3.5 w-3.5 text-[#e1306c]" />
+              Ready to post
+            </motion.div>
+          )}
+        </AnimatePresence>
+      }
+      shareBar={
+        <div className="flex flex-col gap-2">
+          <ShareBar />
+          {p >= 2 && <CaptionCard text={venue.images.caption} />}
+        </div>
+      }
       stage={
         <PhoneFrame>
-          <ChatHeader venue={venue} />
-          <ChatArea>
-            {p >= 1 && (
-              <Bubble from="user" className="w-[34%] p-1">
-                <img src={venue.images.before} alt="" className="aspect-[3/4] w-full rounded-xl object-cover" />
-                <SentStamp />
-              </Bubble>
-            )}
-            <AnimatePresence>{p === 2 && <Typing />}</AnimatePresence>
-            {p >= 3 && (
-              <Bubble from="bot" className="w-[70%]">
-                <CompareImage before={venue.images.before} after={venue.images.after} />
-                <div className="px-3 pb-3 pt-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-bold">Logo added · caption ready</span>
-                    <PreparedTag className="!bg-black/80" />
+          <div className="absolute inset-0 bg-black overflow-hidden">
+            <AnimatePresence>
+              {p < 2 && (
+                <motion.div key="before" exit={{ opacity: 0 }} transition={{ duration: 0.4 }} className="absolute inset-0">
+                  <img src={venue.images.before} alt="Original" className="h-full w-full object-cover" />
+                  {p === 1 && <ScanSweep color="var(--brand-orange)" duration={1.1} />}
+                </motion.div>
+              )}
+            </AnimatePresence>
+            {p >= 2 && (
+              <motion.div
+                key="after"
+                initial={{ opacity: 0, scale: 1.04 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, ease: EASE }}
+                className="absolute inset-0"
+              >
+                <img src={venue.images.after} alt="Smart Images result" className="h-full w-full object-cover" />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-3 pt-16">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="grid h-7 w-7 place-items-center overflow-hidden rounded-full bg-black ring-1 ring-white/40">
+                      <img src={venue.logo} alt="" className="h-full w-full object-contain p-0.5" />
+                    </span>
+                    <span className="text-[12px] font-bold text-white">{venue.name.toLowerCase()}</span>
+                    {venue.images.staffName && (
+                      <span className="text-[11px] font-semibold text-white/75">{venue.images.staffName}</span>
+                    )}
                   </div>
-                  <p className="mt-1 line-clamp-2 text-[10.5px] text-black/60">{venue.images.caption}</p>
-                  <div className="mt-2 flex items-center justify-center gap-1.5 rounded-lg bg-[#06c755] py-1.5 text-[11px] font-bold text-white">
-                    <Check className="h-3 w-3" /> Ready for
-                    <FaFacebook className="h-3 w-3" />
-                    <FaInstagram className="h-3 w-3" />
-                  </div>
+                  <p className="line-clamp-2 text-[11px] leading-snug text-white/90">{venue.images.caption}</p>
                 </div>
-              </Bubble>
+              </motion.div>
             )}
-          </ChatArea>
+          </div>
         </PhoneFrame>
       }
     />
@@ -371,22 +429,16 @@ function SlideshowStage({ venue, music, outro }: { venue: DemoVenue; music: bool
             </div>
             <p className="mt-1.5 line-clamp-2 text-[11px] leading-snug text-white/90">{s.caption}</p>
           </div>
-          <PreparedTag className="absolute left-3 top-9 z-10" />
         </motion.div>
       )}
     </div>
   );
 }
 
-function VideoResultStage({ src, poster, caption, venue }: { src: string; poster: string; caption: string; venue: DemoVenue }) {
+function VideoResultStage({ src, poster }: { src: string; poster: string }) {
   return (
     <div className="absolute inset-0">
       <DemoVideoPlayer src={src} poster={poster} />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/85 to-transparent p-3 pt-16">
-        <span className="text-[12px] font-bold text-white">{venue.name.toLowerCase()}</span>
-        <p className="mt-1 line-clamp-2 text-[11px] text-white/90">{caption}</p>
-      </div>
-      <PreparedTag className="absolute left-3 top-9 z-10" />
     </div>
   );
 }
@@ -404,10 +456,9 @@ export function ShortsChapter({ venue }: ChapterProps) {
       info={{
         number: 2,
         tool: "Smart Shorts",
-        credits: "3 credits",
         title: (
           <>
-            From camera roll <span className="gradient-text-multi">to Reels.</span>
+            Camera roll <span className="gradient-text-multi">to Reels.</span>
           </>
         ),
         description: meta.description,
@@ -439,12 +490,22 @@ export function ShortsChapter({ venue }: ChapterProps) {
           )}
         </>
       }
-      aside={current ? <CaptionCard text={current.caption} className="hidden md:block" /> : null}
+      aside={
+        <div className="inline-flex items-center gap-2 self-start rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[12px] font-bold text-white/80">
+          <FaInstagram className="h-3.5 w-3.5 text-[#e1306c]" /> Vertical video · Reels
+        </div>
+      }
+      shareBar={
+        <div className="flex flex-col gap-2">
+          <ShareBar />
+          {current && <CaptionCard text={current.caption} />}
+        </div>
+      }
       stage={
         <PhoneFrame>
           {variant === "slideshow" && venue.shorts.slideshow && <SlideshowStage venue={venue} music={music} outro={outro} />}
           {variant !== "slideshow" && current && (
-            <VideoResultStage key={variant} src={current.src} poster={current.poster} caption={current.caption} venue={venue} />
+            <VideoResultStage key={variant} src={current.src} poster={current.poster} />
           )}
         </PhoneFrame>
       }
@@ -461,7 +522,6 @@ export function StoriesChapter({ venue }: ChapterProps) {
       info={{
         number: 3,
         tool: "Smart Stories",
-        credits: "1 credit",
         title: (
           <>
             Tonight&apos;s vibe, <span className="gradient-text-multi">live in Stories.</span>
@@ -471,6 +531,23 @@ export function StoriesChapter({ venue }: ChapterProps) {
           "Send a photo or video in LINE and it goes up as a Facebook and Instagram Story. No app switching, no logins.",
         steps: ["Photo or video", "Story format", "FB & IG Stories"],
       }}
+      aside={
+        <AnimatePresence mode="wait">
+          {p >= 3 ? (
+            <motion.div key="live" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
+              className="inline-flex items-center gap-2 self-start rounded-full border border-white/15 bg-black/60 px-3 py-1.5 text-[12px] font-bold text-white backdrop-blur">
+              <FaFacebook className="h-3.5 w-3.5 text-[#1877f2]" />
+              <FaInstagram className="h-3.5 w-3.5 text-[#e1306c]" />
+              Story preview
+            </motion.div>
+          ) : (
+            <motion.div key="chat" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+              className="inline-flex items-center gap-2 self-start rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white/60">
+              <FaLine className="h-3.5 w-3.5 text-[#06c755]" /> LINE chat
+            </motion.div>
+          )}
+        </AnimatePresence>
+      }
       stage={
         <PhoneFrame>
           <AnimatePresence mode="wait">
@@ -524,15 +601,6 @@ export function StoriesChapter({ venue }: ChapterProps) {
                 <div className="absolute inset-x-3 bottom-4 z-10 flex items-center gap-2">
                   <div className="flex-1 rounded-full border border-white/50 px-3 py-2 text-[11px] text-white/80">Send message</div>
                 </div>
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 }}
-                  className="absolute left-1/2 top-[26%] z-10 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-black/65 px-3 py-1.5 text-[10px] font-bold text-white backdrop-blur"
-                >
-                  <FaFacebook className="h-3 w-3 text-[#1877f2]" />
-                  <FaInstagram className="h-3 w-3 text-[#e1306c]" /> Story preview
-                </motion.div>
               </motion.div>
             )}
           </AnimatePresence>
@@ -601,7 +669,6 @@ export function PromoChapter({ venue }: ChapterProps) {
       info={{
         number: 4,
         tool: "Smart Promo",
-        credits: "2 credits · post + story",
         title: (
           <>
             One row. <span className="gradient-text-multi">A finished flyer.</span>
@@ -612,10 +679,32 @@ export function PromoChapter({ venue }: ChapterProps) {
         steps: ["Sheet row", "Flyer design", "Post + story"],
       }}
       aside={
-        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.6, ease: EASE }}>
-          <SheetCard venue={venue} active={active} />
-        </motion.div>
+        <div className="flex flex-col gap-3">
+          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.6, ease: EASE }}>
+            <SheetCard venue={venue} active={active} />
+          </motion.div>
+          {p >= 4 && (
+            <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/60 px-3 py-1.5 text-[12px] font-bold text-white backdrop-blur">
+                <FaFacebook className="h-3.5 w-3.5 text-[#1877f2]" />
+                <FaInstagram className="h-3.5 w-3.5 text-[#e1306c]" />
+                Feed post + Story
+              </span>
+              <a href="/demo/deluzion/promo-oyster.jpg" target="_blank" rel="noopener"
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-2 py-1 text-[11px] font-semibold text-white/80 hover:text-white transition">
+                <img src="/demo/deluzion/promo-oyster.jpg" alt="Oyster Day" className="h-6 w-5 rounded object-cover" />
+                Oyster Day
+              </a>
+              <a href="/demo/deluzion/promo-police.jpg" target="_blank" rel="noopener"
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-2 py-1 text-[11px] font-semibold text-white/80 hover:text-white transition">
+                <img src="/demo/deluzion/promo-police.jpg" alt="Police Party" className="h-6 w-5 rounded object-cover" />
+                Police Party
+              </a>
+            </motion.div>
+          )}
+        </div>
       }
+      shareBar={<ShareBar />}
       stage={
         <PhoneFrame>
           <div className="absolute inset-0 bg-[linear-gradient(180deg,#1b2433,#0e1218)]">
@@ -646,21 +735,6 @@ export function PromoChapter({ venue }: ChapterProps) {
                 </div>
               </div>
             )}
-            {p >= 3 && <PreparedTag className="absolute left-3 top-9 z-10" />}
-            {p >= 4 && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: EASE }}
-                className="absolute inset-x-3 bottom-3 z-10 rounded-2xl bg-black/70 p-3 backdrop-blur"
-              >
-                <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-white/70">
-                  <FaFacebook className="h-3 w-3 text-[#1877f2]" />
-                  <FaInstagram className="h-3 w-3 text-[#e1306c]" /> Feed post + Story
-                </div>
-                <p className="mt-1.5 line-clamp-3 text-[11px] leading-snug text-white/90">{venue.promo.caption}</p>
-              </motion.div>
-            )}
           </div>
         </PhoneFrame>
       }
@@ -688,7 +762,6 @@ function AnimateStage({ src, poster, label }: { src: string; poster: string; lab
       {p >= 2 && <DemoVideoPlayer src={src} poster={poster} fit="contain" />}
       {p >= 2 && (
         <div className="absolute left-3 top-9 z-10 flex flex-col items-start gap-1">
-          <PreparedTag />
           <span className="rounded-full bg-black/60 px-2 py-0.5 text-[9px] font-semibold text-white/85">{label}</span>
         </div>
       )}
@@ -705,7 +778,6 @@ export function AnimateChapter({ venue }: ChapterProps) {
       info={{
         number: 5,
         tool: "Smart Animate",
-        credits: "3 credits",
         title: (
           <>
             Stop the scroll. <span className="gradient-text-multi">Make it move.</span>
@@ -716,18 +788,18 @@ export function AnimateChapter({ venue }: ChapterProps) {
         steps: ["Image + prompt", "Animation", "Motion video"],
       }}
       controls={
-        <div className="flex flex-wrap gap-2">
+        <div className="grid grid-cols-3 gap-1.5">
           {venue.animate.map((a, i) => (
             <button
               key={a.id}
               type="button"
               onClick={() => setIdx(i)}
-              className={`flex items-center gap-2 rounded-xl border p-1 pr-3 text-left text-[12px] font-semibold transition ${
+              className={`flex items-center gap-1.5 rounded-lg border p-1 pr-2 text-left text-[11px] font-semibold transition ${
                 i === idx ? "border-white/60 bg-white/15 text-white" : "border-white/10 bg-white/5 text-white/60 hover:text-white"
               }`}
             >
-              <img src={a.poster} alt="" className="h-9 w-7 rounded-lg object-cover" />
-              {a.label}
+              <img src={a.poster} alt="" className="h-7 w-5 flex-shrink-0 rounded object-cover" />
+              <span className="truncate">{a.label}</span>
             </button>
           ))}
         </div>
@@ -741,10 +813,11 @@ export function AnimateChapter({ venue }: ChapterProps) {
             className="rounded-2xl border border-white/10 bg-white/[0.06] p-4"
           >
             <div className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-white/45">Prompt</div>
-            <p className="font-mono text-[13px] text-white/90">{ex.prompt}</p>
+            <p className="font-mono text-[13px] leading-relaxed text-white/90">{ex.prompt}</p>
           </motion.div>
-        ) : null
+        ) : undefined
       }
+      shareBar={<ShareBar />}
       stage={
         <PhoneFrame>
           <AnimateStage key={ex.id} src={ex.src} poster={ex.poster} label={ex.label} />
@@ -908,19 +981,6 @@ export function CloseChapter({ venue, lang, onRestart }: ChapterProps) {
           </motion.div>
         ))}
       </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-        className="mt-5 flex flex-wrap justify-center gap-2"
-      >
-        {DEMO_CREDIT_COSTS.map((c) => (
-          <span key={c.tool} className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-[12px] text-white/70">
-            {c.tool} <span className="font-bold text-white">{c.credits} cr</span>
-          </span>
-        ))}
-      </motion.div>
 
       <motion.div
         initial={{ opacity: 0, y: 16 }}
