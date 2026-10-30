@@ -243,34 +243,19 @@ export function ImagesChapter({ venue }: ChapterProps) {
         steps: ["Photo in LINE", "Logo + caption", "FB & IG post"],
       }}
       aside={
-        <motion.div key="orig" initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-          className="inline-flex items-center gap-2 self-start rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white/70">
-          Original photo
-        </motion.div>
-      }
-      shareBar={
-        <div className="flex flex-col gap-2">
-          <AnimatePresence mode="wait">
-            {p < 2 ? (
-              <motion.div key="sharebar-only" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                <ShareBar />
-              </motion.div>
-            ) : (
-              <motion.div key="sharebar-ready" initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col gap-2">
-                <div className="flex items-center gap-2">
-                  <ShareBar />
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 text-[12px] font-bold text-white backdrop-blur border border-white/15 whitespace-nowrap">
-                    <FaFacebook className="h-3.5 w-3.5 text-[#1877f2]" />
-                    <FaInstagram className="h-3.5 w-3.5 text-[#e1306c]" />
-                    Ready to post
-                  </span>
-                </div>
-                <div className="max-h-40 overflow-y-auto rounded-2xl"><CaptionCard text={venue.images.caption} /></div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+        <div className="flex flex-col gap-3">
+          <motion.div key="orig" initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+            className="inline-flex items-center gap-2 self-start rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white/70">
+            Original photo
+          </motion.div>
+          {p >= 2 && (
+            <motion.div key="caption" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}>
+              <CaptionCard text={venue.images.caption} />
+            </motion.div>
+          )}
         </div>
       }
+      shareBar={<ShareBar />}
       stage={
         <PhoneFrame>
           <div className="absolute inset-0 bg-black overflow-hidden">
@@ -498,15 +483,19 @@ export function ShortsChapter({ venue }: ChapterProps) {
           )}
         </>
       }
+      aside={
+        current ? (
+          <motion.div key={variant} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}>
+            <CaptionCard text={current.caption} />
+          </motion.div>
+        ) : undefined
+      }
       shareBar={
-        <div className="flex flex-col gap-2">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[12px] font-bold text-white/80 whitespace-nowrap">
-              <FaInstagram className="h-3.5 w-3.5 text-[#e1306c]" /> Vertical video · Reels
-            </span>
-            <ShareBar />
-          </div>
-          {current && <div className="max-h-40 overflow-y-auto rounded-2xl"><CaptionCard text={current.caption} /></div>}
+        <div className="flex flex-nowrap items-center gap-2">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[12px] font-bold text-white/80 whitespace-nowrap">
+            <FaInstagram className="h-3.5 w-3.5 text-[#e1306c]" /> Vertical video · Reels
+          </span>
+          <ShareBar />
         </div>
       }
       stage={
@@ -692,36 +681,32 @@ export function PromoChapter({ venue }: ChapterProps) {
             <SheetCard venue={venue} active={active} />
           </motion.div>
           {p >= 4 && (
-            <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/60 px-3 py-1.5 text-[12px] font-bold text-white backdrop-blur">
-                <FaFacebook className="h-3.5 w-3.5 text-[#1877f2]" />
-                <FaInstagram className="h-3.5 w-3.5 text-[#e1306c]" />
-                Feed post + Story
-              </span>
-              <a href="/demo/deluzion/promo-oyster.jpg" target="_blank" rel="noopener"
-                className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-2 py-1 text-[11px] font-semibold text-white/80 hover:text-white transition">
-                <img src="/demo/deluzion/promo-oyster.jpg" alt="Oyster Day" className="h-6 w-5 rounded object-cover" />
-                Oyster Day
-              </a>
-              <a href="/demo/deluzion/promo-police.jpg" target="_blank" rel="noopener"
-                className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-2 py-1 text-[11px] font-semibold text-white/80 hover:text-white transition">
-                <img src="/demo/deluzion/promo-police.jpg" alt="Police Party" className="h-6 w-5 rounded object-cover" />
-                Police Party
-              </a>
-            </motion.div>
+            <>
+              <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/60 px-3 py-1.5 text-[12px] font-bold text-white backdrop-blur">
+                  <FaFacebook className="h-3.5 w-3.5 text-[#1877f2]" />
+                  <FaInstagram className="h-3.5 w-3.5 text-[#e1306c]" />
+                  Feed post + Story
+                </span>
+                <a href="/demo/deluzion/promo-oyster.jpg" target="_blank" rel="noopener"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-2 py-1 text-[11px] font-semibold text-white/80 hover:text-white transition">
+                  <img src="/demo/deluzion/promo-oyster.jpg" alt="Oyster Day" className="h-6 w-5 rounded object-cover" />
+                  Oyster Day
+                </a>
+                <a href="/demo/deluzion/promo-police.jpg" target="_blank" rel="noopener"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-2 py-1 text-[11px] font-semibold text-white/80 hover:text-white transition">
+                  <img src="/demo/deluzion/promo-police.jpg" alt="Police Party" className="h-6 w-5 rounded object-cover" />
+                  Police Party
+                </a>
+              </motion.div>
+              <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}>
+                <CaptionCard text={venue.promo.caption} />
+              </motion.div>
+            </>
           )}
         </div>
       }
-      shareBar={
-        <div className="flex flex-col gap-2">
-          <ShareBar />
-          {p >= 4 && (
-            <div className="max-h-40 overflow-y-auto rounded-2xl">
-              <CaptionCard text={venue.promo.caption} />
-            </div>
-          )}
-        </div>
-      }
+      shareBar={<ShareBar />}
       stage={
         <PhoneFrame>
           <div className="absolute inset-0 bg-[linear-gradient(180deg,#1b2433,#0e1218)]">
