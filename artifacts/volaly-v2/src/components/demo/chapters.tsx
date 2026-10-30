@@ -1,7 +1,21 @@
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import { motion, AnimatePresence, animate, useMotionValue, useTransform } from "motion/react";
 import { Check, Sparkles, Clapperboard, Image as ImageIcon, Megaphone, Wand2, CircleDashed, ArrowRight } from "lucide-react";
-import { FaFacebook, FaInstagram, FaThreads, FaLine, FaTiktok } from "react-icons/fa6";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaThreads,
+  FaLine,
+  FaTiktok,
+  FaYoutube,
+  FaXTwitter,
+  FaWhatsapp,
+  FaDiscord,
+  FaPinterest,
+  FaTelegram,
+  FaLinkedin,
+  FaReddit,
+} from "react-icons/fa6";
 import { Link } from "@tanstack/react-router";
 import type { DemoVenue, ShortsVariant } from "@/lib/demo-venues";
 import { DEMO_CREDIT_COSTS, DEMO_PLANS } from "@/lib/demo-venues";
@@ -323,7 +337,7 @@ export function ImagesChapter({ venue }: ChapterProps) {
                       </span>
                       <span className="text-[12px] font-bold text-white">{venue.name.toLowerCase()}</span>
                       {venue.images.staffName && (
-                        <span className="rounded border border-brand-blue px-2 py-0.5 text-[11px] font-bold text-white">
+                        <span className="rounded border border-brand-cyan px-2 py-0.5 text-[11px] font-bold text-white">
                           {venue.images.staffName}
                         </span>
                       )}
@@ -895,7 +909,17 @@ const CHANNELS = [
   { name: "Instagram", icon: FaInstagram, color: "#e1306c" },
   { name: "Threads", icon: FaThreads, color: "#ffffff" },
   { name: "LINE", icon: FaLine, color: "#06c755" },
-];
+  { name: "YouTube", icon: FaYoutube, color: "#ff0000" },
+  { name: "TikTok", icon: FaTiktok, color: "#ffffff" },
+  { name: "X", icon: FaXTwitter, color: "#ffffff" },
+  { name: "WhatsApp", icon: FaWhatsapp, color: "#25d366" },
+  { name: "GMB", icon: null, color: "#34a853", emoji: "G" },
+  { name: "Discord", icon: FaDiscord, color: "#5865f2" },
+  { name: "Pinterest", icon: FaPinterest, color: "#e60023" },
+  { name: "Telegram", icon: FaTelegram, color: "#26a5e4" },
+  { name: "LinkedIn", icon: FaLinkedin, color: "#0a66c2" },
+  { name: "Reddit", icon: FaReddit, color: "#ff4500" },
+] as const;
 
 export function WeekChapter({ venue }: ChapterProps) {
   const p = usePhases([300, 2000, 3000]);
@@ -955,7 +979,14 @@ export function WeekChapter({ venue }: ChapterProps) {
                 transition={{ delay: i * 0.18, duration: 0.5 }}
                 className="flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.06] px-3 py-1.5 text-[13px] font-semibold text-white"
               >
-                <c.icon className="h-4 w-4" style={{ color: c.color }} /> {c.name}
+                {"icon" in c && c.icon ? (
+                  <c.icon className="h-4 w-4 flex-shrink-0" style={{ color: c.color }} />
+                ) : (
+                  <span className="flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full text-[10px] font-black" style={{ backgroundColor: c.color, color: "#fff" }}>
+                    {(c as { emoji: string }).emoji}
+                  </span>
+                )}
+                {c.name}
               </motion.span>
             ))}
           </div>

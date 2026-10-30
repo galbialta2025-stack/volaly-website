@@ -27,7 +27,6 @@ export function PhoneFrame({ children, className = "" }: { children: ReactNode; 
       className={`relative mx-auto w-[min(100%,300px,calc((100dvh_-_330px)*0.5))] md:w-[min(100%,340px,calc((100dvh_-_190px)*0.5))] md:rounded-[46px] md:border md:border-white/15 md:bg-[oklch(0.12_0.02_265)] md:p-[10px] md:shadow-[0_40px_120px_-30px_rgba(0,0,0,0.75),inset_0_0_0_1px_rgba(255,255,255,0.04)] ${className}`}
     >
       <div className="relative aspect-[9/18.5] overflow-hidden rounded-[28px] bg-[#0f1115] md:rounded-[36px]">
-        <div className="pointer-events-none absolute left-1/2 top-2 z-30 hidden h-[22px] w-[92px] -translate-x-1/2 rounded-full bg-black md:block" />
         {children}
       </div>
     </div>
