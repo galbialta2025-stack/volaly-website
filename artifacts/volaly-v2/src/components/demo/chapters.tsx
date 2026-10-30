@@ -47,7 +47,7 @@ const SHARE_CHANNELS = [
 
 function ShareBar() {
   return (
-    <div className="flex flex-wrap items-center gap-2 pt-1">
+    <div className="flex flex-nowrap items-center gap-2 overflow-x-auto pt-1">
       <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/40">Share to</span>
       {SHARE_CHANNELS.map((ch) => (
         <span
@@ -265,7 +265,7 @@ export function ImagesChapter({ venue }: ChapterProps) {
                     Ready to post
                   </span>
                 </div>
-                <CaptionCard text={venue.images.caption} />
+                <div className="max-h-40 overflow-y-auto rounded-2xl"><CaptionCard text={venue.images.caption} /></div>
               </motion.div>
             )}
           </AnimatePresence>
@@ -506,7 +506,7 @@ export function ShortsChapter({ venue }: ChapterProps) {
             </span>
             <ShareBar />
           </div>
-          {current && <CaptionCard text={current.caption} />}
+          {current && <div className="max-h-40 overflow-y-auto rounded-2xl"><CaptionCard text={current.caption} /></div>}
         </div>
       }
       stage={
@@ -715,7 +715,11 @@ export function PromoChapter({ venue }: ChapterProps) {
       shareBar={
         <div className="flex flex-col gap-2">
           <ShareBar />
-          {p >= 4 && <CaptionCard text={venue.promo.caption} />}
+          {p >= 4 && (
+            <div className="max-h-40 overflow-y-auto rounded-2xl">
+              <CaptionCard text={venue.promo.caption} />
+            </div>
+          )}
         </div>
       }
       stage={
