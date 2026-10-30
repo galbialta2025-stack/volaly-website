@@ -228,6 +228,8 @@ function CompareImage({ before, after }: { before: string; after: string }) {
 
 export function ImagesChapter({ venue }: ChapterProps) {
   const p = usePhases([600, 1800, 3200]);
+  const [showEnhanced, setShowEnhanced] = useState(false);
+
   return (
     <ChapterLayout
       info={{
@@ -242,12 +244,38 @@ export function ImagesChapter({ venue }: ChapterProps) {
           "Staff send photos to the venue's Volaly LINE. Volaly adds the logo, writes caption and hashtags and posts to Facebook and Instagram.",
         steps: ["Photo in LINE", "Logo + caption", "FB & IG post"],
       }}
+      controls={
+        p >= 2 ? (
+          <div className="flex rounded-full border border-white/12 bg-white/5 p-1">
+            <button
+              type="button"
+              onClick={() => setShowEnhanced(false)}
+              className={`rounded-full px-4 py-1.5 text-sm font-semibold transition ${
+                !showEnhanced ? "bg-white text-black" : "text-white/70 hover:text-white"
+              }`}
+            >
+              Original photo
+            </button>
+            <button
+              type="button"
+              onClick={() => setShowEnhanced(true)}
+              className={`rounded-full px-4 py-1.5 text-sm font-semibold transition ${
+                showEnhanced ? "bg-white text-black" : "text-white/70 hover:text-white"
+              }`}
+            >
+              Photo Enhancement
+            </button>
+          </div>
+        ) : undefined
+      }
       aside={
         <div className="flex flex-col gap-3">
-          <motion.div key="orig" initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-            className="inline-flex items-center gap-2 self-start rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white/70">
-            Original photo
-          </motion.div>
+          {p < 2 && (
+            <motion.div key="orig" initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+              className="inline-flex items-center gap-2 self-start rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white/70">
+              Original photo
+            </motion.div>
+          )}
           {p >= 2 && (
             <motion.div key="caption" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}>
               <CaptionCard text={venue.images.caption} />
@@ -269,27 +297,40 @@ export function ImagesChapter({ venue }: ChapterProps) {
             </AnimatePresence>
             {p >= 2 && (
               <motion.div
-                key="after"
+                key={showEnhanced ? "enhanced" : "after"}
                 initial={{ opacity: 0, scale: 1.04 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: EASE }}
                 className="absolute inset-0"
               >
-                <img src={venue.images.after} alt="Smart Images result" className="h-full w-full object-cover" />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-3 pt-16">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <span className="grid h-7 w-7 place-items-center overflow-hidden rounded-full bg-black ring-1 ring-white/40">
-                      <img src={venue.logo} alt="" className="h-full w-full object-contain p-0.5" />
+                <img
+                  src={showEnhanced ? venue.images.before : venue.images.after}
+                  alt={showEnhanced ? "Original photo" : "Smart Images result"}
+                  className="h-full w-full object-cover"
+                />
+                {showEnhanced && (
+                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                    <span className="rounded-full bg-black/60 px-3 py-1.5 text-[11px] font-bold text-white backdrop-blur">
+                      Original photo
                     </span>
-                    <span className="text-[12px] font-bold text-white">{venue.name.toLowerCase()}</span>
-                    {venue.images.staffName && (
-                      <span className="rounded border border-brand-blue px-2 py-0.5 text-[11px] font-bold text-white">
-                        {venue.images.staffName}
-                      </span>
-                    )}
                   </div>
-                  <p className="line-clamp-2 text-[11px] leading-snug text-white/90">{venue.images.caption}</p>
-                </div>
+                )}
+                {!showEnhanced && (
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-3 pt-16">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <span className="grid h-7 w-7 place-items-center overflow-hidden rounded-full bg-black ring-1 ring-white/40">
+                        <img src={venue.logo} alt="" className="h-full w-full object-contain p-0.5" />
+                      </span>
+                      <span className="text-[12px] font-bold text-white">{venue.name.toLowerCase()}</span>
+                      {venue.images.staffName && (
+                        <span className="rounded border border-brand-blue px-2 py-0.5 text-[11px] font-bold text-white">
+                          {venue.images.staffName}
+                        </span>
+                      )}
+                    </div>
+                    <p className="line-clamp-2 text-[11px] leading-snug text-white/90">{venue.images.caption}</p>
+                  </div>
+                )}
               </motion.div>
             )}
           </div>
@@ -490,14 +531,7 @@ export function ShortsChapter({ venue }: ChapterProps) {
           </motion.div>
         ) : undefined
       }
-      shareBar={
-        <div className="flex flex-nowrap items-center gap-2">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[12px] font-bold text-white/80 whitespace-nowrap">
-            <FaInstagram className="h-3.5 w-3.5 text-[#e1306c]" /> Vertical video · Reels
-          </span>
-          <ShareBar />
-        </div>
-      }
+      shareBar={<ShareBar />}
       stage={
         <PhoneFrame>
           {variant === "slideshow" && venue.shorts.slideshow && <SlideshowStage venue={venue} music={music} outro={outro} />}
@@ -645,9 +679,15 @@ function SheetCard({ venue, active }: { venue: DemoVenue; active: number }) {
   );
 }
 
+const EXTRA_FLYERS = [
+  { label: "Oyster Day", src: "/demo/deluzion/promo-oyster.jpg" },
+  { label: "Police Party", src: "/demo/deluzion/promo-police.jpg" },
+];
+
 export function PromoChapter({ venue }: ChapterProps) {
   const p = usePhases([400, 2800, 3700, 4700]);
   const [active, setActive] = useState(-1);
+  const [activeFlyer, setActiveFlyer] = useState<string | null>(null);
 
   useEffect(() => {
     if (p !== 1) return;
@@ -688,16 +728,21 @@ export function PromoChapter({ venue }: ChapterProps) {
                   <FaInstagram className="h-3.5 w-3.5 text-[#e1306c]" />
                   Feed post + Story
                 </span>
-                <a href="/demo/deluzion/promo-oyster.jpg" target="_blank" rel="noopener"
-                  className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-2 py-1 text-[11px] font-semibold text-white/80 hover:text-white transition">
-                  <img src="/demo/deluzion/promo-oyster.jpg" alt="Oyster Day" className="h-6 w-5 rounded object-cover" />
-                  Oyster Day
-                </a>
-                <a href="/demo/deluzion/promo-police.jpg" target="_blank" rel="noopener"
-                  className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-2 py-1 text-[11px] font-semibold text-white/80 hover:text-white transition">
-                  <img src="/demo/deluzion/promo-police.jpg" alt="Police Party" className="h-6 w-5 rounded object-cover" />
-                  Police Party
-                </a>
+                {EXTRA_FLYERS.map((f) => (
+                  <button
+                    key={f.src}
+                    type="button"
+                    onClick={() => setActiveFlyer(activeFlyer === f.src ? null : f.src)}
+                    className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-1 text-[11px] font-semibold transition ${
+                      activeFlyer === f.src
+                        ? "border-brand-blue bg-brand-blue/20 text-white"
+                        : "border-white/15 bg-white/[0.06] text-white/80 hover:text-white"
+                    }`}
+                  >
+                    <img src={f.src} alt={f.label} className="h-6 w-5 rounded object-cover" />
+                    {f.label}
+                  </button>
+                ))}
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}>
                 <CaptionCard text={venue.promo.caption} />
@@ -710,33 +755,47 @@ export function PromoChapter({ venue }: ChapterProps) {
       stage={
         <PhoneFrame>
           <div className="absolute inset-0 bg-[linear-gradient(180deg,#1b2433,#0e1218)]">
-            {p >= 2 && (
-              <motion.div
-                className="absolute inset-0"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
-                <img src={venue.promo.flyer} alt="" aria-hidden className="absolute inset-0 h-full w-full scale-125 object-cover opacity-60 blur-2xl" />
-                <motion.img
-                  src={venue.promo.flyer}
-                  alt="Event flyer"
-                  initial={{ filter: "blur(24px) saturate(0.4)", scale: 1.12 }}
-                  animate={p >= 3 ? { filter: "blur(0px) saturate(1)", scale: 1 } : { filter: "blur(18px) saturate(0.6)", scale: 1.08 }}
-                  transition={{ duration: 1.1, ease: EASE }}
-                  className="absolute inset-0 h-full w-full object-contain"
-                />
-                {p === 2 && <ScanSweep color="var(--brand-orange)" duration={0.9} />}
-              </motion.div>
-            )}
-            {p < 2 && (
-              <div className="absolute inset-0 grid place-items-center">
-                <div className="flex flex-col items-center gap-3 text-white/60">
-                  <Megaphone className="h-8 w-8" />
-                  <span className="text-[12px] font-semibold">Reading the sheet row…</span>
-                </div>
-              </div>
-            )}
+            <AnimatePresence mode="wait">
+              {activeFlyer ? (
+                <motion.div
+                  key={activeFlyer}
+                  initial={{ opacity: 0, scale: 1.04 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.96 }}
+                  transition={{ duration: 0.4, ease: EASE }}
+                  className="absolute inset-0"
+                >
+                  <img src={activeFlyer} alt="Flyer preview" className="absolute inset-0 h-full w-full object-contain" />
+                </motion.div>
+              ) : p >= 2 ? (
+                <motion.div
+                  key="main-flyer"
+                  className="absolute inset-0"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img src={venue.promo.flyer} alt="" aria-hidden className="absolute inset-0 h-full w-full scale-125 object-cover opacity-60 blur-2xl" />
+                  <motion.img
+                    src={venue.promo.flyer}
+                    alt="Event flyer"
+                    initial={{ filter: "blur(24px) saturate(0.4)", scale: 1.12 }}
+                    animate={p >= 3 ? { filter: "blur(0px) saturate(1)", scale: 1 } : { filter: "blur(18px) saturate(0.6)", scale: 1.08 }}
+                    transition={{ duration: 1.1, ease: EASE }}
+                    className="absolute inset-0 h-full w-full object-contain"
+                  />
+                  {p === 2 && <ScanSweep color="var(--brand-orange)" duration={0.9} />}
+                </motion.div>
+              ) : (
+                <motion.div key="loading" className="absolute inset-0 grid place-items-center" exit={{ opacity: 0 }}>
+                  <div className="flex flex-col items-center gap-3 text-white/60">
+                    <Megaphone className="h-8 w-8" />
+                    <span className="text-[12px] font-semibold">Reading the sheet row…</span>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </PhoneFrame>
       }
@@ -807,15 +866,15 @@ export function AnimateChapter({ venue }: ChapterProps) {
         </div>
       }
       aside={
-        ex.prompt ? (
-          <motion.div
-            key={ex.id}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="rounded-2xl border border-white/10 bg-white/[0.06] p-4"
-          >
-            <div className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-white/45">Prompt</div>
-            <p className="font-mono text-[13px] leading-relaxed text-white/90">{ex.prompt}</p>
+        ex.prompt || ex.caption ? (
+          <motion.div key={ex.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col gap-3">
+            {ex.prompt && (
+              <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-4">
+                <div className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-white/45">Prompt</div>
+                <p className="font-mono text-[13px] leading-relaxed text-white/90">{ex.prompt}</p>
+              </div>
+            )}
+            {ex.caption && <CaptionCard text={ex.caption} />}
           </motion.div>
         ) : undefined
       }

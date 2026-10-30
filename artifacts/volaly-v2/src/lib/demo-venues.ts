@@ -23,6 +23,8 @@ export interface AnimateExample extends DemoVideo {
   label: string;
   /** The real prompt used for this output. Leave undefined if unknown — the prompt block is then hidden. */
   prompt?: string;
+  /** Caption + hashtags for this animated output. Leave undefined to hide the caption block. */
+  caption?: string;
 }
 
 export interface PromoSheetRow {
@@ -126,6 +128,8 @@ const DELUZION: DemoVenue = {
       src: "/demo/deluzion/animate-halloween.mp4",
       poster: "/demo/deluzion/animate-halloween-poster.webp",
       prompt: "Animate the Halloween makeup — glowing eyes, bats flying, spooky aura",
+      caption:
+        "🦇 Beware — Deluzion goes dark this Halloween! 👻 Glowing eyes, spooky beats and killer cocktails. Join us Soi 7 from 4 PM on 31.10.2026. Do you dare? 🎃🍹\n#Pattaya #Halloween #DeluzionHalloween #PattayaNightlife #SpookyVibes #HalloweenParty #ThailandNightlife",
     },
     {
       id: "deluzion-ice-birthday",
@@ -133,6 +137,8 @@ const DELUZION: DemoVenue = {
       src: "/demo/deluzion/animate-ice-birthday.mp4",
       poster: "/demo/deluzion/animate-ice-birthday-poster.webp",
       prompt: "Make the ice crystals sparkle and the dress shimmer with light rays",
+      caption:
+        "❄️ Ice cold and twice as hot — Happy Birthday to our girl! 🎂✨ Celebrate with us at Deluzion, Soi 7 Pattaya. Tonight we shine! 💎🍾\n#Pattaya #BirthdayParty #IceParty #DeluzionPattaya #NightlifePattaya #PattayaThailand #CelebrationVibes",
     },
     ...SHARED_ANIMATE.filter((a) => !["smartbar-halloween", "smartbar-ice-birthday"].includes(a.id)),
   ],
