@@ -29,9 +29,9 @@ export function ChapterLayout({
   shareBar?: ReactNode;
 }) {
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 sm:px-6 md:grid md:h-full md:grid-cols-[minmax(0,1fr)_minmax(0,520px)] md:items-center md:gap-6 md:overflow-hidden lg:gap-10">
+    <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 sm:px-6 md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,520px)] md:items-center md:gap-6 lg:gap-10">
       {/* ── Left column: text + controls + aside ── */}
-      <div className="order-2 flex flex-col gap-2 md:order-1 md:min-h-0 md:max-h-full md:flex-shrink md:self-stretch md:overflow-y-auto md:gap-4 md:py-2">
+      <div className="order-2 flex flex-col gap-2 md:order-1 md:gap-4">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -96,12 +96,12 @@ export function ChapterLayout({
       </div>
 
       {/* ── Right column: phone + shareBar below ── */}
-      <div className="order-1 flex flex-col gap-3 md:order-2 md:min-h-0">
+      <div className="order-1 flex flex-col gap-3 md:order-2">
         <motion.div
           initial={{ opacity: 0, y: 30, rotate: 1.5 }}
           animate={{ opacity: 1, y: 0, rotate: 0 }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-          className="w-full flex-shrink-0 basis-[55vh] overflow-hidden md:basis-auto md:overflow-visible"
+          className="w-full overflow-hidden md:overflow-visible"
         >
           {stage}
         </motion.div>

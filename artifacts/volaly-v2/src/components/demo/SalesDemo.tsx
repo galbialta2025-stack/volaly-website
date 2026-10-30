@@ -102,7 +102,7 @@ export function SalesDemo({ lang, venueId }: { lang: string; venueId?: string })
   const { Component } = CHAPTERS[step];
 
   return (
-    <div className="noise relative flex h-[100dvh] flex-col overflow-hidden bg-[oklch(0.15_0.03_265)] text-white">
+    <div className="noise relative flex min-h-[100dvh] flex-col bg-[oklch(0.15_0.03_265)] text-white">
       <SEO
         title={`Volaly Visibility Suite — Demo for ${venue.name}`}
         description="Guided Volaly sales demo with prepared example results."
@@ -138,7 +138,7 @@ export function SalesDemo({ lang, venueId }: { lang: string; venueId?: string })
       </header>
 
       {/* Stage */}
-      <main className="relative z-10 min-h-0 flex-1 overflow-y-auto overflow-x-hidden md:overflow-hidden">
+      <main className="relative z-10 overflow-x-hidden">
         <AnimatePresence mode="wait" custom={dir} initial={false}>
           <motion.div
             key={`${run}-${step}`}
@@ -147,7 +147,7 @@ export function SalesDemo({ lang, venueId }: { lang: string; venueId?: string })
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: dir * -60 }}
             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-            className="flex min-h-full w-full items-start py-4 pb-6 md:h-full md:items-center md:py-0 md:pb-0"
+            className="flex w-full items-start py-4 pb-6 md:items-center md:py-8"
           >
             <Component venue={venue} lang={lang} onRestart={restart} />
           </motion.div>
