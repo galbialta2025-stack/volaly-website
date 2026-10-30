@@ -31,7 +31,7 @@ export function ChapterLayout({
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 sm:px-6 md:grid md:h-full md:grid-cols-[minmax(0,1fr)_minmax(0,520px)] md:items-center md:gap-6 md:overflow-hidden lg:gap-10">
       {/* ── Left column: text + controls + aside ── */}
-      <div className="order-2 flex flex-col gap-2 md:order-1 md:min-h-0 md:flex-shrink md:overflow-y-auto md:gap-4">
+      <div className="order-2 flex flex-col gap-2 md:order-1 md:min-h-0 md:max-h-full md:flex-shrink md:self-stretch md:overflow-y-auto md:gap-4 md:py-2">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
