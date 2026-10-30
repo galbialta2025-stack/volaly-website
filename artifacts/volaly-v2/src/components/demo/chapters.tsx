@@ -298,7 +298,9 @@ export function ImagesChapter({ venue }: ChapterProps) {
                     </span>
                     <span className="text-[12px] font-bold text-white">{venue.name.toLowerCase()}</span>
                     {venue.images.staffName && (
-                      <span className="text-[11px] font-semibold text-white/75">{venue.images.staffName}</span>
+                      <span className="rounded-full bg-white/20 px-2 py-0.5 text-[11px] font-bold text-white backdrop-blur">
+                        {venue.images.staffName}
+                      </span>
                     )}
                   </div>
                   <p className="line-clamp-2 text-[11px] leading-snug text-white/90">{venue.images.caption}</p>
