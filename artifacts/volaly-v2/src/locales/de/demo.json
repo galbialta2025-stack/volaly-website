@@ -76,6 +76,11 @@
     "titlePre": "Ein Video. ",
     "titleHighlight": "Zehn Clips. Automatisch veröffentlicht.",
     "subtitle": "Laden Sie ein langes Video hoch, und Volaly erstellt, untertitelt und plant sofort Kurzform-Content für jede Plattform.",
+    "tabs": {
+      "generate": "Generieren",
+      "edit": "Bearbeiten",
+      "clip": "Zuschneiden"
+    },
     "idle": {
       "title": "Ziehen Sie Ihr langes Video hierher",
       "sub": "oder klicken Sie zum Hochladen — MP4, MOV, AVI",
@@ -95,6 +100,36 @@
       "ai": { "label": "Volaly AI", "sub": "Verarbeitet…" },
       "shorts": { "label": "10 Shorts", "sub": "Automatisch erstellt" },
       "publish": { "label": "Auto-Veröffentlichung", "sub": "Alle Plattformen" }
+    },
+    "edit": {
+      "title": "Clip bearbeiten",
+      "sub": "Trimmen, Untertitel hinzufügen und Thumbnail wählen — alles im Browser.",
+      "timeline": "Timeline",
+      "clip1": "Intro-Hook",
+      "clip2": "Haupt-Highlight",
+      "clip3": "Call to Action",
+      "captionLabel": "Untertitel",
+      "captionPlaceholder": "Untertitel hier eingeben…",
+      "trimLabel": "Trimmen",
+      "trimStart": "0:04",
+      "trimEnd": "0:29",
+      "publishCta": "Speichern & Veröffentlichen",
+      "badge": "KI-empfohlener Schnitt"
+    },
+    "clip": {
+      "title": "Clip auswählen",
+      "sub": "In- und Out-Punkte setzen — Volaly schneidet, untertitelt und veröffentlicht automatisch.",
+      "inLabel": "IN",
+      "outLabel": "OUT",
+      "duration": "25s",
+      "extractCta": "Clip extrahieren",
+      "clips": [
+        { "label": "Hook — 0:00–0:08", "platform": "TikTok" },
+        { "label": "Highlight — 0:14–0:29", "platform": "Reels" },
+        { "label": "Outro — 0:52–1:00", "platform": "YT Shorts" }
+      ],
+      "aiDetected": "KI erkannte 3 Highlights",
+      "readyCta": "Alle veröffentlichen"
     }
   },
   "revenue": {
