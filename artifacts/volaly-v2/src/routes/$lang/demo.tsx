@@ -649,14 +649,27 @@ function ShortsGeneratePanel() {
 /* — Edit tab — */
 function ShortsEditPanel() {
   const { t } = useTranslation("demo");
-  const [trimValue, setTrimValue] = useState(62); // percent of total
+  const [trimValue, setTrimValue] = useState(62);
   const [caption, setCaption] = useState("");
   const [saved, setSaved] = useState(false);
+  const [playing, setPlaying] = useState(false);
   const reduce = useReducedMotion();
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleSave = () => {
     setSaved(true);
     setTimeout(() => setSaved(false), 2000);
+  };
+
+  const togglePlay = () => {
+    if (!videoRef.current) return;
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+      setPlaying(true);
+    } else {
+      videoRef.current.pause();
+      setPlaying(false);
+    }
   };
 
   const clips = [
@@ -664,6 +677,11 @@ function ShortsEditPanel() {
     { label: t("shorts.edit.clip2"), color: "bg-brand-purple", width: "w-[36%]", left: "left-[34%]" },
     { label: t("shorts.edit.clip3"), color: "bg-brand-cyan",   width: "w-[22%]", left: "left-[74%]" },
   ];
+
+  // trim percent → time label
+  const totalSecs = 25;
+  const endSec = Math.round((trimValue / 100) * totalSecs);
+  const fmt = (s: number) => `0:${String(s).padStart(2, "0")}`;
 
   return (
     <div className="flex flex-col gap-6">
@@ -673,7 +691,43 @@ function ShortsEditPanel() {
         <p className="mt-1 text-sm text-muted-foreground">{t("shorts.edit.sub")}</p>
       </div>
 
-      {/* Timeline mock */}
+      {/* Video player */}
+      <div className="relative overflow-hidden rounded-[16px] border border-border/60 bg-black">
+        <video
+          ref={videoRef}
+          src="/demo/editing-demo.mp4"
+          className="mx-auto block max-h-64 w-auto"
+          loop
+          playsInline
+          onEnded={() => setPlaying(false)}
+        />
+        {/* Play overlay */}
+        {!playing && (
+          <button
+            onClick={togglePlay}
+            className="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity hover:bg-black/40"
+          >
+            <span className="grid h-14 w-14 place-items-center rounded-full bg-white/20 backdrop-blur-sm">
+              <Play className="h-7 w-7 text-white translate-x-0.5" />
+            </span>
+          </button>
+        )}
+        {playing && (
+          <button
+            onClick={togglePlay}
+            className="absolute inset-0 opacity-0 hover:opacity-100 flex items-center justify-center bg-black/20 transition-opacity"
+          >
+            <span className="grid h-14 w-14 place-items-center rounded-full bg-white/20 backdrop-blur-sm">
+              <span className="flex gap-1">
+                <span className="h-6 w-1.5 rounded-full bg-white" />
+                <span className="h-6 w-1.5 rounded-full bg-white" />
+              </span>
+            </span>
+          </button>
+        )}
+      </div>
+
+      {/* Timeline */}
       <div className="rounded-[16px] border border-border/60 bg-muted/30 p-4">
         <div className="mb-3 flex items-center justify-between">
           <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">{t("shorts.edit.timeline")}</span>
@@ -681,7 +735,6 @@ function ShortsEditPanel() {
             {t("shorts.edit.badge")}
           </span>
         </div>
-        {/* Track */}
         <div className="relative h-12 w-full rounded-lg bg-muted/60">
           {clips.map((c) => (
             <div
@@ -691,7 +744,6 @@ function ShortsEditPanel() {
               <span className="truncate text-[10px] font-bold text-white">{c.label}</span>
             </div>
           ))}
-          {/* Playhead */}
           <motion.div
             className="absolute top-0 h-full w-0.5 bg-brand-orange shadow-[0_0_6px_rgba(251,146,60,0.8)]"
             animate={reduce ? {} : { left: ["8%", "92%"] }}
@@ -707,7 +759,7 @@ function ShortsEditPanel() {
             <Sliders className="h-3 w-3" /> {t("shorts.edit.trimLabel")}
           </span>
           <span className="text-xs text-muted-foreground">
-            {t("shorts.edit.trimStart")} – {t("shorts.edit.trimEnd")}
+            {fmt(4)} – {fmt(endSec)}
           </span>
         </div>
         <input
@@ -774,32 +826,39 @@ function ShortsClipPanel() {
         <p className="mt-1 text-sm text-muted-foreground">{t("shorts.clip.sub")}</p>
       </div>
 
-      {/* Video preview mock */}
-      <div className="relative overflow-hidden rounded-[16px] border border-border/60 bg-muted/40">
-        {/* Fake video frame */}
-        <div className="relative flex h-40 items-center justify-center bg-gradient-to-br from-brand-blue/10 to-brand-purple/10">
-          <Play className="h-10 w-10 text-muted-foreground/40" />
-          {/* IN / OUT markers */}
-          <div className="absolute left-[20%] top-0 flex h-full flex-col items-center">
-            <div className="h-full w-0.5 bg-brand-green" />
-            <span className="absolute -top-1 rounded bg-brand-green px-1.5 py-0.5 text-[10px] font-bold text-white">
+      {/* Video preview with IN/OUT markers */}
+      <div className="relative overflow-hidden rounded-[16px] border border-border/60 bg-black">
+        <div className="relative">
+          <video
+            src="/demo/editing-demo.mp4"
+            className="mx-auto block max-h-56 w-auto"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+          {/* IN marker */}
+          <div className="absolute left-[20%] top-0 flex h-full flex-col items-center pointer-events-none">
+            <div className="h-full w-0.5 bg-brand-green shadow-[0_0_6px_rgba(34,197,94,0.8)]" />
+            <span className="absolute top-2 rounded bg-brand-green px-1.5 py-0.5 text-[10px] font-bold text-white">
               {t("shorts.clip.inLabel")}
             </span>
           </div>
-          <div className="absolute left-[75%] top-0 flex h-full flex-col items-center">
-            <div className="h-full w-0.5 bg-brand-orange" />
-            <span className="absolute -top-1 rounded bg-brand-orange px-1.5 py-0.5 text-[10px] font-bold text-white">
+          {/* OUT marker */}
+          <div className="absolute left-[75%] top-0 flex h-full flex-col items-center pointer-events-none">
+            <div className="h-full w-0.5 bg-brand-orange shadow-[0_0_6px_rgba(251,146,60,0.8)]" />
+            <span className="absolute top-2 rounded bg-brand-orange px-1.5 py-0.5 text-[10px] font-bold text-white">
               {t("shorts.clip.outLabel")}
             </span>
           </div>
           {/* Duration badge */}
-          <span className="absolute bottom-2 right-3 rounded-full bg-background/80 px-2 py-0.5 text-[10px] font-bold text-foreground backdrop-blur-sm">
+          <span className="absolute bottom-2 right-3 rounded-full bg-black/70 px-2 py-0.5 text-[10px] font-bold text-white backdrop-blur-sm">
             {t("shorts.clip.duration")}
           </span>
         </div>
 
         {/* AI detected badge */}
-        <div className="flex items-center gap-2 border-t border-border/40 bg-muted/30 px-4 py-2.5">
+        <div className="flex items-center gap-2 border-t border-white/10 bg-black/40 px-4 py-2.5">
           <Sparkles className="h-3.5 w-3.5 text-brand-purple" />
           <span className="text-xs font-semibold text-brand-purple">{t("shorts.clip.aiDetected")}</span>
         </div>
