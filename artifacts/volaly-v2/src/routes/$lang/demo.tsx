@@ -6,7 +6,7 @@ import {
   Mic, MicOff, MessageSquare, Bot, ArrowRight, Play,
   Clapperboard, BarChart3, Users, Eye, MousePointer,
   ShoppingCart, CircleDollarSign, RefreshCw,
-  CheckCircle2, Send,
+  CheckCircle2, Send, Scissors, Pencil, Film, Sliders,
 } from "lucide-react";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { AuroraOrbs } from "@/components/Backdrop";
@@ -483,16 +483,17 @@ function VoiceAISection() {
    SECTION 5 — SMART SHORTS DEMO
 ═══════════════════════════════════════ */
 
+type ShortsTab = "generate" | "edit" | "clip";
+
 function ShortsSection() {
   const { t } = useTranslation("demo");
-  const [stage, setStage] = useState<"idle" | "processing" | "done">("idle");
-  const reduce = useReducedMotion();
+  const [activeTab, setActiveTab] = useState<ShortsTab>("generate");
 
-  const process = () => {
-    if (stage !== "idle") { setStage("idle"); return; }
-    setStage("processing");
-    setTimeout(() => setStage("done"), 2200);
-  };
+  const tabs: { key: ShortsTab; icon: React.ElementType }[] = [
+    { key: "generate", icon: Upload },
+    { key: "edit",     icon: Pencil },
+    { key: "clip",     icon: Scissors },
+  ];
 
   return (
     <section className="relative overflow-hidden bg-muted/20 py-32">
@@ -504,90 +505,345 @@ function ShortsSection() {
         />
 
         <Reveal delay={0.1}>
-          <div className="mt-16 overflow-hidden rounded-[28px] border border-border/60 bg-background/80 p-8 shadow-[0_16px_48px_rgba(0,0,0,0.10)]">
+          <div className="mt-16 overflow-hidden rounded-[28px] border border-border/60 bg-background/80 shadow-[0_16px_48px_rgba(0,0,0,0.10)]">
 
-            {/* Upload zone */}
-            <motion.button
-              onClick={process}
-              whileHover={stage === "idle" ? { scale: 1.01 } : {}}
-              whileTap={stage === "idle" ? { scale: 0.99 } : {}}
-              className={`relative flex w-full flex-col items-center gap-4 overflow-hidden rounded-[20px] border-2 border-dashed px-8 py-12 text-center transition-all duration-300 ${
-                stage === "idle"
-                  ? "border-border/60 hover:border-brand-orange/40"
-                  : stage === "processing"
-                  ? "border-brand-purple/40 bg-brand-purple/5"
-                  : "border-brand-green/40 bg-brand-green/5"
-              }`}
-            >
+            {/* Tab bar */}
+            <div className="flex border-b border-border/60 bg-muted/30">
+              {tabs.map(({ key, icon: Icon }) => (
+                <button
+                  key={key}
+                  onClick={() => setActiveTab(key)}
+                  className={`flex flex-1 items-center justify-center gap-2 py-4 text-sm font-semibold transition-colors duration-200 ${
+                    activeTab === key
+                      ? "border-b-2 border-brand-orange text-brand-orange"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  <Icon className="h-4 w-4" />
+                  {t(`shorts.tabs.${key}`)}
+                </button>
+              ))}
+            </div>
+
+            {/* Tab panels */}
+            <div className="p-8">
               <AnimatePresence mode="wait">
-                {stage === "idle" && (
-                  <motion.div key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center gap-3">
-                    <div className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand-orange/20 to-brand-pink/20">
-                      <Upload className="h-7 w-7 text-brand-orange" />
-                    </div>
-                    <p className="text-base font-bold text-foreground">{t("shorts.idle.title")}</p>
-                    <p className="text-sm text-muted-foreground">{t("shorts.idle.sub")}</p>
-                    <span className="mt-2 rounded-full bg-brand-orange px-5 py-2 text-sm font-bold text-white shadow-soft">
-                      {t("shorts.idle.cta")}
-                    </span>
+                {activeTab === "generate" && (
+                  <motion.div key="generate" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.2 }}>
+                    <ShortsGeneratePanel />
                   </motion.div>
                 )}
-                {stage === "processing" && (
-                  <motion.div key="processing" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center gap-4">
-                    <motion.div
-                      animate={reduce ? {} : { rotate: 360 }}
-                      transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-                      className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand-purple to-brand-blue"
-                    >
-                      <Sparkles className="h-7 w-7 text-white" />
-                    </motion.div>
-                    <p className="text-base font-bold text-foreground">{t("shorts.processing.title")}</p>
-                    <p className="text-sm text-muted-foreground">{t("shorts.processing.sub")}</p>
-                    <div className="mt-2 h-1.5 w-48 overflow-hidden rounded-full bg-border">
-                      <motion.div
-                        className="h-full bg-gradient-to-r from-brand-purple to-brand-blue"
-                        animate={{ width: ["0%", "100%"] }}
-                        transition={{ duration: 2, ease: "easeInOut" }}
-                      />
-                    </div>
+                {activeTab === "edit" && (
+                  <motion.div key="edit" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.2 }}>
+                    <ShortsEditPanel />
                   </motion.div>
                 )}
-                {stage === "done" && (
-                  <motion.div key="done" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center gap-4">
-                    <div className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand-green to-brand-cyan">
-                      <CheckCircle2 className="h-7 w-7 text-white" />
-                    </div>
-                    <p className="text-base font-extrabold gradient-text-multi">{t("shorts.done.title")}</p>
-                    <p className="text-sm text-muted-foreground">{t("shorts.done.sub")}</p>
-                    <span className="mt-1 text-xs text-muted-foreground/60">{t("shorts.done.resetHint")}</span>
+                {activeTab === "clip" && (
+                  <motion.div key="clip" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.2 }}>
+                    <ShortsClipPanel />
                   </motion.div>
                 )}
               </AnimatePresence>
-            </motion.button>
-
-            {/* Step arrows */}
-            {stage === "done" && (
-              <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="mt-8 flex items-center justify-center gap-2"
-              >
-                {shortsStepsMeta.map((s, i) => (
-                  <div key={s.key} className="flex items-center gap-2">
-                    <div className={`flex flex-col items-center gap-1.5 rounded-[16px] bg-gradient-to-br ${s.gradient} px-4 py-3 text-center`}>
-                      <s.icon className="h-4 w-4 text-white" strokeWidth={1.8} />
-                      <span className="text-xs font-bold text-white">{t(`shorts.steps.${s.key}.label`)}</span>
-                    </div>
-                    {i < shortsStepsMeta.length - 1 && <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground/40" />}
-                  </div>
-                ))}
-              </motion.div>
-            )}
+            </div>
           </div>
         </Reveal>
       </div>
     </section>
+  );
+}
+
+/* — Generate tab (original upload flow) — */
+function ShortsGeneratePanel() {
+  const { t } = useTranslation("demo");
+  const [stage, setStage] = useState<"idle" | "processing" | "done">("idle");
+  const reduce = useReducedMotion();
+
+  const process = () => {
+    if (stage !== "idle") { setStage("idle"); return; }
+    setStage("processing");
+    setTimeout(() => setStage("done"), 2200);
+  };
+
+  return (
+    <div className="flex flex-col gap-6">
+      <motion.button
+        onClick={process}
+        whileHover={stage === "idle" ? { scale: 1.01 } : {}}
+        whileTap={stage === "idle" ? { scale: 0.99 } : {}}
+        className={`relative flex w-full flex-col items-center gap-4 overflow-hidden rounded-[20px] border-2 border-dashed px-8 py-12 text-center transition-all duration-300 ${
+          stage === "idle"
+            ? "border-border/60 hover:border-brand-orange/40"
+            : stage === "processing"
+            ? "border-brand-purple/40 bg-brand-purple/5"
+            : "border-brand-green/40 bg-brand-green/5"
+        }`}
+      >
+        <AnimatePresence mode="wait">
+          {stage === "idle" && (
+            <motion.div key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center gap-3">
+              <div className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand-orange/20 to-brand-pink/20">
+                <Upload className="h-7 w-7 text-brand-orange" />
+              </div>
+              <p className="text-base font-bold text-foreground">{t("shorts.idle.title")}</p>
+              <p className="text-sm text-muted-foreground">{t("shorts.idle.sub")}</p>
+              <span className="mt-2 rounded-full bg-brand-orange px-5 py-2 text-sm font-bold text-white shadow-soft">
+                {t("shorts.idle.cta")}
+              </span>
+            </motion.div>
+          )}
+          {stage === "processing" && (
+            <motion.div key="processing" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center gap-4">
+              <motion.div
+                animate={reduce ? {} : { rotate: 360 }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+                className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand-purple to-brand-blue"
+              >
+                <Sparkles className="h-7 w-7 text-white" />
+              </motion.div>
+              <p className="text-base font-bold text-foreground">{t("shorts.processing.title")}</p>
+              <p className="text-sm text-muted-foreground">{t("shorts.processing.sub")}</p>
+              <div className="mt-2 h-1.5 w-48 overflow-hidden rounded-full bg-border">
+                <motion.div
+                  className="h-full bg-gradient-to-r from-brand-purple to-brand-blue"
+                  animate={{ width: ["0%", "100%"] }}
+                  transition={{ duration: 2, ease: "easeInOut" }}
+                />
+              </div>
+            </motion.div>
+          )}
+          {stage === "done" && (
+            <motion.div key="done" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center gap-4">
+              <div className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand-green to-brand-cyan">
+                <CheckCircle2 className="h-7 w-7 text-white" />
+              </div>
+              <p className="text-base font-extrabold gradient-text-multi">{t("shorts.done.title")}</p>
+              <p className="text-sm text-muted-foreground">{t("shorts.done.sub")}</p>
+              <span className="mt-1 text-xs text-muted-foreground/60">{t("shorts.done.resetHint")}</span>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.button>
+
+      {stage === "done" && (
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="flex items-center justify-center gap-2"
+        >
+          {shortsStepsMeta.map((s, i) => (
+            <div key={s.key} className="flex items-center gap-2">
+              <div className={`flex flex-col items-center gap-1.5 rounded-[16px] bg-gradient-to-br ${s.gradient} px-4 py-3 text-center`}>
+                <s.icon className="h-4 w-4 text-white" strokeWidth={1.8} />
+                <span className="text-xs font-bold text-white">{t(`shorts.steps.${s.key}.label`)}</span>
+              </div>
+              {i < shortsStepsMeta.length - 1 && <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground/40" />}
+            </div>
+          ))}
+        </motion.div>
+      )}
+    </div>
+  );
+}
+
+/* — Edit tab — */
+function ShortsEditPanel() {
+  const { t } = useTranslation("demo");
+  const [trimValue, setTrimValue] = useState(62); // percent of total
+  const [caption, setCaption] = useState("");
+  const [saved, setSaved] = useState(false);
+  const reduce = useReducedMotion();
+
+  const handleSave = () => {
+    setSaved(true);
+    setTimeout(() => setSaved(false), 2000);
+  };
+
+  const clips = [
+    { label: t("shorts.edit.clip1"), color: "bg-brand-orange", width: "w-[28%]", left: "left-[4%]" },
+    { label: t("shorts.edit.clip2"), color: "bg-brand-purple", width: "w-[36%]", left: "left-[34%]" },
+    { label: t("shorts.edit.clip3"), color: "bg-brand-cyan",   width: "w-[22%]", left: "left-[74%]" },
+  ];
+
+  return (
+    <div className="flex flex-col gap-6">
+      {/* Header */}
+      <div>
+        <p className="text-base font-bold text-foreground">{t("shorts.edit.title")}</p>
+        <p className="mt-1 text-sm text-muted-foreground">{t("shorts.edit.sub")}</p>
+      </div>
+
+      {/* Timeline mock */}
+      <div className="rounded-[16px] border border-border/60 bg-muted/30 p-4">
+        <div className="mb-3 flex items-center justify-between">
+          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">{t("shorts.edit.timeline")}</span>
+          <span className="rounded-full bg-brand-orange/10 px-2.5 py-0.5 text-[10px] font-bold text-brand-orange">
+            {t("shorts.edit.badge")}
+          </span>
+        </div>
+        {/* Track */}
+        <div className="relative h-12 w-full rounded-lg bg-muted/60">
+          {clips.map((c) => (
+            <div
+              key={c.label}
+              className={`absolute top-2 h-8 ${c.color}/80 ${c.width} ${c.left} flex items-center justify-center rounded-md px-2`}
+            >
+              <span className="truncate text-[10px] font-bold text-white">{c.label}</span>
+            </div>
+          ))}
+          {/* Playhead */}
+          <motion.div
+            className="absolute top-0 h-full w-0.5 bg-brand-orange shadow-[0_0_6px_rgba(251,146,60,0.8)]"
+            animate={reduce ? {} : { left: ["8%", "92%"] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+          />
+        </div>
+      </div>
+
+      {/* Trim slider */}
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center justify-between">
+          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide flex items-center gap-1.5">
+            <Sliders className="h-3 w-3" /> {t("shorts.edit.trimLabel")}
+          </span>
+          <span className="text-xs text-muted-foreground">
+            {t("shorts.edit.trimStart")} – {t("shorts.edit.trimEnd")}
+          </span>
+        </div>
+        <input
+          type="range"
+          min={10}
+          max={100}
+          value={trimValue}
+          onChange={(e) => setTrimValue(Number(e.target.value))}
+          className="h-2 w-full cursor-pointer appearance-none rounded-full bg-border accent-brand-orange"
+        />
+      </div>
+
+      {/* Caption input */}
+      <div className="flex flex-col gap-2">
+        <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+          {t("shorts.edit.captionLabel")}
+        </span>
+        <textarea
+          rows={2}
+          value={caption}
+          onChange={(e) => setCaption(e.target.value)}
+          placeholder={t("shorts.edit.captionPlaceholder")}
+          className="w-full resize-none rounded-[12px] border border-border/60 bg-muted/30 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-brand-orange/40"
+        />
+      </div>
+
+      {/* Save button */}
+      <motion.button
+        onClick={handleSave}
+        whileTap={{ scale: 0.97 }}
+        className={`flex w-full items-center justify-center gap-2 rounded-[14px] py-3 text-sm font-bold text-white shadow-soft transition-colors duration-200 ${
+          saved ? "bg-brand-green" : "bg-brand-orange hover:bg-brand-orange/90"
+        }`}
+      >
+        {saved ? <CheckCircle2 className="h-4 w-4" /> : <Film className="h-4 w-4" />}
+        {saved ? "Saved!" : t("shorts.edit.publishCta")}
+      </motion.button>
+    </div>
+  );
+}
+
+/* — Clip tab — */
+function ShortsClipPanel() {
+  const { t } = useTranslation("demo");
+  const [selectedClip, setSelectedClip] = useState<number | null>(null);
+  const [published, setPublished] = useState(false);
+
+  const clipsMeta = [
+    { platform: "TikTok",    color: "from-brand-pink to-brand-orange" },
+    { platform: "Reels",     color: "from-brand-purple to-brand-blue" },
+    { platform: "YT Shorts", color: "from-brand-cyan to-brand-green" },
+  ];
+
+  const handlePublish = () => {
+    setPublished(true);
+    setTimeout(() => setPublished(false), 2200);
+  };
+
+  return (
+    <div className="flex flex-col gap-6">
+      {/* Header */}
+      <div>
+        <p className="text-base font-bold text-foreground">{t("shorts.clip.title")}</p>
+        <p className="mt-1 text-sm text-muted-foreground">{t("shorts.clip.sub")}</p>
+      </div>
+
+      {/* Video preview mock */}
+      <div className="relative overflow-hidden rounded-[16px] border border-border/60 bg-muted/40">
+        {/* Fake video frame */}
+        <div className="relative flex h-40 items-center justify-center bg-gradient-to-br from-brand-blue/10 to-brand-purple/10">
+          <Play className="h-10 w-10 text-muted-foreground/40" />
+          {/* IN / OUT markers */}
+          <div className="absolute left-[20%] top-0 flex h-full flex-col items-center">
+            <div className="h-full w-0.5 bg-brand-green" />
+            <span className="absolute -top-1 rounded bg-brand-green px-1.5 py-0.5 text-[10px] font-bold text-white">
+              {t("shorts.clip.inLabel")}
+            </span>
+          </div>
+          <div className="absolute left-[75%] top-0 flex h-full flex-col items-center">
+            <div className="h-full w-0.5 bg-brand-orange" />
+            <span className="absolute -top-1 rounded bg-brand-orange px-1.5 py-0.5 text-[10px] font-bold text-white">
+              {t("shorts.clip.outLabel")}
+            </span>
+          </div>
+          {/* Duration badge */}
+          <span className="absolute bottom-2 right-3 rounded-full bg-background/80 px-2 py-0.5 text-[10px] font-bold text-foreground backdrop-blur-sm">
+            {t("shorts.clip.duration")}
+          </span>
+        </div>
+
+        {/* AI detected badge */}
+        <div className="flex items-center gap-2 border-t border-border/40 bg-muted/30 px-4 py-2.5">
+          <Sparkles className="h-3.5 w-3.5 text-brand-purple" />
+          <span className="text-xs font-semibold text-brand-purple">{t("shorts.clip.aiDetected")}</span>
+        </div>
+      </div>
+
+      {/* Clip list */}
+      <div className="flex flex-col gap-2">
+        {clipsMeta.map((c, i) => {
+          const clipData = t(`shorts.clip.clips.${i}.label`, { defaultValue: `Clip ${i + 1}` });
+          return (
+            <button
+              key={i}
+              onClick={() => setSelectedClip(selectedClip === i ? null : i)}
+              className={`flex items-center gap-3 rounded-[14px] border px-4 py-3 text-left transition-colors duration-150 ${
+                selectedClip === i
+                  ? "border-brand-orange/40 bg-brand-orange/5"
+                  : "border-border/60 hover:border-border"
+              }`}
+            >
+              <div className={`h-8 w-8 flex-shrink-0 rounded-lg bg-gradient-to-br ${c.color} flex items-center justify-center`}>
+                <Scissors className="h-3.5 w-3.5 text-white" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="truncate text-sm font-semibold text-foreground">{clipData}</p>
+                <p className="text-xs text-muted-foreground">{c.platform}</p>
+              </div>
+              {selectedClip === i && <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-brand-orange" />}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Publish all button */}
+      <motion.button
+        onClick={handlePublish}
+        whileTap={{ scale: 0.97 }}
+        className={`flex w-full items-center justify-center gap-2 rounded-[14px] py-3 text-sm font-bold text-white shadow-soft transition-colors duration-200 ${
+          published ? "bg-brand-green" : "bg-gradient-to-r from-brand-purple to-brand-blue hover:opacity-90"
+        }`}
+      >
+        {published ? <CheckCircle2 className="h-4 w-4" /> : <Rocket className="h-4 w-4" />}
+        {published ? "Published!" : t("shorts.clip.readyCta")}
+      </motion.button>
+    </div>
   );
 }
 

@@ -76,6 +76,11 @@
     "titlePre": "One video. ",
     "titleHighlight": "Ten clips. Auto-published.",
     "subtitle": "Upload a long video and Volaly instantly creates, captions and schedules short-form content for every platform.",
+    "tabs": {
+      "generate": "Generate",
+      "edit": "Edit",
+      "clip": "Clip"
+    },
     "idle": {
       "title": "Drop your long video here",
       "sub": "or click to upload — MP4, MOV, AVI",
@@ -95,6 +100,36 @@
       "ai": { "label": "Volaly AI", "sub": "Processing…" },
       "shorts": { "label": "10 Shorts", "sub": "Auto-generated" },
       "publish": { "label": "Auto Publish", "sub": "All platforms" }
+    },
+    "edit": {
+      "title": "Edit your clip",
+      "sub": "Trim, add captions and pick your thumbnail — all from the browser.",
+      "timeline": "Timeline",
+      "clip1": "Intro hook",
+      "clip2": "Main highlight",
+      "clip3": "Call to action",
+      "captionLabel": "Caption",
+      "captionPlaceholder": "Add your caption here…",
+      "trimLabel": "Trim",
+      "trimStart": "0:04",
+      "trimEnd": "0:29",
+      "publishCta": "Save & Publish",
+      "badge": "AI-suggested trim"
+    },
+    "clip": {
+      "title": "Select your clip",
+      "sub": "Set in and out points — Volaly cuts, captions and publishes automatically.",
+      "inLabel": "IN",
+      "outLabel": "OUT",
+      "duration": "25s",
+      "extractCta": "Extract Clip",
+      "clips": [
+        { "label": "Hook — 0:00–0:08", "platform": "TikTok" },
+        { "label": "Highlight — 0:14–0:29", "platform": "Reels" },
+        { "label": "Outro — 0:52–1:00", "platform": "YT Shorts" }
+      ],
+      "aiDetected": "AI detected 3 highlights",
+      "readyCta": "Publish All"
     }
   },
   "revenue": {
